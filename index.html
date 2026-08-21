@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#101418">
+<meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>庫存查詢</title>
+<style>
+:root{
+  --bg:#101418; --panel:#1a2027; --panel2:#232b34; --line:#2e3842;
+  --txt:#f2f5f7; --sub:#93a1ad; --amber:#ffb03a; --amber-deep:#e08900;
+  --ok:#3ddc84; --err:#ff5d5d; --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  overscroll-behavior:none;display:flex;flex-direction:column;
+  padding-top:env(safe-area-inset-top)}
+header{display:flex;align-items:center;gap:10px;padding:12px 16px 8px}
+header .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--amber),var(--amber-deep));
+  display:flex;align-items:center;justify-content:center;font-weight:800;color:#1b1200;font-size:15px;flex:none}
+header h1{font-size:17px;font-weight:700;letter-spacing:.5px}
+header .eng{display:block;font-size:10.5px;color:var(--sub);font-weight:500;letter-spacing:1.5px}
+#engineTag{margin-left:auto;font-size:10.5px;color:var(--sub);background:var(--panel);border:1px solid var(--line);
+  padding:4px 9px;border-radius:99px;white-space:nowrap}
+main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 14px calc(86px + env(safe-area-inset-bottom))}
+.page{display:none}.page.on{display:block}
+
+/* ---- 掃描頁 ---- */
+#camWrap{position:relative;border-radius:var(--radius);overflow:hidden;background:#000;aspect-ratio:3/4;max-height:56vh;width:100%}
+#video{width:100%;height:100%;object-fit:cover;display:block;transform-origin:center center}
+#scanBox{position:absolute;left:8%;right:8%;top:26%;height:34%;border-radius:14px;
+  box-shadow:0 0 0 2000px rgba(6,9,12,.45);pointer-events:none}
+#scanBox::before,#scanBox::after,#scanBox b::before,#scanBox b::after{content:"";position:absolute;width:26px;height:26px;border:3px solid var(--amber)}
+#scanBox::before{left:-2px;top:-2px;border-right:0;border-bottom:0;border-radius:14px 0 0 0}
+#scanBox::after{right:-2px;top:-2px;border-left:0;border-bottom:0;border-radius:0 14px 0 0}
+#scanBox b::before{left:-2px;bottom:-2px;border-right:0;border-top:0;border-radius:0 0 0 14px}
+#scanBox b::after{right:-2px;bottom:-2px;border-left:0;border-top:0;border-radius:0 0 14px 0}
+#laser{position:absolute;left:6%;right:6%;height:2.5px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--err) 22%,#ff9c9c 50%,var(--err) 78%,transparent);
+  top:12%;animation:laser 1.9s ease-in-out infinite;box-shadow:0 0 12px rgba(255,80,80,.75)}
+@keyframes laser{0%,100%{top:10%}50%{top:88%}}
+#camMsg{position:absolute;inset:0;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;
+  text-align:center;padding:22px;background:var(--panel);font-size:14.5px;color:var(--sub);line-height:1.75}
+#camMsg .big{font-size:38px}
+#camBtns{position:absolute;right:10px;bottom:10px;display:flex;gap:8px}
+.camBtn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(10,14,18,.55);
+  color:#fff;font-size:19px;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center}
+.camBtn.on{background:var(--amber);color:#1b1200;border-color:var(--amber)}
+#hint{margin:10px 2px 0;font-size:12.5px;color:var(--sub);text-align:center;line-height:1.6}
+
+.manual{display:flex;gap:8px;margin-top:12px}
+.manual input{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:12px;
+  padding:13px 14px;font-size:16px;letter-spacing:1px;min-width:0}
+.manual button{background:var(--amber);border:0;color:#1b1200;font-weight:700;border-radius:12px;padding:0 20px;font-size:15px}
+
+/* ---- 結果卡 ---- */
+#sheetMask{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .22s;z-index:40}
+#sheetMask.on{opacity:1;pointer-events:auto}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:41;background:var(--panel2);border-radius:22px 22px 0 0;
+  padding:10px 18px calc(24px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .26s cubic-bezier(.2,.8,.25,1);
+  max-height:78vh;overflow-y:auto}
+#sheet.on{transform:translateY(0)}
+#sheet .grip{width:40px;height:4px;border-radius:2px;background:var(--line);margin:4px auto 14px}
+.codeTag{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--amber);
+  background:rgba(255,176,58,.1);border:1px solid rgba(255,176,58,.35);padding:5px 11px;border-radius:8px;letter-spacing:1.2px}
+.hitName{font-size:20px;font-weight:800;margin:12px 0 4px;line-height:1.35}
+.hitPath{font-size:11.5px;color:var(--sub);word-break:break-all;line-height:1.5}
+.hitDesc{font-size:13.5px;color:#c6d0d9;margin-top:10px;line-height:1.65;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px;padding:11px 13px}
+.badges{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.badge{font-size:11px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--sub)}
+.badge.hot{color:#1b1200;background:var(--amber);border-color:var(--amber);font-weight:700}
+.priceRow{display:flex;gap:10px;margin-top:14px}
+.priceBox{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.priceBox .lab{font-size:11.5px;color:var(--sub);margin-bottom:3px}
+.priceBox .val{font-size:22px;font-weight:800;color:var(--ok)}
+.priceBox .val small{font-size:12px;color:var(--sub);font-weight:500}
+.missCard{text-align:center;padding:6px 0 2px}
+.missCard .big{font-size:40px;margin-bottom:8px}
+.missCard p{color:var(--sub);font-size:14px;line-height:1.8}
+.chooseTitle{font-size:14px;color:var(--sub);margin:10px 0 8px}
+.chooseItem{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:14.5px;line-height:1.5}
+.chooseItem b{color:var(--amber)}
+
+/* ---- 搜尋/紀錄 ---- */
+.searchBar{position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5}
+.searchBar input{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:13px 15px;font-size:16px}
+.rItem{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:12px 14px;margin-bottom:9px}
+.rItem .nm{font-size:15px;font-weight:700;line-height:1.4}
+.rItem .meta{display:flex;gap:8px;align-items:center;margin-top:6px;font-size:12px;color:var(--sub);flex-wrap:wrap}
+.rItem .meta .pr{color:var(--ok);font-weight:700;font-size:13px}
+.empty{text-align:center;color:var(--sub);padding:44px 20px;font-size:14px;line-height:1.9}
+.empty .big{font-size:40px;margin-bottom:8px}
+
+/* ---- 底部導航 ---- */
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:rgba(16,20,24,.92);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);z-index:30}
+nav button{flex:1;background:none;border:0;color:var(--sub);padding:9px 0 7px;font-size:11px;display:flex;flex-direction:column;gap:3px;align-items:center}
+nav button .ic{font-size:21px;line-height:1}
+nav button.on{color:var(--amber)}
+
+/* ---- PIN ---- */
+#lock{position:fixed;inset:0;background:var(--bg);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:30px}
+#lock .logo{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--amber),var(--amber-deep));
+  display:flex;align-items:center;justify-content:center;font-weight:800;color:#1b1200;font-size:26px}
+#lock h2{font-size:19px}#lock p{color:var(--sub);font-size:13px}
+#pinIn{background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:14px;padding:15px;font-size:20px;
+  letter-spacing:2px;text-align:center;width:min(280px,80vw);font-family:ui-monospace,Menlo,monospace}
+#pinIn::placeholder{color:var(--line);letter-spacing:1px}
+#pinBtn{background:var(--amber);border:0;color:#1b1200;font-weight:800;border-radius:14px;padding:14px 52px;font-size:16px}
+#pinErr{color:var(--err);font-size:13px;min-height:18px}
+.spin{width:26px;height:26px;border:3px solid var(--line);border-top-color:var(--amber);border-radius:50%;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div id="lock">
+  <div class="logo">▮</div>
+  <h2>庫存查詢</h2>
+  <p>請輸入通行碼（區分大小寫）</p>
+  <input id="pinIn" type="text" inputmode="text" maxlength="32" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="xxxx-xxxx-xxxx">
+  <div id="pinErr"></div>
+  <button id="pinBtn">解 鎖</button>
+</div>
+
+<header>
+  <div class="logo">▮</div>
+  <div><h1>庫存查詢<span class="eng">STOCK&nbsp;LOOKUP</span></h1></div>
+  <span id="engineTag">…</span>
+</header>
+
+<main>
+  <section id="pageScan" class="page on">
+    <div id="camWrap">
+      <video id="video" playsinline muted autoplay></video>
+      <div id="scanBox"><b></b><div id="laser"></div></div>
+      <div id="camBtns">
+        <button class="camBtn" id="zoomBtn" style="font-size:13px;font-weight:700">1×</button>
+        <button class="camBtn" id="torchBtn" style="display:none">🔦</button>
+        <button class="camBtn" id="camToggle">⏸</button>
+      </div>
+      <div id="camMsg"><span class="big">📷</span><span id="camMsgTxt">正在啟動相機…</span></div>
+    </div>
+    <div id="hint">將條碼對準框內．自動辨識．同一條碼 3 秒內不重複觸發</div>
+    <div class="manual">
+      <input id="manualIn" type="tel" inputmode="numeric" placeholder="或手動輸入條碼數字…" maxlength="14">
+      <button id="manualBtn">查詢</button>
+    </div>
+  </section>
+
+  <section id="pageSearch" class="page">
+    <div class="searchBar"><input id="q" type="search" placeholder="輸入品名搜尋（中英文皆可）…"></div>
+    <div id="sResults"><div class="empty"><div class="big">🔎</div>輸入品名關鍵字<br>例如：珍珠、果糖、Tapioca</div></div>
+  </section>
+
+  <section id="pageHist" class="page">
+    <div id="histList"><div class="empty"><div class="big">🕓</div>還沒有掃描紀錄</div></div>
+  </section>
+</main>
+
+<nav>
+  <button data-p="pageScan" class="on"><span class="ic">▣</span>掃描</button>
+  <button data-p="pageSearch"><span class="ic">⌕</span>搜尋</button>
+  <button data-p="pageHist"><span class="ic">≡</span>紀錄</button>
+</nav>
+
+<div id="sheetMask"></div>
+<div id="sheet"><div class="grip"></div><div id="sheetBody"></div></div>
+
+<script src="data.enc.js"></script>
+<script src="zxing.min.js"></script>
+<script>
+"use strict";
+const $=s=>document.querySelector(s);
+let DB=null, BCIDX=null;
+
+/* ================= PIN 解鎖 ================= */
+async function tryUnlock(pin){
+  const e=window.ENC_DATA, td=new TextDecoder, b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pin),'PBKDF2',false,['deriveKey']);
+  const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(e.salt),iterations:e.iter,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+  const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(e.iv)},key,b64(e.ct));
+  return JSON.parse(td.decode(pt));
+}
+async function unlock(pin,silent){
+  $('#pinBtn').innerHTML='<div class="spin"></div>';
+  try{
+    DB=await tryUnlock(pin);
+    BCIDX=DB.barcodes;
+    localStorage.setItem('whscan_pin',pin);
+    $('#lock').style.display='none';
+    boot();
+  }catch(err){
+    $('#pinBtn').textContent='解 鎖';
+    if(!silent){$('#pinErr').textContent='通行碼不正確';$('#pinIn').value='';}
+    localStorage.removeItem('whscan_pin');
+  }
+}
+$('#pinBtn').onclick=()=>unlock($('#pinIn').value.trim());
+$('#pinIn').addEventListener('keydown',e=>{if(e.key==='Enter')unlock($('#pinIn').value.trim())});
+const saved=localStorage.getItem('whscan_pin');
+if(saved) unlock(saved,true);
+
+/* ================= 條碼正規化與查詢 ================= */
+function candidates(raw){
+  let d=(raw||'').replace(/\D/g,''); const out=new Set();
+  if(!d) return [];
+  if(d.length===13) out.add(d);
+  if(d.length===12){out.add('0'+d); out.add(d.padStart(13,'0'));}
+  if(d.length===14){ out.add(d.replace(/^0+/,'').padStart(13,'0')); out.add(d.slice(1)); }
+  if(d.length===8) out.add(d.padStart(13,'0'));
+  out.add(d.padStart(13,'0'));
+  return [...out];
+}
+function lookup(raw){
+  for(const c of candidates(raw)){ if(BCIDX[c]) return {code:c,rec:BCIDX[c]}; }
+  return null;
+}
+const layerName={a:'件（最小單位）',b:'中層包裝',c:'箱',['?']:'—'};
+function cleanLeaf(leaf){ return leaf.replace(/^[abcpABCP](?=[A-Z0-9一-鿿（(])/,''); }
+
+/* ================= 結果卡 ================= */
+function fmtPrice(p){ return p>0 ? '$'+p.toFixed(2) : '—'; }
+function showSheet(html){ $('#sheetBody').innerHTML=html; $('#sheet').classList.add('on'); $('#sheetMask').classList.add('on'); }
+function hideSheet(){ $('#sheet').classList.remove('on'); $('#sheetMask').classList.remove('on'); }
+$('#sheetMask').onclick=hideSheet;
+
+function itemCard(code,it,caseIt){
+  const hot=it.rank?`<span class="badge hot">熱銷 TOP ${it.rank}</span>`:'';
+  const priceLab={a:'件價（a）',b:'中層價（b）',c:'箱價（c）'}[it.layer]||'單價';
+  let prices=`<div class="priceBox"><div class="lab">${priceLab}</div><div class="val">${fmtPrice(it.price)}</div></div>`;
+  if(caseIt && caseIt.id!==it.id) prices+=`<div class="priceBox"><div class="lab">箱價（c）</div><div class="val">${fmtPrice(caseIt.price)}</div></div>`;
+  return `<span class="codeTag">▮▮ ${code}</span>
+    <div class="hitName">${cleanLeaf(it.leaf)}</div>
+    <div class="hitPath">${it.name}</div>
+    <div class="badges"><span class="badge">層級：${layerName[it.layer]||'—'}</span>${hot}</div>
+    <div class="priceRow">${prices}</div>
+    ${it.desc?`<div class="hitDesc">${it.desc}</div>`:''}`;
+}
+function showHit(raw){
+  const hit=lookup(raw);
+  if(!hit){
+    showSheet(`<div class="missCard"><div class="big">🤷</div>
+      <span class="codeTag">▮▮ ${raw.replace(/\D/g,'')}</span>
+      <p style="margin-top:12px">這個條碼不在資料庫裡<br>（目前收錄 ${Object.keys(BCIDX).length} 組條碼）<br>請改用「搜尋」以品名查詢</p></div>`);
+    pushHist(raw.replace(/\D/g,''),null); buzz(false); return;
+  }
+  const r=hit.rec;
+  if(r.m){ // 真衝突：一碼多產品
+    let li=r.m.map(id=>{const it=DB.items[id];
+      return `<div class="chooseItem" onclick='showSheet(itemCard("${hit.code}",DB.items[${id}],null))'><b>${cleanLeaf(it.leaf)}</b><br><small style="color:var(--sub)">${it.name}</small></div>`;}).join('');
+    showSheet(`<span class="codeTag">▮▮ ${hit.code}</span><div class="chooseTitle">⚠️ 這個條碼對應多個不同產品，請選擇：</div>${li}`);
+    pushHist(hit.code,'multi'); buzz(true); return;
+  }
+  const it=DB.items[r.p], caseIt=r.c!=null?DB.items[r.c]:null;
+  showSheet(itemCard(hit.code,it,caseIt));
+  pushHist(hit.code,it.id); buzz(true);
+}
+
+/* ================= 音效/震動 ================= */
+let AC=null;
+function buzz(ok){
+  try{navigator.vibrate&&navigator.vibrate(ok?60:[40,60,40]);}catch(e){}
+  try{
+    AC=AC||new (window.AudioContext||window.webkitAudioContext)();
+    const o=AC.createOscillator(),g=AC.createGain();
+    o.frequency.value=ok?1318:220; o.type='sine';
+    g.gain.setValueAtTime(.22,AC.currentTime);
+    g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+.16);
+    o.connect(g).connect(AC.destination); o.start(); o.stop(AC.currentTime+.17);
+  }catch(e){}
+}
+
+/* ================= 掃描引擎 ================= */
+let stream=null, running=false, detector=null, zreader=null, lastCode='', lastAt=0, engine='';
+let pendCode='', pendAt=0;
+function onCode(text){
+  const now=Date.now();
+  if(text===lastCode && now-lastAt<3000) return;
+  if(!lookup(text)){
+    // 查不到的碼：需 1.5 秒內連續讀到兩次相同才顯示（濾掉雜訊誤讀）
+    if(!(text===pendCode && now-pendAt<1500)){ pendCode=text; pendAt=now; return; }
+  }
+  pendCode=''; lastCode=text; lastAt=now;
+  showHit(text);
+}
+async function startCam(){
+  $('#camMsg').style.display='flex'; $('#camMsgTxt').textContent='正在啟動相機…';
+  try{
+    stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1080}},audio:false});
+  }catch(e){
+    $('#camMsgTxt').innerHTML='無法開啟相機：'+e.name+'<br>請到瀏覽器設定允許相機權限，<br>或直接用下方「手動輸入」/「搜尋」';
+    return;
+  }
+  const v=$('#video'); v.srcObject=stream; await v.play().catch(()=>{});
+  $('#camMsg').style.display='none'; running=true; $('#camToggle').textContent='⏸';
+  // 手電筒
+  const track=stream.getVideoTracks()[0];
+  try{ if(track.getCapabilities&&track.getCapabilities().torch){$('#torchBtn').style.display='flex';} }catch(e){}
+  applyZoom();
+  // 引擎選擇：原生 BarcodeDetector 優先，否則 ZXing
+  let native=false;
+  if('BarcodeDetector' in window){
+    try{
+      const fm=await BarcodeDetector.getSupportedFormats();
+      if(fm.includes('ean_13')){ detector=new BarcodeDetector({formats:['ean_13','upc_a','ean_8'].filter(f=>fm.includes(f))}); native=true; }
+    }catch(e){}
+  }
+  if(native){ engine='原生引擎'; loopNative(); }
+  else{ engine='ZXing 引擎'; loopZXing(); }
+  $('#engineTag').textContent=engine;
+}
+/* ===== Zoom ===== */
+const ZOOMS=[1,2,3];
+let zoomIdx=0, hwZoom=false, digiZoom=1;
+function applyZoom(){
+  const z=ZOOMS[zoomIdx];
+  $('#zoomBtn').textContent=z+'×';
+  const track=stream&&stream.getVideoTracks()[0];
+  hwZoom=false;
+  if(track&&track.getCapabilities){
+    try{
+      const cap=track.getCapabilities();
+      if(cap.zoom&&cap.zoom.max>=z){ track.applyConstraints({advanced:[{zoom:Math.max(cap.zoom.min,z)}]}); hwZoom=true; }
+    }catch(e){}
+  }
+  digiZoom=hwZoom?1:z;
+  $('#video').style.transform=digiZoom>1?('scale('+digiZoom+')'):'';
+}
+$('#zoomBtn').onclick=()=>{ zoomIdx=(zoomIdx+1)%ZOOMS.length; applyZoom(); };
+/* 依數位變焦回推相機座標中央區域 */
+function cropRect(W,H){
+  const z=digiZoom, cw=W/z, ch=H/z, cx0=(W-cw)/2, cy0=(H-ch)/2;
+  return {bx:cx0+cw*0.06, bw:cw*0.88, by:cy0+ch*0.30, bh:ch*0.36, fx:cx0, fy:cy0, fw:cw, fh:ch};
+}
+async function loopNative(){
+  const v=$('#video'), work=document.createElement('canvas'), wc=work.getContext('2d',{willReadFrequently:true});
+  while(running&&detector){
+    try{
+      let target=v;
+      if(digiZoom>1&&v.videoWidth>0){
+        const r=cropRect(v.videoWidth,v.videoHeight);
+        work.width=Math.round(r.fw); work.height=Math.round(r.fh);
+        wc.drawImage(v,r.fx,r.fy,r.fw,r.fh,0,0,work.width,work.height);
+        target=work;
+      }
+      const codes=await detector.detect(target);
+      if(codes.length) onCode(codes[0].rawValue);
+    }catch(e){}
+    await new Promise(r=>setTimeout(r,120));
+  }
+}
+/* ZXing 手動取格解碼：不依賴 ZXing 的影像接管（該路徑在部分環境取到 0x0 畫面）。
+   每 tick 依序嘗試：①掃描框區域原尺寸 ②框區放大 1.6x ③全畫面 ④每逢偶數 tick 轉 90 度 */
+let zxCore=null, zxTick=0;
+function zxDecodeCanvas(cv){
+  try{
+    const src=new ZXing.HTMLCanvasElementLuminanceSource(cv);
+    const bmp=new ZXing.BinaryBitmap(new ZXing.HybridBinarizer(src));
+    return zxCore.decode(bmp).getText();
+  }catch(e){ return null; }
+}
+async function loopZXing(){
+  if(!zxCore){
+    const hints=new Map();
+    hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS,[ZXing.BarcodeFormat.EAN_13,ZXing.BarcodeFormat.UPC_A,ZXing.BarcodeFormat.EAN_8]);
+    hints.set(ZXing.DecodeHintType.TRY_HARDER,true);
+    zxCore=new ZXing.MultiFormatReader(); zxCore.setHints(hints);
+  }
+  const v=$('#video'), work=document.createElement('canvas'), wc=work.getContext('2d',{willReadFrequently:true});
+  while(running){
+    if(v.videoWidth>0){
+      zxTick++;
+      const W=v.videoWidth,H=v.videoHeight;
+      // 掃描框對應相機座標（object-fit:cover 近似）；數位變焦時取中央區域
+      const {bx,bw,by,bh}=cropRect(W,H);
+      const passes=[[bx,by,bw,bh,1],[bx,by,bw,bh,1.6],[0,0,W,H,1]];
+      let hit=null;
+      for(const [x,y,cw,ch,sc] of passes){
+        work.width=Math.round(cw*sc); work.height=Math.round(ch*sc);
+        wc.drawImage(v,x,y,cw,ch,0,0,work.width,work.height);
+        hit=zxDecodeCanvas(work);
+        if(hit) break;
+      }
+      if(!hit && zxTick%2===0){ // 轉 90 度再試框區
+        work.width=Math.round(bh); work.height=Math.round(bw);
+        wc.save(); wc.translate(work.width/2,work.height/2); wc.rotate(Math.PI/2);
+        wc.drawImage(v,bx,by,bw,bh,-bw/2,-bh/2,bw,bh); wc.restore();
+        hit=zxDecodeCanvas(work);
+      }
+      if(hit&&running) onCode(hit);
+    }
+    await new Promise(r=>setTimeout(r,150));
+  }
+}
+function stopCam(){
+  running=false;
+  if(zreader){try{zreader.reset();}catch(e){} zreader=null;}
+  if(stream){stream.getTracks().forEach(t=>t.stop()); stream=null;}
+  $('#video').srcObject=null;
+  $('#camMsg').style.display='flex'; $('#camMsgTxt').textContent='相機已暫停，點 ▶ 繼續';
+  $('#camToggle').textContent='▶';
+}
+$('#camToggle').onclick=()=>{ running?stopCam():startCam(); };
+let torchOn=false;
+$('#torchBtn').onclick=async()=>{
+  if(!stream)return; const t=stream.getVideoTracks()[0]; torchOn=!torchOn;
+  try{await t.applyConstraints({advanced:[{torch:torchOn}]});$('#torchBtn').classList.toggle('on',torchOn);}catch(e){}
+};
+$('#manualBtn').onclick=()=>{const v=$('#manualIn').value.trim(); if(v){showHit(v);$('#manualIn').value='';}};
+$('#manualIn').addEventListener('keydown',e=>{if(e.key==='Enter')$('#manualBtn').click()});
+
+/* ================= 搜尋 ================= */
+function doSearch(q){
+  q=q.trim().toLowerCase();
+  const box=$('#sResults');
+  if(q.length<1){box.innerHTML='<div class="empty"><div class="big">🔎</div>輸入品名關鍵字<br>例如：珍珠、果糖、Tapioca</div>';return;}
+  const terms=q.split(/\s+/);
+  const hits=[];
+  for(const it of DB.items){
+    const hay=(it.name+' '+it.desc).toLowerCase();
+    if(terms.every(t=>hay.includes(t))) hits.push(it);
+  }
+  hits.sort((a,b)=>{
+    const ra=a.rank||999,rb=b.rank||999;
+    if(ra!==rb)return ra-rb;
+    if(a.layer!==b.layer)return (a.layer==='a'?0:1)-(b.layer==='a'?0:1);
+    return a.name.length-b.name.length;
+  });
+  if(!hits.length){box.innerHTML='<div class="empty"><div class="big">🤷</div>找不到「'+q+'」</div>';return;}
+  box.innerHTML=hits.slice(0,40).map(it=>{
+    const hot=it.rank?`<span class="badge hot" style="font-size:10px">TOP ${it.rank}</span>`:'';
+    return `<div class="rItem" onclick='showSheet(itemCard("${it.bc[0]||"無條碼"}",DB.items[${it.id}],null))'>
+      <div class="nm">${cleanLeaf(it.leaf)}</div>
+      <div class="meta"><span class="pr">${fmtPrice(it.price)}</span><span>${layerName[it.layer]||''}</span>${hot}<span style="font-family:ui-monospace,Menlo">${it.bc[0]||'無條碼'}</span></div>
+    </div>`;}).join('')+(hits.length>40?`<div class="empty">共 ${hits.length} 筆，只顯示前 40 筆，請縮小關鍵字</div>`:'');
+}
+let qt=null;
+$('#q').addEventListener('input',e=>{clearTimeout(qt);qt=setTimeout(()=>doSearch(e.target.value),160);});
+
+/* ================= 紀錄 ================= */
+function pushHist(code,itemId){
+  const h=JSON.parse(localStorage.getItem('whscan_hist')||'[]');
+  h.unshift({c:code,i:itemId,t:Date.now()});
+  localStorage.setItem('whscan_hist',JSON.stringify(h.slice(0,60)));
+  renderHist();
+}
+function renderHist(){
+  const h=JSON.parse(localStorage.getItem('whscan_hist')||'[]');
+  const box=$('#histList');
+  if(!h.length){box.innerHTML='<div class="empty"><div class="big">🕓</div>還沒有掃描紀錄</div>';return;}
+  box.innerHTML=h.map(e=>{
+    const t=new Date(e.t),ts=`${t.getMonth()+1}/${t.getDate()} ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`;
+    let nm='❓ 不在資料庫', extra='';
+    if(e.i==='multi'){nm='⚠️ 一碼多品項';}
+    else if(e.i!=null&&DB.items[e.i]){const it=DB.items[e.i];nm=cleanLeaf(it.leaf);extra=`<span class="pr">${fmtPrice(it.price)}</span>`;}
+    return `<div class="rItem" onclick='showHit("${e.c}")'><div class="nm">${nm}</div>
+      <div class="meta">${extra}<span style="font-family:ui-monospace,Menlo">${e.c}</span><span style="margin-left:auto">${ts}</span></div></div>`;
+  }).join('');
+}
+
+/* ================= 導航 & 啟動 ================= */
+document.querySelectorAll('nav button').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); $('#'+b.dataset.p).classList.add('on');
+    if(b.dataset.p==='pageScan'){ if(!running) startCam(); }
+    else if(running) stopCam();
+    if(b.dataset.p==='pageHist') renderHist();
+  };
+});
+function boot(){
+  startCam();
+  renderHist();
+  if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
+window.showSheet=showSheet; window.itemCard=itemCard; window.showHit=showHit;
+</script>
+</body>
+</html>
