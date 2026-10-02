@@ -34,6 +34,10 @@ final class ImportEngine: ObservableObject {
     /// Set synchronously before any suspension point so two triggers (launch + foreground, NFC + resume)
     /// can never run the same batch twice at once.
     private var busy = false
+    /// Imports requested while another batch is running (e.g. NFC tapped again) wait here instead of being dropped.
+    private var queued: [(loaders: [@Sendable () async -> Data?], source: String)] = []
+    /// Progress callbacks hop to the main actor asynchronously; late ones from a finished run are ignored.
+    private var activeRun: UUID?
 
     func makeProcessor() -> BatchProcessor? {
         var config = BatchConfig()
@@ -67,9 +71,22 @@ final class ImportEngine: ObservableObject {
     /// Loads, prepares and stores one photo at a time so the original images are never all in memory
     /// (the share extension has a small memory budget).
     func importImages(loaders: [@Sendable () async -> Data?], source: String) async {
-        guard !loaders.isEmpty, !busy else { return }
+        guard !loaders.isEmpty else { return }
+        queued.append((loaders, source))
+        guard !busy else { return }
         busy = true
-        defer { busy = false }
+        await drainQueue()
+        busy = false
+    }
+
+    private func drainQueue() async {
+        while !queued.isEmpty {
+            let next = queued.removeFirst()
+            await importNow(next.loaders, source: next.source)
+        }
+    }
+
+    private func importNow(_ loaders: [@Sendable () async -> Data?], source: String) async {
         if AppSettings.useCloudAI && (KeychainStore.load() ?? "").isEmpty { stage = .needsAPIKey; return }
         if !stopBeforeWriting {
             let granted = await contacts.requestAccess()
@@ -97,17 +114,21 @@ final class ImportEngine: ObservableObject {
     func run(_ batch: BatchState) async {
         guard !busy else { return }
         busy = true
-        defer { busy = false }
         await runLocked(batch)
+        await drainQueue()
+        busy = false
     }
 
     private func runLocked(_ batch: BatchState) async {
         guard let processor = makeProcessor() else { stage = .needsAPIKey; return }
         state = batch
+        let runID = UUID()
+        activeRun = runID
         stage = .processing(BatchProgressView(phase: "recognizing", recognized: 0, total: batch.photos.count, peopleDone: 0, peopleTotal: 0))
         await processor.onProgress { [weak self] p in
             Task { @MainActor in
-                self?.stage = .processing(BatchProgressView(phase: p.phase.rawValue, recognized: p.recognized, total: p.totalPhotos,
+                guard let self, self.activeRun == runID else { return }
+                self.stage = .processing(BatchProgressView(phase: p.phase.rawValue, recognized: p.recognized, total: p.totalPhotos,
                                                             peopleDone: p.peopleDone, peopleTotal: p.peopleTotal))
                 BackgroundWork.progress(done: p.recognized + p.peopleDone, total: p.totalPhotos + max(p.peopleTotal, 1),
                                         subtitle: p.peopleTotal > 0 ? "\(p.peopleDone) / \(p.peopleTotal) 位" : "\(p.recognized) / \(p.totalPhotos) 張")
@@ -115,6 +136,7 @@ final class ImportEngine: ObservableObject {
         }
         let token = BackgroundWork.begin(title: "名片匯入", total: batch.photos.count)
         let result = await processor.run(batch)
+        activeRun = nil
         BackgroundWork.end(token, success: result.phase == .done)
         state = result
         stage = .finished
@@ -124,10 +146,9 @@ final class ImportEngine: ObservableObject {
     func resumeUnfinished() async {
         guard case .idle = stage, !busy else { return }
         busy = true
-        defer { busy = false }
-        let unfinished = await store.unfinished()
-        guard let next = unfinished.first else { return }
-        await runLocked(next)
+        if let next = await store.unfinished().first { await runLocked(next) }
+        await drainQueue()
+        busy = false
     }
 
     /// Recent batches for the processing log (newest first).

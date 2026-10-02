@@ -57,6 +57,13 @@ struct RootView: View {
             router.pendingImages = nil
             Task { await engine.importImages(images, source: router.pendingSource) }
         }
+        .task {
+            // Images handed over by a Shortcut before this view existed.
+            if let images = router.pendingImages, !images.isEmpty {
+                router.pendingImages = nil
+                await engine.importImages(images, source: router.pendingSource)
+            }
+        }
         .sheet(isPresented: $showSettings) { SettingsView(highlightKey: false, onClose: { showSettings = false }).environmentObject(engine) }
         .fullScreenCover(isPresented: $showOnboarding) { OnboardingView { showOnboarding = false } }
     }
