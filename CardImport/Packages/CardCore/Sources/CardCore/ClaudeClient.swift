@@ -102,8 +102,9 @@ public struct ClaudeConfig: Codable, Sendable {
     /// Primary reader. Accuracy is the top priority, so the default is the current Opus model.
     public var extractionModel = "claude-opus-5-5"
     public var extractionEffort = "medium"
-    /// Independent second reader for uncertain fields — deliberately a different model.
-    public var verifierModel = "claude-fable-5-1"
+    /// Second reader for uncertain fields (asked a narrow question about one field). Opus 5.5 is the combination
+    /// the benchmark measured; Fable 5.1 is available as a stronger, more independent (and pricier) option.
+    public var verifierModel = "claude-opus-5-5"
     public var verifierEffort = "high"
     /// Text-only helpers (grouping resolver, voice notes).
     public var helperModel = "claude-opus-5-5"

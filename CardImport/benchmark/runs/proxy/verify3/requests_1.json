@@ -1,0 +1,105 @@
+[
+ {
+  "fieldLabel": "公司（中文）",
+  "key": "463ded9c80938e44",
+  "photoIds": [
+   "img_0024",
+   "img_0044"
+  ],
+  "candidates": [
+   "滙泰食品有限公司",
+   "匯泰食品有限公司"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "公司（中文）",
+  "key": "c669e87b3c91a53e",
+  "photoIds": [
+   "img_0006"
+  ],
+  "candidates": [
+   "滙泰食品有限公司",
+   "匯泰食品有限公司"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "電話 Phone — the mobile number; the first reader saw it printed as “+852 5176 8862”",
+  "key": "4c739772a83f357d",
+  "photoIds": [
+   "img_0014",
+   "img_0057"
+  ],
+  "candidates": [
+   "+852 5176 8862",
+   "+852 5176 8852"
+  ],
+  "ocrHint": [
+   "je: 4852 5176 8862"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0026"
+  ],
+  "ocrHint": [
+   "品牌部 Brand Studio"
+  ],
+  "key": "674acdc30d3aa396",
+  "fieldLabel": "部門 Department",
+  "candidates": [
+   "Brand Studio",
+   "品牌部",
+   "品牌部 Brand Studio"
+  ]
+ },
+ {
+  "fieldLabel": "姓氏 Last name",
+  "key": "6da69fd0fedb744b",
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ],
+  "candidates": [
+   "Chang",
+   "Zhang"
+  ],
+  "ocrHint": [
+   "Kevin Chang",
+   "Kevin Zhang"
+  ]
+ },
+ {
+  "fieldLabel": "公司 Company",
+  "key": "4d2d735d56d21705",
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ],
+  "candidates": [
+   "Harbourview Frozen Foods Ltd.",
+   "Dawnlight Design Studio"
+  ],
+  "ocrHint": [
+   "Dawniight Design Studio",
+   "@dawnlight.design",
+   "Harbourview Frozen Foods Ltd."
+  ]
+ },
+ {
+  "fieldLabel": "職稱 Job title",
+  "key": "89a58867df75691a",
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ],
+  "candidates": [
+   "Senior Designer",
+   "Quality Assurance Manager"
+  ],
+  "ocrHint": [
+   "Senior Designer"
+  ]
+ }
+]

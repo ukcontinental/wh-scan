@@ -187,12 +187,43 @@ extension ContactDraft {
         add(.givenName, givenName); add(.familyName, familyName); add(.cjkName, cjkName)
         add(.company, company); add(.companyCJK, companyCJK); add(.jobTitle, jobTitle); add(.jobTitleCJK, jobTitleCJK)
         add(.department, department); add(.departmentCJK, departmentCJK)
-        for p in phones { out.append((.phone(p.e164), p.printed, p.confidence, p.alternatives)) }
+        for p in phones {
+            var shown = p.printed
+            if let ext = p.extensionNumber, !TextNorm.digits(shown).hasSuffix(ext) { shown += " ext. \(ext)" }
+            out.append((.phone(p.e164), shown, p.confidence, p.alternatives))
+        }
         for e in emails { out.append((.email(e.value), e.value, e.confidence, e.alternatives)) }
         for w in websites { out.append((.website(w.value), w.value, w.confidence, w.alternatives)) }
         for a in addresses { out.append((.address(a.matchKey), a.formatted ?? [a.street, a.city].compactMap { $0 }.joined(separator: ", "), a.confidence, [])) }
         for s in social { out.append((.social(s.service + ":" + s.handle), s.service + ": " + s.handle, s.confidence, [])) }
         return out
+    }
+
+    /// Signals recorded for a field (for policy decisions).
+    public func signals(_ ref: FieldRef) -> [String] {
+        switch ref {
+        case .givenName: return givenName?.signals ?? []
+        case .familyName: return familyName?.signals ?? []
+        case .cjkName: return cjkName?.signals ?? []
+        case .company: return company?.signals ?? []
+        case .companyCJK: return companyCJK?.signals ?? []
+        case .jobTitle: return jobTitle?.signals ?? []
+        case .jobTitleCJK: return jobTitleCJK?.signals ?? []
+        case .department: return department?.signals ?? []
+        case .departmentCJK: return departmentCJK?.signals ?? []
+        case .phone(let k): return phones.first { $0.e164 == k }?.signals ?? []
+        case .email(let k): return emails.first { $0.value == k }?.signals ?? []
+        case .website(let k): return websites.first { $0.value == k }?.signals ?? []
+        case .address(let k): return addresses.first { $0.matchKey == k }?.signals ?? []
+        case .social: return []
+        }
+    }
+
+    /// A reading the first model itself doubted (it listed alternatives) counts as settled only after an
+    /// independent confirmation: a second opinion, the other side of the card, or the user.
+    public func isSettled(_ ref: FieldRef) -> Bool {
+        let s = signals(ref)
+        return s.contains { $0.hasPrefix("second_opinion:agree") || $0.hasPrefix("second_opinion:picked") || $0 == "user_review" || $0 == "cross_side_agree" }
     }
 
     /// Removes a field (used when a value is held back for review).

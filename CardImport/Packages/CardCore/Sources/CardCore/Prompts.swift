@@ -124,7 +124,10 @@ public enum Prompts {
     public static let verifySystem = """
     You are the second, independent reader in a business-card pipeline. Another model read the card; one field is \
     uncertain. Look at the image yourself, character by character, and report exactly what is printed for that \
-    field. Do not be swayed by the candidates — they may all be wrong. If the field is not printed, value = null. \
+    field. Do not be swayed by the candidates — they may all be wrong. If the card prints several values of this kind \
+    (office, mobile and fax numbers; head-office and branch addresses), read the one the field description points to — \
+    same label, same position — never a different one. For a phone, include an extension printed with it. \
+    Distinguish variant characters exactly (恆/恒, 峯/峰, 着/著). If the field is not printed, value = null. \
     confidence = probability your value is exactly right.
     """
 

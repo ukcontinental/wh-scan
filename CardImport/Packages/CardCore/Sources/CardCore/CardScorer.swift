@@ -35,6 +35,17 @@ public struct CardScorer: Sendable {
         "業務", "业务", "主管", "顧問", "顾问", "工程師", "工程师", "負責人", "负责人", "代表", "協理", "协理", "處長", "处长",
         "課長", "科长", "組長", "组长", "店長", "店长", "執行長", "执行长", "創辦人", "创始人", "秘書", "秘书", "採購", "采购"]
 
+    /// Alternatives that differ only in case, spacing or punctuation are the same reading, not an ambiguity.
+    public static func realAlternatives(_ alts: [String], to value: String) -> [String] {
+        var seen = Set([TextNorm.alnum(value)])
+        var out: [String] = []
+        for a in alts where !a.isEmpty {
+            let k = TextNorm.alnum(a)
+            if seen.insert(k).inserted { out.append(a) }
+        }
+        return out
+    }
+
     public func regionHint(for card: ExtractedCard) -> String {
         for p in card.phones {
             if let h = p.countryHint, h.count == 2 { return h.uppercased() }
@@ -60,7 +71,7 @@ public struct CardScorer: Sendable {
         var signals = ["model:\(String(format: "%.2f", f.confidence))", "ocr:\(support.rawValue)"]
         for (name, d) in extra where d != 0 { deltas.append(d); signals.append(name) }
         return DraftValue(value: value, confidence: model.adjust(f.confidence, deltas: deltas),
-                          alternatives: f.alternatives.map(TextNorm.nfkc).filter { $0 != value }, sources: [source], signals: signals)
+                          alternatives: Self.realAlternatives(f.alternatives.map(TextNorm.nfkc), to: value), sources: [source], signals: signals)
     }
 
     public func score(_ obs: CardObservation) -> ContactDraft {

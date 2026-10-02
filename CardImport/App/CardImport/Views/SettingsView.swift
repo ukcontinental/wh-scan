@@ -10,6 +10,7 @@ struct SettingsView: View {
     @State private var nameStyle = AppSettings.nameStyle
     @State private var notesEntitled = AppSettings.contactsNotesEntitled
     @State private var model = AppSettings.extractionModel
+    @State private var verifier = AppSettings.verifierModel
 
     var body: some View {
         NavigationStack {
@@ -28,8 +29,12 @@ struct SettingsView: View {
                         Text("Claude Fable 5.1（最強、較貴）").tag("claude-fable-5-1")
                         Text("Claude Sonnet 5.5（較快、較便宜）").tag("claude-sonnet-5-5")
                     }.disabled(!useCloud)
+                    Picker("複核模型", selection: $verifier) {
+                        Text("Claude Opus 5.5（預設）").tag("claude-opus-5-5")
+                        Text("Claude Fable 5.1（最強、較貴）").tag("claude-fable-5-1")
+                    }.disabled(!useCloud || !secondOpinion)
                 } header: { Text("辨識") } footer: {
-                    Text("關閉 AI 辨識時只用手機內建的文字辨識（免費、不上傳），但需要確認的項目會明顯變多。AI 成本估計每張照片約 US$0.03–0.05（Opus 5.5），以實測為準。")
+                    Text("關閉 AI 辨識時只用手機內建的文字辨識（免費、不上傳），但需要確認的項目會明顯變多。AI 成本估計每張照片約 US$0.05–0.12（含複核），以實測為準。")
                 }
                 Section("聯絡人") {
                     Picker("預設國家/地區（電話沒寫國碼時）", selection: $region) {
@@ -74,6 +79,7 @@ struct SettingsView: View {
         AppSettings.nameStyle = nameStyle
         AppSettings.contactsNotesEntitled = notesEntitled
         AppSettings.extractionModel = model
+        AppSettings.verifierModel = verifier
     }
 }
 

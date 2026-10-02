@@ -285,8 +285,8 @@ public actor BatchProcessor {
         let policy = ReviewPolicy(config: config.policy)
         if let verifier {
             let first = policy.evaluate(draft)
-            let candidates = draft.allFields().filter { ref, _, conf, _ in
-                conf < config.policy.threshold(for: ref) && conf >= config.policy.dropBelow
+            let candidates = draft.allFields().filter { ref, _, conf, alts in
+                !config.policy.accepts(ref, confidence: conf, alternatives: alts, in: draft) && conf >= config.policy.dropBelow
                     && { if case .social = ref { return false }; return true }()
             }
             _ = first
@@ -297,12 +297,14 @@ public actor BatchProcessor {
                 let region = draft.phones.first.flatMap { $0.e164.hasPrefix("+886") ? "TW" : $0.e164.hasPrefix("+86") ? "CN" : nil } ?? config.defaultRegion
                 for (ref, value, conf, alts) in candidates.prefix(config.maxVerificationsPerPerson) where !imgs.isEmpty {
                     let cands = [value] + alts
+                    let label = ReviewPolicy.label(ref) + Self.verifyContext(ref, draft: draft)
                     let hints = ocrLines.filter { line in cands.contains { TextNorm.similarity(line, $0) >= 0.5 || (!TextNorm.digits($0).isEmpty && TextNorm.digits(line).contains(String(TextNorm.digits($0).suffix(4)))) } }
-                    guard let ans = try? await verifier.verify(fieldLabel: ReviewPolicy.label(ref), candidates: cands, images: imgs,
+                    guard let ans = try? await verifier.verify(fieldLabel: label, candidates: cands, images: imgs,
                                                                ocrHint: Array(hints.prefix(6))) else { continue }
                     usage = usage + ans.usage
                     verified.append(ref.description)
-                    let key: (String) -> String = { ref.kind == .phone ? TextNorm.digits($0) : TextNorm.alnum(TextNorm.toSimplified($0)) }
+                    // Exact comparison: variant characters (恆/恒, 着/著) are different values on a contact card.
+                    let key: (String) -> String = { ref.kind == .phone ? TextNorm.digits(PhoneNormalizer.splitExtension($0).0) : TextNorm.alnum($0) }
                     if case .address = ref {
                         // Addresses: agreement = same numbers and mostly the same words.
                         guard let v = ans.value else { continue }
@@ -341,6 +343,24 @@ public actor BatchProcessor {
             }
         }
         return Prepared(personID: p.id, draft: draft, outcome: policy.evaluate(draft), verified: verified, usage: usage)
+    }
+
+    /// Tells the second reader WHICH value is meant when a card prints several of the same kind.
+    nonisolated static func verifyContext(_ ref: FieldRef, draft: ContactDraft) -> String {
+        switch ref {
+        case .phone(let k):
+            guard let p = draft.phones.first(where: { $0.e164 == k }) else { return "" }
+            var s = " — the \(p.kind.rawValue) number"
+            if let ext = p.extensionNumber { s += " (extension \(ext) printed with it)" }
+            return s + "; the first reader saw it printed as “\(p.printed)”"
+        case .address(let k):
+            guard let a = draft.addresses.first(where: { $0.matchKey == k }) else { return "" }
+            return " — the address the first reader read as “\(a.formatted ?? a.street ?? "")” (if several addresses are printed, read this same one)"
+        case .email(let k):
+            return " — the email address read as “\(k)”"
+        default:
+            return ""
+        }
     }
 
     func finalize(_ s0: BatchState) async -> BatchState {

@@ -6,7 +6,7 @@ public struct DraftMerger: Sendable {
     public var model: ConfidenceModel
     public init(model: ConfidenceModel = ConfidenceModel()) { self.model = model }
 
-    func mergeValue(_ values: [DraftValue?], key: (String) -> String = { TextNorm.alnum(TextNorm.toSimplified($0)) }) -> DraftValue? {
+    func mergeValue(_ values: [DraftValue?], key: (String) -> String = { TextNorm.alnum($0) }) -> DraftValue? {
         let present = values.compactMap { $0 }
         guard var best = present.max(by: { $0.confidence < $1.confidence }) else { return nil }
         guard present.count > 1 else { return best }
@@ -41,8 +41,8 @@ public struct DraftMerger: Sendable {
         m.cjkName = mergeValue(drafts.map(\.cjkName))
         m.namePrefix = mergeValue(drafts.map(\.namePrefix))
         m.nameSuffix = mergeValue(drafts.map(\.nameSuffix))
-        m.company = mergeValue(drafts.map(\.company), key: CompanyUtil.key)
-        m.companyCJK = mergeValue(drafts.map(\.companyCJK), key: CompanyUtil.key)
+        m.company = mergeValue(drafts.map(\.company))
+        m.companyCJK = mergeValue(drafts.map(\.companyCJK))
         m.jobTitle = mergeValue(drafts.map(\.jobTitle))
         m.jobTitleCJK = mergeValue(drafts.map(\.jobTitleCJK))
         m.department = mergeValue(drafts.map(\.department))

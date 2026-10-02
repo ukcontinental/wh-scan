@@ -1,0 +1,183 @@
+[
+ {
+  "candidates": [
+   "黃以恆",
+   "黃以恒"
+  ],
+  "photoIds": [
+   "img_0038",
+   "img_0045"
+  ],
+  "fieldLabel": "中文姓名",
+  "ocrHint": [],
+  "key": "d8712b748fdd60b4"
+ },
+ {
+  "candidates": [
+   "台灣 220 新北市板橋區文化路一段188號"
+  ],
+  "photoIds": [
+   "img_0025",
+   "img_0053"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “台灣 220 新北市板橋區文化路一段188號” (if several addresses are printed, read this same one)",
+  "ocrHint": [
+   "台湾 220 新北市板橋區文 b 路一段 188 號"
+  ],
+  "key": "fe20cbd1301d6d19"
+ },
+ {
+  "fieldLabel": "電話 Phone — the work number; the first reader saw it printed as “905-555-0193”",
+  "candidates": [
+   "905-555-0193",
+   "905-555-0198"
+  ],
+  "key": "4a5bdb384b75fec2",
+  "photoIds": [
+   "img_0015"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "部門 Department",
+  "candidates": [
+   "Customer Service",
+   "客服部"
+  ],
+  "key": "6c83a4d26150ac11",
+  "photoIds": [
+   "img_0005",
+   "img_0029"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3, Canada” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3, Canada"
+  ],
+  "key": "18cc17ca859b2420",
+  "photoIds": [
+   "img_0013"
+  ],
+  "ocrHint": []
+ },
+ {
+  "photoIds": [
+   "img_0026"
+  ],
+  "key": "f2e9aac12563c7b9",
+  "candidates": [
+   "資深設計師"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "職稱（中文）"
+ },
+ {
+  "photoIds": [
+   "img_0026"
+  ],
+  "key": "959191f90b1584f6",
+  "candidates": [
+   "https://www.dawnlight.design"
+  ],
+  "ocrHint": [
+   "BH Email: kevin@dawnlight design",
+   "BH Email: orders@dawnlight. design",
+   "hittps://www.dawnlight.design",
+   "@dawnlight.design"
+  ],
+  "fieldLabel": "網站 Website"
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “辽宁省大连市中山区港兴路7号 邮编:116001” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "辽宁省大连市中山区港兴路7号 邮编:116001"
+  ],
+  "key": "1282292e9b2a9964",
+  "photoIds": [
+   "img_0037"
+  ],
+  "ocrHint": [
+   "116001"
+  ]
+ },
+ {
+  "fieldLabel": "Email — the email address read as “stephanie@harbourtrustcpa.com”",
+  "candidates": [
+   "stephanie@harbourtrustcpa.com",
+   "stephanie@harbourtrustcpa.com.hk"
+  ],
+  "key": "649400951c82a4b3",
+  "photoIds": [
+   "img_0046"
+  ],
+  "ocrHint": [
+   "E-mail : stephanie@harbourtrustcpa.com",
+   "harbourtrustcpa.com.hk"
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “中環德輔道中88號景豐大廈22樓2208室” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "中環德輔道中88號景豐大廈22樓2208室"
+  ],
+  "key": "a8d566c426482fe2",
+  "photoIds": [
+   "img_0046"
+  ],
+  "ocrHint": [
+   "竅 22 樓 2208 室"
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “1450 Broadway, 18th Floor, New York, NY 10018, USA” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "1450 Broadway, 18th Floor, New York, NY 10018, USA"
+  ],
+  "key": "c3baa2c5b98f17ed",
+  "photoIds": [
+   "img_0041"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "網站 Website",
+  "candidates": [
+   "www.qinghetea.com"
+  ],
+  "key": "476740b1668cd5bf",
+  "photoIds": [
+   "img_0056"
+  ],
+  "ocrHint": [
+   "kai.zheng@qinghetea.com",
+   "ed inghetea.com"
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “中国浙江省杭州市西湖区龙井路16号” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "中国浙江省杭州市西湖区龙井路16号"
+  ],
+  "key": "eca89af4766e25c9",
+  "photoIds": [
+   "img_0056"
+  ],
+  "ocrHint": [
+   "TEL: (0571) 6677-5347 轉 4168"
+  ]
+ },
+ {
+  "candidates": [
+   "資深設計師"
+  ],
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ],
+  "fieldLabel": "職稱（中文）",
+  "ocrHint": [],
+  "key": "ec88b4a16df332c9"
+ }
+]

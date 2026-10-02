@@ -9,6 +9,17 @@ public struct PolicyConfig: Codable, Sendable {
     public var dropBelow = 0.30
     public init() {}
 
+    /// Fields whose reading the model doubted (alternatives listed) need an independent confirmation.
+    public var alternativesNeedConfirmation = true
+
+    /// True when this value may be written without review.
+    public func accepts(_ ref: FieldRef, confidence: Double, alternatives: [String], in draft: ContactDraft) -> Bool {
+        guard confidence >= threshold(for: ref) else { return false }
+        if alternativesNeedConfirmation && !CardScorer.realAlternatives(alternatives, to: draft.current(ref)?.value ?? "").isEmpty
+            && !draft.isSettled(ref) { return false }
+        return true
+    }
+
     func threshold(for ref: FieldRef) -> Double {
         switch ref.kind {
         case .personName, .phone, .email: return autoAcceptCritical
@@ -86,7 +97,7 @@ public struct ReviewPolicy: Sendable {
         var held: [String] = [], dropped: [String] = [], review: [ReviewItem] = []
         var heldName = false
         for (ref, value, conf, alts) in draft.allFields() {
-            if conf >= config.threshold(for: ref) { continue }
+            if config.accepts(ref, confidence: conf, alternatives: alts, in: draft) { continue }
             writable.remove(ref)
             if conf < config.dropBelow && alts.isEmpty {
                 dropped.append("\(ref)=\(value)@\(String(format: "%.2f", conf))")

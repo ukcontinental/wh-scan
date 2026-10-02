@@ -1,0 +1,186 @@
+[
+ {
+  "candidates": [
+   "Suite 1203, No. 93 Jianguo Road, Chaoyang District Beijing 100022, China"
+  ],
+  "photoIds": [
+   "img_0003",
+   "img_0012"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “Suite 1203, No. 93 Jianguo Road, Chaoyang District Beijing 100022, China” (if several addresses are printed, read this same one)",
+  "ocrHint": [
+   "中國京市朝陽區建國路 93 呈 1203 室 (100022)"
+  ],
+  "key": "8641660d3a342154"
+ },
+ {
+  "candidates": [
+   "花崗峰資本"
+  ],
+  "photoIds": [
+   "img_0038",
+   "img_0045"
+  ],
+  "fieldLabel": "公司（中文）",
+  "ocrHint": [
+   "峰資本"
+  ],
+  "key": "b4f41538a0b15c8f"
+ },
+ {
+  "fieldLabel": "Email — the email address read as “jessica.wilson@lakeshoretrading.ca”",
+  "candidates": [
+   "jessica.wilson@lakeshoretrading.ca"
+  ],
+  "key": "f35d3e3daf61c99b",
+  "photoIds": [
+   "img_0015"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "網站 Website",
+  "candidates": [
+   "www.brightwaterseafood.ca"
+  ],
+  "key": "92ebe5b6f1455be1",
+  "photoIds": [
+   "img_0013"
+  ],
+  "ocrHint": [
+   "aisha@brightwaterseafood.ca",
+   "aterseafood.ca",
+   "BRIGHTWATER SEAFOOD INC."
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “上海市浦东新区张江路88号3号楼501室(200120)” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "上海市浦东新区张江路88号3号楼501室(200120)"
+  ],
+  "key": "f9995bf2ad110952",
+  "photoIds": [
+   "img_0005",
+   "img_0029"
+  ],
+  "ocrHint": [
+   "Shanghai 200120",
+   "江路 88 号 3 号楼 501 室 (200120)"
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central Central, Hong Kong” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central Central, Hong Kong"
+  ],
+  "key": "8eb186d12ce323ff",
+  "photoIds": [
+   "img_0014",
+   "img_0057"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “中環德輔道中88號景豐大廈22樓2208室” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "中環德輔道中88號景豐大廈22樓2208室"
+  ],
+  "key": "b3fe656b344a1f35",
+  "photoIds": [
+   "img_0034"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "電話 Phone — the work number (extension 4789 printed with it); the first reader saw it printed as “212.555.0125”",
+  "candidates": [
+   "212.555.0125 ext. 4789"
+  ],
+  "key": "c00c987ae53ba3ec",
+  "photoIds": [
+   "img_0041"
+  ],
+  "ocrHint": [
+   "25 Ext4789"
+  ]
+ },
+ {
+  "fieldLabel": "電話 Phone — the fax number; the first reader saw it printed as “+886 2 2281 6339”",
+  "candidates": [
+   "+886 2 2281 6339"
+  ],
+  "key": "56a84fc4ca3ad30f",
+  "photoIds": [
+   "img_0043",
+   "img_0047"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “台灣 407 台中市西屯區台灣大道三段99號8樓” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "台灣 407 台中市西屯區台灣大道三段99號8樓"
+  ],
+  "key": "2292d6a5ffc70296",
+  "photoIds": [
+   "img_0043",
+   "img_0047"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "公司（中文）",
+  "candidates": [
+   "恒昌國際貿易有限公司",
+   "恆昌國際貿易有限公司"
+  ],
+  "key": "d75aa0de4590b737",
+  "photoIds": [
+   "img_0050"
+  ],
+  "ocrHint": [
+   "際貿易有限公司"
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “台灣 407 台中市西屯區台灣大道三段99號8樓” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "台灣 407 台中市西屯區台灣大道三段99號8樓"
+  ],
+  "key": "6ecc4f01d8fb1a0d",
+  "photoIds": [
+   "img_0054"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "網站 Website",
+  "candidates": [
+   "www.ruiguang-logistics.com.tw"
+  ],
+  "key": "45986f7ebf93d64a",
+  "photoIds": [
+   "img_0061"
+  ],
+  "ocrHint": [
+   "Ruiguang cold Chain Logistics Co, Le",
+   "jason,chen@ruiguang-logistics.com.tw",
+   "weww.ruiguang-logistics.com.tw"
+  ]
+ },
+ {
+  "fieldLabel": "Email — the email address read as “kevin.zhang@harbourviewfoods.ca”",
+  "candidates": [
+   "kevin.zhang@harbourviewfoods.ca"
+  ],
+  "key": "496a232d4644f763",
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ],
+  "ocrHint": [
+   "E kevin.zhang@harbourviewtoods.ca",
+   "Jiwwwharbourviewioods ca"
+  ]
+ }
+]

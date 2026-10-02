@@ -22,6 +22,8 @@ jobs:
   app-build:
     name: Build iOS app + share extension
     runs-on: macos-15
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Select newest Xcode
@@ -51,6 +53,7 @@ jobs:
           xcrun simctl boot "$UDID" || true
           xcrun simctl bootstatus "$UDID" -b
           xcrun simctl install "$UDID" "$APP"
+          xcrun simctl status_bar "$UDID" override --time 9:41 --batteryState charged --batteryLevel 100 || true
           mkdir -p shots
           for s in home completion review; do
             xcrun simctl launch --terminate-running-process "$UDID" com.example.cardimport -demo $s
@@ -62,6 +65,18 @@ jobs:
         with:
           name: screenshots
           path: CardImport/App/shots
+      - name: Commit screenshots to the branch (for review without artifact access)
+        if: github.event_name == 'push'
+        run: |
+          mkdir -p CardImport/docs/screenshots
+          for f in CardImport/App/shots/*.png; do sips -Z 1000 "$f" --out "CardImport/docs/screenshots/$(basename "$f")" >/dev/null; done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CardImport/docs/screenshots
+          if ! git diff --cached --quiet; then
+            git commit -m "Update app screenshots from CI [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
       - name: Show errors
         if: failure()
         working-directory: CardImport/App

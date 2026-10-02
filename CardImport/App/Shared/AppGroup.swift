@@ -55,7 +55,7 @@ enum AppSettings {
         set { d.set(newValue, forKey: "extractionModel") }
     }
     static var verifierModel: String {
-        get { d.string(forKey: "verifierModel") ?? "claude-fable-5-1" }
+        get { d.string(forKey: "verifierModel") ?? "claude-opus-5-5" }
         set { d.set(newValue, forKey: "verifierModel") }
     }
     static var nameStyle: NameStyle {

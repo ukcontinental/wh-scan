@@ -1,0 +1,184 @@
+[
+ {
+  "candidates": [
+   "3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3"
+  ],
+  "photoIds": [
+   "img_0019",
+   "img_0039"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3” (if several addresses are printed, read this same one)",
+  "ocrHint": [],
+  "key": "a834c38a1057d79c"
+ },
+ {
+  "fieldLabel": "電話 Phone — the mobile number; the first reader saw it printed as “+1 905 555 0175”",
+  "candidates": [
+   "+1 905 555 0175",
+   "+1 905 555 0176"
+  ],
+  "key": "e8399aecd32939c3",
+  "photoIds": [
+   "img_0015"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “香港中環德輔道中88號景豐大廈22樓2208室” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "香港中環德輔道中88號景豐大廈22樓2208室"
+  ],
+  "key": "a627189598ddb097",
+  "photoIds": [
+   "img_0014",
+   "img_0057"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "電話 Phone — the work number; the first reader saw it printed as “021-8944 1205”",
+  "candidates": [
+   "021-8944 1205"
+  ],
+  "key": "364ddca759b1d32f",
+  "photoIds": [
+   "img_0017"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "部門 Department",
+  "candidates": [
+   "Operations"
+  ],
+  "key": "12aa35db306a818b",
+  "photoIds": [
+   "img_0027"
+  ],
+  "ocrHint": [
+   "ation:"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0033",
+   "img_0063"
+  ],
+  "key": "c3a3045411363fbc",
+  "candidates": [
+   "kevin.zhang@harbourviewfoods.ca"
+  ],
+  "ocrHint": [
+   "E kevin.zhang@harbourviewtoods.ca",
+   "Jiwwwharbourviewioods ca",
+   "https://www. harbourviewfoods.ca"
+  ],
+  "fieldLabel": "Email — the email address read as “kevin.zhang@harbourviewfoods.ca”"
+ },
+ {
+  "fieldLabel": "網站 Website",
+  "candidates": [
+   "www.haichuan-tech.cn"
+  ],
+  "key": "f3a2dcabe94c8c37",
+  "photoIds": [
+   "img_0036"
+  ],
+  "ocrHint": [
+   "邮箱 Email: leon_liu@haichuan-tech.cn",
+   "ichuan-tech.cn"
+  ]
+ },
+ {
+  "fieldLabel": "電話 Phone — the main number; the first reader saw it printed as “+886 2 2962 9293”",
+  "candidates": [
+   "+886 2 2962 9293"
+  ],
+  "key": "1d1cab948111e627",
+  "photoIds": [
+   "img_0043",
+   "img_0047"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "電話 Phone — the fax number; the first reader saw it printed as “+1 212 555 0102”",
+  "candidates": [
+   "+1 212 555 0102"
+  ],
+  "key": "d3fc16343a4e9034",
+  "photoIds": [
+   "img_0041"
+  ],
+  "ocrHint": [
+   "Celi: 212-555-0108",
+   "T 212.555,",
+   "F #1 212 555 010"
+  ]
+ },
+ {
+  "fieldLabel": "電話 Phone — the work number (extension 3462 printed with it); the first reader saw it printed as “+852 3351 2789”",
+  "candidates": [
+   "+852 3351 2789 ext. 3462"
+  ],
+  "key": "c418f03ff52e046",
+  "photoIds": [
+   "img_0049"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “九龍觀塘鴻圖道12號永發工業大廈9樓B室” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "九龍觀塘鴻圖道12號永發工業大廈9樓B室"
+  ],
+  "key": "d889511da6e34cfc",
+  "photoIds": [
+   "img_0051"
+  ],
+  "ocrHint": [
+   "12 號永發工業大廈 9 樓"
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “北京市朝阳区建国路93号1203室(100022)” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "北京市朝阳区建国路93号1203室(100022)"
+  ],
+  "key": "e39a4e032c1b3277",
+  "photoIds": [
+   "img_0058"
+  ],
+  "ocrHint": [
+   "北京市朝 oe (100022)"
+  ]
+ },
+ {
+  "fieldLabel": "地址 Address — the address the first reader read as “Unit 1503, 15/F, Harbour Crest Centre, 30 Canton Road, Tsim Sha Tsui Kowloon” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "Unit 1503, 15/F, Harbour Crest Centre, 30 Canton Road, Tsim Sha Tsui Kowloon"
+  ],
+  "key": "1ec2be80111ed09a",
+  "photoIds": [
+   "img_0062"
+  ],
+  "ocrHint": []
+ },
+ {
+  "fieldLabel": "網站 Website",
+  "candidates": [
+   "https://www.dawnlight.design"
+  ],
+  "key": "888c4548e2c6d846",
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ],
+  "ocrHint": [
+   "BH Email: kevin@dawnlight design",
+   "BH Email: orders@dawnlight. design",
+   "hittps://www.dawnlight.design",
+   "@dawnlight.design"
+  ]
+ }
+]
