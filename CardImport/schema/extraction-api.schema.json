@@ -1,0 +1,676 @@
+{
+  "additionalProperties" : false,
+  "properties" : {
+    "addresses" : {
+      "items" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "city" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          },
+          "confidence" : {
+            "type" : "number"
+          },
+          "country" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          },
+          "formatted" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          },
+          "postal_code" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          },
+          "region" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          },
+          "street" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          }
+        },
+        "required" : [
+          "city",
+          "confidence",
+          "country",
+          "formatted",
+          "postal_code",
+          "region",
+          "street"
+        ],
+        "type" : "object"
+      },
+      "type" : "array"
+    },
+    "card_side" : {
+      "enum" : [
+        "front",
+        "back",
+        "unknown"
+      ],
+      "type" : "string"
+    },
+    "company" : {
+      "anyOf" : [
+        {
+          "additionalProperties" : false,
+          "properties" : {
+            "alternatives" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "confidence" : {
+              "type" : "number"
+            },
+            "source_text" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          },
+          "required" : [
+            "alternatives",
+            "confidence",
+            "source_text",
+            "value"
+          ],
+          "type" : "object"
+        },
+        {
+          "type" : "null"
+        }
+      ]
+    },
+    "company_cjk" : {
+      "anyOf" : [
+        {
+          "additionalProperties" : false,
+          "properties" : {
+            "alternatives" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "confidence" : {
+              "type" : "number"
+            },
+            "source_text" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          },
+          "required" : [
+            "alternatives",
+            "confidence",
+            "source_text",
+            "value"
+          ],
+          "type" : "object"
+        },
+        {
+          "type" : "null"
+        }
+      ]
+    },
+    "department" : {
+      "anyOf" : [
+        {
+          "additionalProperties" : false,
+          "properties" : {
+            "alternatives" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "confidence" : {
+              "type" : "number"
+            },
+            "source_text" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          },
+          "required" : [
+            "alternatives",
+            "confidence",
+            "source_text",
+            "value"
+          ],
+          "type" : "object"
+        },
+        {
+          "type" : "null"
+        }
+      ]
+    },
+    "emails" : {
+      "items" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "address" : {
+            "type" : "string"
+          },
+          "alternatives" : {
+            "items" : {
+              "type" : "string"
+            },
+            "type" : "array"
+          },
+          "confidence" : {
+            "type" : "number"
+          },
+          "source_text" : {
+            "type" : "string"
+          }
+        },
+        "required" : [
+          "address",
+          "alternatives",
+          "confidence",
+          "source_text"
+        ],
+        "type" : "object"
+      },
+      "type" : "array"
+    },
+    "evidence" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "concerns" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "has_person_photo" : {
+          "type" : "boolean"
+        },
+        "has_qr_code" : {
+          "type" : "boolean"
+        },
+        "ignored_text" : {
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "overall_confidence" : {
+          "type" : "number"
+        }
+      },
+      "required" : [
+        "concerns",
+        "has_person_photo",
+        "has_qr_code",
+        "ignored_text",
+        "overall_confidence"
+      ],
+      "type" : "object"
+    },
+    "is_business_card" : {
+      "type" : "boolean"
+    },
+    "job_title" : {
+      "anyOf" : [
+        {
+          "additionalProperties" : false,
+          "properties" : {
+            "alternatives" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "confidence" : {
+              "type" : "number"
+            },
+            "source_text" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          },
+          "required" : [
+            "alternatives",
+            "confidence",
+            "source_text",
+            "value"
+          ],
+          "type" : "object"
+        },
+        {
+          "type" : "null"
+        }
+      ]
+    },
+    "job_title_cjk" : {
+      "anyOf" : [
+        {
+          "additionalProperties" : false,
+          "properties" : {
+            "alternatives" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "confidence" : {
+              "type" : "number"
+            },
+            "source_text" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          },
+          "required" : [
+            "alternatives",
+            "confidence",
+            "source_text",
+            "value"
+          ],
+          "type" : "object"
+        },
+        {
+          "type" : "null"
+        }
+      ]
+    },
+    "language_hint" : {
+      "items" : {
+        "enum" : [
+          "en",
+          "zh-Hant",
+          "zh-Hans",
+          "ja",
+          "ko",
+          "other"
+        ],
+        "type" : "string"
+      },
+      "type" : "array"
+    },
+    "name" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "cjk_full" : {
+          "anyOf" : [
+            {
+              "additionalProperties" : false,
+              "properties" : {
+                "alternatives" : {
+                  "items" : {
+                    "type" : "string"
+                  },
+                  "type" : "array"
+                },
+                "confidence" : {
+                  "type" : "number"
+                },
+                "source_text" : {
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              },
+              "required" : [
+                "alternatives",
+                "confidence",
+                "source_text",
+                "value"
+              ],
+              "type" : "object"
+            },
+            {
+              "type" : "null"
+            }
+          ]
+        },
+        "family" : {
+          "anyOf" : [
+            {
+              "additionalProperties" : false,
+              "properties" : {
+                "alternatives" : {
+                  "items" : {
+                    "type" : "string"
+                  },
+                  "type" : "array"
+                },
+                "confidence" : {
+                  "type" : "number"
+                },
+                "source_text" : {
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              },
+              "required" : [
+                "alternatives",
+                "confidence",
+                "source_text",
+                "value"
+              ],
+              "type" : "object"
+            },
+            {
+              "type" : "null"
+            }
+          ]
+        },
+        "given" : {
+          "anyOf" : [
+            {
+              "additionalProperties" : false,
+              "properties" : {
+                "alternatives" : {
+                  "items" : {
+                    "type" : "string"
+                  },
+                  "type" : "array"
+                },
+                "confidence" : {
+                  "type" : "number"
+                },
+                "source_text" : {
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              },
+              "required" : [
+                "alternatives",
+                "confidence",
+                "source_text",
+                "value"
+              ],
+              "type" : "object"
+            },
+            {
+              "type" : "null"
+            }
+          ]
+        },
+        "prefix" : {
+          "anyOf" : [
+            {
+              "additionalProperties" : false,
+              "properties" : {
+                "alternatives" : {
+                  "items" : {
+                    "type" : "string"
+                  },
+                  "type" : "array"
+                },
+                "confidence" : {
+                  "type" : "number"
+                },
+                "source_text" : {
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              },
+              "required" : [
+                "alternatives",
+                "confidence",
+                "source_text",
+                "value"
+              ],
+              "type" : "object"
+            },
+            {
+              "type" : "null"
+            }
+          ]
+        },
+        "suffix" : {
+          "anyOf" : [
+            {
+              "additionalProperties" : false,
+              "properties" : {
+                "alternatives" : {
+                  "items" : {
+                    "type" : "string"
+                  },
+                  "type" : "array"
+                },
+                "confidence" : {
+                  "type" : "number"
+                },
+                "source_text" : {
+                  "type" : "string"
+                },
+                "value" : {
+                  "type" : "string"
+                }
+              },
+              "required" : [
+                "alternatives",
+                "confidence",
+                "source_text",
+                "value"
+              ],
+              "type" : "object"
+            },
+            {
+              "type" : "null"
+            }
+          ]
+        }
+      },
+      "required" : [
+        "cjk_full",
+        "family",
+        "given",
+        "prefix",
+        "suffix"
+      ],
+      "type" : "object"
+    },
+    "notes_on_card" : {
+      "anyOf" : [
+        {
+          "type" : "string"
+        },
+        {
+          "type" : "null"
+        }
+      ]
+    },
+    "phones" : {
+      "items" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "alternatives" : {
+            "items" : {
+              "type" : "string"
+            },
+            "type" : "array"
+          },
+          "confidence" : {
+            "type" : "number"
+          },
+          "country_hint" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          },
+          "extension" : {
+            "anyOf" : [
+              {
+                "type" : "string"
+              },
+              {
+                "type" : "null"
+              }
+            ]
+          },
+          "kind" : {
+            "enum" : [
+              "mobile",
+              "work",
+              "fax",
+              "main",
+              "other"
+            ],
+            "type" : "string"
+          },
+          "number" : {
+            "type" : "string"
+          },
+          "source_text" : {
+            "type" : "string"
+          }
+        },
+        "required" : [
+          "alternatives",
+          "confidence",
+          "country_hint",
+          "extension",
+          "kind",
+          "number",
+          "source_text"
+        ],
+        "type" : "object"
+      },
+      "type" : "array"
+    },
+    "schema_version" : {
+      "type" : "integer"
+    },
+    "social" : {
+      "items" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "confidence" : {
+            "type" : "number"
+          },
+          "handle" : {
+            "type" : "string"
+          },
+          "service" : {
+            "enum" : [
+              "linkedin",
+              "wechat",
+              "line",
+              "whatsapp",
+              "instagram",
+              "facebook",
+              "x",
+              "other"
+            ],
+            "type" : "string"
+          }
+        },
+        "required" : [
+          "confidence",
+          "handle",
+          "service"
+        ],
+        "type" : "object"
+      },
+      "type" : "array"
+    },
+    "websites" : {
+      "items" : {
+        "additionalProperties" : false,
+        "properties" : {
+          "confidence" : {
+            "type" : "number"
+          },
+          "url" : {
+            "type" : "string"
+          }
+        },
+        "required" : [
+          "confidence",
+          "url"
+        ],
+        "type" : "object"
+      },
+      "type" : "array"
+    }
+  },
+  "required" : [
+    "addresses",
+    "card_side",
+    "company",
+    "company_cjk",
+    "department",
+    "emails",
+    "evidence",
+    "is_business_card",
+    "job_title",
+    "job_title_cjk",
+    "language_hint",
+    "name",
+    "notes_on_card",
+    "phones",
+    "schema_version",
+    "social",
+    "websites"
+  ],
+  "type" : "object"
+}

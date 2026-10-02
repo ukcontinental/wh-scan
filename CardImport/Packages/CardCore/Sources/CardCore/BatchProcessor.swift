@@ -11,6 +11,8 @@ public struct BatchConfig: Sendable {
     public var deleteImagesWhenDone = true
     /// Minimum resolver confidence to accept an LLM grouping decision.
     public var resolverAcceptConfidence = 0.85
+    /// Stop after grouping (e.g. a share extension without Contacts access); the app finishes the batch later.
+    public var stopBeforeWriting = false
     public init() {}
 }
 
@@ -80,6 +82,11 @@ public actor BatchProcessor {
             s = await groupPeople(s)
             s.phase = .finalizing
             await persist(s)
+        }
+        if s.phase == .finalizing && config.stopBeforeWriting {
+            s.processingSeconds += Date().timeIntervalSince(started)
+            await persist(s)
+            return s
         }
         if s.phase == .finalizing {
             s = await finalize(s)

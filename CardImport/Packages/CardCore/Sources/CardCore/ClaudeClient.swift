@@ -151,8 +151,10 @@ public final class ClaudeClient: @unchecked Sendable {
             } catch let e as LLMError {
                 lastError = e
                 guard e.isTransient else { throw e }
+            } catch let e as URLError {
+                lastError = .transient("network: \(e.code.rawValue)")
             } catch {
-                lastError = .transient(String(describing: error))
+                throw LLMError.badOutput(String(describing: error))
             }
             attempt += 1
             if attempt <= config.maxRetries {

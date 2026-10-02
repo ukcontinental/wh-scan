@@ -1,0 +1,90 @@
+# XcodeGen spec — generate the Xcode project on a Mac with:
+#   brew install xcodegen && cd CardImport/App && xcodegen
+# Then open CardImport.xcodeproj, pick your Team, and run on your iPhone.
+name: CardImport
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: ""                       # ← your Apple Developer Team ID
+    APP_GROUP_ID: group.com.example.cardimport  # ← change together with bundleIdPrefix
+packages:
+  CardCore:
+    path: ../Packages/CardCore
+targets:
+  CardImport:
+    type: application
+    platform: iOS
+    sources:
+      - CardImport
+      - Shared
+    dependencies:
+      - package: CardCore
+      - target: CardImportShare
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.cardimport
+        INFOPLIST_KEY_CFBundleDisplayName: 名片匯入
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_ENTITLEMENTS: CardImport/CardImport.entitlements
+    info:
+      path: CardImport/Info.plist
+      properties:
+        CFBundleDisplayName: 名片匯入
+        AppGroupID: $(APP_GROUP_ID)
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSContactsUsageDescription: 用來檢查重複聯絡人，並把名片資料寫入你的通訊錄。
+        NSMicrophoneUsageDescription: 錄製選用的語音備註（例如在哪裡認識這個人）。
+        NSSpeechRecognitionUsageDescription: 把語音備註轉成文字。
+        CFBundleURLTypes:
+          - CFBundleURLName: cardimport
+            CFBundleURLSchemes: [cardimport]
+    entitlements:
+      path: CardImport/CardImport.entitlements
+      properties:
+        com.apple.security.application-groups: [$(APP_GROUP_ID)]
+  CardImportShare:
+    type: app-extension
+    platform: iOS
+    sources:
+      - ShareExtension
+      - Shared
+    dependencies:
+      - package: CardCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.cardimport.share
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_ENTITLEMENTS: ShareExtension/CardImportShare.entitlements
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: APP_EXTENSION
+        APPLICATION_EXTENSION_API_ONLY: "YES"
+    info:
+      path: ShareExtension/Info.plist
+      properties:
+        CFBundleDisplayName: 名片匯入
+        AppGroupID: $(APP_GROUP_ID)
+        NSContactsUsageDescription: 用來檢查重複聯絡人，並把名片資料寫入你的通訊錄。
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.share-services
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).ShareViewController
+          NSExtensionAttributes:
+            NSExtensionActivationRule:
+              NSExtensionActivationSupportsImageWithMaxCount: 100
+    entitlements:
+      path: ShareExtension/CardImportShare.entitlements
+      properties:
+        com.apple.security.application-groups: [$(APP_GROUP_ID)]
+schemes:
+  CardImport:
+    build:
+      targets:
+        CardImport: all
+        CardImportShare: all

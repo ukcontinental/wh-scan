@@ -1,0 +1,48 @@
+name: CardImport iOS build
+
+on:
+  push:
+    paths:
+      - "CardImport/**"
+      - ".github/workflows/cardimport-ios.yml"
+  workflow_dispatch:
+
+jobs:
+  core-tests:
+    name: CardCore tests (macOS)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift version
+        run: swift --version
+      - name: Test CardCore
+        working-directory: CardImport/Packages/CardCore
+        run: swift test 2>&1 | tail -40
+
+  app-build:
+    name: Build iOS app + share extension
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select newest Xcode
+        run: |
+          ls /Applications | grep Xcode || true
+          XC=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$XC" ]; then sudo xcode-select -s "$XC"; fi
+          xcodebuild -version
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        working-directory: CardImport/App
+        run: xcodegen generate
+      - name: Build (simulator, unsigned)
+        working-directory: CardImport/App
+        run: |
+          set -o pipefail
+          xcodebuild -project CardImport.xcodeproj -scheme CardImport \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log | grep -E "error:|warning: .*deprecated|BUILD (SUCCEEDED|FAILED)" | head -200
+      - name: Show errors
+        if: failure()
+        working-directory: CardImport/App
+        run: grep -E "error:" -A3 build.log | head -300 || true
