@@ -1,0 +1,7 @@
+.build/
+.swiftpm/
+*.xcodeproj/
+DerivedData/
+benchmark/dataset/clean/
+benchmark/runs/*/tmp/
+__pycache__/

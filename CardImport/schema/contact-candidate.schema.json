@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wh-scan/cardimport/contact-candidate.schema.json",
+  "title": "ContactCandidate",
+  "description": "Structured result of recognising ONE business card (one person). Every value field is a FieldValue with a confidence in [0,1]. Absent data MUST be null, never guessed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "card_side", "language_hint", "name", "company", "job_title", "department", "phones", "emails", "websites", "addresses", "social", "notes_on_card", "evidence"],
+  "$defs": {
+    "fieldString": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["value", "confidence"],
+      "properties": {
+        "value": {"type": "string", "minLength": 1},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "alternatives": {"type": "array", "items": {"type": "string"}, "description": "Other plausible readings when confidence < 0.9 (e.g. OCR ambiguity 0/O, 1/l, 8/B)."},
+        "source_text": {"type": "string", "description": "Exact text as printed on the card that this value was derived from."}
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "card_side": {"type": "string", "enum": ["front", "back", "unknown"], "description": "front = contains the person's name; back = contact details / address / other language without a name; unknown = cannot tell."},
+    "language_hint": {"type": "array", "items": {"type": "string", "enum": ["en", "zh-Hant", "zh-Hans", "ja", "ko", "other"]}},
+    "name": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["given", "family", "cjk_full", "prefix", "suffix"],
+      "properties": {
+        "given": {"$ref": "#/$defs/fieldString", "description": "Latin-script given name(s), e.g. 'John'. For CJK-only cards use the romanised form only if it is printed; otherwise null."},
+        "family": {"$ref": "#/$defs/fieldString", "description": "Latin-script family name, e.g. 'Chen'."},
+        "cjk_full": {"$ref": "#/$defs/fieldString", "description": "Full CJK name exactly as printed, family name first, e.g. '王大明'. Null if no CJK name printed."},
+        "prefix": {"$ref": "#/$defs/fieldString", "description": "Dr., Mr., 博士 ... only if printed."},
+        "suffix": {"$ref": "#/$defs/fieldString", "description": "PhD, CPA, P.Eng, Jr. ... only if printed."}
+      }
+    },
+    "company": {"$ref": "#/$defs/fieldString", "description": "Legal / trading name of the organisation. Never the slogan, never a product name."},
+    "company_cjk": {"$ref": "#/$defs/fieldString", "description": "CJK form of the company name if printed separately."},
+    "job_title": {"$ref": "#/$defs/fieldString"},
+    "job_title_cjk": {"$ref": "#/$defs/fieldString"},
+    "department": {"$ref": "#/$defs/fieldString"},
+    "phones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "number", "confidence"],
+        "properties": {
+          "kind": {"type": "string", "enum": ["mobile", "work", "fax", "main", "other"]},
+          "number": {"type": "string", "description": "Number as printed, digits plus +, spaces, dashes, parentheses. Keep country code if printed."},
+          "extension": {"type": ["string", "null"]},
+          "country_hint": {"type": ["string", "null"], "description": "ISO 3166-1 alpha-2 inferred from the address or country code, e.g. 'CA', 'TW', 'CN', 'US'."},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "alternatives": {"type": "array", "items": {"type": "string"}},
+          "source_text": {"type": "string"}
+        }
+      }
+    },
+    "emails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["address", "confidence"],
+        "properties": {
+          "kind": {"type": "string", "enum": ["work", "personal", "other"]},
+          "address": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "alternatives": {"type": "array", "items": {"type": "string"}},
+          "source_text": {"type": "string"}
+        }
+      }
+    },
+    "websites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "confidence"],
+        "properties": {
+          "url": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "source_text": {"type": "string"}
+        }
+      }
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "street", "city", "region", "postal_code", "country", "confidence"],
+        "properties": {
+          "kind": {"type": "string", "enum": ["work", "other"]},
+          "street": {"type": ["string", "null"]},
+          "city": {"type": ["string", "null"]},
+          "region": {"type": ["string", "null"], "description": "Province / state / 縣市 as printed (e.g. 'Ontario', 'ON', '台北市')."},
+          "postal_code": {"type": ["string", "null"]},
+          "country": {"type": ["string", "null"], "description": "Printed country, or inferred ISO alpha-2 if region/postal code make it unambiguous (mark lower confidence)."},
+          "formatted": {"type": ["string", "null"], "description": "Full address text exactly as printed, lines joined with ', '."},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    },
+    "social": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["service", "handle", "confidence"],
+        "properties": {
+          "service": {"type": "string", "enum": ["linkedin", "wechat", "line", "whatsapp", "instagram", "facebook", "x", "other"]},
+          "handle": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    },
+    "notes_on_card": {"type": ["string", "null"], "description": "Hand-written notes on the card, if any. Never slogans or marketing text."},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ignored_text", "has_person_photo", "has_qr_code", "overall_confidence", "concerns"],
+      "properties": {
+        "ignored_text": {"type": "array", "items": {"type": "string"}, "description": "Text that was on the card but deliberately NOT mapped to any field (slogans, logos, certifications, decorative text)."},
+        "has_person_photo": {"type": "boolean"},
+        "has_qr_code": {"type": "boolean"},
+        "overall_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "concerns": {"type": "array", "items": {"type": "string"}, "description": "Short machine-readable concerns, e.g. 'name_vs_company_ambiguous', 'blurry_phone_digits', 'two_people_on_card'."}
+      }
+    }
+  }
+}
