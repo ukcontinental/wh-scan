@@ -4,110 +4,101 @@
   "extractor": "replay:runs/proxy/extractions",
   "ocr": "tesseract",
   "region": "CA",
-  "verify": "false"
+  "verify": "true"
  },
  "photos": 63,
  "gt_people": 45,
- "pipeline_people": 46,
+ "pipeline_people": 45,
  "pairing": {
   "two_sided_people": 18,
-  "correctly_grouped": 17,
-  "accuracy_%": 94.4,
+  "correctly_grouped": 18,
+  "accuracy_%": 100.0,
   "wrong_merges": 0,
   "decorative_backs_ignored": "3/3"
  },
  "contacts": {
   "auto_saved": 44,
-  "perfect_without_human_%": 24.4,
-  "human_intervention_rate_%": 75.6,
+  "perfect_without_human_%": 93.3,
+  "human_intervention_rate_%": 6.7,
   "wrong_auto_save_rate_%": 0.0,
   "people_with_missed_fields": 0,
   "distractor_leaks": 0,
-  "open_review_items": 58,
+  "open_review_items": 3,
   "review_items_by_kind": {
-   "grouping": 1,
-   "field": 55,
    "duplicate": 1,
+   "field": 1,
    "conflict": 1
   },
   "review_items_by_field": {
-   "grouping": 1,
-   "address": 27,
-   "cjk_name": 1,
-   "company_cjk": 3,
    "duplicate": 1,
-   "department": 2,
-   "phone": 10,
-   "website": 6,
-   "email": 5,
-   "job_title_cjk": 1,
+   "email": 1,
    "organization": 1
   }
  },
  "field_accuracy": {
   "name": {
-   "correct": 60,
+   "correct": 61,
    "wrong": 0,
-   "held_for_review": 2,
+   "held_for_review": 1,
    "missed": 0,
    "auto_accuracy_%": 100.0,
-   "coverage_%": 96.8
+   "coverage_%": 98.4
   },
   "company": {
-   "correct": 58,
+   "correct": 61,
    "wrong": 0,
-   "held_for_review": 4,
+   "held_for_review": 1,
    "missed": 0,
    "auto_accuracy_%": 100.0,
-   "coverage_%": 93.5
+   "coverage_%": 98.4
   },
   "job_title": {
-   "correct": 60,
+   "correct": 61,
    "wrong": 0,
-   "held_for_review": 2,
+   "held_for_review": 1,
    "missed": 0,
    "auto_accuracy_%": 100.0,
-   "coverage_%": 96.8
+   "coverage_%": 98.4
   },
   "department": {
-   "correct": 12,
+   "correct": 14,
+   "wrong": 0,
+   "held_for_review": 0,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 100.0
+  },
+  "phone": {
+   "correct": 85,
+   "wrong": 0,
+   "held_for_review": 1,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 98.8
+  },
+  "email": {
+   "correct": 55,
    "wrong": 0,
    "held_for_review": 2,
    "missed": 0,
    "auto_accuracy_%": 100.0,
-   "coverage_%": 85.7
-  },
-  "phone": {
-   "correct": 75,
-   "wrong": 0,
-   "held_for_review": 11,
-   "missed": 0,
-   "auto_accuracy_%": 100.0,
-   "coverage_%": 87.2
-  },
-  "email": {
-   "correct": 51,
-   "wrong": 0,
-   "held_for_review": 6,
-   "missed": 0,
-   "auto_accuracy_%": 100.0,
-   "coverage_%": 89.5
+   "coverage_%": 96.5
   },
   "website": {
-   "correct": 38,
+   "correct": 44,
    "wrong": 0,
-   "held_for_review": 7,
+   "held_for_review": 1,
    "missed": 0,
    "auto_accuracy_%": 100.0,
-   "coverage_%": 84.4
+   "coverage_%": 97.8
   },
   "address": {
-   "correct": 33,
+   "correct": 54,
    "wrong": 0,
-   "held_for_review": 22,
+   "held_for_review": 1,
    "missed": 0,
    "auto_accuracy_%": 100.0,
-   "coverage_%": 60.0
+   "coverage_%": 98.2
   }
  },
  "duplicates": [
@@ -192,8 +183,8 @@
  ],
  "dedup_ok": "6/6",
  "failed_photos": 0,
- "avg_seconds_per_photo": 0.01,
- "wall_seconds": 6.1,
+ "avg_seconds_per_photo": 0.0,
+ "wall_seconds": 4.0,
  "cost_usd": 0,
  "rows": [
   {
@@ -201,13 +192,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -245,15 +236,10 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:1101005"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p002",
@@ -310,13 +296,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -346,15 +332,10 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:unit150315fharbour"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p004",
@@ -412,13 +393,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 2,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -456,23 +437,14 @@
     ],
     [
      "website",
-     "held"
+     "correct"
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "website:www.ruiguang-logistics.com.tw"
-    ],
-    [
-     "field",
-     "address:114358"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p006",
@@ -603,13 +575,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -639,28 +611,23 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:100022931203"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p009",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
    "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -709,25 +676,20 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:l3r0m3360171"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p010",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -773,32 +735,23 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:德輔道中88號景豐大廈22樓2208"
-    ],
-    [
-     "field",
-     "address:room220822fkingsfi"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p011",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -820,7 +773,7 @@
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "email",
@@ -835,25 +788,20 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "phone:+862189441205"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p012",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
    "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -910,25 +858,20 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:220188"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p013",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -946,7 +889,7 @@
     ],
     [
      "department",
-     "held"
+     "correct"
     ],
     [
      "phone",
@@ -965,25 +908,20 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "department"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p014",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 6,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1001,19 +939,19 @@
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "email",
-     "held"
+     "correct"
     ],
     [
      "email",
-     "held"
+     "correct"
     ],
     [
      "website",
@@ -1021,52 +959,27 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "phone:+19055550175"
-    ],
-    [
-     "field",
-     "phone:+19055550193"
-    ],
-    [
-     "field",
-     "email:jessica.wilson@lakeshoretrading.ca"
-    ],
-    [
-     "field",
-     "email:service@lakeshoretrading.ca"
-    ],
-    [
-     "field",
-     "address:l3r0m3360171"
-    ],
-    [
-     "field",
-     "address:l5n2l367507"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p015",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1096,7 +1009,7 @@
     ],
     [
      "department",
-     "held"
+     "correct"
     ],
     [
      "phone",
@@ -1131,101 +1044,82 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "department"
-    ],
-    [
-     "field",
-     "address:200120883501"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p016",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
-   "auto_saved": true,
-   "wrong": 0,
-   "missed": 0,
-   "held": 2,
-   "wrong_merge": false,
-   "perfect_auto": false,
-   "wrong_auto_save": false,
-   "leaks": [],
-   "outcomes": [
-    [
-     "name",
-     "correct"
-    ],
-    [
-     "name",
-     "held"
-    ],
-    [
-     "company",
-     "correct"
-    ],
-    [
-     "company",
-     "held"
-    ],
-    [
-     "job_title",
-     "correct"
-    ],
-    [
-     "job_title",
-     "correct"
-    ],
-    [
-     "phone",
-     "correct"
-    ],
-    [
-     "phone",
-     "correct"
-    ],
-    [
-     "email",
-     "correct"
-    ],
-    [
-     "website",
-     "correct"
-    ],
-    [
-     "address",
-     "correct"
-    ]
-   ],
-   "reviews": [
-    [
-     "field",
-     "cjk_name"
-    ],
-    [
-     "field",
-     "company_cjk"
-    ]
-   ]
-  },
-  {
-   "person": "p017",
-   "statuses": [
-    "created",
-    "needsReview"
-   ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
    "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p017",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1266,25 +1160,20 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "grouping",
-     null
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p018",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1330,28 +1219,23 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:407998"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p019",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1369,7 +1253,7 @@
     ],
     [
      "company",
-     "held"
+     "correct"
     ],
     [
      "job_title",
@@ -1400,12 +1284,7 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "company_cjk"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p020",
@@ -1478,13 +1357,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1526,19 +1405,14 @@
     ],
     [
      "website",
-     "held"
+     "correct"
     ],
     [
      "address",
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "website:www.haichuan-tech.cn"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p022",
@@ -1599,7 +1473,7 @@
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 2,
+   "held": 1,
    "wrong_merge": false,
    "perfect_auto": false,
    "wrong_auto_save": false,
@@ -1639,17 +1513,13 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
    "reviews": [
     [
      "field",
-     "email:stephanie@harbourtrustcpa.com"
-    ],
-    [
-     "field",
-     "address:德輔道中88號景豐大廈22樓2208"
+     "email:stephanie@harbourtrustcpa.com.hk"
     ]
    ]
   },
@@ -1709,13 +1579,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1757,28 +1627,23 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:鴻圖道12號永發工業大廈9樓b室"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p026",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 3,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1800,11 +1665,11 @@
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "email",
-     "held"
+     "correct"
     ],
     [
      "website",
@@ -1812,36 +1677,23 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "phone:+85233512789"
-    ],
-    [
-     "field",
-     "email:raymondw@wuitaifoods.com.hk"
-    ],
-    [
-     "field",
-     "address:flatb9fwingfatindu"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p027",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -1895,15 +1747,10 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:德輔道中88號景豐大廈22樓2208"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p028",
@@ -2064,13 +1911,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 2,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2104,36 +1951,27 @@
     ],
     [
      "website",
-     "held"
+     "correct"
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "website:www.qinghetea.com"
-    ],
-    [
-     "field",
-     "address:31001316"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p032",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 3,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2155,7 +1993,7 @@
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "phone",
@@ -2167,40 +2005,27 @@
     ],
     [
      "website",
-     "held"
+     "correct"
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "phone:+16045550117"
-    ],
-    [
-     "field",
-     "website:www.brightwaterseafood.ca"
-    ],
-    [
-     "field",
-     "address:v6e3p3105521"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p033",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 2,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2226,7 +2051,7 @@
     ],
     [
      "job_title",
-     "held"
+     "correct"
     ],
     [
      "department",
@@ -2246,36 +2071,27 @@
     ],
     [
      "website",
-     "held"
+     "correct"
     ],
     [
      "address",
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "job_title_cjk"
-    ],
-    [
-     "field",
-     "website:https://www.dawnlight.design"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p034",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 2,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2305,36 +2121,27 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:1160017"
-    ],
-    [
-     "field",
-     "address:200120883501"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p035",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 4,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2352,15 +2159,15 @@
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "email",
@@ -2380,27 +2187,10 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "phone:+886900773729"
-    ],
-    [
-     "field",
-     "phone:+886229629293"
-    ],
-    [
-     "field",
-     "phone:+886222816339"
-    ],
-    [
-     "field",
-     "address:407998"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p036",
@@ -2473,13 +2263,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2521,32 +2311,23 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:100022931203"
-    ],
-    [
-     "field",
-     "address:100022120393"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p038",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 4,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2572,11 +2353,11 @@
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "phone",
-     "held"
+     "correct"
     ],
     [
      "email",
@@ -2588,44 +2369,27 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "phone:+12125550125"
-    ],
-    [
-     "field",
-     "phone:+12125550102"
-    ],
-    [
-     "field",
-     "address:10018145018"
-    ],
-    [
-     "field",
-     "address:10002883"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p039",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2655,28 +2419,23 @@
     ],
     [
      "address",
-     "held"
+     "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:220188"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p040",
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2702,7 +2461,7 @@
     ],
     [
      "website",
-     "held"
+     "correct"
     ],
     [
      "address",
@@ -2713,12 +2472,7 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "website:www.fuyuanseafood.com.tw"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p041",
@@ -2783,13 +2537,13 @@
    "statuses": [
     "created"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2807,7 +2561,7 @@
     ],
     [
      "company",
-     "held"
+     "correct"
     ],
     [
      "job_title",
@@ -2842,25 +2596,20 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "company_cjk"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p043",
    "statuses": [
     "updated"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
    "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -2905,12 +2654,7 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "address:鴻圖道12號永發工業大廈9樓b室"
-    ]
-   ]
+   "reviews": []
   },
   {
    "person": "p044",
@@ -2991,13 +2735,13 @@
    "statuses": [
     "updated"
    ],
-   "needs_human": true,
+   "needs_human": false,
    "auto_saved": true,
    "wrong": 0,
    "missed": 0,
-   "held": 1,
+   "held": 0,
    "wrong_merge": false,
-   "perfect_auto": false,
+   "perfect_auto": true,
    "wrong_auto_save": false,
    "leaks": [],
    "outcomes": [
@@ -3027,7 +2771,7 @@
     ],
     [
      "email",
-     "held"
+     "correct"
     ],
     [
      "website",
@@ -3038,12 +2782,7 @@
      "correct"
     ]
    ],
-   "reviews": [
-    [
-     "field",
-     "email:kevin.zhang@harbourviewfoods.ca"
-    ]
-   ]
+   "reviews": []
   }
  ]
 }

@@ -2,7 +2,7 @@ import Foundation
 
 public struct BatchConfig: Sendable {
     public var maxConcurrentRecognitions = 4
-    public var maxVerificationsPerPerson = 4
+    public var maxVerificationsPerPerson = 8
     public var defaultRegion = "CA"
     public var policy = PolicyConfig()
     public var grouping = GroupingConfig()
@@ -329,9 +329,9 @@ public actor BatchProcessor {
                         draft.setVerified(ref, value: value, confidence: model.adjust(max(conf, ans.confidence * 0.9), deltas: [model.secondOpinionAgree]),
                                           signal: "second_opinion:agree", regionHint: region)
                     } else if let alt = alts.first(where: { key($0) == key(v) }) {
-                        // The second reader picked the first reader's alternative.
-                        let altConf = max(1 - conf, 0.5)
-                        draft.setVerified(ref, value: alt, confidence: model.adjust(min(altConf, ans.confidence), deltas: [model.secondOpinionAgree * 0.75]),
+                        // The second reader independently chose the reading the first reader listed as its alternative:
+                        // two readers agree on it.
+                        draft.setVerified(ref, value: alt, confidence: model.adjust(ans.confidence, deltas: [model.secondOpinionAgree * 0.75]),
                                           signal: "second_opinion:picked_alternative", regionHint: region)
                     } else {
                         // Disagreement: keep the first reading, lower it, offer both in review.

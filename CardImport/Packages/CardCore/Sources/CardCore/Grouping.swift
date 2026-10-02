@@ -59,6 +59,16 @@ public struct FrontBackMatcher: Sendable {
         let sharedPhones: (ContactDraft) -> Set<String> = { Set($0.phones.filter { $0.kind != .mobile }.map { $0.e164 + ($0.extensionNumber ?? "") }) }
         if !personalPhones(a.draft).isDisjoint(with: personalPhones(b.draft)) { s += 3.5; content += 3.5; sig.append("same_mobile") }
 
+        // Contradicting personal contacts: both sides print emails / mobiles and none match → different people.
+        if !emailsA.isEmpty && !emailsB.isEmpty && emailsA.isDisjoint(with: emailsB) {
+            let dA = Set(emailsA.compactMap(EmailValidator.domain(of:)).map(DomainUtil.registrable))
+            let dB = Set(emailsB.compactMap(EmailValidator.domain(of:)).map(DomainUtil.registrable))
+            if dA.isDisjoint(with: dB) { s -= 4; sig.append("different_email_domains") }
+        }
+        if !personalPhones(a.draft).isEmpty && !personalPhones(b.draft).isEmpty && personalPhones(a.draft).isDisjoint(with: personalPhones(b.draft)) {
+            s -= 3; sig.append("different_mobiles")
+        }
+
         // Company-level evidence is shared by every colleague, so it is capped: it can say "same company",
         // never "same person".
         var companyLevel = 0.0
@@ -127,13 +137,15 @@ public struct FrontBackMatcher: Sendable {
         let latinY = [y.givenName?.value, y.familyName?.value].compactMap { $0 }.joined(separator: " ")
         var anySame = false, anyDifferent = false
         if !latinX.isEmpty && !latinY.isEmpty {
+            // One letter can be a different person (Chang/Zhang, Lee/Lei): only identical names, or names that differ
+            // purely by OCR-confusable characters, count as the same.
             let tx = Set(TextNorm.tokens(latinX)), ty = Set(TextNorm.tokens(latinY))
-            if tx == ty || TextNorm.similarity(latinX, latinY) >= 0.85 { anySame = true } else { anyDifferent = true }
-        }
-        if let cx = x.cjkName?.value, let cy = y.cjkName?.value {
-            if TextNorm.toSimplified(cx) == TextNorm.toSimplified(cy) || TextNorm.similarity(TextNorm.toSimplified(cx), TextNorm.toSimplified(cy)) >= 0.66 {
+            if tx == ty || TextNorm.confusableFold(TextNorm.alnum(latinX)) == TextNorm.confusableFold(TextNorm.alnum(latinY)) {
                 anySame = true
             } else { anyDifferent = true }
+        }
+        if let cx = x.cjkName?.value, let cy = y.cjkName?.value {
+            if TextNorm.toSimplified(TextNorm.alnum(cx)) == TextNorm.toSimplified(TextNorm.alnum(cy)) { anySame = true } else { anyDifferent = true }
         }
         if anySame && !anyDifferent { return .same }
         if anyDifferent { return .different }
@@ -195,13 +207,22 @@ public struct FrontBackMatcher: Sendable {
         var ambiguous: [String: [Int]] = [:]
         // Nameless sides: attach to the best named group if clearly best; otherwise stand alone or be ambiguous.
         var namelessAlone: [String] = []
+        let timeOf: [String: Date] = Dictionary(uniqueKeysWithValues: usable.compactMap { o in o.0.captureDate.map { (o.0.photoID, $0) } })
         for id in nameless {
+            // People photograph a card's front and back back-to-back: the photo taken right before/after a
+            // nameless side (within 30 s) is strong evidence when it is also a content-linked candidate.
+            var nearestGroup: Int? = nil
+            if let t = timeOf[id] {
+                let near = timeOf.filter { $0.key != id }.min { abs($0.value.timeIntervalSince(t)) < abs($1.value.timeIntervalSince(t)) }
+                if let near, abs(near.value.timeIntervalSince(t)) <= 30 { nearestGroup = groupOf[near.key] }
+            }
             var scores: [(Int, Double)] = []
             for (gi, g) in groups.enumerated() where !g.isEmpty {
-                let best = g.compactMap { m -> Double? in
+                var best = g.compactMap { m -> Double? in
                     guard let e = evidence(m, id), e.contentScore >= config.minContentScore else { return nil }
                     return e.score
                 }.max() ?? -10
+                if gi == nearestGroup && best > -10 { best += 1.5 }
                 scores.append((gi, best))
             }
             scores.sort { $0.1 > $1.1 }

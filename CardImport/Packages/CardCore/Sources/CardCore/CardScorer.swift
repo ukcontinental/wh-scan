@@ -87,6 +87,27 @@ public struct CardScorer: Sendable {
                 card.jobTitleCjk = card.jobTitleCjk ?? t; card.jobTitle = nil
             }
         }
+        // An "alternative" in the other script is a translation printed on the card, not a doubtful reading:
+        // move it to the bilingual slot. A combined "品牌部 Brand Studio" alternative is the same text.
+        func splitBilingual(_ latin: inout FieldValue?, _ cjk: inout FieldValue?) {
+            guard var l = latin else { return }
+            if TextNorm.containsCJK(l.value) { return }
+            var keep: [String] = []
+            for alt in l.alternatives {
+                let altIsCJK = TextNorm.containsCJK(alt)
+                if altIsCJK && TextNorm.alnum(alt).contains(TextNorm.alnum(l.value)) { continue }          // "品牌部 Brand Studio"
+                if altIsCJK && !TextNorm.isMostlyLatin(alt) {
+                    if cjk == nil { cjk = FieldValue(alt, confidence: l.confidence, sourceText: l.sourceText) }
+                    continue
+                }
+                keep.append(alt)
+            }
+            l.alternatives = keep
+            latin = l
+        }
+        splitBilingual(&card.company, &card.companyCjk)
+        splitBilingual(&card.jobTitle, &card.jobTitleCjk)
+        splitBilingual(&card.department, &card.departmentCjk)
         let ocr = obs.ocr
         let rel = OCRReliability.estimate(card: card, ocr: ocr)
         let src = obs.photoID

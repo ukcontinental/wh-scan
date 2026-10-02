@@ -78,3 +78,26 @@ final class CalibrationRegressionTests: XCTestCase {
         XCTAssertEqual(d.allFields().first?.1, "+1 604 555 0117 ext. 746")
     }
 }
+
+final class NameIdentityTests: XCTestCase {
+    func testOneLetterDifferentNamesAreDifferentPeople() {
+        let a = ExtractedCard(cardSide: .front, name: ExtractedName(given: F.fv("Kevin"), family: F.fv("Chang")),
+                              emails: [ExtractedEmail(address: "kevin@dawnlight.design", confidence: 0.98)])
+        let b = ExtractedCard(cardSide: .front, name: ExtractedName(given: F.fv("Kevin"), family: F.fv("Zhang")),
+                              emails: [ExtractedEmail(address: "kevin.zhang@harbourviewfoods.ca", confidence: 0.98)])
+        let e = FrontBackMatcher().pairEvidence((F.obs("a", 0, a), CardScorer().score(F.obs("a", 0, a))),
+                                               (F.obs("b", 1, b), CardScorer().score(F.obs("b", 1, b))))
+        XCTAssertTrue(e.conflict || e.score < 0, "\(e)")
+        let c = ExtractedCard(cardSide: .front, name: ExtractedName(cjkFull: F.fv("王大明")))
+        let d = ExtractedCard(cardSide: .front, name: ExtractedName(cjkFull: F.fv("王小明")))
+        let e2 = FrontBackMatcher().pairEvidence((F.obs("c", 0, c), CardScorer().score(F.obs("c", 0, c))),
+                                                (F.obs("d", 1, d), CardScorer().score(F.obs("d", 1, d))))
+        XCTAssertTrue(e2.conflict)
+        // Simplified vs Traditional printing of the same name is the same person.
+        let t = ExtractedCard(cardSide: .front, name: ExtractedName(cjkFull: F.fv("陳建華")))
+        let s = ExtractedCard(cardSide: .back, name: ExtractedName(cjkFull: F.fv("陈建华")))
+        let e3 = FrontBackMatcher().pairEvidence((F.obs("t", 0, t), CardScorer().score(F.obs("t", 0, t))),
+                                                (F.obs("s", 1, s), CardScorer().score(F.obs("s", 1, s))))
+        XCTAssertTrue(e3.signals.contains("same_name"))
+    }
+}

@@ -1,0 +1,75 @@
+[
+ {
+  "fieldLabel": "公司（中文）",
+  "key": "eded5a34f648aa49",
+  "photoIds": [
+   "img_0006",
+   "img_0030"
+  ],
+  "ocrHint": [],
+  "candidates": [
+   "滙泰食品有限公司",
+   "匯泰食品有限公司"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0005",
+   "img_0029"
+  ],
+  "fieldLabel": "部門 Department",
+  "candidates": [
+   "Customer Service"
+  ],
+  "key": "b352794130cdc095",
+  "ocrHint": []
+ },
+ {
+  "photoIds": [
+   "img_0005",
+   "img_0029"
+  ],
+  "fieldLabel": "部門（中文）",
+  "candidates": [
+   "客服部"
+  ],
+  "key": "ea7cee48c6293669",
+  "ocrHint": []
+ },
+ {
+  "photoIds": [
+   "img_0015"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3, Canada” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3, Canada"
+  ],
+  "key": "fad499ec407240ae",
+  "ocrHint": []
+ },
+ {
+  "photoIds": [
+   "img_0015"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada"
+  ],
+  "key": "7e372077872d2a0c",
+  "ocrHint": []
+ },
+ {
+  "photoIds": [
+   "img_0033"
+  ],
+  "fieldLabel": "Email — the email address read as “kevin.zhang@harbourviewfoods.ca”",
+  "candidates": [
+   "kevin.zhang@harbourviewfoods.ca"
+  ],
+  "key": "376ca123756a6c75",
+  "ocrHint": [
+   "E kevin.zhang@harbourviewtoods.ca",
+   "Jiwwwharbourviewioods ca"
+  ]
+ }
+]
