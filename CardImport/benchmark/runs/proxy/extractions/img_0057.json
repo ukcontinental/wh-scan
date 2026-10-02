@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Karen",
+      "confidence": 0.97,
+      "source_text": "Karen Lam",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Lam",
+      "confidence": 0.97,
+      "source_text": "Karen Lam",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Harbour Trust CPA Limited",
+    "confidence": 0.94,
+    "source_text": "Harbour Trust CPA Limited",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": {
+    "value": "Chief Financial Officer",
+    "confidence": 0.94,
+    "source_text": "Chief Financial Officer",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "+852 5176 8862",
+      "kind": "mobile",
+      "source_text": "Mobile: +852 5176 8862",
+      "confidence": 0.85,
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": [
+        "+852 5176 8852"
+      ]
+    },
+    {
+      "number": "(852) 2560 7397",
+      "kind": "work",
+      "source_text": "Tel: (852) 2560 7397 ext 751",
+      "confidence": 0.85,
+      "country_hint": "HK",
+      "extension": "751",
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "karen.lam@harbourtrustcpa.com.hk",
+      "source_text": "karen.lam@harbourtrustcpa.com.hk",
+      "confidence": 0.88,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.harbourtrustcpa.com.hk",
+      "confidence": 0.88
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central Central, Hong Kong",
+      "street": "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central",
+      "city": "Central",
+      "region": null,
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.75
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "karenlam21",
+      "confidence": 0.87
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "blurry_digits"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "HARBOUR TRUST",
+      "港信",
+      "Integrity. Insight. Results.",
+      "ISO 27001"
+    ],
+    "overall_confidence": 0.85
+  }
+}

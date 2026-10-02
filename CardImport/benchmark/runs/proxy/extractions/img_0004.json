@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "陳嘉欣",
+      "confidence": 0.96,
+      "source_text": "陳嘉欣",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "九龍灣物流有限公司",
+    "confidence": 0.93,
+    "source_text": "九龍灣物流有限公司",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "總經理",
+    "confidence": 0.96,
+    "source_text": "總經理",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "(852) 5365 4042",
+      "kind": "mobile",
+      "confidence": 0.95,
+      "source_text": "手提電話：(852) 5365 4042",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+852-2600-0792",
+      "kind": "work",
+      "confidence": 0.95,
+      "source_text": "電話：+852-2600-0792",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+852 2584 5611",
+      "kind": "fax",
+      "confidence": 0.95,
+      "source_text": "傳真：+852 2584 5611",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "vivian.chan@kblogistics.com.hk",
+      "confidence": 0.95,
+      "source_text": "信箱：vivian.chan@kblogistics.com.hk",
+      "alternatives": []
+    },
+    {
+      "address": "contact@kblogistics.com.hk",
+      "confidence": 0.95,
+      "source_text": "信箱：contact@kblogistics.com.hk",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.kblogistics.com.hk",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "九龍觀塘鴻圖道12號永發工業大廈9樓B室",
+      "street": "鴻圖道12號永發工業大廈9樓B室",
+      "city": "觀塘",
+      "region": "九龍",
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.85
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "KB LOGISTICS",
+      "安全 準時 專業",
+      "始於1962"
+    ],
+    "overall_confidence": 0.92
+  }
+}

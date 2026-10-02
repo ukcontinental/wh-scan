@@ -47,7 +47,7 @@ public actor InMemoryAddressBook: ContactIndex, ContactWriter {
         func setIfEmpty(_ kp: WritableKeyPath<ContactDraft, DraftValue?>) {
             if let v = draft[keyPath: kp] { if base[keyPath: kp] == nil || mode == .overwriteSingleValued { base[keyPath: kp] = v } }
         }
-        for kp in [\ContactDraft.givenName, \.familyName, \.cjkName, \.company, \.companyCJK, \.jobTitle, \.jobTitleCJK, \.department] { setIfEmpty(kp) }
+        for kp in [\ContactDraft.givenName, \.familyName, \.cjkName, \.company, \.companyCJK, \.jobTitle, \.jobTitleCJK, \.department, \.departmentCJK] { setIfEmpty(kp) }
         for p in draft.phones where !base.phones.contains(where: { $0.e164 == p.e164 }) { base.phones.append(p) }
         for e in draft.emails where !base.emails.contains(where: { $0.value == e.value }) { base.emails.append(e) }
         for w in draft.websites where !base.websites.contains(where: { $0.value == w.value }) { base.websites.append(w) }

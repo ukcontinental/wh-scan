@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK SC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#fff;padding:44px 56px 40px;display:flex;flex-direction:column;gap:18px}
+.hd{display:flex;align-items:center;gap:20px;border-bottom:3px solid #0f7d9c;padding-bottom:14px}
+.hc{font-size:2.00rem;font-weight:700;color:#0f7d9c;white-space:nowrap} .he{font-size:1.44rem;color:#555;white-space:nowrap}
+.cols{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:34px;overflow:hidden}
+.col{overflow:hidden} .col+.col{border-left:1px solid #ddd;padding-left:34px}
+.nm{font-size:3.52rem;font-weight:700;white-space:nowrap}
+.tt{font-size:1.76rem;color:#0f7d9c;white-space:nowrap;margin-top:4px}
+.dp{font-size:1.52rem;color:#666;white-space:nowrap}
+.addr{font-size:1.44rem;color:#444;line-height:1.3;margin-top:10px} .alab{font-weight:700}
+.ft{font-size:1.60rem;color:#333;display:flex;flex-wrap:wrap;column-gap:30px;row-gap:2px}
+.ex{font-size:1.28rem;color:#999}
+
+</style></head><body><div class="card fit"><div class="hd"><div class="logo" style="display:flex;flex-direction:row;align-items:center;gap:13px"><svg width="74" height="74" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="9" fill="#a12a5e"/><circle cx="50" cy="20" r="11" fill="#0f7d9c"/><circle cx="80" cy="20" r="13" fill="#a12a5e"/><circle cx="20" cy="50" r="10" fill="#a12a5e"/><circle cx="50" cy="50" r="12" fill="#0f7d9c"/><circle cx="80" cy="50" r="9" fill="#a12a5e"/><circle cx="20" cy="80" r="11" fill="#a12a5e"/><circle cx="50" cy="80" r="13" fill="#0f7d9c"/><circle cx="80" cy="80" r="10" fill="#a12a5e"/></svg></div><div><div class="hc" style="font-family:'Noto Sans CJK SC','WenQuanYi Zen Hei','Liberation Sans',sans-serif">深圳市海川电子科技有限公司</div><div class="he">Shenzhen Haichuan Electronic Technology Co., Ltd.</div></div><div style="margin-left:auto;text-align:right"></div></div><div class="cols"><div class="col fit" style="font-family:'Noto Sans CJK SC','WenQuanYi Zen Hei','Liberation Sans',sans-serif"><div class="nm">刘洋</div><div class="tt">市场专员</div><div class="dp">研发中心  R&amp;D Center</div></div><div class="col fit"><div class="nm">Dr. Leon Liu</div><div class="tt">Marketing Specialist</div><div class="addr"><div>Floor 12, Tower A, No. 9 Gaoxin South 1st Road, Nanshan District</div><div>Shenzhen, Guangdong 518057</div></div></div></div><div class="ft fit"><span class="ln">手机 Mob: 158-1901-3900</span><span class="ln">邮箱 Email: leon_liu@haichuan-tech.cn</span><span class="ln">www.haichuan-tech.cn</span><span class="ln">微信 WeChat: liuleon87</span></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

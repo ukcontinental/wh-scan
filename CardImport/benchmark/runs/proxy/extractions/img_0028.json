@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "劉建宏",
+      "confidence": 0.96,
+      "source_text": "劉建宏",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "瑞光冷鏈物流股份有限公司",
+    "confidence": 0.93,
+    "source_text": "瑞光冷鏈物流股份有限公司",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "業務開發經理",
+    "confidence": 0.95,
+    "source_text": "業務開發經理",
+    "alternatives": []
+  },
+  "department": {
+    "value": "冷鏈事業部",
+    "confidence": 0.92,
+    "source_text": "冷鏈事業部",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "0941-517-202",
+      "kind": "mobile",
+      "confidence": 0.95,
+      "source_text": "手機：0941-517-202",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "henry_liu@ruiguang-logistics.com.tw",
+      "confidence": 0.94,
+      "source_text": "E-mail：henry_liu@ruiguang-logistics.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.ruiguang-logistics.com.tw",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "台灣 114 台北市內湖區瑞光路35號8樓",
+      "street": "瑞光路35號8樓",
+      "city": "內湖區",
+      "region": "台北市",
+      "postal_code": "114",
+      "country": "台灣",
+      "confidence": 0.87
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": true,
+    "has_qr_code": true,
+    "ignored_text": [
+      "瑞光"
+    ],
+    "overall_confidence": 0.92
+  }
+}

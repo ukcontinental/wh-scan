@@ -26,6 +26,10 @@ struct CardImportApp: App {
     @StateObject private var router = ImportRouter.shared
     @Environment(\.scenePhase) private var scenePhase
 
+    init() {
+        ContinuedProcessing.shared.registerIfNeeded()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
@@ -35,7 +39,10 @@ struct CardImportApp: App {
                     // cardimport://import — for NFC tags that carry a URL record instead of a Shortcuts automation.
                     if url.host == "import" { router.requestPicker(source: "url") }
                 }
-                .task { await engine.resumeUnfinished() }
+                .task {
+                    if let demo = DemoData.requestedScreen() { DemoData.apply(demo, to: engine); return }
+                    await engine.resumeUnfinished()
+                }
                 .onChange(of: scenePhase) { _, phase in
                     if phase == .active { Task { await engine.resumeUnfinished() } }
                 }

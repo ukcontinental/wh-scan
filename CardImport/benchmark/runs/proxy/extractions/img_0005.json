@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans",
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Jing",
+      "confidence": 0.97,
+      "source_text": "Chen Jing",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Chen",
+      "confidence": 0.97,
+      "source_text": "Chen Jing",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "陈静",
+      "confidence": 0.97,
+      "source_text": "陈 静",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Suzhou Ruida Packaging Materials Co., Ltd.",
+    "confidence": 0.96,
+    "source_text": "Suzhou Ruida Packaging Materials Co., Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "苏州瑞达包装材料有限公司",
+    "confidence": 0.96,
+    "source_text": "苏州瑞达包装材料有限公司",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Plant Manager",
+    "confidence": 0.96,
+    "source_text": "Plant Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "厂长",
+    "confidence": 0.95,
+    "source_text": "厂长",
+    "alternatives": []
+  },
+  "department": {
+    "value": "Customer Service",
+    "confidence": 0.9,
+    "source_text": "客服部 Customer Service",
+    "alternatives": [
+      "客服部"
+    ]
+  },
+  "phones": [
+    {
+      "number": "+86-512-64613523",
+      "kind": "work",
+      "extension": null,
+      "country_hint": "CN",
+      "source_text": "电话 Tel: +86-512-64613523",
+      "confidence": 0.96,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "chenjing@ruidapack.com.cn",
+      "source_text": "邮箱 Email: chenjing@ruidapack.com.cn",
+      "confidence": 0.96,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.ruidapack.com.cn",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "street": "No. 58 Suhong East Road, Suzhou Industrial Park",
+      "city": "Suzhou",
+      "region": "Jiangsu",
+      "postal_code": "215021",
+      "country": "China",
+      "formatted": "No. 58 Suhong East Road, Suzhou Industrial Park, Suzhou, Jiangsu 215021",
+      "confidence": 0.9
+    },
+    {
+      "street": "Room 501, Building 3, No. 88 Zhangjiang Road, Pudong New Area",
+      "city": "Shanghai",
+      "region": null,
+      "postal_code": "200120",
+      "country": "China",
+      "formatted": "Room 501, Building 3, No. 88 Zhangjiang Road, Pudong New Area, Shanghai 200120",
+      "confidence": 0.88
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "瑞达",
+      "Packaging Solutions that Protect",
+      "ISO 14001 · FSC Certified",
+      "Head Office",
+      "Warehouse"
+    ],
+    "concerns": [
+      "multiple_addresses"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.93
+  }
+}

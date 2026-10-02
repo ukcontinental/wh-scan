@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "cjk_full": {
+      "value": "蔡宜君",
+      "confidence": 0.96,
+      "source_text": "蔡宜君",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Tsai",
+      "confidence": 0.97,
+      "source_text": "Irene Tsai",
+      "alternatives": []
+    },
+    "given": {
+      "value": "Irene",
+      "confidence": 0.97,
+      "source_text": "Irene Tsai",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Heng Chang International Trading Co., Ltd.",
+    "confidence": 0.95,
+    "source_text": "Heng Chang International Trading Co., Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "恒昌國際貿易有限公司",
+    "confidence": 0.85,
+    "source_text": "恒昌國際貿易有限公司",
+    "alternatives": [
+      "恆昌國際貿易有限公司"
+    ]
+  },
+  "department": null,
+  "job_title": {
+    "value": "Purchasing Manager",
+    "confidence": 0.97,
+    "source_text": "Purchasing Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "採購經理",
+    "confidence": 0.95,
+    "source_text": "採購經理",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "0903-736-695",
+      "kind": "mobile",
+      "source_text": "手機 Mobile: 0903-736-695",
+      "confidence": 0.96,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "itsai@hengchang-trade.com.tw",
+      "source_text": "itsai@hengchang-trade.com.tw",
+      "confidence": 0.96,
+      "alternatives": []
+    },
+    {
+      "address": "sales@hengchang-trade.com.tw",
+      "source_text": "sales@hengchang-trade.com.tw",
+      "confidence": 0.96,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "hengchang-trade.com.tw",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "12F., No. 88, Sec. 2, Nanjing E. Rd., Zhongshan Dist. Taipei City 104, Taiwan",
+      "street": "12F., No. 88, Sec. 2, Nanjing E. Rd., Zhongshan Dist.",
+      "city": "Taipei City",
+      "region": null,
+      "postal_code": "104",
+      "country": "Taiwan",
+      "confidence": 0.92
+    }
+  ],
+  "social": [
+    {
+      "service": "line",
+      "handle": "irene98",
+      "confidence": 0.95
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "Connecting Asia & North America"
+    ],
+    "overall_confidence": 0.94
+  }
+}

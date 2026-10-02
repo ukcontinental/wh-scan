@@ -72,9 +72,21 @@ struct TesseractOCR: OCRProvider {
         return String(h, radix: 16)
     }
 
-    func run(_ file: URL) throws -> OCRResult {
+    func run(_ input: URL) throws -> OCRResult {
+        // Downscale like the app does (≤1600 px for OCR) and keep tesseract single-threaded:
+        // OpenMP thread contention made it ~200× slower with several OCR jobs in parallel.
+        let small = FileManager.default.temporaryDirectory.appendingPathComponent("ocr-small-\(UUID().uuidString).jpg")
+        defer { try? FileManager.default.removeItem(at: small) }
+        let conv = Process()
+        conv.executableURL = URL(fileURLWithPath: "/usr/bin/convert")
+        conv.arguments = [input.path, "-resize", "1600x1600>", small.path]
+        try conv.run(); conv.waitUntilExit()
+        let file = FileManager.default.fileExists(atPath: small.path) ? small : input
         let p = Process()
         p.executableURL = URL(fileURLWithPath: "/usr/bin/tesseract")
+        var env = ProcessInfo.processInfo.environment
+        env["OMP_THREAD_LIMIT"] = "1"
+        p.environment = env
         p.arguments = [file.path, "stdout", "-l", "eng+chi_tra+chi_sim", "--psm", "11", "tsv"]
         let out = Pipe(); p.standardOutput = out; p.standardError = Pipe()
         try p.run()
@@ -142,6 +154,36 @@ struct SavingExtractor: CardExtractor {
     }
 }
 
+/// Records the second-opinion requests the pipeline makes (so they can be answered offline), and replays answers.
+final class ReplayVerifier: FieldVerifier, @unchecked Sendable {
+    struct Request: Codable { var key: String; var photoIds: [String]; var fieldLabel: String; var candidates: [String]; var ocrHint: [String] }
+    struct Answer: Codable { var value: String?; var confidence: Double }
+    let idByHash: [String: String]
+    let answers: [String: Answer]
+    var requests: [Request] = []
+    let lock = NSLock()
+
+    init(idByHash: [String: String], answersFile: URL?) {
+        self.idByHash = idByHash
+        if let f = answersFile, let d = try? Data(contentsOf: f), let a = try? JSONDecoder().decode([String: Answer].self, from: d) { answers = a } else { answers = [:] }
+    }
+
+    static func key(_ ids: [String], _ label: String, _ cands: [String]) -> String {
+        let raw = ids.joined(separator: ",") + "|" + label + "|" + cands.joined(separator: "‖")
+        var h: UInt64 = 0xcbf29ce484222325
+        for b in raw.utf8 { h ^= UInt64(b); h = h &* 0x100000001b3 }
+        return String(h, radix: 16)
+    }
+
+    func verify(fieldLabel: String, candidates: [String], images: [ImagePayload], ocrHint: [String]) async throws -> VerifierAnswer {
+        let ids = images.compactMap { idByHash[TesseractOCR(cacheDir: nil, pathsByHash: [:]).sha($0.data)] }
+        let k = Self.key(ids, fieldLabel, candidates)
+        lock.lock(); requests.append(Request(key: k, photoIds: ids, fieldLabel: fieldLabel, candidates: candidates, ocrHint: ocrHint)); lock.unlock()
+        guard let a = answers[k] else { throw LLMError.transient("no recorded answer") }
+        return VerifierAnswer(value: a.value, confidence: a.confidence)
+    }
+}
+
 struct RunOutput: Codable {
     var config: [String: String]
     var summary: BatchSummary
@@ -171,10 +213,17 @@ func run(_ a: Args) async {
     var extractor: CardExtractor
     var verifier: FieldVerifier? = nil
     var resolver: GroupingResolver? = nil
+    var replayVerifier: ReplayVerifier? = nil
     if extractorMode == "heuristic" {
         extractor = HeuristicExtractor(defaultRegion: region)
     } else if extractorMode.hasPrefix("replay:") {
         extractor = ReplayExtractor(dir: URL(fileURLWithPath: String(extractorMode.dropFirst(7))), idByHash: idByHash)
+        if let v = a.values["verifier"], v.hasPrefix("replay") {
+            // --verifier replay[:answers.json] — records requests to <out>.verify_requests.json
+            let file = v.hasPrefix("replay:") ? URL(fileURLWithPath: String(v.dropFirst(7))) : nil
+            replayVerifier = ReplayVerifier(idByHash: idByHash, answersFile: file)
+            verifier = replayVerifier
+        }
     } else if extractorMode == "claude" {
         let key = ProcessInfo.processInfo.environment["ANTHROPIC_API_KEY"] ?? ""
         if key.isEmpty { fail("ANTHROPIC_API_KEY is not set") }
@@ -217,6 +266,11 @@ func run(_ a: Args) async {
                         grouping: state.grouping, addressBook: await book.contacts, wallSeconds: wall)
     let data = try! CardJSON.encoder(pretty: true).encode(out)
     let outFile = a.get("out", "run.json")
+    if let rv = replayVerifier {
+        let reqFile = URL(fileURLWithPath: outFile).deletingPathExtension().appendingPathExtension("verify_requests.json")
+        try! JSONEncoder().encode(rv.requests).write(to: reqFile)
+        log("verifier requests: \(rv.requests.count) (answered \(rv.requests.filter { rv.answers[$0.key] != nil }.count)) → \(reqFile.path)")
+    }
     try! data.write(to: URL(fileURLWithPath: outFile))
     let s = state.summary
     log("done: photos=\(s.photos) people=\(s.peopleDetected) created=\(s.created) updated=\(s.updated) existing=\(s.alreadyExisted) review=\(s.openReviewItems) failed=\(s.failedPhotos) cost=$\(String(format: "%.3f", s.costUSD)) wall=\(String(format: "%.1f", wall))s → \(outFile)")

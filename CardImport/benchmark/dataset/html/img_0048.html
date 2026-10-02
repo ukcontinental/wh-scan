@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK TC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{display:grid;grid-template-columns:390px 1fr;background:#fbfbf8}
+.band{background:#14213d;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:40px 30px;text-align:center;overflow:hidden}
+.bco{font-size:2.60rem;font-weight:700;line-height:1.25} .bco2{font-size:1.80rem;opacity:.85}
+.bsl{font-size:1.70rem;opacity:.85;font-style:italic}
+.main{padding:56px 60px;display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:hidden}
+.nm{font-size:5.00rem;font-weight:700;color:#1d1d1d;font-style:normal;white-space:nowrap;line-height:1.1}
+.nm2{font-size:2.80rem;color:#555;white-space:nowrap}
+.tt{font-size:2.40rem;color:#14213d;white-space:nowrap} .tt2,.dp{font-size:2.00rem;color:#666;white-space:nowrap}
+.rule{height:3px;width:90px;background:#0f7d9c;margin:6px 0}
+.ct{font-size:2.20rem;line-height:1.42;color:#333}
+.addr{font-size:2.00rem;line-height:1.35;color:#444} .addr+.addr{margin-top:6px} .alab{font-weight:700;color:#14213d}
+.ex{font-size:1.70rem;color:#888}
+
+</style></head><body><div class="card"><div class="band fit"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:19px"><svg width="110" height="110" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 96 C8 70 8 26 50 4 C92 26 92 70 50 96Z" fill="#ffffff"/><path d="M50 90 L50 18 M50 50 L30 35 M50 65 L70 48" stroke="#14213d" stroke-width="4" fill="none"/></svg><span class="wm" style="font-size:3.0rem;color:#ffffff;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">海之味</span></div><div><div class="bco">福源水產有限公司</div></div><div class="bsl">品質第一 服務至上</div></div><div class="main fit"><div style="display:flex;gap:22px;align-items:center"><div><div class="nm">楊志偉</div></div></div><div><div class="tt">業務經理</div></div><div class="rule"></div><div style="display:flex;gap:24px;align-items:flex-end;justify-content:space-between"><div><div class="ct"><div class="ln">手機 0913222017</div><div class="ln">wilsony@fuyuanseafood.com.tw</div><div class="ln">網址：www.fuyuanseafood.com.tw</div></div><div class="addr"><div class="alab">總公司</div><div>407 台中市西屯區台灣大道三段99號8樓</div></div><div class="addr"><div class="alab">工廠</div><div>328 桃園市觀音區工業五路26號</div></div></div></div></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

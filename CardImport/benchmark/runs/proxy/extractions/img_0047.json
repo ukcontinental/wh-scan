@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "back",
+  "language_hint": [
+    "zh-Hant"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": null,
+  "department": null,
+  "phones": [
+    {
+      "number": "+886 2 2962 9293",
+      "kind": "main",
+      "extension": null,
+      "country_hint": "TW",
+      "source_text": "代表號：+886 2 2962 9293",
+      "confidence": 0.88,
+      "alternatives": []
+    },
+    {
+      "number": "+886 2 2281 6339",
+      "kind": "fax",
+      "extension": null,
+      "country_hint": "TW",
+      "source_text": "傳真：+886 2 2281 6339",
+      "confidence": 0.88,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "service@xinhetech.com.tw",
+      "source_text": "service@xinhetech.com.tw",
+      "confidence": 0.9,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.xinhetech.com.tw",
+      "confidence": 0.9
+    }
+  ],
+  "addresses": [
+    {
+      "street": "內湖區瑞光路35號8樓",
+      "city": "台北市",
+      "region": null,
+      "postal_code": "114",
+      "country": "台灣",
+      "formatted": "台灣 114 台北市內湖區瑞光路35號8樓",
+      "confidence": 0.82
+    },
+    {
+      "street": "西屯區台灣大道三段99號8樓",
+      "city": "台中市",
+      "region": null,
+      "postal_code": "407",
+      "country": "台灣",
+      "formatted": "台灣 407 台中市西屯區台灣大道三段99號8樓",
+      "confidence": 0.82
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "新禾",
+      "總公司",
+      "工廠"
+    ],
+    "concerns": [
+      "blurry_text",
+      "small_font",
+      "no_company_name_printed",
+      "multiple_addresses"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.84
+  }
+}

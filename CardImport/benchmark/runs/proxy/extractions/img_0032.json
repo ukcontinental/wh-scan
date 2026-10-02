@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans"
+  ],
+  "name": {
+    "cjk_full": {
+      "value": "徐浩",
+      "confidence": 0.95,
+      "source_text": "徐浩",
+      "alternatives": []
+    },
+    "family": null,
+    "given": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "大连海韵水产有限公司",
+    "confidence": 0.93,
+    "source_text": "大连海韵水产有限公司",
+    "alternatives": []
+  },
+  "department": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "出口经理",
+    "confidence": 0.93,
+    "source_text": "出口经理",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "188-8209-1317",
+      "kind": "mobile",
+      "source_text": "手机：188-8209-1317",
+      "confidence": 0.92,
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+86 411 6592 4931",
+      "kind": "work",
+      "source_text": "电话：+86 411 6592 4931",
+      "confidence": 0.92,
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "howard.xu@haiyunseafood.cn",
+      "source_text": "howard.xu@haiyunseafood.cn",
+      "confidence": 0.93,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.haiyunseafood.cn",
+      "confidence": 0.93
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "辽宁省大连市中山区港兴路7号",
+      "street": "中山区港兴路7号",
+      "city": "大连市",
+      "region": "辽宁省",
+      "postal_code": "116001",
+      "country": "China",
+      "confidence": 0.88
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "slightly_blurry"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "海韵",
+      "创立于1985年"
+    ],
+    "overall_confidence": 0.91
+  }
+}

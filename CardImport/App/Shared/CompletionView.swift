@@ -7,6 +7,7 @@ struct CompletionView: View {
     let state: BatchState
     var onDone: (() -> Void)? = nil
     var allowVoiceNotes = true
+    var autoOpenReview = false
     @State private var showReview = false
     @State private var showNotes = false
 
@@ -60,6 +61,7 @@ struct CompletionView: View {
             .padding(.bottom, 12)
         }
         .sheet(isPresented: $showReview) { ReviewView() }
+        .onAppear { if autoOpenReview { showReview = true } }
         .sheet(isPresented: $showNotes) { VoiceNotePeopleView(state: state) }
     }
 

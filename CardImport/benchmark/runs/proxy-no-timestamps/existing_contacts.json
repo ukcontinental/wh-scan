@@ -1,0 +1,88 @@
+[
+ {
+  "identifier": "existing-1",
+  "givenName": "Sarah",
+  "familyName": "MacDonald",
+  "nickname": "",
+  "organization": "Northstar Cold Chain Inc.",
+  "jobTitle": "",
+  "phones": [],
+  "emails": [
+   "sarah@northstarcoldchain.com"
+  ],
+  "urls": []
+ },
+ {
+  "identifier": "existing-2",
+  "givenName": "Calvin",
+  "familyName": "Ng",
+  "nickname": "",
+  "organization": "Wui Tai Foods Limited",
+  "jobTitle": "President",
+  "phones": [
+   "+85229820655"
+  ],
+  "emails": [
+   "calvin.ng@wuitaifoods.com.hk"
+  ],
+  "urls": [
+   "www.wuitaifoods.com.hk"
+  ]
+ },
+ {
+  "identifier": "existing-3",
+  "givenName": "Michael",
+  "familyName": "Nguyen",
+  "nickname": "",
+  "organization": "Previous Employer Inc.",
+  "jobTitle": "",
+  "phones": [],
+  "emails": [
+   "michael.nguyen@pinecrestpack.ca"
+  ],
+  "urls": []
+ },
+ {
+  "identifier": "existing-4",
+  "givenName": "Kevin",
+  "familyName": "Zhang",
+  "nickname": "",
+  "organization": "Harbourview Frozen Foods Ltd.",
+  "jobTitle": "",
+  "phones": [
+   "+16475550185"
+  ],
+  "emails": [],
+  "urls": []
+ },
+ {
+  "identifier": "decoy-1",
+  "givenName": "Victoria",
+  "familyName": "Chan",
+  "nickname": "",
+  "organization": "Unrelated Holdings Ltd.",
+  "jobTitle": "",
+  "phones": [
+   "+14165559999"
+  ],
+  "emails": [
+   "someone0@elsewhere.example"
+  ],
+  "urls": []
+ },
+ {
+  "identifier": "decoy-2",
+  "givenName": "Morgan",
+  "familyName": "Lee",
+  "nickname": "",
+  "organization": "Morgan Consulting Group",
+  "jobTitle": "",
+  "phones": [
+   "+14165559999"
+  ],
+  "emails": [
+   "someone1@elsewhere.example"
+  ],
+  "urls": []
+ }
+]

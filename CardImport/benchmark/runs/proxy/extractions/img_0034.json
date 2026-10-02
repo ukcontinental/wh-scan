@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Winnie",
+      "confidence": 0.96,
+      "source_text": "Winnie Cheung",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Cheung",
+      "confidence": 0.96,
+      "source_text": "Winnie Cheung",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "張美儀",
+      "confidence": 0.95,
+      "source_text": "張美儀",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Harbour Trust CPA Limited",
+    "confidence": 0.95,
+    "source_text": "Harbour Trust CPA Limited",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "港信會計師事務所有限公司",
+    "confidence": 0.94,
+    "source_text": "港信會計師事務所有限公司",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Branch Manager",
+    "confidence": 0.95,
+    "source_text": "Branch Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "分行經理",
+    "confidence": 0.95,
+    "source_text": "分行經理",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "(852) 5527 4300",
+      "kind": "mobile",
+      "confidence": 0.94,
+      "source_text": "手機 Mobile: (852) 5527 4300",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "3458 8142",
+      "kind": "work",
+      "confidence": 0.92,
+      "source_text": "T 電話 3458 8142 轉 3941",
+      "country_hint": "HK",
+      "extension": "3941",
+      "alternatives": []
+    },
+    {
+      "number": "(852) 2292 2807",
+      "kind": "fax",
+      "confidence": 0.94,
+      "source_text": "傳真 Fax: (852) 2292 2807",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "winnie.cheung@harbourtrustcpa.com.hk",
+      "confidence": 0.93,
+      "source_text": "電郵 Email: winnie.cheung@harbourtrustcpa.com.hk",
+      "alternatives": []
+    },
+    {
+      "address": "contact@harbourtrustcpa.com.hk",
+      "confidence": 0.93,
+      "source_text": "電郵 Email: contact@harbourtrustcpa.com.hk",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.harbourtrustcpa.com.hk",
+      "confidence": 0.93
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "中環德輔道中88號景豐大廈22樓2208室",
+      "street": "德輔道中88號景豐大廈22樓2208室",
+      "city": "中環",
+      "region": null,
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.85
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "winniecheung30",
+      "confidence": 0.92
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "perspective_skew"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": true,
+    "ignored_text": [],
+    "overall_confidence": 0.92
+  }
+}

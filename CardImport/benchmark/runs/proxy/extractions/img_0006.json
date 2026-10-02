@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "梁家輝",
+      "confidence": 0.97,
+      "source_text": "梁家輝",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "滙泰食品有限公司",
+    "confidence": 0.93,
+    "source_text": "滙泰食品有限公司",
+    "alternatives": [
+      "匯泰食品有限公司"
+    ]
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "品保經理",
+    "confidence": 0.96,
+    "source_text": "品保經理",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "(852) 5638 1262",
+      "kind": "mobile",
+      "confidence": 0.94,
+      "source_text": "手提：(852) 5638 1262",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+852 2517 0785",
+      "kind": "work",
+      "confidence": 0.94,
+      "source_text": "直線：+852 2517 0785",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+852 3812 1189",
+      "kind": "fax",
+      "confidence": 0.94,
+      "source_text": "傳真：+852 3812 1189",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "patrick.leung@wuitaifoods.com.hk",
+      "confidence": 0.95,
+      "source_text": "E-mail：patrick.leung@wuitaifoods.com.hk",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.wuitaifoods.com.hk",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "香港九龍觀塘鴻圖道12號永發工業大廈9樓B室",
+      "street": "鴻圖道12號永發工業大廈9樓B室",
+      "city": "觀塘",
+      "region": "九龍",
+      "postal_code": null,
+      "country": "香港",
+      "confidence": 0.9
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "嚴選食材 用心把關",
+      "滙泰"
+    ],
+    "concerns": [
+      "vertical_text"
+    ],
+    "has_qr_code": false,
+    "has_person_photo": false,
+    "overall_confidence": 0.92
+  }
+}

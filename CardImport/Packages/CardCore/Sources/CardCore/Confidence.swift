@@ -48,6 +48,16 @@ public enum OCRCrossCheck {
                 }
             }
             return .none
+        case .address:
+            // Addresses span several printed lines and OCR line order varies: compare token coverage.
+            let tokens = TextNorm.tokens(value).filter { $0.count >= 2 || $0.allSatisfy(\.isNumber) }
+            guard !tokens.isEmpty else { return .unavailable }
+            let o = TextNorm.alnum(joined)
+            let hits = tokens.filter { o.contains(TextNorm.alnum($0)) }.count
+            let ratio = Double(hits) / Double(tokens.count)
+            if ratio >= 0.9 { return .strong }
+            if ratio >= 0.6 { return .partial }
+            return .none
         case .email, .website:
             let v = TextNorm.alnum(value)
             let o = TextNorm.alnum(joined)
@@ -92,6 +102,32 @@ public enum OCRCrossCheck {
 
 /// Evidence-combination in log-odds space. Each signal shifts the logit by a fixed weight;
 /// weights were chosen conservatively and are re-calibrated by the benchmark (see docs).
+public enum OCRReliability {
+    /// Fraction of the model's confident short values (names, phones, emails, websites) that the OCR also read.
+    public static func estimate(card: ExtractedCard, ocr: OCRResult?) -> Double {
+        guard let ocr, !ocr.lines.isEmpty else { return 0 }
+        var checks: [(String, FieldKind)] = []
+        for f in [card.name.given, card.name.family, card.name.cjkFull, card.company, card.companyCjk, card.jobTitle] {
+            if let f, f.confidence >= 0.9 { checks.append((f.value, .personName)) }
+        }
+        for p in card.phones where p.confidence >= 0.9 { checks.append((p.number, .phone)) }
+        for e in card.emails where e.confidence >= 0.9 { checks.append((e.address, .email)) }
+        for w in card.websites where w.confidence >= 0.9 { checks.append((w.url, .website)) }
+        var score = 0.0, n = 0.0
+        for (v, k) in checks {
+            switch OCRCrossCheck.support(value: v, kind: k, ocr: ocr) {
+            case .strong: score += 1; n += 1
+            case .partial: score += 0.6; n += 1
+            case .conflict: score += 0.3; n += 1
+            case .none: n += 1
+            case .unavailable: break
+            }
+        }
+        guard n >= 3 else { return 0.5 }
+        return score / n
+    }
+}
+
 public struct ConfidenceModel: Codable, Sendable {
     public var ocrStrong = 1.2
     public var ocrPartial = 0.2
@@ -117,12 +153,16 @@ public struct ConfidenceModel: Codable, Sendable {
         min(Self.sigmoid(Self.logit(p) + deltas.reduce(0, +)), maxConfidence)
     }
 
-    public func delta(for support: OCRSupport) -> Double {
+    /// `reliability` (0…1) says how trustworthy this photo's OCR transcript is, measured by how often it agrees
+    /// with the model on the fields the model is sure about. A weak OCR (stylised fonts, CJK, low resolution)
+    /// that misses a value is weak evidence; a good OCR that misses it is strong evidence.
+    public func delta(for support: OCRSupport, reliability: Double = 1) -> Double {
+        let r = min(max(reliability, 0), 1)
         switch support {
         case .strong: return ocrStrong
         case .partial: return ocrPartial
-        case .conflict: return ocrConflict
-        case .none: return ocrNone
+        case .conflict: return ocrConflict * (0.4 + 0.6 * r)
+        case .none: return ocrNone * r * r
         case .unavailable: return 0
         }
     }

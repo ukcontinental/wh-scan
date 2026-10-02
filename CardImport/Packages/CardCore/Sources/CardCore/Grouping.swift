@@ -8,6 +8,9 @@ public struct PairEvidence: Codable, Hashable, Sendable {
     public var signals: [String]
     /// Hard veto: the two photos name different people.
     public var conflict: Bool
+    /// Score from content (identity + company-level evidence) only. Weak signals such as capture time,
+    /// colour or front/back labels can rank candidates but can never merge two photos on their own.
+    public var contentScore: Double = 0
 }
 
 public struct GroupingResult: Codable, Hashable, Sendable {
@@ -24,6 +27,8 @@ public struct GroupingConfig: Codable, Sendable {
     public var mergeThreshold = 3.0
     /// Nameless sides need a clear winner: best − runner-up must exceed this.
     public var ambiguityMargin = 1.5
+    /// Minimum content evidence (identity or company-level) for any merge.
+    public var minContentScore = 1.5
     public init() {}
 }
 
@@ -43,15 +48,16 @@ public struct FrontBackMatcher: Sendable {
     public func pairEvidence(_ x: (CardObservation, ContactDraft), _ y: (CardObservation, ContactDraft)) -> PairEvidence {
         let a = Side(obs: x.0, draft: x.1), b = Side(obs: y.0, draft: y.1)
         var s = 0.0
+        var content = 0.0
         var sig: [String] = []
         var conflict = false
 
         // Identity keys.
         let emailsA = Set(a.draft.emails.map(\.value)), emailsB = Set(b.draft.emails.map(\.value))
-        if !emailsA.isDisjoint(with: emailsB) { s += 4; sig.append("same_email") }
+        if !emailsA.isDisjoint(with: emailsB) { s += 4; content += 4; sig.append("same_email") }
         let personalPhones: (ContactDraft) -> Set<String> = { Set($0.phones.filter { $0.kind == .mobile }.map(\.e164)) }
         let sharedPhones: (ContactDraft) -> Set<String> = { Set($0.phones.filter { $0.kind != .mobile }.map { $0.e164 + ($0.extensionNumber ?? "") }) }
-        if !personalPhones(a.draft).isDisjoint(with: personalPhones(b.draft)) { s += 3.5; sig.append("same_mobile") }
+        if !personalPhones(a.draft).isDisjoint(with: personalPhones(b.draft)) { s += 3.5; content += 3.5; sig.append("same_mobile") }
 
         // Company-level evidence is shared by every colleague, so it is capped: it can say "same company",
         // never "same person".
@@ -76,13 +82,15 @@ public struct FrontBackMatcher: Sendable {
         let addrA = Set(a.draft.addresses.map(\.matchKey).filter { !$0.isEmpty }), addrB = Set(b.draft.addresses.map(\.matchKey).filter { !$0.isEmpty })
         if !addrA.isDisjoint(with: addrB) { companyLevel += 1; sig.append("same_address") }
         s += min(companyLevel, 2.5)
+        content += min(companyLevel, 2.5)
 
         // Names.
         if a.hasName && b.hasName {
             let r = nameRelation(a.draft, b.draft)
             switch r {
-            case .same: s += 3; sig.append("same_name")
-            case .crossScript: s += 2.5; sig.append("cross_script_name")
+            case .same: s += 3; content += 3; sig.append("same_name")
+            case .crossScript: s += 2.5; content += 2.5; sig.append("cross_script_name")
+            case .crossScriptSurnameOnly: s += 0.5; content += 0.5; sig.append("cross_script_surname_only")
             case .different: conflict = true; sig.append("different_names")
             case .incomparable: sig.append("names_incomparable")
             }
@@ -108,11 +116,11 @@ public struct FrontBackMatcher: Sendable {
             if let ra = va.aspectRatio, let rb = vb.aspectRatio, abs(ra - rb) > 0.15 { s -= 0.5; sig.append("different_aspect") }
         }
         if abs(a.obs.index - b.obs.index) == 1 { s += 0.3; sig.append("adjacent_in_selection") }
-        if conflict { s = -10 }
-        return PairEvidence(a: a.id, b: b.id, score: s, signals: sig, conflict: conflict)
+        if conflict { s = -10; content = 0 }
+        return PairEvidence(a: a.id, b: b.id, score: s, signals: sig, conflict: conflict, contentScore: content)
     }
 
-    enum NameRelation { case same, crossScript, different, incomparable }
+    enum NameRelation { case same, crossScript, crossScriptSurnameOnly, different, incomparable }
 
     func nameRelation(_ x: ContactDraft, _ y: ContactDraft) -> NameRelation {
         let latinX = [x.givenName?.value, x.familyName?.value].compactMap { $0 }.joined(separator: " ")
@@ -134,7 +142,10 @@ public struct FrontBackMatcher: Sendable {
         for (l, c) in pairs {
             if let cjk = c.cjkName?.value, l.givenName != nil || l.familyName != nil {
                 let m = NameUtil.crossScriptMatch(latinGiven: l.givenName?.value, latinFamily: l.familyName?.value, cjkFull: cjk)
-                if m >= 0.6 { return .crossScript }
+                // Surname alone is weak evidence (Wang, Chen, Lee… are extremely common); the given name must
+                // also match (pinyin / Wade–Giles) for a strong cross-script link.
+                if m >= 0.9 { return .crossScript }
+                if m >= 0.6 { return .crossScriptSurnameOnly }
                 return .different
             }
         }
@@ -162,7 +173,7 @@ public struct FrontBackMatcher: Sendable {
         func evidence(_ x: String, _ y: String) -> PairEvidence? { pairs.first { ($0.a == x && $0.b == y) || ($0.a == y && $0.b == x) } }
         func groupConflicts(_ g: Int, _ id: String) -> Bool { groups[g].contains { evidence($0, id)?.conflict ?? false } }
 
-        for e in pairs.sorted(by: { $0.score > $1.score }) where e.score >= config.mergeThreshold {
+        for e in pairs.sorted(by: { $0.score > $1.score }) where e.score >= config.mergeThreshold && e.contentScore >= config.minContentScore {
             guard named.contains(e.a) && named.contains(e.b) else { continue }
             switch (groupOf[e.a], groupOf[e.b]) {
             case (nil, nil):
@@ -187,7 +198,10 @@ public struct FrontBackMatcher: Sendable {
         for id in nameless {
             var scores: [(Int, Double)] = []
             for (gi, g) in groups.enumerated() where !g.isEmpty {
-                let best = g.compactMap { evidence($0, id)?.score }.max() ?? -10
+                let best = g.compactMap { m -> Double? in
+                    guard let e = evidence(m, id), e.contentScore >= config.minContentScore else { return nil }
+                    return e.score
+                }.max() ?? -10
                 scores.append((gi, best))
             }
             scores.sort { $0.1 > $1.1 }
@@ -202,7 +216,10 @@ public struct FrontBackMatcher: Sendable {
         // Nameless sides that did not attach anywhere: merge them with each other if they match (company-only cards).
         for id in namelessAlone {
             if let g = groups.indices.first(where: { gi in
-                !groups[gi].isEmpty && groups[gi].allSatisfy { nameless.contains($0) } && groups[gi].contains { (evidence($0, id)?.score ?? -10) >= config.mergeThreshold }
+                !groups[gi].isEmpty && groups[gi].allSatisfy { nameless.contains($0) } && groups[gi].contains {
+                    guard let e = evidence($0, id) else { return false }
+                    return e.score >= config.mergeThreshold && e.contentScore >= config.minContentScore
+                }
             }) {
                 groups[g].append(id); groupOf[id] = g
             } else {

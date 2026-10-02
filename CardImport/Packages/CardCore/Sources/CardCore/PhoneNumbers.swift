@@ -71,6 +71,15 @@ public enum PhoneNormalizer {
                                    isValid: digits.count >= 8 && digits.count <= 15, planType: .unknown)
         }
 
+        // Country code printed without "+", e.g. "(852) 2560 7397", "886-2-2345-6789", "86 21 6123 4567".
+        let groups = trimmed.split(whereSeparator: { !$0.isNumber }).map(String.init).filter { !$0.isEmpty }
+        if let first = groups.first, groups.count >= 2, first != "1", let region = countryCodes[first] {
+            var national = String(digits.dropFirst(first.count))
+            if national.hasPrefix("0") { national.removeFirst() }
+            let (valid, _) = validate(cc: first, national: national)
+            if valid { return build(cc: first, national: national, region: region, ext: ext) }
+        }
+
         // National form: infer the country from the hint and the shape of the number.
         let hint = (regionHint ?? defaultRegion).uppercased()
         if let guess = guessRegion(nationalDigits: digits, hint: hint) {

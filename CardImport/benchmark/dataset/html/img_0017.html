@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK SC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{display:grid;grid-template-columns:1fr 390px;background:#fbfbf8}
+.band{background:#c4561d;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:40px 30px;text-align:center;overflow:hidden}
+.bco{font-size:2.60rem;font-weight:700;line-height:1.25} .bco2{font-size:1.80rem;opacity:.85}
+.bsl{font-size:1.70rem;opacity:.85;font-style:italic}
+.main{padding:56px 60px;display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:hidden}
+.nm{font-size:5.00rem;font-weight:700;color:#1d1d1d;font-style:normal;white-space:nowrap;line-height:1.1}
+.nm2{font-size:2.80rem;color:#555;white-space:nowrap}
+.tt{font-size:2.40rem;color:#c4561d;white-space:nowrap} .tt2,.dp{font-size:2.00rem;color:#666;white-space:nowrap}
+.rule{height:3px;width:90px;background:#9a031e;margin:6px 0}
+.ct{font-size:2.20rem;line-height:1.42;color:#333}
+.addr{font-size:2.00rem;line-height:1.35;color:#444} .addr+.addr{margin-top:6px} .alab{font-weight:700;color:#c4561d}
+.ex{font-size:1.70rem;color:#888}
+
+</style></head><body><div class="card"><div class="main fit"><div style="display:flex;gap:22px;align-items:center"><div><div class="nm">王芳</div></div></div><div><div class="tt">董事长</div><div class="dp">销售部</div></div><div class="rule"></div><div style="display:flex;gap:24px;align-items:flex-end;justify-content:space-between"><div><div class="ct"><div class="ln">TEL：021-8944 1205</div><div class="ln">邮箱：wang.fang@xinyuanfood.com.cn</div><div class="ln">xinyuanfood.com.cn</div><div class="ln">微信：wangfang88</div></div><div class="addr"><div>上海市浦东新区张江路88号3号楼501室</div><div>邮编：200120</div></div><div class="ex">HACCP  ·  FSSC 22000</div></div></div></div><div class="band fit"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:30px"><svg width="170" height="170" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 96 C8 70 8 26 50 4 C92 26 92 70 50 96Z" fill="#ffffff"/><path d="M50 90 L50 18 M50 50 L30 35 M50 65 L70 48" stroke="#c4561d" stroke-width="4" fill="none"/></svg></div><div><div class="bco">上海鑫源食品有限公司</div></div></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

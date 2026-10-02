@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Tina",
+      "confidence": 0.97,
+      "source_text": "Tina Hsu",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Hsu",
+      "confidence": 0.97,
+      "source_text": "Tina Hsu",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "許雅婷",
+      "confidence": 0.96,
+      "source_text": "許雅婷",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Hebang Commercial Bank",
+    "confidence": 0.95,
+    "source_text": "Hebang Commercial Bank",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "合邦商業銀行",
+    "confidence": 0.94,
+    "source_text": "合邦商業銀行",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Partner",
+    "confidence": 0.96,
+    "source_text": "Partner",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "合夥人",
+    "confidence": 0.95,
+    "source_text": "合夥人",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "+886 937 052 703",
+      "kind": "mobile",
+      "confidence": 0.95,
+      "source_text": "M 手機 +886 937 052 703",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "tina@hebangbank.com.tw",
+      "confidence": 0.95,
+      "source_text": "電郵 Email: tina@hebangbank.com.tw",
+      "alternatives": []
+    },
+    {
+      "address": "service@hebangbank.com.tw",
+      "confidence": 0.94,
+      "source_text": "電郵 Email: service@hebangbank.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.hebangbank.com.tw",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "12F., No. 88, Sec. 2, Nanjing E. Rd., Zhongshan Dist. Taipei City 104",
+      "street": "12F., No. 88, Sec. 2, Nanjing E. Rd., Zhongshan Dist.",
+      "city": "Taipei City",
+      "region": null,
+      "postal_code": "104",
+      "country": "Taiwan",
+      "confidence": 0.88
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "Est. 1985"
+    ],
+    "concerns": [],
+    "has_qr_code": true,
+    "has_person_photo": true,
+    "overall_confidence": 0.93
+  }
+}

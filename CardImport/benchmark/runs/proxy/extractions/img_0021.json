@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en",
+    "zh-Hant"
+  ],
+  "name": {
+    "given": {
+      "value": "Derek",
+      "confidence": 0.98,
+      "source_text": "Derek Lau",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Lau",
+      "confidence": 0.98,
+      "source_text": "Derek Lau",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "劉德成",
+      "confidence": 0.96,
+      "source_text": "劉 德 成",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Harbourview Frozen Foods Ltd.",
+    "confidence": 0.97,
+    "source_text": "Harbourview Frozen Foods Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "海景冷凍食品有限公司",
+    "confidence": 0.96,
+    "source_text": "海景冷凍食品有限公司",
+    "alternatives": []
+  },
+  "department": {
+    "value": "International Trade Division",
+    "confidence": 0.93,
+    "source_text": "國際貿易部 International Trade Division",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Quality Assurance Manager",
+    "confidence": 0.97,
+    "source_text": "Quality Assurance Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "品保經理",
+    "confidence": 0.96,
+    "source_text": "品保經理",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "416-555-0145",
+      "kind": "mobile",
+      "source_text": "手機 Mobile: 416-555-0145",
+      "confidence": 0.97,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "416 555 0121",
+      "kind": "work",
+      "source_text": "電話 TEL 416 555 0121",
+      "confidence": 0.97,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "derek.lau@harbourviewfoods.ca",
+      "source_text": "E-mail: derek.lau@harbourviewfoods.ca",
+      "confidence": 0.97,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.harbourviewfoods.ca",
+      "confidence": 0.97
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "120 Front St W, Suite 400, Toronto, ON M5J 2M2, Canada",
+      "street": "120 Front St W, Suite 400",
+      "city": "Toronto",
+      "region": "ON",
+      "postal_code": "M5J 2M2",
+      "country": "Canada",
+      "confidence": 0.95
+    },
+    {
+      "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada",
+      "street": "6750 Mississauga Rd, Unit 7",
+      "city": "Mississauga",
+      "region": "ON",
+      "postal_code": "L5N 2L3",
+      "country": "Canada",
+      "confidence": 0.95
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "OCEAN CREST",
+      "Head Office",
+      "Warehouse",
+      "Taste the Difference",
+      "ISO 22000"
+    ],
+    "overall_confidence": 0.95
+  }
+}

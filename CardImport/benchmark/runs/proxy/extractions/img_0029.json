@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "back",
+  "language_hint": [
+    "zh-Hans"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "苏州瑞达包装材料有限公司",
+    "confidence": 0.95,
+    "source_text": "苏州瑞达包装材料有限公司",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "苏州瑞达包装材料有限公司",
+    "confidence": 0.95,
+    "source_text": "苏州瑞达包装材料有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": null,
+  "department": null,
+  "phones": [
+    {
+      "number": "+86-512-82293571",
+      "kind": "main",
+      "extension": null,
+      "country_hint": "CN",
+      "source_text": "总机：+86-512-82293571",
+      "confidence": 0.94,
+      "alternatives": []
+    },
+    {
+      "number": "0512-61109545",
+      "kind": "fax",
+      "extension": null,
+      "country_hint": "CN",
+      "source_text": "FAX：0512-61109545",
+      "confidence": 0.94,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "orders@ruidapack.com.cn",
+      "source_text": "orders@ruidapack.com.cn",
+      "confidence": 0.95,
+      "alternatives": []
+    },
+    {
+      "address": "chenjing@ruidapack.com.cn",
+      "source_text": "chenjing@ruidapack.com.cn",
+      "confidence": 0.95,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.ruidapack.com.cn",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "street": "苏州工业园区苏虹东路58号",
+      "city": "苏州市",
+      "region": "江苏省",
+      "postal_code": "215021",
+      "country": "中国",
+      "formatted": "江苏省苏州市苏州工业园区苏虹东路58号（215021）",
+      "confidence": 0.88
+    },
+    {
+      "street": "浦东新区张江路88号3号楼501室",
+      "city": "上海市",
+      "region": null,
+      "postal_code": "200120",
+      "country": "中国",
+      "formatted": "上海市浦东新区张江路88号3号楼501室（200120）",
+      "confidence": 0.87
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "瑞达",
+      "总部",
+      "工厂"
+    ],
+    "concerns": [
+      "multiple_addresses"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.92
+  }
+}

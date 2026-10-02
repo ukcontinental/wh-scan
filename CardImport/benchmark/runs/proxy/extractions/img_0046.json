@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "何詠詩",
+      "confidence": 0.96,
+      "source_text": "何詠詩",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "港信會計師事務所有限公司",
+    "confidence": 0.95,
+    "source_text": "港信會計師事務所有限公司",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "合夥人",
+    "confidence": 0.95,
+    "source_text": "合夥人",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "+852-5632-3122",
+      "kind": "mobile",
+      "confidence": 0.96,
+      "source_text": "手提：+852-5632-3122",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "2131 6381",
+      "kind": "work",
+      "confidence": 0.95,
+      "source_text": "直線：2131 6381",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+852-3514-6250",
+      "kind": "fax",
+      "confidence": 0.96,
+      "source_text": "傳真：+852-3514-6250",
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "stephanie@harbourtrustcpa.com",
+      "confidence": 0.3,
+      "source_text": "E-mail：stephanie@harbourtrustcpa.com.",
+      "alternatives": [
+        "stephanie@harbourtrustcpa.com.hk"
+      ]
+    }
+  ],
+  "websites": [
+    {
+      "url": "harbourtrustcpa.com.hk",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "中環德輔道中88號景豐大廈22樓2208室",
+      "street": "德輔道中88號景豐大廈22樓2208室",
+      "city": "中環",
+      "region": null,
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.88
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "partially_cut_off",
+      "email_obscured_by_qr_code"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": true,
+    "ignored_text": [
+      "創立於1962年"
+    ],
+    "overall_confidence": 0.85
+  }
+}

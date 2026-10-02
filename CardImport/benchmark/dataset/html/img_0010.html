@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#ffffff;color:#c4561d;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;padding:40px}
+.web{font-size:2.6rem;letter-spacing:.08em}
+.co{font-size:2.3rem;font-weight:700;letter-spacing:.04em}
+.sl{font-size:1.9rem;font-style:italic;opacity:.85}
+.qrw{background:#fff;padding:10px;border-radius:6px;display:flex}
+
+</style></head><body><div class="card fit" style="flex-direction:row;gap:60px"><div style="display:flex;flex-direction:column;align-items:center;gap:20px"><div class="logo" style="display:flex;flex-direction:row;align-items:center;gap:36px"><svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,3 93,27 93,73 50,97 7,73 7,27" fill="#c4561d"/><polygon points="50,22 76,37 76,63 50,78 24,63 24,37" fill="none" stroke="#ffffff" stroke-width="6"/></svg><span class="wm" style="font-size:5.0rem;color:#c4561d;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">PINECREST</span></div><div class="web">www.pinecrestpack.ca</div></div><div class="qrw"><img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACbUlEQVR4nO2bQYobMRBF348Es1TDHMBHad8gR8qZcoPuo/gAgdbSIFFZSO0ZDyTYgcaCVC2Mm36LD0VJv0pqGQ/G+u1REhx11NFvkNXjnCVWSdIEkiL7qziIVkcJZma2L4mpYHaRzDZgNrP2bwytjvY6glSA/GZAMOlUaJV3PlyAow9F/PyQ343ZQKSrjBzL8QIc/Vc0FaQJmC8R1lP5M3qMAEf/Hq227mx8jbZOt6dkQD5OgKNPoHQLATBvwb7+9Ahmy8u1Ohp79QCQq1ingK0Tau7wcAGOPtlvRaSpqptAaksUqyI6U8Xq/dYYKGZbMFtSoTVdsxW6lyc0L9+Rl2t1tGXrY4/qedt6x2wLwSCZZ2sENO51VGXkCcFby5vmBQTQO6+Xa3U00iz7qUSRSjTo3THk92JQxbyUEbQ6yj4ivG1P9IXRlmRtEcQd/CDovkdt4ZYZsKW925Pn2RoHTVdJp6vMLhFIZvrRnEdnbEm+Eo6C5rd2JqJzuvZzkj55qmLeqo4W4OjD0busbS+huT3etrFUcAc/CnrrrUqfE3ZDT88byawdSXq2Xo/e1VYzhtAHGgTrpebZGgNt/RbrFIpIGyKVCHkC2ojwYAGOPl1bPbZbq/VpRAi4gx8E/Xq+tQ8GC3ufDLa4yxgDjUBovkJQZbNVAcE0b+8YGZgvPiccCP2486QzwXqfTJU0BdP5cAGOPhT3d54mjPxe2kq4nko08iRr92lertXRu2wRiiAA1AgpGOt3Q74SDoLe3XlKV1k/6f8F889Y2M9TDhPg6JNobXfdIcc2ItyHhVUfo91BtP7fqPyLIEcdPQT9DfbIjuZc9a25AAAAAElFTkSuQmCC" style="width:150px;height:150px;image-rendering:pixelated;flex:none"></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

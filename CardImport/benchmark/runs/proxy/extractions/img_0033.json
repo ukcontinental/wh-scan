@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Kevin",
+      "confidence": 0.97,
+      "source_text": "Kevin Zhang",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Zhang",
+      "confidence": 0.97,
+      "source_text": "Kevin Zhang",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Harbourview Frozen Foods Ltd.",
+    "confidence": 0.96,
+    "source_text": "Harbourview Frozen Foods Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": {
+    "value": "Quality Assurance Manager",
+    "confidence": 0.95,
+    "source_text": "Quality Assurance Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "647-555-0185",
+      "kind": "mobile",
+      "source_text": "M: 647-555-0185",
+      "confidence": 0.94,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "(416) 555-0168",
+      "kind": "work",
+      "source_text": "Direct: (416) 555-0168",
+      "confidence": 0.93,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "416.555.0123",
+      "kind": "fax",
+      "source_text": "F: 416.555.0123",
+      "confidence": 0.93,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "kevin.zhang@harbourviewfoods.ca",
+      "source_text": "E kevin.zhang@harbourviewfoods.ca",
+      "confidence": 0.94,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.harbourviewfoods.ca",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "120 Front St W, Suite 400 Toronto, ON M5J 2M2",
+      "street": "120 Front St W, Suite 400",
+      "city": "Toronto",
+      "region": "ON",
+      "postal_code": "M5J 2M2",
+      "country": "Canada",
+      "confidence": 0.9
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "OCEAN CREST",
+      "Fresh from Ocean to Table",
+      "FSSC 22000"
+    ],
+    "overall_confidence": 0.92
+  }
+}

@@ -51,12 +51,12 @@ public struct CardScorer: Sendable {
     }
 
     private func scoreText(_ f: FieldValue?, kind: FieldKind, ocr: OCRResult?, source: String,
-                           extra: [(String, Double)] = []) -> DraftValue? {
+                           extra: [(String, Double)] = [], reliability: Double = 1) -> DraftValue? {
         guard let f else { return nil }
         let value = TextNorm.nfkc(f.value)
         guard !value.isEmpty else { return nil }
         let support = OCRCrossCheck.support(value: value, kind: kind, ocr: ocr)
-        var deltas = [model.delta(for: support)]
+        var deltas = [model.delta(for: support, reliability: reliability)]
         var signals = ["model:\(String(format: "%.2f", f.confidence))", "ocr:\(support.rawValue)"]
         for (name, d) in extra where d != 0 { deltas.append(d); signals.append(name) }
         return DraftValue(value: value, confidence: model.adjust(f.confidence, deltas: deltas),
@@ -64,11 +64,23 @@ public struct CardScorer: Sendable {
     }
 
     public func score(_ obs: CardObservation) -> ContactDraft {
-        let card = obs.extraction
+        var card = obs.extraction
+        // Chinese-only company / title placed in the Latin slot: keep it in the CJK slot only.
+        if let c = card.company, TextNorm.containsCJK(c.value) && !TextNorm.isMostlyLatin(c.value) {
+            if card.companyCjk == nil || TextNorm.alnum(card.companyCjk!.value) == TextNorm.alnum(c.value) {
+                card.companyCjk = card.companyCjk ?? c; card.company = nil
+            }
+        }
+        if let t = card.jobTitle, TextNorm.containsCJK(t.value) && !TextNorm.isMostlyLatin(t.value) {
+            if card.jobTitleCjk == nil || TextNorm.alnum(card.jobTitleCjk!.value) == TextNorm.alnum(t.value) {
+                card.jobTitleCjk = card.jobTitleCjk ?? t; card.jobTitle = nil
+            }
+        }
         let ocr = obs.ocr
+        let rel = OCRReliability.estimate(card: card, ocr: ocr)
         let src = obs.photoID
         var d = ContactDraft(id: "card-\(obs.photoID)", photoIDs: [obs.photoID])
-        d.concerns = card.evidence.concerns
+        d.concerns = card.evidence.concerns + ["ocr_reliability:\(String(format: "%.2f", rel))"]
         d.cardNotes = card.notesOnCard
 
         // Names
@@ -80,16 +92,16 @@ public struct CardScorer: Sendable {
         }
         let latinFull = [card.name.given?.value, card.name.family?.value].compactMap { $0 }.joined(separator: " ")
         if !latinFull.isEmpty && !NameUtil.looksLikePersonName(latinFull) { nameExtra.append(("not_name_shaped", -1.2)) }
-        d.givenName = scoreText(card.name.given, kind: .personName, ocr: ocr, source: src, extra: nameExtra)
-        d.familyName = scoreText(card.name.family, kind: .personName, ocr: ocr, source: src, extra: nameExtra)
+        d.givenName = scoreText(card.name.given, kind: .personName, ocr: ocr, source: src, extra: nameExtra, reliability: rel)
+        d.familyName = scoreText(card.name.family, kind: .personName, ocr: ocr, source: src, extra: nameExtra, reliability: rel)
         var cjkExtra = nameExtra.filter { $0.0 != "not_name_shaped" }
         if let cjk = card.name.cjkFull?.value {
             if !NameUtil.looksLikePersonName(cjk) { cjkExtra.append(("cjk_not_name_shaped", -1.0)) }
             else if NameUtil.isKnownSurname(NameUtil.splitCJK(cjk).family) { cjkExtra.append(("known_surname", 0.4)) }
         }
-        d.cjkName = scoreText(card.name.cjkFull, kind: .personName, ocr: ocr, source: src, extra: cjkExtra)
-        d.namePrefix = scoreText(card.name.prefix, kind: .personName, ocr: ocr, source: src)
-        d.nameSuffix = scoreText(card.name.suffix, kind: .personName, ocr: ocr, source: src)
+        d.cjkName = scoreText(card.name.cjkFull, kind: .personName, ocr: ocr, source: src, extra: cjkExtra, reliability: rel)
+        d.namePrefix = scoreText(card.name.prefix, kind: .personName, ocr: ocr, source: src, reliability: rel)
+        d.nameSuffix = scoreText(card.name.suffix, kind: .personName, ocr: ocr, source: src, reliability: rel)
 
         // Company / title
         let domains = Set(card.websites.compactMap { DomainUtil.host(fromURL: $0.url) }
@@ -102,17 +114,22 @@ public struct CardScorer: Sendable {
             if TextNorm.tokens(c).count > 7 && !CompanyUtil.hasLegalSuffix(c) { companyExtra.append(("slogan_shaped", -1.5)) }
             if CompanyUtil.hasLegalSuffix(c) { companyExtra.append(("legal_suffix", 0.4)) }
         }
-        d.company = scoreText(card.company, kind: .company, ocr: ocr, source: src, extra: companyExtra)
+        d.company = scoreText(card.company, kind: .company, ocr: ocr, source: src, extra: companyExtra, reliability: rel)
         d.companyCJK = scoreText(card.companyCjk, kind: .company, ocr: ocr, source: src,
-                                 extra: (card.companyCjk.map { CompanyUtil.hasLegalSuffix($0.value) } ?? false) ? [("legal_suffix", 0.4)] : [])
+                                 extra: (card.companyCjk.map { CompanyUtil.hasLegalSuffix($0.value) } ?? false) ? [("legal_suffix", 0.4)] : [], reliability: rel)
         func titleExtra(_ f: FieldValue?) -> [(String, Double)] {
             guard let t = f?.value else { return [] }
             let l = TextNorm.loose(t)
             return Self.titleKeywords.contains(where: { l.contains($0) }) ? [("title_keyword", 0.5)] : []
         }
-        d.jobTitle = scoreText(card.jobTitle, kind: .jobTitle, ocr: ocr, source: src, extra: titleExtra(card.jobTitle))
-        d.jobTitleCJK = scoreText(card.jobTitleCjk, kind: .jobTitle, ocr: ocr, source: src, extra: titleExtra(card.jobTitleCjk))
-        d.department = scoreText(card.department, kind: .department, ocr: ocr, source: src)
+        d.jobTitle = scoreText(card.jobTitle, kind: .jobTitle, ocr: ocr, source: src, extra: titleExtra(card.jobTitle), reliability: rel)
+        d.jobTitleCJK = scoreText(card.jobTitleCjk, kind: .jobTitle, ocr: ocr, source: src, extra: titleExtra(card.jobTitleCjk), reliability: rel)
+        if let dp = card.department, TextNorm.containsCJK(dp.value) && !TextNorm.isMostlyLatin(dp.value),
+           card.departmentCjk == nil || TextNorm.alnum(card.departmentCjk!.value) == TextNorm.alnum(dp.value) {
+            card.departmentCjk = card.departmentCjk ?? dp; card.department = nil
+        }
+        d.department = scoreText(card.department, kind: .department, ocr: ocr, source: src, reliability: rel)
+        d.departmentCJK = scoreText(card.departmentCjk, kind: .department, ocr: ocr, source: src, reliability: rel)
 
         // Phones
         let region = regionHint(for: card)
@@ -120,7 +137,7 @@ public struct CardScorer: Sendable {
             guard let n = PhoneNormalizer.normalize(p.number, regionHint: p.countryHint ?? region, defaultRegion: defaultRegion,
                                                     extensionHint: p.extension) else { continue }
             let support = OCRCrossCheck.support(value: p.number, kind: .phone, ocr: ocr)
-            var deltas = [model.delta(for: support)]
+            var deltas = [model.delta(for: support, reliability: rel)]
             var signals = ["model:\(String(format: "%.2f", p.confidence))", "ocr:\(support.rawValue)"]
             if !n.isValid { deltas.append(-2.6); signals.append("validator:invalid_number_plan") }
             var kind = p.kind
@@ -144,7 +161,7 @@ public struct CardScorer: Sendable {
                 + card.emails.map { EmailValidator.repair($0.address) }.filter { $0 != repaired }.compactMap { EmailValidator.domain(of: $0) })
             let issues = EmailValidator.validate(repaired, siblingDomains: siblings)
             let support = OCRCrossCheck.support(value: repaired, kind: .email, ocr: ocr)
-            var deltas = [model.delta(for: support)] + issues.map { model.delta(forFactor: $0.factor) }
+            var deltas = [model.delta(for: support, reliability: rel)] + issues.map { model.delta(forFactor: $0.factor) }
             var signals = ["model:\(String(format: "%.2f", e.confidence))", "ocr:\(support.rawValue)"] + issues.map { "validator:\($0.code)" }
             if repaired != e.address.lowercased().trimmingCharacters(in: .whitespaces) { signals.append("repaired_from:\(e.address)"); deltas.append(-0.3) }
             if d.emails.contains(where: { $0.value == repaired }) { continue }
@@ -157,7 +174,7 @@ public struct CardScorer: Sendable {
             let v = TextNorm.nfkc(w.url).lowercased().filter { !$0.isWhitespace }
             guard !v.isEmpty else { continue }
             let support = OCRCrossCheck.support(value: v, kind: .website, ocr: ocr)
-            var deltas = [model.delta(for: support)]
+            var deltas = [model.delta(for: support, reliability: rel)]
             var signals = ["ocr:\(support.rawValue)"]
             if !DomainUtil.isPlausibleURL(v) { deltas.append(-2.0); signals.append("validator:url_syntax") }
             if let h = DomainUtil.host(fromURL: v), d.emailDomains.contains(where: { DomainUtil.registrable($0) == DomainUtil.registrable(h) }) {
@@ -184,7 +201,7 @@ public struct CardScorer: Sendable {
             let issues = AddressValidator.validate(a2)
             let probe = a2.street ?? a2.formatted ?? ""
             let support = probe.isEmpty ? OCRSupport.unavailable : OCRCrossCheck.support(value: probe, kind: .address, ocr: ocr)
-            var deltas = [model.delta(for: support)] + issues.map { model.delta(forFactor: $0.factor) }
+            var deltas = [model.delta(for: support, reliability: rel)] + issues.map { model.delta(forFactor: $0.factor) }
             var signals = ["ocr:\(support.rawValue)"] + issues.map { "validator:\($0.code)" }
             if a2.postalCode != a.postalCode { signals.append("postal_code_repaired"); deltas.append(-0.2) }
             let draft = DraftAddress(street: a2.street.map(TextNorm.nfkc), city: a2.city.map(TextNorm.nfkc),
@@ -199,7 +216,7 @@ public struct CardScorer: Sendable {
         for s in card.social {
             let support = OCRCrossCheck.support(value: s.handle, kind: .social, ocr: ocr)
             d.social.append(DraftSocial(service: s.service, handle: TextNorm.nfkc(s.handle),
-                                        confidence: model.adjust(s.confidence, deltas: [model.delta(for: support)]), sources: [src]))
+                                        confidence: model.adjust(s.confidence, deltas: [model.delta(for: support, reliability: rel)]), sources: [src]))
         }
         return d
     }

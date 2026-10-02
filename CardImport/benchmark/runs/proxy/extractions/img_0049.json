@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Raymond",
+      "confidence": 0.96,
+      "source_text": "Raymond WONG",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Wong",
+      "confidence": 0.95,
+      "source_text": "Raymond WONG",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Wui Tai Foods Limited",
+    "confidence": 0.92,
+    "source_text": "Wui Tai Foods Limited",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": {
+    "value": "International Trade Division",
+    "confidence": 0.88,
+    "source_text": "International Trade Division",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Purchasing Manager",
+    "confidence": 0.93,
+    "source_text": "Purchasing Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "+852 3351 2789",
+      "kind": "work",
+      "confidence": 0.88,
+      "source_text": "Direct: +852 3351 2789 ext. 3462",
+      "country_hint": "HK",
+      "extension": "3462",
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "raymondw@wuitaifoods.com.hk",
+      "confidence": 0.88,
+      "source_text": "E: raymondw@wuitaifoods.com.hk",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.wuitaifoods.com.hk",
+      "confidence": 0.9
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon",
+      "street": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road",
+      "city": "Kwun Tong",
+      "region": "Kowloon",
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.82
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "raymondwong45",
+      "confidence": 0.9
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "GOLDEN BOWL",
+      "ISO 9001:2015"
+    ],
+    "concerns": [
+      "name_vs_company_ambiguous",
+      "small_text"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.88
+  }
+}

@@ -113,7 +113,8 @@ final class ContactsService: ContactIndex, ContactWriter, @unchecked Sendable {
         set(c.organizationName, org.isEmpty ? nil : org) { c.organizationName = $0 }
         let title = [d.jobTitle?.value, d.jobTitleCJK?.value].compactMap { $0 }.joined(separator: " / ")
         set(c.jobTitle, title.isEmpty ? nil : title) { c.jobTitle = $0 }
-        set(c.departmentName, d.department?.value) { c.departmentName = $0 }
+        let dept = [d.department?.value, d.departmentCJK?.value].compactMap { $0 }.joined(separator: " / ")
+        set(c.departmentName, dept.isEmpty ? nil : dept) { c.departmentName = $0 }
         if !d.hasPersonName && !org.isEmpty && c.givenName.isEmpty && c.familyName.isEmpty { c.contactType = .organization }
 
         let existingDigits = Set(c.phoneNumbers.map { TextNorm.digits($0.value.stringValue) })

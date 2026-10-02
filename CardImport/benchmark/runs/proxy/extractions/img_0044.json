@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "cjk_full": null,
+    "family": {
+      "value": "Ng",
+      "confidence": 0.96,
+      "source_text": "Calvin Ng, MBA",
+      "alternatives": []
+    },
+    "given": {
+      "value": "Calvin",
+      "confidence": 0.96,
+      "source_text": "Calvin Ng, MBA",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": {
+      "value": "MBA",
+      "confidence": 0.95,
+      "source_text": "Calvin Ng, MBA",
+      "alternatives": []
+    }
+  },
+  "company": {
+    "value": "Wui Tai Foods Limited",
+    "confidence": 0.95,
+    "source_text": "Wui Tai Foods Limited",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": {
+    "value": "President",
+    "confidence": 0.96,
+    "source_text": "President",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "2982 0655",
+      "kind": "work",
+      "source_text": "T: 2982 0655",
+      "confidence": 0.92,
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "calvin.ng@wuitaifoods.com.hk",
+      "source_text": "E: calvin.ng@wuitaifoods.com.hk",
+      "confidence": 0.92,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.wuitaifoods.com.hk",
+      "confidence": 0.93
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong Kowloon, Hong Kong",
+      "street": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road",
+      "city": "Kwun Tong",
+      "region": "Kowloon",
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.88
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "calvinng86",
+      "confidence": 0.9
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "small_font"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "滙泰",
+      "GOLDEN BOWL"
+    ],
+    "overall_confidence": 0.91
+  }
+}

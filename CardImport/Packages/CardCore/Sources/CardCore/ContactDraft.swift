@@ -89,6 +89,7 @@ public struct ContactDraft: Codable, Hashable, Sendable {
     public var jobTitle: DraftValue?
     public var jobTitleCJK: DraftValue?
     public var department: DraftValue?
+    public var departmentCJK: DraftValue?
     public var phones: [DraftPhone]
     public var emails: [DraftValue]
     public var websites: [DraftValue]
@@ -113,7 +114,7 @@ public struct ContactDraft: Codable, Hashable, Sendable {
 
     /// Nothing to write (used for patches, where a lone job title is meaningful).
     public var hasNoFields: Bool {
-        isEmpty && jobTitle == nil && jobTitleCJK == nil && department == nil && namePrefix == nil && nameSuffix == nil
+        isEmpty && jobTitle == nil && jobTitleCJK == nil && department == nil && departmentCJK == nil && namePrefix == nil && nameSuffix == nil
     }
 
     /// Human readable label for the summary and review screens.
@@ -133,7 +134,7 @@ public struct ContactDraft: Codable, Hashable, Sendable {
 
 /// Identifies one field of a draft for review / held fields.
 public enum FieldRef: Codable, Hashable, Sendable, CustomStringConvertible {
-    case givenName, familyName, cjkName, company, companyCJK, jobTitle, jobTitleCJK, department
+    case givenName, familyName, cjkName, company, companyCJK, jobTitle, jobTitleCJK, department, departmentCJK
     case phone(String)      // e164
     case email(String)      // address
     case website(String)
@@ -150,6 +151,7 @@ public enum FieldRef: Codable, Hashable, Sendable, CustomStringConvertible {
         case .jobTitle: return "job_title"
         case .jobTitleCJK: return "job_title_cjk"
         case .department: return "department"
+        case .departmentCJK: return "department_cjk"
         case .phone(let v): return "phone:\(v)"
         case .email(let v): return "email:\(v)"
         case .website(let v): return "website:\(v)"
@@ -167,7 +169,7 @@ public enum FieldRef: Codable, Hashable, Sendable, CustomStringConvertible {
         case .givenName, .familyName, .cjkName: return .personName
         case .company, .companyCJK: return .company
         case .jobTitle, .jobTitleCJK: return .jobTitle
-        case .department: return .department
+        case .department, .departmentCJK: return .department
         case .phone: return .phone
         case .email: return .email
         case .website: return .website
@@ -184,7 +186,7 @@ extension ContactDraft {
         func add(_ r: FieldRef, _ v: DraftValue?) { if let v { out.append((r, v.value, v.confidence, v.alternatives)) } }
         add(.givenName, givenName); add(.familyName, familyName); add(.cjkName, cjkName)
         add(.company, company); add(.companyCJK, companyCJK); add(.jobTitle, jobTitle); add(.jobTitleCJK, jobTitleCJK)
-        add(.department, department)
+        add(.department, department); add(.departmentCJK, departmentCJK)
         for p in phones { out.append((.phone(p.e164), p.printed, p.confidence, p.alternatives)) }
         for e in emails { out.append((.email(e.value), e.value, e.confidence, e.alternatives)) }
         for w in websites { out.append((.website(w.value), w.value, w.confidence, w.alternatives)) }
@@ -204,6 +206,7 @@ extension ContactDraft {
         case .jobTitle: jobTitle = nil
         case .jobTitleCJK: jobTitleCJK = nil
         case .department: department = nil
+        case .departmentCJK: departmentCJK = nil
         case .phone(let v): phones.removeAll { $0.e164 == v }
         case .email(let v): emails.removeAll { $0.value == v }
         case .website(let v): websites.removeAll { $0.value == v }
@@ -226,6 +229,7 @@ extension ContactDraft {
         case .jobTitle: jobTitle = dv
         case .jobTitleCJK: jobTitleCJK = dv
         case .department: department = dv
+        case .departmentCJK: departmentCJK = dv
         case .phone(let e164):
             var p = original.phones.first { $0.e164 == e164 } ?? DraftPhone(kind: .work, e164: e164, printed: value, confidence: 1)
             let region = p.e164.hasPrefix("+1") ? "CA" : nil
@@ -259,6 +263,7 @@ extension FieldRef {
         case "job_title": self = .jobTitle
         case "job_title_cjk": self = .jobTitleCJK
         case "department": self = .department
+        case "department_cjk": self = .departmentCJK
         case "phone": self = .phone(tail)
         case "email": self = .email(tail)
         case "website": self = .website(tail)
@@ -282,6 +287,7 @@ extension ContactDraft {
         case .jobTitle: return dv(jobTitle)
         case .jobTitleCJK: return dv(jobTitleCJK)
         case .department: return dv(department)
+        case .departmentCJK: return dv(departmentCJK)
         case .phone(let k): return phones.first { $0.e164 == k }.map { ($0.printed, $0.confidence, $0.alternatives) }
         case .email(let k): return dv(emails.first { $0.value == k })
         case .website(let k): return dv(websites.first { $0.value == k })
@@ -307,6 +313,7 @@ extension ContactDraft {
         case .jobTitle: upd(&jobTitle)
         case .jobTitleCJK: upd(&jobTitleCJK)
         case .department: upd(&department)
+        case .departmentCJK: upd(&departmentCJK)
         case .phone(let k):
             guard let i = phones.firstIndex(where: { $0.e164 == k }) else { return ref }
             var p = phones[i]
@@ -328,7 +335,12 @@ extension ContactDraft {
             guard let i = websites.firstIndex(where: { $0.value == k }) else { return ref }
             websites[i].value = value.lowercased(); websites[i].confidence = confidence; websites[i].signals.append(signal)
             return .website(websites[i].value)
-        case .address, .social:
+        case .address(let k):
+            // Addresses are confirmed or rejected as a whole; the printed text is kept.
+            guard let i = addresses.firstIndex(where: { $0.matchKey == k }) else { return ref }
+            addresses[i].confidence = confidence; addresses[i].signals.append(signal)
+            return ref
+        case .social:
             return ref
         }
         return ref
@@ -346,6 +358,7 @@ extension ContactDraft {
         case .jobTitle: d.jobTitle = jobTitle
         case .jobTitleCJK: d.jobTitleCJK = jobTitleCJK
         case .department: d.department = department
+        case .departmentCJK: d.departmentCJK = departmentCJK
         case .phone(let k): d.phones = phones.filter { $0.e164 == k }
         case .email(let k): d.emails = emails.filter { $0.value == k }
         case .website(let k): d.websites = websites.filter { $0.value == k }

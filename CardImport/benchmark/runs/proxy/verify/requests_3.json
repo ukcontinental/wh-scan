@@ -1,0 +1,177 @@
+[
+ {
+  "key": "d8712b748fdd60b4",
+  "photoIds": [
+   "img_0038",
+   "img_0045"
+  ],
+  "candidates": [
+   "黃以恆",
+   "黃以恒"
+  ],
+  "fieldLabel": "中文姓名",
+  "ocrHint": []
+ },
+ {
+  "key": "b4f41538a0b15c8f",
+  "photoIds": [
+   "img_0038",
+   "img_0045"
+  ],
+  "candidates": [
+   "花崗峰資本"
+  ],
+  "fieldLabel": "公司（中文）",
+  "ocrHint": [
+   "峰資本"
+  ]
+ },
+ {
+  "candidates": [
+   "jessica.wilson@lakeshoretrading.ca"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "Email",
+  "key": "2bf597421810f2f4",
+  "photoIds": [
+   "img_0015"
+  ]
+ },
+ {
+  "candidates": [
+   "021-8944 1205"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "電話 Phone",
+  "key": "3b2ab00506f9ff7f",
+  "photoIds": [
+   "img_0017"
+  ]
+ },
+ {
+  "candidates": [
+   "恒昌國際貿易有限公司",
+   "恆昌國際貿易有限公司"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "公司（中文）",
+  "key": "ab887e990401b8a0",
+  "photoIds": [
+   "img_0022"
+  ]
+ },
+ {
+  "key": "c806faf74824d2bc",
+  "photoIds": [
+   "img_0014",
+   "img_0057"
+  ],
+  "candidates": [
+   "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central Central, Hong Kong"
+  ],
+  "fieldLabel": "地址 Address",
+  "ocrHint": []
+ },
+ {
+  "candidates": [
+   "中環德輔道中88號景豐大廈22樓2208室"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "地址 Address",
+  "key": "5c9ef3c0c7302e64",
+  "photoIds": [
+   "img_0034"
+  ]
+ },
+ {
+  "candidates": [
+   "212.555.0125"
+  ],
+  "ocrHint": [
+   "Celi: 212-555-0108",
+   "T 212.555,",
+   "F #1 212 555 010"
+  ],
+  "fieldLabel": "電話 Phone",
+  "key": "fc8338a7fd949657",
+  "photoIds": [
+   "img_0041"
+  ]
+ },
+ {
+  "candidates": [
+   "+886 2 2281 6339"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "電話 Phone",
+  "key": "2c123a8e4c2f2e5f",
+  "photoIds": [
+   "img_0043",
+   "img_0047"
+  ]
+ },
+ {
+  "candidates": [
+   "+852 3351 2789"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "電話 Phone",
+  "key": "6c7b0cbce3a1ff15",
+  "photoIds": [
+   "img_0049"
+  ]
+ },
+ {
+  "candidates": [
+   "1450 Broadway, 18th Floor, New York, NY 10018, USA"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "地址 Address",
+  "key": "cccb2c6950ef18aa",
+  "photoIds": [
+   "img_0041"
+  ]
+ },
+ {
+  "candidates": [
+   "www.qinghetea.com"
+  ],
+  "ocrHint": [
+   "kai.zheng@qinghetea.com",
+   "ed inghetea.com"
+  ],
+  "fieldLabel": "網站 Website",
+  "key": "476740b1668cd5bf",
+  "photoIds": [
+   "img_0056"
+  ]
+ },
+ {
+  "candidates": [
+   "中国浙江省杭州市西湖区龙井路16号"
+  ],
+  "ocrHint": [
+   "TEL: (0571) 6677-5347 轉 4168"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "e7824d746f1cc5ad",
+  "photoIds": [
+   "img_0056"
+  ]
+ },
+ {
+  "key": "14194eaa0f7db0d7",
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ],
+  "candidates": [
+   "kevin.zhang@harbourviewfoods.ca"
+  ],
+  "fieldLabel": "Email",
+  "ocrHint": [
+   "E kevin.zhang@harbourviewtoods.ca",
+   "Jiwwwharbourviewioods ca"
+  ]
+ }
+]

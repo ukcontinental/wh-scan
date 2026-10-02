@@ -47,6 +47,8 @@ targets:
         CFBundleURLTypes:
           - CFBundleURLName: cardimport
             CFBundleURLSchemes: [cardimport]
+        BGTaskSchedulerPermittedIdentifiers: [$(PRODUCT_BUNDLE_IDENTIFIER).batch.*]
+        UIBackgroundModes: [processing]
     entitlements:
       path: CardImport/CardImport.entitlements
       properties:

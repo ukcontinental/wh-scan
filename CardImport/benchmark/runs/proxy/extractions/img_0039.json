@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "陳欣怡",
+      "confidence": 0.97,
+      "source_text": "陳 欣 怡",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "真北食品經銷有限公司",
+    "confidence": 0.95,
+    "source_text": "真北食品經銷有限公司",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": {
+    "value": "品保經理",
+    "confidence": 0.95,
+    "source_text": "品保經理",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "(905) 555-0138",
+      "kind": "work",
+      "source_text": "電話 (905) 555-0138",
+      "confidence": 0.92,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "olivia.chen@truenorthfood.ca",
+      "source_text": "olivia.chen@truenorthfood.ca",
+      "confidence": 0.93,
+      "alternatives": []
+    },
+    {
+      "address": "orders@truenorthfood.ca",
+      "source_text": "orders@truenorthfood.ca",
+      "confidence": 0.93,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "truenorthfood.ca",
+      "confidence": 0.93
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "安大略省萬錦7號公路東3601號1008室 郵遞區號 L3R 0M3",
+      "street": "7號公路東3601號1008室",
+      "city": "萬錦",
+      "region": "安大略省",
+      "postal_code": "L3R 0M3",
+      "country": "Canada",
+      "confidence": 0.85
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "TRUE NORTH"
+    ],
+    "overall_confidence": 0.9
+  }
+}

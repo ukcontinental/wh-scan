@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "郭俊傑",
+      "confidence": 0.97,
+      "source_text": "郭 俊 傑",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "嘉豐食品股份有限公司",
+    "confidence": 0.96,
+    "source_text": "嘉豐食品股份有限公司",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "嘉豐食品股份有限公司",
+    "confidence": 0.96,
+    "source_text": "嘉豐食品股份有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "董事長",
+    "confidence": 0.96,
+    "source_text": "董事長",
+    "alternatives": []
+  },
+  "department": {
+    "value": "採購部",
+    "confidence": 0.94,
+    "source_text": "採購部",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "+886 932 256 028",
+      "kind": "mobile",
+      "extension": null,
+      "country_hint": "TW",
+      "source_text": "手機 +886 932 256 028",
+      "confidence": 0.96,
+      "alternatives": []
+    },
+    {
+      "number": "02-20787574",
+      "kind": "work",
+      "extension": null,
+      "country_hint": "TW",
+      "source_text": "電話 02-20787574",
+      "confidence": 0.96,
+      "alternatives": []
+    },
+    {
+      "number": "02-21326720",
+      "kind": "fax",
+      "extension": null,
+      "country_hint": "TW",
+      "source_text": "FAX：02-21326720",
+      "confidence": 0.96,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "jack.kuo@chiafeng.com.tw",
+      "source_text": "jack.kuo@chiafeng.com.tw",
+      "confidence": 0.96,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.chiafeng.com.tw",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "street": "板橋區文化路一段188號",
+      "city": "新北市",
+      "region": null,
+      "postal_code": "220",
+      "country": "台灣",
+      "formatted": "台灣 220 新北市板橋區文化路一段188號",
+      "confidence": 0.9
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "CF",
+      "金穗",
+      "HACCP · BRCGS AA"
+    ],
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.94
+  }
+}

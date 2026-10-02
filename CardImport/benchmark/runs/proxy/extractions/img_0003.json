@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "赵敏",
+      "confidence": 0.98,
+      "source_text": "赵敏",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "北京云帆软件有限公司",
+    "confidence": 0.97,
+    "source_text": "北京云帆软件有限公司",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": {
+    "value": "高级软件工程师",
+    "confidence": 0.96,
+    "source_text": "高级软件工程师",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "159-1477-1523",
+      "kind": "mobile",
+      "source_text": "移动电话：159-1477-1523",
+      "confidence": 0.96,
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "min.zhao@yunfansoft.cn",
+      "source_text": "E-mail：min.zhao@yunfansoft.cn",
+      "confidence": 0.96,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "yunfansoft.cn",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "中国北京市朝阳区建国路93号1203室（100022）",
+      "street": "朝阳区建国路93号1203室",
+      "city": "北京市",
+      "region": null,
+      "postal_code": "100022",
+      "country": "中国",
+      "confidence": 0.9
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": true,
+    "has_qr_code": false,
+    "ignored_text": [
+      "CloudSail",
+      "云帆"
+    ],
+    "overall_confidence": 0.93
+  }
+}

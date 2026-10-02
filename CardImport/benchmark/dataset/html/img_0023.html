@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#0b4f8a;color:#ffffff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;padding:40px}
+.web{font-size:2.6rem;letter-spacing:.08em}
+.co{font-size:2.3rem;font-weight:700;letter-spacing:.04em}
+.sl{font-size:1.9rem;font-style:italic;opacity:.85}
+.qrw{background:#fff;padding:10px;border-radius:6px;display:flex}
+
+</style></head><body><div class="card fit" style="flex-direction:row;gap:60px"><div style="display:flex;flex-direction:column;align-items:center;gap:20px"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:36px"><svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#ffffff"/><text x="50" y="64" font-size="40" font-weight="700" text-anchor="middle" fill="#0b4f8a" font-family="Liberation Sans">EG</text></svg><span class="wm" style="font-size:5.0rem;color:#ffffff;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">AURORA BAY</span></div><div class="web">www.empiregourmet.com</div><div class="sl">Your Trusted Partner in Frozen Foods</div></div><div class="qrw"><img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACX0lEQVR4nO2awY3cMAxFH1cC5igDKWBLsTtISUFKSgd2KSlgAes4gAzmQMn2XoKdw8QKhjqNR+/wgQ9SJCVRvriWt6+S4Kijjr5BlrqmHJGJTUQGkAloW7ETrS+ORiAUAARAl+HDdnSRUBhngPztaQIcfRit0QPIjxUYV2DUgkXe9HQBjj6OprtAvinLsMkVAhx9AM03BTbRGRAZ/rkAR/++LAHWMj7dRckg47qh5FggKZCfJ8DRB9HN6j7IN5WJoO0XsIhIjbIutL42Gmv02LoLyxCAVNDlvXDunS/X6ugb5NhCSCI6p7uwWKiJQI54v9UXKhOgM6FmwlFVIamyDACpPFmAo19FU6lG/dCC6grAJtZ0kUptv7rQ+uIoqlrQOanqnOqvGkxgLbLqGlTny7U6am7V1EdQnaF+jmuwdOhu9YLuqQ90BrSuslsGmI2Xa3W0xZbFUTG3jrPMEuPosdUHGiEPKBkUNhvEM/66qZA+BIjtCLtcq6P7jck+xk0rWGO8jw3BK/gu0FbwJVWdCTXrqZbTrpUangmvR2uVUYuJWmocx5hX8F2hJ7fMqM8FxlHQu1sdoObWqfTTde+YD8gzYR/o3mBpNWrmiLfDPHerC/TUHdfTClomtKLD3eoLDVp7Yo5muRb0ZtniNyY9oac3TxPAMgRrtUSGTerrp060vjLaOqrWap2vSNIxnPdM2AUazx+pTjAEQmH5DpBjERs/Xa7VUUPb8GITmdhEf74XgKD2xtBvIztBI6cRYZvvyrhuEYiF8XfE54S9oJ/fPCntM7Q/j93LtTrq6P+E/gHZmJp2OuclawAAAABJRU5ErkJggg==" style="width:150px;height:150px;image-rendering:pixelated;flex:none"></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

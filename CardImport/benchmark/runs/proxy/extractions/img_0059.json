@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Michael",
+      "confidence": 0.97,
+      "source_text": "Michael Nguyen",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Nguyen",
+      "confidence": 0.97,
+      "source_text": "Michael Nguyen",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Pinecrest Packaging Corp.",
+    "confidence": 0.95,
+    "source_text": "Pinecrest Packaging Corp.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": {
+    "value": "Account Manager",
+    "confidence": 0.93,
+    "source_text": "ACCOUNT MANAGER",
+    "alternatives": [
+      "ACCOUNT MANAGER"
+    ]
+  },
+  "job_title_cjk": null,
+  "department": null,
+  "phones": [
+    {
+      "number": "905-555-0182",
+      "kind": "work",
+      "extension": null,
+      "country_hint": "CA",
+      "source_text": "T 905-555-0182",
+      "confidence": 0.95,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "michael.nguyen@pinecrestpack.ca",
+      "source_text": "E michael.nguyen@pinecrestpack.ca",
+      "confidence": 0.95,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.pinecrestpack.ca",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "street": "6750 Mississauga Rd, Unit 7",
+      "city": "Mississauga",
+      "region": "ON",
+      "postal_code": "L5N 2L3",
+      "country": "Canada",
+      "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada",
+      "confidence": 0.92
+    }
+  ],
+  "social": [
+    {
+      "service": "linkedin",
+      "handle": "linkedin.com/in/michaelnguyen",
+      "confidence": 0.94
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "hexagon logo"
+    ],
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.94
+  }
+}

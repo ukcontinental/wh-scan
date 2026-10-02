@@ -7,7 +7,7 @@ struct RootView: View {
     @EnvironmentObject var router: ImportRouter
     @State private var selection: [PhotosPickerItem] = []
     @State private var showSettings = false
-    @State private var showOnboarding = !AppSettings.onboardingDone
+    @State private var showOnboarding = !AppSettings.onboardingDone && DemoData.requestedScreen() == nil
 
     var body: some View {
         NavigationStack {
@@ -23,7 +23,9 @@ struct RootView: View {
                                 fraction: p.peopleTotal > 0 ? 0.6 + 0.4 * Double(p.peopleDone) / Double(max(1, p.peopleTotal))
                                                             : 0.6 * Double(p.recognized) / Double(max(1, p.total)))
                 case .finished:
-                    if let s = engine.state { CompletionView(state: s) } else { HomeView(showSettings: $showSettings) }
+                    if let s = engine.state {
+                        CompletionView(state: s, autoOpenReview: DemoData.requestedScreen() == "review")
+                    } else { HomeView(showSettings: $showSettings) }
                 case .needsAPIKey:
                     SettingsView(highlightKey: true, onClose: { engine.reset() })
                 case .needsContactsAccess:

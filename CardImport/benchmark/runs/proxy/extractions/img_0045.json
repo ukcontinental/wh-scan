@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Ethan",
+      "confidence": 0.98,
+      "source_text": "Ethan Wong",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Wong",
+      "confidence": 0.98,
+      "source_text": "Ethan Wong",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Granite Peak Capital Partners",
+    "confidence": 0.95,
+    "source_text": "Granite Peak Capital Partners",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": {
+    "value": "Relationship Manager",
+    "confidence": 0.9,
+    "source_text": "RELATIONSHIP MANAGER",
+    "alternatives": [
+      "RELATIONSHIP MANAGER"
+    ]
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "(647) 555-0140",
+      "kind": "mobile",
+      "source_text": "Mobile: (647) 555-0140",
+      "confidence": 0.97,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "647.555.0191",
+      "kind": "work",
+      "source_text": "Office: 647.555.0191",
+      "confidence": 0.97,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "ethanw@granitepeakcap.ca",
+      "source_text": "Email: ethanw@granitepeakcap.ca",
+      "confidence": 0.97,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.granitepeakcap.ca",
+      "confidence": 0.97
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "333 Bay St, 18th Floor Toronto, ON M5H 2R2",
+      "street": "333 Bay St, 18th Floor",
+      "city": "Toronto",
+      "region": "ON",
+      "postal_code": "M5H 2R2",
+      "country": "Canada",
+      "confidence": 0.94
+    }
+  ],
+  "social": [
+    {
+      "service": "linkedin",
+      "handle": "ethan-wong",
+      "confidence": 0.94
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [],
+    "overall_confidence": 0.95
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "cjk_full": {
+      "value": "張家豪",
+      "confidence": 0.94,
+      "source_text": "張家豪",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Chang",
+      "confidence": 0.96,
+      "source_text": "Kevin Chang",
+      "alternatives": []
+    },
+    "given": {
+      "value": "Kevin",
+      "confidence": 0.96,
+      "source_text": "Kevin Chang",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Dawnlight Design Studio",
+    "confidence": 0.92,
+    "source_text": "Dawnlight Design Studio",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "晨曦設計工作室",
+    "confidence": 0.88,
+    "source_text": "晨曦設計工作室",
+    "alternatives": []
+  },
+  "department": {
+    "value": "Brand Studio",
+    "confidence": 0.75,
+    "source_text": "品牌部 Brand Studio",
+    "alternatives": [
+      "品牌部",
+      "品牌部 Brand Studio"
+    ]
+  },
+  "job_title": {
+    "value": "Senior Designer",
+    "confidence": 0.95,
+    "source_text": "Senior Designer",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "資深設計師",
+    "confidence": 0.92,
+    "source_text": "資深設計師",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "0956-611-442",
+      "kind": "mobile",
+      "source_text": "M 手機 0956-611-442",
+      "confidence": 0.92,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "kevin@dawnlight.design",
+      "source_text": "電郵 Email: kevin@dawnlight.design",
+      "confidence": 0.93,
+      "alternatives": []
+    },
+    {
+      "address": "orders@dawnlight.design",
+      "source_text": "電郵 Email: orders@dawnlight.design",
+      "confidence": 0.93,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.dawnlight.design",
+      "confidence": 0.93
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "5F., No. 100, Songren Rd., Xinyi Dist. Taipei City 110, Taiwan",
+      "street": "5F., No. 100, Songren Rd., Xinyi Dist.",
+      "city": "Taipei City",
+      "region": null,
+      "postal_code": "110",
+      "country": "Taiwan",
+      "confidence": 0.88
+    }
+  ],
+  "social": [
+    {
+      "service": "line",
+      "handle": "kevin50",
+      "confidence": 0.9
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "slightly_blurry",
+      "unlabelled_social_handle"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "Design with Purpose",
+      "@dawnlight.design"
+    ],
+    "overall_confidence": 0.9
+  }
+}

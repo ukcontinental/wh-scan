@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "cjk_full": null,
+    "family": {
+      "value": "Lee",
+      "confidence": 0.97,
+      "source_text": "Morgan Lee",
+      "alternatives": []
+    },
+    "given": {
+      "value": "Morgan",
+      "confidence": 0.97,
+      "source_text": "Morgan Lee",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Morgan Consulting Group",
+    "confidence": 0.93,
+    "source_text": "Morgan Consulting Group",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": {
+    "value": "Senior Consultant",
+    "confidence": 0.97,
+    "source_text": "Senior Consultant",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "+1-416-555-0111",
+      "kind": "work",
+      "source_text": "Direct: +1-416-555-0111 ext. 51",
+      "confidence": 0.96,
+      "country_hint": "CA",
+      "extension": "51",
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "morgan_lee@morganconsulting.ca",
+      "source_text": "Email: morgan_lee@morganconsulting.ca",
+      "confidence": 0.96,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.morganconsulting.ca",
+      "confidence": 0.97
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "120 Front St W, Suite 400, Toronto, ON M5J 2M2",
+      "street": "120 Front St W, Suite 400",
+      "city": "Toronto",
+      "region": "ON",
+      "postal_code": "M5J 2M2",
+      "country": "Canada",
+      "confidence": 0.93
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "name_vs_company_ambiguous"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "diamond logo"
+    ],
+    "overall_confidence": 0.95
+  }
+}

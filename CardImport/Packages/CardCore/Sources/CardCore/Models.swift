@@ -157,6 +157,7 @@ public struct ExtractedCard: Codable, Hashable, Sendable {
     public var jobTitle: FieldValue?
     public var jobTitleCjk: FieldValue?
     public var department: FieldValue?
+    public var departmentCjk: FieldValue?
     public var phones: [ExtractedPhone]
     public var emails: [ExtractedEmail]
     public var websites: [ExtractedWebsite]
@@ -168,13 +169,14 @@ public struct ExtractedCard: Codable, Hashable, Sendable {
     public init(cardSide: CardSide = .unknown, isBusinessCard: Bool = true, languageHint: [String] = [],
                 name: ExtractedName = ExtractedName(), company: FieldValue? = nil, companyCjk: FieldValue? = nil,
                 jobTitle: FieldValue? = nil, jobTitleCjk: FieldValue? = nil, department: FieldValue? = nil,
-                phones: [ExtractedPhone] = [], emails: [ExtractedEmail] = [], websites: [ExtractedWebsite] = [],
+                departmentCjk: FieldValue? = nil, phones: [ExtractedPhone] = [], emails: [ExtractedEmail] = [], websites: [ExtractedWebsite] = [],
                 addresses: [ExtractedAddress] = [], social: [ExtractedSocial] = [], notesOnCard: String? = nil,
                 evidence: Evidence = Evidence()) {
         self.schemaVersion = 1
         self.cardSide = cardSide; self.isBusinessCard = isBusinessCard; self.languageHint = languageHint
         self.name = name; self.company = company; self.companyCjk = companyCjk
         self.jobTitle = jobTitle; self.jobTitleCjk = jobTitleCjk; self.department = department
+        self.departmentCjk = departmentCjk
         self.phones = phones; self.emails = emails; self.websites = websites; self.addresses = addresses
         self.social = social; self.notesOnCard = notesOnCard; self.evidence = evidence
     }
@@ -191,6 +193,7 @@ public struct ExtractedCard: Codable, Hashable, Sendable {
         jobTitle = try c.decodeIfPresent(FieldValue.self, forKey: .jobTitle)
         jobTitleCjk = try c.decodeIfPresent(FieldValue.self, forKey: .jobTitleCjk)
         department = try c.decodeIfPresent(FieldValue.self, forKey: .department)
+        departmentCjk = try c.decodeIfPresent(FieldValue.self, forKey: .departmentCjk)
         phones = try c.decodeIfPresent([ExtractedPhone].self, forKey: .phones) ?? []
         emails = try c.decodeIfPresent([ExtractedEmail].self, forKey: .emails) ?? []
         websites = try c.decodeIfPresent([ExtractedWebsite].self, forKey: .websites) ?? []

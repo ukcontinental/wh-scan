@@ -21,7 +21,9 @@ public enum Prompts {
     3. company = the organisation's full name as printed (prefer the line with Ltd./Inc./Co./有限公司 over a logo \
     wordmark or abbreviation). Put the Chinese company name in company_cjk when both scripts are printed. A logo \
     wordmark that differs from the company name goes to evidence.ignored_text.
-    4. job_title and department are separate. Bilingual titles: Latin in job_title, CJK in job_title_cjk.
+    4. job_title and department are separate. Bilingual titles/departments: Latin in job_title / department, CJK in \
+    job_title_cjk / department_cjk. When a company, title or department is printed only in Chinese, put it only in \
+    the *_cjk field and leave the Latin field null.
     5. phones: one entry per number. kind from the printed label: M/Mob/Cell/手機/行動 → mobile; T/Tel/Office/ \
     Direct/電話 → work; F/Fax/傳真 → fax; Main/總機/Toll-free → main. Without a label: Taiwan 09xx, China 1xx \
     (11 digits), Hong Kong numbers starting 5/6/9 → mobile, otherwise work. number = digits as printed including any \
@@ -94,6 +96,7 @@ public enum Prompts {
             "job_title": nullable(fieldValue),
             "job_title_cjk": nullable(fieldValue),
             "department": nullable(fieldValue),
+            "department_cjk": nullable(fieldValue),
             "phones": arr(obj([
                 "kind": enumStr(PhoneKind.allCases.map(\.rawValue)), "number": str, "extension": nullable(str),
                 "country_hint": nullable(str), "confidence": num, "alternatives": arr(str), "source_text": str,

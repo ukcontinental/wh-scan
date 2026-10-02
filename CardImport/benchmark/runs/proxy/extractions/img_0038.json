@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "cjk_full": {
+      "value": "黃以恆",
+      "confidence": 0.9,
+      "source_text": "黃 以 恆",
+      "alternatives": [
+        "黃以恒"
+      ]
+    },
+    "family": null,
+    "given": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "花崗峰資本",
+    "confidence": 0.88,
+    "source_text": "花崗峰資本",
+    "alternatives": []
+  },
+  "department": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "理財專員",
+    "confidence": 0.95,
+    "source_text": "理財專員",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "+1 647 555 0140",
+      "kind": "mobile",
+      "source_text": "手機 +1 647 555 0140",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+1-647-555-0191",
+      "kind": "work",
+      "source_text": "電話 +1-647-555-0191",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "ethanw@granitepeakcap.ca",
+      "source_text": "E-mail：ethanw@granitepeakcap.ca",
+      "confidence": 0.95,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.granitepeakcap.ca",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "333 Bay St, 18th Floor Toronto, ON M5H 2R2",
+      "street": "333 Bay St, 18th Floor",
+      "city": "Toronto",
+      "region": "ON",
+      "postal_code": "M5H 2R2",
+      "country": "Canada",
+      "confidence": 0.92
+    }
+  ],
+  "social": [
+    {
+      "service": "linkedin",
+      "handle": "ethan-wong",
+      "confidence": 0.9
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "GR"
+    ],
+    "overall_confidence": 0.93
+  }
+}

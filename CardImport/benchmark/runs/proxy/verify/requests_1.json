@@ -1,0 +1,189 @@
+[
+ {
+  "key": "126c152e5d41e412",
+  "photoIds": [
+   "img_0003",
+   "img_0012"
+  ],
+  "candidates": [
+   "中国北京市朝阳区建国路93号1203室(100022)"
+  ],
+  "fieldLabel": "地址 Address",
+  "ocrHint": [
+   "中國京市朝陽區建國路 93 呈 1203 室 (100022)"
+  ]
+ },
+ {
+  "key": "dc0246ef9666ca6f",
+  "photoIds": [
+   "img_0025",
+   "img_0053"
+  ],
+  "candidates": [
+   "台灣 220 新北市板橋區文化路一段188號"
+  ],
+  "fieldLabel": "地址 Address",
+  "ocrHint": [
+   "台湾 220 新北市板橋區文 b 路一段 188 號"
+  ]
+ },
+ {
+  "key": "b1e2eda68d208d0c",
+  "photoIds": [
+   "img_0013"
+  ],
+  "candidates": [
+   "+1 604 555 0117"
+  ],
+  "fieldLabel": "電話 Phone",
+  "ocrHint": [
+   "604 555 0181",
+   "+1 604 555 6117 ext 746",
+   "F (604) 555-0125"
+  ]
+ },
+ {
+  "key": "caf20860574221",
+  "photoIds": [
+   "img_0014",
+   "img_0057"
+  ],
+  "candidates": [
+   "香港中環德輔道中88號景豐大廈22樓2208室"
+  ],
+  "fieldLabel": "地址 Address",
+  "ocrHint": []
+ },
+ {
+  "candidates": [
+   "110 台北市信義區松仁路100號5樓"
+  ],
+  "ocrHint": [
+   "110 台北市信義區",
+   "在路 100 屿 5 和"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "1d84839d46922a8d",
+  "photoIds": [
+   "img_0020"
+  ]
+ },
+ {
+  "candidates": [
+   "資深設計師"
+  ],
+  "fieldLabel": "職稱（中文）",
+  "ocrHint": [],
+  "photoIds": [
+   "img_0026"
+  ],
+  "key": "f2e9aac12563c7b9"
+ },
+ {
+  "candidates": [
+   "kevin.zhang@harbourviewfoods.ca"
+  ],
+  "fieldLabel": "Email",
+  "ocrHint": [
+   "E kevin.zhang@harbourviewtoods.ca",
+   "Jiwwwharbourviewioods ca",
+   "https://www. harbourviewfoods.ca"
+  ],
+  "photoIds": [
+   "img_0033",
+   "img_0063"
+  ],
+  "key": "616438f82948bf0"
+ },
+ {
+  "candidates": [
+   "辽宁省大连市中山区港兴路7号 邮编:116001"
+  ],
+  "ocrHint": [
+   "116001"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "ebf41e20e8858c50",
+  "photoIds": [
+   "img_0037"
+  ]
+ },
+ {
+  "candidates": [
+   "上海市浦东新区张江路88号3号楼501室 邮编:200120"
+  ],
+  "ocrHint": [
+   "200120"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "e780b8a25052761c",
+  "photoIds": [
+   "img_0037"
+  ]
+ },
+ {
+  "candidates": [
+   "stephanie@harbourtrustcpa.com",
+   "stephanie@harbourtrustcpa.com.hk"
+  ],
+  "ocrHint": [
+   "E-mail : stephanie@harbourtrustcpa.com",
+   "harbourtrustcpa.com.hk"
+  ],
+  "fieldLabel": "Email",
+  "key": "694c20765c2e817a",
+  "photoIds": [
+   "img_0046"
+  ]
+ },
+ {
+  "candidates": [
+   "中環德輔道中88號景豐大廈22樓2208室"
+  ],
+  "ocrHint": [
+   "竅 22 樓 2208 室"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "2060b008d58207ab",
+  "photoIds": [
+   "img_0046"
+  ]
+ },
+ {
+  "candidates": [
+   "九龍觀塘鴻圖道12號永發工業大廈9樓B室"
+  ],
+  "ocrHint": [
+   "12 號永發工業大廈 9 樓"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "a1a2540a346c1582",
+  "photoIds": [
+   "img_0051"
+  ]
+ },
+ {
+  "candidates": [
+   "88 Canal St, 3rd Floor, New York, NY 10002, USA"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "地址 Address",
+  "key": "beccb06b84ced310",
+  "photoIds": [
+   "img_0041"
+  ]
+ },
+ {
+  "candidates": [
+   "台灣 114 台北市內湖區瑞光路35號8樓"
+  ],
+  "ocrHint": [
+   "114 台北市內湖區玉光路 - 娃"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "ebdaeabee2566393",
+  "photoIds": [
+   "img_0061"
+  ]
+ }
+]

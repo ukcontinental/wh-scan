@@ -192,6 +192,40 @@
         }
       ]
     },
+    "department_cjk" : {
+      "anyOf" : [
+        {
+          "additionalProperties" : false,
+          "properties" : {
+            "alternatives" : {
+              "items" : {
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "confidence" : {
+              "type" : "number"
+            },
+            "source_text" : {
+              "type" : "string"
+            },
+            "value" : {
+              "type" : "string"
+            }
+          },
+          "required" : [
+            "alternatives",
+            "confidence",
+            "source_text",
+            "value"
+          ],
+          "type" : "object"
+        },
+        {
+          "type" : "null"
+        }
+      ]
+    },
     "emails" : {
       "items" : {
         "additionalProperties" : false,
@@ -659,6 +693,7 @@
     "company",
     "company_cjk",
     "department",
+    "department_cjk",
     "emails",
     "evidence",
     "is_business_card",

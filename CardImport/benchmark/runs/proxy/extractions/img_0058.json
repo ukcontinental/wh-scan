@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "李娜",
+      "confidence": 0.97,
+      "source_text": "李娜",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "北京云帆软件有限公司",
+    "confidence": 0.95,
+    "source_text": "北京云帆软件有限公司",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "创始人兼首席执行官",
+    "confidence": 0.95,
+    "source_text": "创始人兼首席执行官",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "+86 158 0921 4136",
+      "kind": "mobile",
+      "confidence": 0.96,
+      "source_text": "手机：+86 158 0921 4136",
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "lina@yunfansoft.cn",
+      "confidence": 0.96,
+      "source_text": "lina@yunfansoft.cn",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.yunfansoft.cn",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "北京市朝阳区建国路93号1203室（100022）",
+      "street": "建国路93号1203室",
+      "city": "北京市",
+      "region": "朝阳区",
+      "postal_code": "100022",
+      "country": "China",
+      "confidence": 0.85
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "lina95",
+      "confidence": 0.94
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "云帆",
+      "CloudSail",
+      "科技创新 引领未来"
+    ],
+    "overall_confidence": 0.94
+  }
+}

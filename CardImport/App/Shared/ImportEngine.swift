@@ -87,11 +87,13 @@ final class ImportEngine: ObservableObject {
             Task { @MainActor in
                 self?.stage = .processing(BatchProgressView(phase: p.phase.rawValue, recognized: p.recognized, total: p.totalPhotos,
                                                             peopleDone: p.peopleDone, peopleTotal: p.peopleTotal))
+                BackgroundWork.progress(done: p.recognized + p.peopleDone, total: p.totalPhotos + max(p.peopleTotal, 1),
+                                        subtitle: p.peopleTotal > 0 ? "\(p.peopleDone) / \(p.peopleTotal) 位" : "\(p.recognized) / \(p.totalPhotos) 張")
             }
         }
         let token = BackgroundWork.begin(title: "名片匯入", total: batch.photos.count)
         let result = await processor.run(batch)
-        BackgroundWork.end(token)
+        BackgroundWork.end(token, success: result.phase == .done)
         state = result
         stage = .finished
     }
@@ -128,6 +130,7 @@ enum BackgroundWork {
     @MainActor
     static func begin(title: String, total: Int) -> Token {
         #if !APP_EXTENSION
+        ContinuedProcessing.shared.begin(title: title, total: total)
         let id = UIApplication.shared.beginBackgroundTask(withName: title) {}
         return Token(id: id)
         #else
@@ -136,8 +139,16 @@ enum BackgroundWork {
     }
 
     @MainActor
-    static func end(_ t: Token) {
+    static func progress(done: Int, total: Int, subtitle: String) {
         #if !APP_EXTENSION
+        ContinuedProcessing.shared.update(done: done, total: total, subtitle: subtitle)
+        #endif
+    }
+
+    @MainActor
+    static func end(_ t: Token, success: Bool) {
+        #if !APP_EXTENSION
+        ContinuedProcessing.shared.end(success: success)
         if let id = t.id, id != .invalid { UIApplication.shared.endBackgroundTask(id) }
         #endif
     }

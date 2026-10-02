@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#fff;display:grid;grid-template-columns:1.15fr 1fr;padding:50px 56px;gap:40px}
+.lg{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;overflow:hidden}
+.info{display:flex;flex-direction:column;justify-content:center;gap:10px;overflow:hidden;border-left:2px solid #e3e3e3;padding-left:36px}
+.nm{font-size:3.86rem;font-weight:700;font-style:normal;white-space:nowrap}
+.nm2{font-size:2.39rem;color:#555;white-space:nowrap}
+.tt{font-size:2.02rem;color:#5b3e96;white-space:nowrap} .tt2,.dp{font-size:1.84rem;color:#777;white-space:nowrap}
+.co{font-size:1.93rem;font-weight:700;color:#333;margin-top:8px} .co2{font-size:1.66rem;color:#777}
+.ct{font-size:1.93rem;line-height:1.4;color:#333;margin-top:8px}
+.addr{font-size:1.75rem;line-height:1.3;color:#555} .alab{font-weight:700}
+.ex{font-size:1.56rem;color:#5b3e96;text-align:center;letter-spacing:.06em}
+
+</style></head><body><div class="card"><div class="lg fit"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:45px"><svg width="250" height="250" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polyline points="10,15 38,50 10,85" fill="none" stroke="#5b3e96" stroke-width="12"/><polyline points="36,15 64,50 36,85" fill="none" stroke="#d1495b" stroke-width="12"/><polyline points="62,15 90,50 62,85" fill="none" stroke="#5b3e96" stroke-width="12"/></svg></div><div class="ex">HACCP</div></div><div class="info fit"><div class="nm">Kenneth Lee, P.Eng.</div><div class="tt">Business Development Manager</div><div class="dp">Operations</div><div class="co">Kowloon Bay Logistics Ltd.</div><div class="ct"><div class="ln">T: 3652 6579 x251</div><div class="ln">E kenneth.lee@kblogistics.com.hk</div><div class="ln">W https://www.kblogistics.com.hk</div></div><div class="addr"><div>Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong</div><div>Kowloon</div></div></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

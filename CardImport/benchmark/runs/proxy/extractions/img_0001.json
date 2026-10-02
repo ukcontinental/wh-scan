@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Jordan",
+      "confidence": 0.96,
+      "source_text": "Jordan Taylor",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Taylor",
+      "confidence": 0.96,
+      "source_text": "Jordan Taylor",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "TAYLOR JORDAN & ASSOCIATES LLP",
+    "confidence": 0.9,
+    "source_text": "TAYLOR JORDAN & ASSOCIATES LLP",
+    "alternatives": [
+      "Taylor Jordan & Associates LLP"
+    ]
+  },
+  "company_cjk": null,
+  "department": {
+    "value": "Strategy Practice",
+    "confidence": 0.92,
+    "source_text": "Strategy Practice",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Senior Consultant",
+    "confidence": 0.96,
+    "source_text": "Senior Consultant",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "212-555-0171",
+      "kind": "mobile",
+      "confidence": 0.96,
+      "source_text": "M: 212-555-0171",
+      "country_hint": "US",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "212-555-0182",
+      "kind": "work",
+      "confidence": 0.9,
+      "source_text": "P: 212-555-0182",
+      "country_hint": "US",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "jordan.taylor@taylorjordanlaw.com",
+      "confidence": 0.95,
+      "source_text": "Email: jordan.taylor@taylorjordanlaw.com",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.taylorjordanlaw.com",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "420 Madison Ave, Suite 1201, New York, NY 10017",
+      "street": "420 Madison Ave, Suite 1201",
+      "city": "New York",
+      "region": "NY",
+      "postal_code": "10017",
+      "country": "United States",
+      "confidence": 0.92
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "Clarity. Strategy. Results."
+    ],
+    "concerns": [
+      "name_vs_company_ambiguous"
+    ],
+    "has_person_photo": true,
+    "has_qr_code": true,
+    "overall_confidence": 0.92
+  }
+}

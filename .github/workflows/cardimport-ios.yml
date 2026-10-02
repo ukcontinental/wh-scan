@@ -42,6 +42,26 @@ jobs:
           xcodebuild -project CardImport.xcodeproj -scheme CardImport \
             -destination 'generic/platform=iOS Simulator' \
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log | grep -E "error:|warning: .*deprecated|BUILD (SUCCEEDED|FAILED)" | head -200
+      - name: Screenshots in the simulator (demo mode, no network / contacts)
+        working-directory: CardImport/App
+        run: |
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -name "CardImport.app" -path "*iphonesimulator*" -type d | head -1)
+          echo "app: $APP"
+          UDID=$(xcrun simctl list devices available -j | python3 -c "import json,sys; d=json.load(sys.stdin)['devices']; c=[x['udid'] for k,v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone')]; print(c[-1])")
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl install "$UDID" "$APP"
+          mkdir -p shots
+          for s in home completion review; do
+            xcrun simctl launch --terminate-running-process "$UDID" com.example.cardimport -demo $s
+            sleep 8
+            xcrun simctl io "$UDID" screenshot "shots/$s.png"
+          done
+          ls -la shots
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: CardImport/App/shots
       - name: Show errors
         if: failure()
         working-directory: CardImport/App

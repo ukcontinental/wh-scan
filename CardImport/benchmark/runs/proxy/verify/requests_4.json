@@ -1,0 +1,184 @@
+[
+ {
+  "key": "3f71df36055cfa0a",
+  "photoIds": [
+   "img_0003",
+   "img_0012"
+  ],
+  "candidates": [
+   "Suite 1203, No. 93 Jianguo Road, Chaoyang District Beijing 100022, China"
+  ],
+  "fieldLabel": "地址 Address",
+  "ocrHint": [
+   "中國京市朝陽區建國路 93 呈 1203 室 (100022)"
+  ]
+ },
+ {
+  "candidates": [
+   "+1 905 555 0175",
+   "+1 905 555 0176"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "電話 Phone",
+  "key": "d901c3cc3998ed5",
+  "photoIds": [
+   "img_0015"
+  ]
+ },
+ {
+  "candidates": [
+   "service@lakeshoretrading.ca"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "Email",
+  "key": "b109d02cee2012c5",
+  "photoIds": [
+   "img_0015"
+  ]
+ },
+ {
+  "key": "6c83a4d26150ac11",
+  "photoIds": [
+   "img_0005",
+   "img_0029"
+  ],
+  "candidates": [
+   "Customer Service",
+   "客服部"
+  ],
+  "fieldLabel": "部門 Department",
+  "ocrHint": []
+ },
+ {
+  "candidates": [
+   "上海市浦东新区张江路88号3号楼501室(200120)"
+  ],
+  "ocrHint": [
+   "Shanghai 200120",
+   "江路 88 号 3 号楼 501 室 (200120)"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "a0f9a2ea6782f2c5",
+  "photoIds": [
+   "img_0005",
+   "img_0029"
+  ]
+ },
+ {
+  "candidates": [
+   "https://www.dawnlight.design"
+  ],
+  "fieldLabel": "網站 Website",
+  "ocrHint": [
+   "BH Email: kevin@dawnlight design",
+   "BH Email: orders@dawnlight. design",
+   "hittps://www.dawnlight.design",
+   "@dawnlight.design"
+  ],
+  "photoIds": [
+   "img_0026"
+  ],
+  "key": "959191f90b1584f6"
+ },
+ {
+  "candidates": [
+   "0900 773 729"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "電話 Phone",
+  "key": "e0673c3c1d7dfb16",
+  "photoIds": [
+   "img_0043",
+   "img_0047"
+  ]
+ },
+ {
+  "candidates": [
+   "+886 2 2962 9293"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "電話 Phone",
+  "key": "6a13f15e77455bc5",
+  "photoIds": [
+   "img_0043",
+   "img_0047"
+  ]
+ },
+ {
+  "candidates": [
+   "www.fuyuanseafood.com.tw"
+  ],
+  "ocrHint": [
+   "wilsony@fuyuanseafood.com.tw",
+   "yuanseafood.com.tw"
+  ],
+  "fieldLabel": "網站 Website",
+  "key": "813e61816ea2d11c",
+  "photoIds": [
+   "img_0048"
+  ]
+ },
+ {
+  "candidates": [
+   "raymondw@wuitaifoods.com.hk"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "Email",
+  "key": "d1ff13e54c025af1",
+  "photoIds": [
+   "img_0049"
+  ]
+ },
+ {
+  "candidates": [
+   "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "地址 Address",
+  "key": "10376278167bb637",
+  "photoIds": [
+   "img_0049"
+  ]
+ },
+ {
+  "candidates": [
+   "北京市朝阳区建国路93号1203室(100022)"
+  ],
+  "ocrHint": [
+   "北京市朝 oe (100022)"
+  ],
+  "fieldLabel": "地址 Address",
+  "key": "13cdac7b211b1ed1",
+  "photoIds": [
+   "img_0058"
+  ]
+ },
+ {
+  "candidates": [
+   "Unit 1503, 15/F, Harbour Crest Centre, 30 Canton Road, Tsim Sha Tsui Kowloon"
+  ],
+  "ocrHint": [],
+  "fieldLabel": "地址 Address",
+  "key": "9208809b47c37b74",
+  "photoIds": [
+   "img_0062"
+  ]
+ },
+ {
+  "candidates": [
+   "https://www.dawnlight.design"
+  ],
+  "ocrHint": [
+   "BH Email: kevin@dawnlight design",
+   "BH Email: orders@dawnlight. design",
+   "hittps://www.dawnlight.design",
+   "@dawnlight.design"
+  ],
+  "fieldLabel": "網站 Website",
+  "key": "888c4548e2c6d846",
+  "photoIds": [
+   "img_0026",
+   "img_0033"
+  ]
+ }
+]

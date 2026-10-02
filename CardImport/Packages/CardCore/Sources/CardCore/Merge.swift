@@ -46,6 +46,7 @@ public struct DraftMerger: Sendable {
         m.jobTitle = mergeValue(drafts.map(\.jobTitle))
         m.jobTitleCJK = mergeValue(drafts.map(\.jobTitleCJK))
         m.department = mergeValue(drafts.map(\.department))
+        m.departmentCJK = mergeValue(drafts.map(\.departmentCJK))
         m.concerns = Array(Set(drafts.flatMap(\.concerns))).sorted()
         m.cardNotes = drafts.compactMap(\.cardNotes).first
 
@@ -53,6 +54,7 @@ public struct DraftMerger: Sendable {
         // if the Latin slot got a CJK value (extractor put it in the wrong slot), move it.
         if let t = m.jobTitle, TextNorm.containsCJK(t.value), m.jobTitleCJK == nil { m.jobTitleCJK = t; m.jobTitle = nil }
         if let c = m.company, TextNorm.containsCJK(c.value), m.companyCJK == nil { m.companyCJK = c; m.company = nil }
+        if let dp = m.department, TextNorm.containsCJK(dp.value), m.departmentCJK == nil { m.departmentCJK = dp; m.department = nil }
 
         // Multi-valued: union with agreement bonus.
         var phones: [DraftPhone] = []

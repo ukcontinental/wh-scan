@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Rachel",
+      "confidence": 0.97,
+      "source_text": "Rachel Goldberg, MBA",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Goldberg",
+      "confidence": 0.97,
+      "source_text": "Rachel Goldberg, MBA",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": {
+      "value": "MBA",
+      "confidence": 0.95,
+      "source_text": "Rachel Goldberg, MBA",
+      "alternatives": []
+    }
+  },
+  "company": {
+    "value": "Empire Gourmet Imports Inc.",
+    "confidence": 0.95,
+    "source_text": "Empire Gourmet Imports Inc.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": {
+    "value": "Procurement",
+    "confidence": 0.9,
+    "source_text": "Procurement",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "President",
+    "confidence": 0.93,
+    "source_text": "President",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "1-212-555-0120",
+      "kind": "mobile",
+      "source_text": "Cell: 1-212-555-0120",
+      "confidence": 0.93,
+      "country_hint": "US",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "rachel.goldberg@empiregourmet.com",
+      "source_text": "E rachel.goldberg@empiregourmet.com",
+      "confidence": 0.93,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.empiregourmet.com",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "88 Canal St, 3rd Floor New York, NY 10002",
+      "street": "88 Canal St, 3rd Floor",
+      "city": "New York",
+      "region": "NY",
+      "postal_code": "10002",
+      "country": "United States",
+      "confidence": 0.92
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "EG",
+      "AURORA BAY",
+      "BRCGS AA · HACCP"
+    ],
+    "overall_confidence": 0.92
+  }
+}

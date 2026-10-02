@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en",
+    "zh-Hant"
+  ],
+  "name": {
+    "given": {
+      "value": "Jack",
+      "confidence": 0.97,
+      "source_text": "Jack Kuo",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Kuo",
+      "confidence": 0.97,
+      "source_text": "Jack Kuo",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Chia Feng Foods Co., Ltd.",
+    "confidence": 0.95,
+    "source_text": "Chia Feng Foods Co., Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": {
+    "value": "Procurement",
+    "confidence": 0.85,
+    "source_text": "Procurement",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "President",
+    "confidence": 0.94,
+    "source_text": "President",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "phones": [
+    {
+      "number": "0932-256-028",
+      "kind": "mobile",
+      "confidence": 0.95,
+      "source_text": "Mobile: 0932-256-028",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "02-2078-7574",
+      "kind": "work",
+      "confidence": 0.95,
+      "source_text": "Direct: 02-2078-7574",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "(02) 2132-6720",
+      "kind": "fax",
+      "confidence": 0.95,
+      "source_text": "Fax: (02) 2132-6720",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "jack.kuo@chiafeng.com.tw",
+      "confidence": 0.94,
+      "source_text": "E: jack.kuo@chiafeng.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.chiafeng.com.tw",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "No. 188, Sec. 1, Wenhua Rd., Banqiao Dist., New Taipei City 220, Taiwan",
+      "street": "No. 188, Sec. 1, Wenhua Rd., Banqiao Dist.",
+      "city": "New Taipei City",
+      "region": null,
+      "postal_code": "220",
+      "country": "Taiwan",
+      "confidence": 0.9
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "CF",
+      "金穗",
+      "HACCP · BRCGS AA"
+    ],
+    "concerns": [
+      "title_department_unusual"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.92
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#6a2c8a;color:#ffffff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;padding:40px}
+.web{font-size:2.6rem;letter-spacing:.08em}
+.co{font-size:2.3rem;font-weight:700;letter-spacing:.04em}
+.sl{font-size:1.9rem;font-style:italic;opacity:.85}
+.qrw{background:#fff;padding:10px;border-radius:6px;display:flex}
+
+</style></head><body><div class="card fit" style="flex-direction:row;gap:60px"><div style="display:flex;flex-direction:column;align-items:center;gap:20px"><div class="logo" style="display:flex;flex-direction:row;align-items:center;gap:36px"><svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#ffffff"/><path d="M12 38 Q31 26 50 38 T88 38" stroke="#6a2c8a" stroke-width="6" fill="none"/><path d="M12 54 Q31 42 50 54 T88 54" stroke="#6a2c8a" stroke-width="6" fill="none"/><path d="M12 70 Q31 58 50 70 T88 70" stroke="#6a2c8a" stroke-width="6" fill="none"/></svg><span class="wm" style="font-size:5.0rem;color:#ffffff;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">OCEAN CREST</span></div><div class="co">Harbourview Frozen Foods Ltd.</div><div class="web">https://www.harbourviewfoods.ca</div><div class="sl">Fresh from Ocean to Table</div></div><div class="qrw"><img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACV0lEQVR4nO2bQYrjMBBFX7UEvbQhB8hR7Jv1meYG1lFyA2vZIPNnISlJz2LoHshEkNLCEPQWH4oqV31XTHzzpLfvkuCoo46+QbZ21mxmNh9ma471ul/FQbQ6SpAkCaaCdImQzp9GmoFFkrQPo9VRaNlDEOkssexgH5dIzbz14QIc/daJ9z/yqRjEIggypvIfBDj6z+hhLPszBTj611Nzq7fxoVg6FyDPKM07MAnIjxPg6A9QWgsBsOxBfz7aCdL2dK2OxpY9AOTDRD5MacYEhfvZ+elaHX2DHIEcMZuDbAVYVLgNYg0ZQeuLo0gqtRxqmwragNpqLJJXwrHQ2mUYU4m27MgWAeRQDI6otIYC+TSCVkepPsZGUE8wqVVCqFlWbz23no/WSngrfdr6TFwLY43lJI/WCChS79Z7ggW1CKp5UPh7ayhUG4fZh0o1dM3mIOCwCtWQDaL1ldHuE06Cal4ASqtBmndZuwgPE+Doz72Ma1uhjd7V14Z+8vfWOGiP1t7aihq36jzdRdDfW0OgzXlKZ2FMAARBPgzyDMuvU7Fl93lrCPQ6b92KYJu36vh1m8Y8t56PXithENwG46sH1RCP1hBoyx719YvaUbSf4f7h0RoCve08EdQXn4A0g60cvpcxDBqBUHs/Y/o0NS+3zcUihwKUhwlw9Mdo23nK71++b3HU9UKS7xMOiE4FbfldNXiL2nRM3X4aS+tLos3VhfClHZzah8jq77qrOxTag9LPcjGTdrA1x97LD6L11dHjbv2iVsJ1ahlFmoNXwmFQ838EOeroQ9DfBRygBTxpFQ0AAAAASUVORK5CYII=" style="width:150px;height:150px;image-rendering:pixelated;flex:none"></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

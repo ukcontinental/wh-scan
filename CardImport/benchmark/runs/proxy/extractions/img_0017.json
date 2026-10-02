@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "王芳",
+      "confidence": 0.95,
+      "source_text": "王芳",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "上海鑫源食品有限公司",
+    "confidence": 0.92,
+    "source_text": "上海鑫源食品有限公司",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "上海鑫源食品有限公司",
+    "confidence": 0.92,
+    "source_text": "上海鑫源食品有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "董事长",
+    "confidence": 0.93,
+    "source_text": "董事长",
+    "alternatives": []
+  },
+  "department": {
+    "value": "销售部",
+    "confidence": 0.9,
+    "source_text": "销售部",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "021-8944 1205",
+      "kind": "work",
+      "extension": null,
+      "country_hint": "CN",
+      "source_text": "TEL：021-8944 1205",
+      "confidence": 0.88,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "wang.fang@xinyuanfood.com.cn",
+      "source_text": "邮箱：wang.fang@xinyuanfood.com.cn",
+      "confidence": 0.9,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "xinyuanfood.com.cn",
+      "confidence": 0.9
+    }
+  ],
+  "addresses": [
+    {
+      "street": "浦东新区张江路88号3号楼501室",
+      "city": "上海市",
+      "region": null,
+      "postal_code": "200120",
+      "country": "中国",
+      "formatted": "上海市浦东新区张江路88号3号楼501室",
+      "confidence": 0.85
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "wangfang88",
+      "confidence": 0.9
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "HACCP · FSSC 22000",
+      "leaf logo"
+    ],
+    "concerns": [
+      "slightly_blurry"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.88
+  }
+}

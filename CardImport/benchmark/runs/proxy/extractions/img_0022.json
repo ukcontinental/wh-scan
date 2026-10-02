@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Grace",
+      "confidence": 0.97,
+      "source_text": "Grace Huang",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Huang",
+      "confidence": 0.97,
+      "source_text": "Grace Huang",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "黃淑芬",
+      "confidence": 0.96,
+      "source_text": "黃淑芬",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Heng Chang International Trading Co., Ltd.",
+    "confidence": 0.96,
+    "source_text": "Heng Chang International Trading Co., Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "恒昌國際貿易有限公司",
+    "confidence": 0.9,
+    "source_text": "恒昌國際貿易有限公司",
+    "alternatives": [
+      "恆昌國際貿易有限公司"
+    ]
+  },
+  "job_title": {
+    "value": "Sales Manager",
+    "confidence": 0.97,
+    "source_text": "Sales Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "業務經理",
+    "confidence": 0.96,
+    "source_text": "業務經理",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "+886 960 345 354",
+      "kind": "mobile",
+      "confidence": 0.96,
+      "source_text": "M 手機 +886 960 345 354",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "886-2-2780-4587",
+      "kind": "work",
+      "confidence": 0.95,
+      "source_text": "電話 Tel: 886-2-2780-4587",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "886-2-2230-1797",
+      "kind": "fax",
+      "confidence": 0.95,
+      "source_text": "傳真 Fax: 886-2-2230-1797",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "grace.huang@hengchang-trade.com.tw",
+      "confidence": 0.96,
+      "source_text": "E-mail: grace.huang@hengchang-trade.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.hengchang-trade.com.tw",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "台灣 104 台北市中山區南京東路二段88號12樓",
+      "street": "南京東路二段88號12樓",
+      "city": "中山區",
+      "region": "台北市",
+      "postal_code": "104",
+      "country": "台灣",
+      "confidence": 0.88
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "ISO 9001:2015",
+      "恒昌"
+    ],
+    "overall_confidence": 0.94
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Sophie",
+      "confidence": 0.97,
+      "source_text": "Sophie Lam",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Lam",
+      "confidence": 0.97,
+      "source_text": "Sophie Lam",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Cedarline Logistics Inc.",
+    "confidence": 0.96,
+    "source_text": "Cedarline Logistics Inc.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": {
+    "value": "Director of Operations",
+    "confidence": 0.96,
+    "source_text": "Director of Operations",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "department": null,
+  "phones": [
+    {
+      "number": "+1-416-555-0172",
+      "kind": "mobile",
+      "confidence": 0.96,
+      "source_text": "M: +1-416-555-0172",
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+1-905-555-0171",
+      "kind": "work",
+      "confidence": 0.92,
+      "source_text": "P: +1-905-555-0171",
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+1-905-555-0197",
+      "kind": "fax",
+      "confidence": 0.96,
+      "source_text": "F: +1-905-555-0197",
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "sophiel@cedarline.ca",
+      "confidence": 0.94,
+      "source_text": "E: sophiel@cedarline.ca",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.cedarline.ca",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada",
+      "street": "6750 Mississauga Rd, Unit 7",
+      "city": "Mississauga",
+      "region": "ON",
+      "postal_code": "L5N 2L3",
+      "country": "Canada",
+      "confidence": 0.93
+    }
+  ],
+  "social": [
+    {
+      "service": "linkedin",
+      "handle": "sophie-lam",
+      "confidence": 0.9
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "CEDARLINE"
+    ],
+    "overall_confidence": 0.94
+  }
+}

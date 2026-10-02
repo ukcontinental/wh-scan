@@ -287,7 +287,7 @@ public actor BatchProcessor {
             let first = policy.evaluate(draft)
             let candidates = draft.allFields().filter { ref, _, conf, _ in
                 conf < config.policy.threshold(for: ref) && conf >= config.policy.dropBelow
-                    && { if case .address = ref { return false }; if case .social = ref { return false }; return true }()
+                    && { if case .social = ref { return false }; return true }()
             }
             _ = first
             if !candidates.isEmpty {
@@ -303,6 +303,20 @@ public actor BatchProcessor {
                     usage = usage + ans.usage
                     verified.append(ref.description)
                     let key: (String) -> String = { ref.kind == .phone ? TextNorm.digits($0) : TextNorm.alnum(TextNorm.toSimplified($0)) }
+                    if case .address = ref {
+                        // Addresses: agreement = same numbers and mostly the same words.
+                        guard let v = ans.value else { continue }
+                        let sameDigits = Set(TextNorm.tokens(v).filter { $0.allSatisfy(\.isNumber) }) == Set(TextNorm.tokens(value).filter { $0.allSatisfy(\.isNumber) })
+                        let model = config.confidence
+                        if sameDigits && TextNorm.similarity(v, value) >= 0.75 {
+                            draft.setVerified(ref, value: value, confidence: model.adjust(max(conf, ans.confidence * 0.9), deltas: [model.secondOpinionAgree]),
+                                              signal: "second_opinion:agree", regionHint: region)
+                        } else {
+                            draft.setVerified(ref, value: value, confidence: model.adjust(conf, deltas: [model.secondOpinionDisagree]),
+                                              signal: "second_opinion:disagree", regionHint: region)
+                        }
+                        continue
+                    }
                     guard let v = ans.value else {
                         // Second reader says the field is not printed at all.
                         if ans.confidence >= 0.9 { draft.remove(ref) }
@@ -537,6 +551,7 @@ extension ContactDraft {
         case .jobTitle: add(&jobTitle)
         case .jobTitleCJK: add(&jobTitleCJK)
         case .department: add(&department)
+        case .departmentCJK: add(&departmentCJK)
         case .phone(let k): if let i = phones.firstIndex(where: { $0.e164 == k }), !phones[i].alternatives.contains(v) { phones[i].alternatives.append(v) }
         case .email(let k): if let i = emails.firstIndex(where: { $0.value == k }), !emails[i].alternatives.contains(v) { emails[i].alternatives.append(v) }
         case .website(let k): if let i = websites.firstIndex(where: { $0.value == k }), !websites[i].alternatives.contains(v) { websites[i].alternatives.append(v) }

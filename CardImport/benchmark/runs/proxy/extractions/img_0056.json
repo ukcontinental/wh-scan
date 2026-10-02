@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans"
+  ],
+  "name": {
+    "cjk_full": {
+      "value": "郑凯",
+      "confidence": 0.95,
+      "source_text": "郑 凯",
+      "alternatives": []
+    },
+    "family": null,
+    "given": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "杭州青禾茶业有限公司",
+    "confidence": 0.94,
+    "source_text": "杭州青禾茶业有限公司",
+    "alternatives": []
+  },
+  "department": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "销售经理",
+    "confidence": 0.94,
+    "source_text": "销售经理",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "186 0000 5494",
+      "kind": "mobile",
+      "source_text": "手机 186 0000 5494",
+      "confidence": 0.94,
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "0571 6677-5347",
+      "kind": "work",
+      "source_text": "TEL：(0571) 6677-5347 转 4168",
+      "confidence": 0.88,
+      "country_hint": "CN",
+      "extension": "4168",
+      "alternatives": [
+        "(0571) 6677-5347"
+      ]
+    },
+    {
+      "number": "0571-51990701",
+      "kind": "fax",
+      "source_text": "传真：0571-51990701",
+      "confidence": 0.93,
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "kai.zheng@qinghetea.com",
+      "source_text": "kai.zheng@qinghetea.com",
+      "confidence": 0.94,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.qinghetea.com",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "中国浙江省杭州市西湖区龙井路16号",
+      "street": "西湖区龙井路16号",
+      "city": "杭州市",
+      "region": "浙江省",
+      "postal_code": "310013",
+      "country": "中国",
+      "confidence": 0.9
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "zhengkai80",
+      "confidence": 0.92
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": true,
+    "ignored_text": [
+      "QINGHE TEA",
+      "青禾",
+      "一片好茶 源自青山"
+    ],
+    "overall_confidence": 0.92
+  }
+}

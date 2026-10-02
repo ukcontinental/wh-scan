@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "吳佩珊",
+      "confidence": 0.96,
+      "source_text": "吳佩珊",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "合邦商業銀行",
+    "confidence": 0.95,
+    "source_text": "合邦商業銀行",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "理財專員",
+    "confidence": 0.95,
+    "source_text": "理財專員",
+    "alternatives": []
+  },
+  "department": null,
+  "phones": [
+    {
+      "number": "0910 653 799",
+      "kind": "mobile",
+      "confidence": 0.93,
+      "source_text": "手機：0910 653 799",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+886 2 2859 1651",
+      "kind": "work",
+      "confidence": 0.93,
+      "source_text": "電話：+886 2 2859 1651",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "02-2277-9904",
+      "kind": "fax",
+      "confidence": 0.93,
+      "source_text": "FAX：02-2277-9904",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "pwu@hebangbank.com.tw",
+      "confidence": 0.94,
+      "source_text": "pwu@hebangbank.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.hebangbank.com.tw",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "104台北市中山區南京東路二段88號12樓",
+      "street": "南京東路二段88號12樓",
+      "city": "中山區",
+      "region": "台北市",
+      "postal_code": "104",
+      "country": "Taiwan",
+      "confidence": 0.88
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "誠信 穩健 專業",
+      "合邦"
+    ],
+    "concerns": [
+      "vertical_text"
+    ],
+    "has_qr_code": false,
+    "has_person_photo": false,
+    "overall_confidence": 0.92
+  }
+}

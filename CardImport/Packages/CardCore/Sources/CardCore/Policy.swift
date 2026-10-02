@@ -72,6 +72,7 @@ public struct ReviewPolicy: Sendable {
         case .jobTitle: return "職稱 Job title"
         case .jobTitleCJK: return "職稱（中文）"
         case .department: return "部門 Department"
+        case .departmentCJK: return "部門（中文）"
         case .phone: return "電話 Phone"
         case .email: return "Email"
         case .website: return "網站 Website"

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "李承恩",
+      "confidence": 0.96,
+      "source_text": "李承恩",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "新禾科技股份有限公司",
+    "confidence": 0.94,
+    "source_text": "新禾科技股份有限公司",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "department": null,
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "資深軟體工程師",
+    "confidence": 0.94,
+    "source_text": "資深軟體工程師",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "0900 773 729",
+      "kind": "mobile",
+      "confidence": 0.9,
+      "source_text": "行動電話：0900 773 729",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "elee@xinhetech.com.tw",
+      "confidence": 0.92,
+      "source_text": "信箱：elee@xinhetech.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.xinhetech.com.tw",
+      "confidence": 0.92
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "台灣 114 台北市內湖區瑞光路35號8樓",
+      "street": "內湖區瑞光路35號8樓",
+      "city": "台北市",
+      "region": null,
+      "postal_code": "114",
+      "country": "台灣",
+      "confidence": 0.88
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "ignored_text": [
+      "新禾",
+      "XINHE"
+    ],
+    "concerns": [
+      "vertical_text"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "overall_confidence": 0.9
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:600px;height:1050px;overflow:hidden;background:#fff}
+body{font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:600px;height:1050px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#ffffff;color:#0b4f8a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;text-align:center;padding:40px}
+.web{font-size:2.6rem;letter-spacing:.08em}
+.co{font-size:2.3rem;font-weight:700;letter-spacing:.04em}
+.sl{font-size:1.9rem;font-style:italic;opacity:.85}
+.qrw{background:#fff;padding:10px;border-radius:6px;display:flex}
+
+</style></head><body><div class="card fit"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:41px"><svg width="230" height="230" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 96 C8 70 8 26 50 4 C92 26 92 70 50 96Z" fill="#0b4f8a"/><path d="M50 90 L50 18 M50 50 L30 35 M50 65 L70 48" stroke="#ffffff" stroke-width="4" fill="none"/></svg><span class="wm" style="font-size:5.0rem;color:#0b4f8a;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">WUI TAI</span></div><div><div class="web">www.wuitaifoods.com.hk</div></div><div class="qrw"><img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACWElEQVR4nO2bQYrjMBBFX7UMWcrQB8hRnJsNfaS+gX2UvoG8DMj8WUhKnF4M6YF0BCktjJO8RcGnSr+kiok71/J2LwmOOuroG6xW12k1sxObmY3AYgPtp6GTWB0lSJJU3j5GkL4GmBIwSZJSN7G+NjoAYBAyxIzBQZfvgHWE6fNxATj6v+g6wKSM2fFsTMq/HYCj/17D/kPMaLGQmT4PYhnTLwTg6I/VajZ+GwSbaRkxYMgQBayPC8DRH6BUCwEwpaDvj7qCND89VkeHmj0ArJvVcjhiWo6Zfe/89FgdRUpBEDNFqBnQHHMx70zKaPbc6gNFatZPc7z0VrG2X5RuLLlaXaBl36rJlIIk5ZJv5W0mCKJcrU7Q2HLr43g2s7F6Czut1d6Xo40uYn1xtFbC0gnHazLlVhhVdzDPrQ5QVFfelcNSE+fiPNoBoqv1fLSoVXJr2u1W0EpkcLW6QXdqlSJYfHsKqr6doFITXa3no02tBK3pauZ9SlfH6Gp1gd70W+zFq11WU9DV6gCtZxnTxfpV8cK+T3ZP2AlaPeFMq3pK0EzHdVdztbpBN6t3kCPYKWZgHUphNDOzhwfg6L1Lu5UuZ4LQDH0C3MF3gt7eb7E7GORqDN0TdoIOlAEa6iiNTdpK6RPrO2KlTj89P1ZHC1onBuPZWMYgKW0GZbIwqJ7vdhLrK6M3UzTreLksDmI5gVjHcovcQayOfkftxNZMYMywHCX74zcmfaA3M09lvum93m9NXwcB2+C51RO6WW2rViu7FcsI5VEMxoMDcPTOZf6PIEcdfQj6F5HFvfG47pT1AAAAAElFTkSuQmCC" style="width:170px;height:170px;image-rendering:pixelated;flex:none"></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

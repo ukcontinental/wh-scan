@@ -1,0 +1,34 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:600px;height:1050px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK TC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:600px;height:1050px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#fff;display:flex;flex-direction:column;align-items:center;text-align:center}
+.hdr{width:100%;min-height:250px;background:#0b4f8a;display:flex;align-items:center;justify-content:center;flex:none;flex-direction:column;gap:10px;color:#fff;padding:24px 0 24px}
+.grow{flex:1}
+.hco{font-size:1.99rem;font-weight:700;padding:0 30px;line-height:1.25}
+.av{margin-top:-70px;border:8px solid #fff;border-radius:50%;flex:none;display:flex}
+.nm{font-size:4.37rem;font-weight:700;margin-top:22px;font-style:normal;white-space:nowrap}
+.nm2{font-size:2.47rem;color:#555;white-space:nowrap}
+.tt{font-size:2.18rem;color:#0b4f8a;margin-top:8px;white-space:nowrap} .tt2,.dp{font-size:1.90rem;color:#666;white-space:nowrap}
+.rule{width:80px;height:3px;background:#c4561d;margin:22px 0}
+.ct{font-size:2.04rem;line-height:1.5;color:#333;padding:0 40px}
+.addr{font-size:1.85rem;line-height:1.35;color:#555;margin-top:12px;padding:0 44px} .alab{font-weight:700;color:#0b4f8a}
+.ex{font-size:1.61rem;color:#999;margin-top:6px;padding:0 30px}
+.co2{font-size:1.61rem;opacity:.9}
+
+</style></head><body><div class="card fit"><div class="hdr"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:17px"><svg width="96" height="96" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#ffffff"/><path d="M12 38 Q31 26 50 38 T88 38" stroke="#0b4f8a" stroke-width="6" fill="none"/><path d="M12 54 Q31 42 50 54 T88 54" stroke="#0b4f8a" stroke-width="6" fill="none"/><path d="M12 70 Q31 58 50 70 T88 70" stroke="#0b4f8a" stroke-width="6" fill="none"/></svg><span class="wm" style="font-size:2.6rem;color:#ffffff;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">OCEAN CREST</span></div><div class="hco">海景冷凍食品有限公司</div><div class="co2">Harbourview Frozen Foods Ltd.</div></div><div style="height:20px"></div><div class="nm">Derek Lau</div><div class="nm2">劉 德 成</div><div class="tt">品保經理</div><div class="tt2">Quality Assurance Manager</div><div class="dp">國際貿易部  International Trade Division</div><div class="rule"></div><div class="grow"></div><div class="ct"><div class="ln">手機 Mobile: 416-555-0145</div><div class="ln">電話 TEL 416 555 0121</div><div class="ln">E-mail: derek.lau@harbourviewfoods.ca</div><div class="ln">www.harbourviewfoods.ca</div></div><div class="addr"><div class="alab">Head Office</div><div>120 Front St W, Suite 400</div><div>Toronto, ON M5J 2M2</div><div>Canada</div></div><div class="addr"><div class="alab">Warehouse</div><div>6750 Mississauga Rd, Unit 7</div><div>Mississauga, ON L5N 2L3</div><div>Canada</div></div><div class="ex">Taste the Difference</div><div class="ex">ISO 22000</div><div class="grow"></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>
