@@ -32,6 +32,7 @@ public enum PhoneNormalizer {
         let patterns = [
             #"(?i)\s*(?:ext\.?|extension|x|分機|分机|轉|转|内线|內線)\s*[:：.]?\s*(\d{1,6})\s*$"#,
             #"\s*#\s*(\d{1,6})\s*$"#,
+            #"\s*[,;]+\s*(\d{1,6})\s*$"#,     // dial-string form written to Contacts: "+14165550100,204"
         ]
         for p in patterns {
             if let re = try? NSRegularExpression(pattern: p),

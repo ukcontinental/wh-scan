@@ -37,16 +37,25 @@ final class ContactsService: ContactIndex, ContactWriter, @unchecked Sendable {
 
     // MARK: ContactIndex
 
+    func requireAccess() throws {
+        guard Self.authorized else { throw ContactStoreError.notAuthorized }
+    }
+
     func candidates(for d: ContactDraft) async throws -> [ExistingContact] {
+        try requireAccess()
         var found: [String: CNContact] = [:]
-        func fetch(_ p: NSPredicate) {
-            if let r = try? store.unifiedContacts(matching: p, keysToFetch: keys) { for c in r { found[c.identifier] = c } }
+        // A failed lookup must fail the write (never be mistaken for "no duplicate").
+        func fetch(_ p: NSPredicate) throws {
+            for c in try store.unifiedContacts(matching: p, keysToFetch: keys) { found[c.identifier] = c }
         }
-        for e in d.emails { fetch(CNContact.predicateForContacts(matchingEmailAddress: e.value)) }
-        for p in d.phones { fetch(CNContact.predicateForContacts(matching: CNPhoneNumber(stringValue: p.e164))) }
+        for e in d.emails { try fetch(CNContact.predicateForContacts(matchingEmailAddress: e.value)) }
+        for p in d.phones { try fetch(CNContact.predicateForContacts(matching: CNPhoneNumber(stringValue: p.e164))) }
         let latin = [d.givenName?.value, d.familyName?.value].compactMap { $0 }.joined(separator: " ")
-        if !latin.isEmpty { fetch(CNContact.predicateForContacts(matchingName: latin)) }
-        if let cjk = d.cjkName?.value { fetch(CNContact.predicateForContacts(matchingName: cjk)) }
+        if !latin.isEmpty { try fetch(CNContact.predicateForContacts(matchingName: latin)) }
+        if let cjk = d.cjkName?.value { try fetch(CNContact.predicateForContacts(matchingName: cjk)) }
+        if let org = d.company?.value ?? d.companyCJK?.value, !d.hasPersonName {
+            try fetch(CNContact.predicateForContacts(matchingName: org))
+        }
         return found.values.map(Self.snapshot)
     }
 
@@ -60,6 +69,7 @@ final class ContactsService: ContactIndex, ContactWriter, @unchecked Sendable {
     // MARK: ContactWriter
 
     func create(_ draft: ContactDraft) async throws -> String {
+        try requireAccess()
         let c = CNMutableContact()
         apply(draft, to: c, mode: .overwriteSingleValued)
         let req = CNSaveRequest()
@@ -69,6 +79,7 @@ final class ContactsService: ContactIndex, ContactWriter, @unchecked Sendable {
     }
 
     func update(identifier: String, with draft: ContactDraft, mode: WriteMode) async throws {
+        try requireAccess()
         let existing = try store.unifiedContact(withIdentifier: identifier, keysToFetch: keys)
         guard let m = existing.mutableCopy() as? CNMutableContact else { return }
         apply(draft, to: m, mode: mode)
@@ -96,14 +107,25 @@ final class ContactsService: ContactIndex, ContactWriter, @unchecked Sendable {
         let latinGiven = d.givenName?.value, latinFamily = d.familyName?.value
         let cjk = d.cjkName?.value
         let hasLatin = latinGiven != nil || latinFamily != nil
-        if let cjk, !hasLatin || nameStyle == .cjkFirst {
+        let latinListed = (!c.givenName.isEmpty || !c.familyName.isEmpty) && !TextNorm.containsCJK(c.familyName + c.givenName)
+        if let cjk, !hasLatin && latinListed && mode == .additive {
+            // A Chinese name added to a contact already listed in English goes to the nickname (searchable).
+            set(c.nickname, cjk) { c.nickname = $0 }
+        } else if let cjk, !hasLatin || nameStyle == .cjkFirst {
             let parts = NameUtil.splitCJK(cjk)
             set(c.familyName, parts.family) { c.familyName = $0 }
             set(c.givenName, parts.given) { c.givenName = $0 }
             if hasLatin { set(c.nickname, [latinGiven, latinFamily].compactMap { $0 }.joined(separator: " ")) { c.nickname = $0 } }
         } else {
-            set(c.givenName, latinGiven) { c.givenName = $0 }
-            set(c.familyName, latinFamily) { c.familyName = $0 }
+            let latinFull = [latinGiven, latinFamily].compactMap { $0 }.joined(separator: " ")
+            let namesTaken = !c.givenName.isEmpty || !c.familyName.isEmpty
+            if hasLatin && namesTaken && mode == .additive && TextNorm.containsCJK(c.familyName + c.givenName) {
+                // The contact is listed by its Chinese name already: keep the English name searchable as nickname.
+                set(c.nickname, latinFull) { c.nickname = $0 }
+            } else {
+                set(c.givenName, latinGiven) { c.givenName = $0 }
+                set(c.familyName, latinFamily) { c.familyName = $0 }
+            }
             // Keep the Chinese name searchable without changing how the contact is listed.
             if let cjk { set(c.nickname, cjk) { c.nickname = $0 } }
         }
@@ -117,12 +139,17 @@ final class ContactsService: ContactIndex, ContactWriter, @unchecked Sendable {
         set(c.departmentName, dept.isEmpty ? nil : dept) { c.departmentName = $0 }
         if !d.hasPersonName && !org.isEmpty && c.givenName.isEmpty && c.familyName.isEmpty { c.contactType = .organization }
 
-        let existingDigits = Set(c.phoneNumbers.map { TextNorm.digits($0.value.stringValue) })
+        // Compare main numbers only (stored values may carry ",ext").
+        let existingDigits = Set(c.phoneNumbers.map { TextNorm.digits(PhoneNormalizer.splitExtension($0.value.stringValue).0) })
         for p in d.phones {
             var value = p.e164
             if let ext = p.extensionNumber { value += ",\(ext)" }
             let digits = TextNorm.digits(p.e164)
-            if existingDigits.contains(where: { $0.hasSuffix(String(digits.suffix(9))) }) { continue }
+            let sameMain = c.phoneNumbers.contains { lv in
+                let (main, ext) = PhoneNormalizer.splitExtension(lv.value.stringValue)
+                return TextNorm.digits(main).hasSuffix(String(digits.suffix(9))) && (ext ?? "") == (p.extensionNumber ?? "")
+            }
+            if sameMain || (p.extensionNumber == nil && existingDigits.contains(where: { $0.hasSuffix(String(digits.suffix(9))) })) { continue }
             let label: String
             switch p.kind {
             case .mobile: label = CNLabelPhoneNumberMobile

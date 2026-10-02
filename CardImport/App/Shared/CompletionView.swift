@@ -25,6 +25,7 @@ struct CompletionView: View {
                 if s.alreadyExisted > 0 { row("已存在（略過）", s.alreadyExisted) }
                 row("待確認", s.openReviewItems, highlight: s.openReviewItems > 0)
                 if s.failedPhotos > 0 { row("無法辨識的照片", s.failedPhotos, highlight: true) }
+                if s.failedPeople > 0 { row("寫入失敗", s.failedPeople, highlight: true) }
             }
             .font(.title3)
             .padding(20)
@@ -37,6 +38,9 @@ struct CompletionView: View {
             if state.phase == .pausedAuth {
                 Label("API 金鑰無效，請到設定更新。", systemImage: "key.slash").font(.footnote).foregroundStyle(.red)
             }
+            if state.phase == .pausedContacts {
+                Label("需要聯絡人權限；允許後會自動完成寫入。", systemImage: "person.crop.circle.badge.exclamationmark").font(.footnote).foregroundStyle(.orange)
+            }
             Spacer()
             VStack(spacing: 12) {
                 if s.openReviewItems > 0 {
@@ -44,8 +48,8 @@ struct CompletionView: View {
                         Text("確認 \(s.openReviewItems) 項").font(.headline).frame(maxWidth: .infinity).padding(.vertical, 6)
                     }.buttonStyle(.borderedProminent)
                 }
-                if s.failedPhotos > 0 {
-                    Button("重試 \(s.failedPhotos) 張") { Task { await engine.retryFailed() } }
+                if s.failedPhotos + s.failedPeople > 0 {
+                    Button("重試 \(s.failedPhotos + s.failedPeople) 項") { Task { await engine.retryFailed() } }
                 }
                 Button {
                     if let onDone { onDone() } else { engine.reset() }
@@ -77,6 +81,7 @@ struct CompletionView: View {
         switch state.phase {
         case .pausedOffline: return "等待網路"
         case .pausedAuth: return "需要 API 金鑰"
+        case .pausedContacts: return "等待聯絡人權限"
         default: return s.openReviewItems == 0 ? "匯入完成" : "匯入完成，剩 \(s.openReviewItems) 項待確認"
         }
     }
@@ -131,6 +136,7 @@ struct ReviewCard: View {
     @EnvironmentObject var engine: ImportEngine
     let item: ReviewItem
     let personName: String
+    @State private var submitting = false
     @State private var custom = ""
     @State private var editing = false
     @State private var zoom = false
@@ -165,6 +171,8 @@ struct ReviewCard: View {
         }
         .padding()
         .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 14))
+        .disabled(submitting)
+        .opacity(submitting ? 0.5 : 1)
     }
 
     func display(_ c: String) -> String {
@@ -173,6 +181,8 @@ struct ReviewCard: View {
     }
 
     func submit(_ value: String?) {
+        guard !submitting else { return }
+        submitting = true
         Task { await engine.answer(item, with: value) }
     }
 }

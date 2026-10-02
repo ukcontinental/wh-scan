@@ -14,9 +14,11 @@ public struct PolicyConfig: Codable, Sendable {
 
     /// True when this value may be written without review.
     public func accepts(_ ref: FieldRef, confidence: Double, alternatives: [String], in draft: ContactDraft) -> Bool {
+        // What the user confirmed is final.
+        if draft.signals(ref).contains("user_review") { return true }
         guard confidence >= threshold(for: ref) else { return false }
         // A number that fails the numbering plan is never written unasked, whatever the readers say.
-        if case .phone(let k) = ref, let p = draft.phones.first(where: { $0.e164 == k }), !p.isValid { return false }
+        if case .phone(let k) = ref, let p = draft.phones.first(where: { $0.key == k }), !p.isValid { return false }
         if alternativesNeedConfirmation && !CardScorer.realAlternatives(alternatives, to: draft.current(ref)?.value ?? "").isEmpty
             && !draft.isSettled(ref) { return false }
         return true
@@ -116,7 +118,7 @@ public struct ReviewPolicy: Sendable {
         }
         // A contact whose identity is uncertain must not be written yet: block only when no name survives.
         if heldName && !writable.hasPersonName {
-            for i in review.indices where review[i].field.map({ $0.contains("name") }) ?? false { review[i].blocking = true }
+            for i in review.indices where review[i].field.flatMap({ FieldRef(description: $0) })?.isNameField ?? false { review[i].blocking = true }
         }
         // Nothing identifying at all (no name, no company, no phone/email) → hold everything.
         if !writable.hasPersonName && writable.company == nil && writable.companyCJK == nil && !writable.hasAnyContactMethod && !review.isEmpty {

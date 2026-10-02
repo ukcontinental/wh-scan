@@ -42,6 +42,7 @@ struct CardImportApp: App {
                 .task {
                     if let demo = DemoData.requestedScreen() { DemoData.apply(demo, to: engine); return }
                     await engine.resumeUnfinished()
+                    await engine.refreshPendingReview()
                 }
                 .onChange(of: scenePhase) { _, phase in
                     if phase == .active { Task { await engine.resumeUnfinished() } }

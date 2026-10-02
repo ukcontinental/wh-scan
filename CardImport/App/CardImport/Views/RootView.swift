@@ -71,10 +71,20 @@ struct RootView: View {
 
 struct HomeView: View {
     @EnvironmentObject var router: ImportRouter
+    @EnvironmentObject var engine: ImportEngine
     @Binding var showSettings: Bool
 
     var body: some View {
         VStack(spacing: 28) {
+            if let p = engine.pendingReview {
+                Button {
+                    engine.openPendingReview()
+                } label: {
+                    Label("上次匯入還有 \(p.review.filter { !$0.resolved }.count) 項待確認", systemImage: "exclamationmark.bubble")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered).tint(.orange).padding(.horizontal, 24).padding(.top, 8)
+            }
             Spacer()
             Image(systemName: "person.crop.rectangle.stack.fill")
                 .font(.system(size: 64)).foregroundStyle(.tint)

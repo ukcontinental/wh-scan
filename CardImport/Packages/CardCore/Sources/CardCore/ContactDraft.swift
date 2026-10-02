@@ -34,6 +34,9 @@ public struct DraftPhone: Codable, Hashable, Sendable {
         self.confidence = confidence; self.alternatives = alternatives; self.sources = sources
         self.signals = signals; self.isValid = isValid
     }
+
+    /// Identity of this entry: the same number with and without an extension are different entries.
+    public var key: String { e164 + (extensionNumber.map { "x" + $0 } ?? "") }
 }
 
 public struct DraftAddress: Codable, Hashable, Sendable {
@@ -135,7 +138,7 @@ public struct ContactDraft: Codable, Hashable, Sendable {
 /// Identifies one field of a draft for review / held fields.
 public enum FieldRef: Codable, Hashable, Sendable, CustomStringConvertible {
     case givenName, familyName, cjkName, company, companyCJK, jobTitle, jobTitleCJK, department, departmentCJK
-    case phone(String)      // e164
+    case phone(String)      // DraftPhone.key (e164 + "x" + extension)
     case email(String)      // address
     case website(String)
     case address(String)    // matchKey
@@ -190,7 +193,7 @@ extension ContactDraft {
         for p in phones {
             var shown = p.printed
             if let ext = p.extensionNumber, !TextNorm.digits(shown).hasSuffix(ext) { shown += " ext. \(ext)" }
-            out.append((.phone(p.e164), shown, p.confidence, p.alternatives))
+            out.append((.phone(p.key), shown, p.confidence, p.alternatives))
         }
         for e in emails { out.append((.email(e.value), e.value, e.confidence, e.alternatives)) }
         for w in websites { out.append((.website(w.value), w.value, w.confidence, w.alternatives)) }
@@ -211,7 +214,7 @@ extension ContactDraft {
         case .jobTitleCJK: return jobTitleCJK?.signals ?? []
         case .department: return department?.signals ?? []
         case .departmentCJK: return departmentCJK?.signals ?? []
-        case .phone(let k): return phones.first { $0.e164 == k }?.signals ?? []
+        case .phone(let k): return phones.first { $0.key == k }?.signals ?? []
         case .email(let k): return emails.first { $0.value == k }?.signals ?? []
         case .website(let k): return websites.first { $0.value == k }?.signals ?? []
         case .address(let k): return addresses.first { $0.matchKey == k }?.signals ?? []
@@ -238,7 +241,7 @@ extension ContactDraft {
         case .jobTitleCJK: jobTitleCJK = nil
         case .department: department = nil
         case .departmentCJK: departmentCJK = nil
-        case .phone(let v): phones.removeAll { $0.e164 == v }
+        case .phone(let v): phones.removeAll { $0.key == v }
         case .email(let v): emails.removeAll { $0.value == v }
         case .website(let v): websites.removeAll { $0.value == v }
         case .address(let v): addresses.removeAll { $0.matchKey == v }
@@ -261,17 +264,24 @@ extension ContactDraft {
         case .jobTitleCJK: jobTitleCJK = dv
         case .department: department = dv
         case .departmentCJK: departmentCJK = dv
-        case .phone(let e164):
-            var p = original.phones.first { $0.e164 == e164 } ?? DraftPhone(kind: .work, e164: e164, printed: value, confidence: 1)
-            let region = p.e164.hasPrefix("+1") ? "CA" : nil
-            if let n = PhoneNormalizer.normalize(value, regionHint: region) { p.e164 = n.e164; p.extensionNumber = n.extensionNumber ?? p.extensionNumber }
+        case .phone(let key):
+            let base = String(key.split(separator: "x").first ?? Substring(key))
+            var p = original.phones.first { $0.key == key } ?? DraftPhone(kind: .work, e164: base, printed: value, confidence: 1)
+            // The user's answer is normalised in the region of the number it replaces (never the device default),
+            // and its own extension (or none) replaces the old one.
+            let region = PhoneNormalizer.region(ofE164: p.e164)
+            if let n = PhoneNormalizer.normalize(value, regionHint: region) {
+                p.e164 = n.e164; p.extensionNumber = n.extensionNumber; p.isValid = n.isValid
+            }
             p.printed = value; p.confidence = 1; p.signals.append("user_review")
             phones.append(p)
         case .email: emails.append(DraftValue(value: EmailValidator.repair(value), confidence: 1, signals: ["user_review"]))
         case .website: websites.append(dv)
         case .address(let key):
             var a = original.addresses.first { $0.matchKey == key } ?? DraftAddress(confidence: 1)
-            a.formatted = value; a.confidence = 1; a.signals.append("user_review")
+            // The doubted structured parts must not survive a correction: keep only the user's text.
+            a.street = value; a.formatted = value; a.city = nil; a.region = nil; a.postalCode = nil
+            a.confidence = 1; a.signals = ["user_review"]
             addresses.append(a)
         case .social(let key):
             let service = String(key.split(separator: ":").first ?? "other")
@@ -319,7 +329,7 @@ extension ContactDraft {
         case .jobTitleCJK: return dv(jobTitleCJK)
         case .department: return dv(department)
         case .departmentCJK: return dv(departmentCJK)
-        case .phone(let k): return phones.first { $0.e164 == k }.map { ($0.printed, $0.confidence, $0.alternatives) }
+        case .phone(let k): return phones.first { $0.key == k }.map { ($0.printed, $0.confidence, $0.alternatives) }
         case .email(let k): return dv(emails.first { $0.value == k })
         case .website(let k): return dv(websites.first { $0.value == k })
         case .address(let k): return addresses.first { $0.matchKey == k }.map { ($0.formatted ?? $0.street ?? "", $0.confidence, []) }
@@ -346,7 +356,7 @@ extension ContactDraft {
         case .department: upd(&department)
         case .departmentCJK: upd(&departmentCJK)
         case .phone(let k):
-            guard let i = phones.firstIndex(where: { $0.e164 == k }) else { return ref }
+            guard let i = phones.firstIndex(where: { $0.key == k }) else { return ref }
             var p = phones[i]
             // Re-read numbers are normalised in the region of the number being verified, not the device default.
             let hint = PhoneNormalizer.region(ofE164: p.e164) ?? regionHint
@@ -356,7 +366,7 @@ extension ContactDraft {
                 if let e = n.extensionNumber { p.extensionNumber = e }
             }
             p.confidence = confidence; p.signals.append(signal); phones[i] = p
-            return .phone(p.e164)
+            return .phone(p.key)
         case .email(let k):
             guard let i = emails.firstIndex(where: { $0.value == k }) else { return ref }
             let repaired = EmailValidator.repair(value)
@@ -379,6 +389,18 @@ extension ContactDraft {
         return ref
     }
 
+    /// Copies every value the user confirmed in `other` into `self` (used when a draft is rebuilt).
+    public mutating func reapplyUserReviewed(from other: ContactDraft) {
+        for (ref, value, _, _) in other.allFields() where other.signals(ref).contains("user_review") {
+            remove(ref)
+            switch ref {
+            case .phone: phones += other.phones.filter { $0.signals.contains("user_review") && !phones.contains($0) }
+            case .address: addresses += other.addresses.filter { $0.signals.contains("user_review") && !addresses.contains($0) }
+            default: resolve(ref, with: value, original: other)
+            }
+        }
+    }
+
     /// A draft containing only one field of `self` (used to patch an existing contact after review).
     public func only(_ ref: FieldRef) -> ContactDraft {
         var d = ContactDraft(id: id, photoIDs: photoIDs)
@@ -392,7 +414,7 @@ extension ContactDraft {
         case .jobTitleCJK: d.jobTitleCJK = jobTitleCJK
         case .department: d.department = department
         case .departmentCJK: d.departmentCJK = departmentCJK
-        case .phone(let k): d.phones = phones.filter { $0.e164 == k }
+        case .phone(let k): d.phones = phones.filter { $0.key == k }
         case .email(let k): d.emails = emails.filter { $0.value == k }
         case .website(let k): d.websites = websites.filter { $0.value == k }
         case .address(let k): d.addresses = addresses.filter { $0.matchKey == k }

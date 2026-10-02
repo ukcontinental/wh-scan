@@ -65,7 +65,7 @@ public actor BatchProcessor {
     public func run(_ initial: BatchState) async -> BatchState {
         var s = initial
         let started = Date()
-        if s.phase == .pausedOffline || s.phase == .pausedAuth {
+        if s.phase == .pausedOffline || s.phase == .pausedAuth || s.phase == .pausedContacts {
             s.phase = s.people.isEmpty ? .recognizing : .finalizing
         }
         if s.phase == .recognizing {
@@ -91,7 +91,7 @@ public actor BatchProcessor {
         if s.phase == .finalizing {
             s = await finalize(s)
         }
-        s = refreshPhase(s)
+        if s.phase != .pausedContacts { s = refreshPhase(s) }
         s.processingSeconds += Date().timeIntervalSince(started)
         await cleanupImages(&s)
         await persist(s)
@@ -101,7 +101,7 @@ public actor BatchProcessor {
     func refreshPhase(_ s0: BatchState) -> BatchState {
         var s = s0
         guard s.phase == .finalizing || s.phase == .done else { return s }
-        let pending = s.people.contains { $0.status == .pending }
+        let pending = s.people.contains { $0.status == .pending || $0.status == .writing }
         s.phase = pending ? .finalizing : .done
         return s
     }
@@ -360,7 +360,7 @@ public actor BatchProcessor {
     nonisolated static func verifyContext(_ ref: FieldRef, draft: ContactDraft) -> String {
         switch ref {
         case .phone(let k):
-            guard let p = draft.phones.first(where: { $0.e164 == k }) else { return "" }
+            guard let p = draft.phones.first(where: { $0.key == k }) else { return "" }
             var s = " — the \(p.kind.rawValue) number"
             if let ext = p.extensionNumber { s += " (extension \(ext) printed with it)" }
             return s + "; the first reader saw it printed as “\(p.printed)”"
@@ -376,7 +376,7 @@ public actor BatchProcessor {
 
     func finalize(_ s0: BatchState) async -> BatchState {
         var s = s0
-        let todo = s.people.filter { $0.status == .pending }
+        let todo = s.people.filter { $0.status == .pending || $0.status == .writing }
         guard !todo.isEmpty else { return s }
         let photos = s.photos
         var prepared: [Prepared] = []
@@ -410,6 +410,7 @@ public actor BatchProcessor {
                 await commit(i, in: &s)
             }
             await persist(s)
+            if s.phase == .pausedContacts { break }
         }
         return s
     }
@@ -417,22 +418,32 @@ public actor BatchProcessor {
     /// De-duplicates and writes person `i` (its `draft` is the writable part).
     func commit(_ i: Int, in s: inout BatchState) async {
         guard let draft = s.people[i].draft else { return }
+        // Everything was held back or left empty: nothing to write — never create a blank contact.
+        guard !draft.hasNoFields else { s.people[i].status = .ignored; return }
         do {
             let candidates = try await index.candidates(for: draft)
             let a = DuplicateDetector(defaultRegion: config.defaultRegion).assess(draft, against: candidates)
             s.people[i].duplicate = a
             switch a.verdict {
             case .new:
+                // Persist "writing" first: if the app dies after the save, resume finds the contact (identical
+                // match) instead of creating a second one.
+                s.people[i].status = .writing
+                await persist(s)
                 s.people[i].contactIdentifier = try await writer.create(draft)
                 s.people[i].status = .created
+                await persist(s)
             case .alreadyExists:
                 s.people[i].contactIdentifier = a.match?.identifier
                 s.people[i].status = .alreadyExists
             case .update, .updateWithConflicts:
                 guard let id = a.match?.identifier else { break }
+                s.people[i].status = .writing
+                await persist(s)
                 try await writer.update(identifier: id, with: draft, mode: .additive)
                 s.people[i].contactIdentifier = id
                 s.people[i].status = .updated
+                await persist(s)
                 for c in a.conflicts {
                     s.review.append(ReviewItem(id: "\(s.people[i].id)#conflict-\(c.field)", personID: s.people[i].id, kind: .conflict,
                                                field: c.field, question: "\(c.field == "organization" ? "公司" : "職稱")不同：要更新嗎？",
@@ -447,11 +458,33 @@ public actor BatchProcessor {
                                            candidates: ["same|是同一人（合併）", "new|不是，建立新聯絡人"], photoIDs: s.people[i].photoIDs,
                                            existingContactID: a.match?.identifier, blocking: true))
             }
+        } catch ContactStoreError.notAuthorized {
+            // No Contacts access: keep the person pending and pause; the app finishes once access is granted.
+            s.people[i].status = .pending
+            s.phase = .pausedContacts
+            s.note("contacts not authorized: paused")
         } catch {
             s.people[i].status = .failed
             s.people[i].lastError = String(describing: error)
             s.note("write failed for \(s.people[i].id): \(error)")
         }
+    }
+
+    /// People whose write failed (e.g. a transient Contacts error) are retried in place; images were kept.
+    public func retryFailedPeople(in s0: BatchState) async -> BatchState {
+        var s = s0
+        guard s.people.contains(where: { $0.status == .failed }) else { return s }
+        for i in s.people.indices where s.people[i].status == .failed {
+            s.people[i].status = .pending
+            // Re-evaluate from the full draft so held fields stay held.
+            if let full = s.people[i].fullDraft {
+                var d = ReviewPolicy(config: config.policy).evaluate(full).writable
+                if let resolved = s.people[i].draft { d.reapplyUserReviewed(from: resolved) }
+                s.people[i].draft = d
+            }
+        }
+        s.phase = .finalizing
+        return await run(s)
     }
 
     // MARK: Review answers
@@ -460,7 +493,7 @@ public actor BatchProcessor {
     /// (for `.field` the chosen value, possibly edited), or nil for "leave empty / skip".
     public func answer(_ itemID: String, with answer: String?, in s0: BatchState) async -> BatchState {
         var s = s0
-        guard let ri = s.review.firstIndex(where: { $0.id == itemID }) else { return s }
+        guard let ri = s.review.firstIndex(where: { $0.id == itemID }), !s.review[ri].resolved else { return s }
         s.review[ri].resolved = true
         s.review[ri].answer = answer
         let item = s.review[ri]
@@ -484,16 +517,24 @@ public actor BatchProcessor {
             }
         case .duplicate:
             if key == "same", let id = item.existingContactID, let d = s.people[pi].draft {
+                s.people[pi].status = .writing
+                await persist(s)
                 do {
                     try await writer.update(identifier: id, with: d, mode: .additive)
                     s.people[pi].contactIdentifier = id
                     s.people[pi].status = .updated
                 } catch { s.people[pi].status = .failed; s.people[pi].lastError = "\(error)" }
-            } else if key == "new", let d = s.people[pi].draft {
+                await persist(s)
+            } else if key == "new", let d = s.people[pi].draft, !d.hasNoFields {
+                s.people[pi].status = .writing
+                await persist(s)
                 do {
                     s.people[pi].contactIdentifier = try await writer.create(d)
                     s.people[pi].status = .created
                 } catch { s.people[pi].status = .failed; s.people[pi].lastError = "\(error)" }
+                await persist(s)
+            } else if key == "new" {
+                s.people[pi].status = .ignored
             }
         case .conflict:
             if key == "new", let id = item.existingContactID, let f = item.field, let d = s.people[pi].draft {
@@ -510,18 +551,29 @@ public actor BatchProcessor {
                 s.people[pi].status = .pending
             } else if let ti = s.people.firstIndex(where: { $0.id == key }), let orphan = s.people[pi].fullDraft {
                 let merger = DraftMerger(model: config.confidence)
+                let policy = ReviewPolicy(config: config.policy)
                 let target = s.people[ti].fullDraft ?? s.people[ti].draft ?? ContactDraft(id: key, photoIDs: [])
-                let combined = merger.merge(id: key, drafts: [target, orphan])
+                var combined = merger.merge(id: key, drafts: [target, orphan])
                 s.people[pi].status = .ignored
                 s.people[ti].photoIDs += s.people[pi].photoIDs
+                // Never let the merge bypass the policy or undo what the user already answered.
+                if let resolved = s.people[ti].draft { combined.reapplyUserReviewed(from: resolved) }
+                let outcome = policy.evaluate(combined)
+                s.people[ti].fullDraft = combined
+                let existingFieldItems = Set(s.review.filter { $0.personID == key && $0.kind == .field }.compactMap(\.field))
+                for var r in outcome.review where !existingFieldItems.contains(r.field ?? "") {
+                    r.personID = key; r.id = "\(key)#\(r.field ?? "field")"
+                    r.photoIDs = s.people[ti].photoIDs
+                    r.blocking = r.blocking && s.people[ti].contactIdentifier == nil
+                    s.review.append(r)
+                }
                 if let id = s.people[ti].contactIdentifier {
                     // Already written: add only what the extra side contributes and passes the policy.
-                    let extra = ReviewPolicy(config: config.policy).evaluate(orphan)
-                    do { try await writer.update(identifier: id, with: extra.writable, mode: .additive) }
+                    do { try await writer.update(identifier: id, with: policy.evaluate(orphan).writable, mode: .additive) }
                     catch { s.note("merge update failed: \(error)") }
-                    s.people[ti].fullDraft = combined
+                    await persist(s)
                 } else {
-                    s.people[ti].draft = combined; s.people[ti].fullDraft = combined
+                    s.people[ti].draft = outcome.writable
                     if s.people[ti].status != .needsReview { s.people[ti].status = .pending }
                 }
             }
@@ -557,11 +609,11 @@ public actor BatchProcessor {
     func cleanupImages(_ s: inout BatchState) async {
         guard config.deleteImagesWhenDone else { return }
         let openReviewPhotos = Set(s.review.filter { !$0.resolved }.flatMap(\.photoIDs))
-        let pendingPeoplePhotos = Set(s.people.filter { $0.status == .pending }.flatMap(\.photoIDs))
+        let pendingPeoplePhotos = Set(s.people.filter { [.pending, .writing, .failed, .needsReview].contains($0.status) }.flatMap(\.photoIDs))
         for i in s.photos.indices where !s.photos[i].imageDeleted {
             let p = s.photos[i]
             let keep = p.status == .pending || p.status == .failed || openReviewPhotos.contains(p.id) || pendingPeoplePhotos.contains(p.id)
-                || s.phase == .pausedOffline || s.phase == .pausedAuth
+                || s.phase == .pausedOffline || s.phase == .pausedAuth || s.phase == .pausedContacts
             if !keep {
                 await images.delete(p.id)
                 s.photos[i].imageDeleted = true
@@ -583,7 +635,7 @@ extension ContactDraft {
         case .jobTitleCJK: add(&jobTitleCJK)
         case .department: add(&department)
         case .departmentCJK: add(&departmentCJK)
-        case .phone(let k): if let i = phones.firstIndex(where: { $0.e164 == k }), !phones[i].alternatives.contains(v) { phones[i].alternatives.append(v) }
+        case .phone(let k): if let i = phones.firstIndex(where: { $0.key == k }), !phones[i].alternatives.contains(v) { phones[i].alternatives.append(v) }
         case .email(let k): if let i = emails.firstIndex(where: { $0.value == k }), !emails[i].alternatives.contains(v) { emails[i].alternatives.append(v) }
         case .website(let k): if let i = websites.firstIndex(where: { $0.value == k }), !websites[i].alternatives.contains(v) { websites[i].alternatives.append(v) }
         case .address, .social: break

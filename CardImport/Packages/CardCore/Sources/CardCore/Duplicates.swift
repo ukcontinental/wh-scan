@@ -35,6 +35,12 @@ public struct InMemoryContactIndex: ContactIndex {
     public func candidates(for draft: ContactDraft) async throws -> [ExistingContact] { contacts }
 }
 
+/// Thrown by a ContactIndex / ContactWriter when the address book cannot be accessed. The batch pauses
+/// (people stay pending) instead of marking them failed.
+public enum ContactStoreError: Error, Sendable {
+    case notAuthorized
+}
+
 public enum DuplicateVerdict: String, Codable, Sendable {
     case new                 // no plausible match → create
     case alreadyExists       // same person, nothing new → skip
@@ -100,10 +106,23 @@ public struct DuplicateDetector: Sendable {
         if nameDifferent { s -= 0.6; sig.append("different_name") }
         let comp = d.company?.value ?? d.companyCJK?.value
         if let comp, !c.organization.isEmpty, CompanyUtil.similarity(comp, c.organization) >= 0.85 { s += 0.15; sig.append("company") }
+        let hosts = Set(c.urls.compactMap(DomainUtil.host(fromURL:)))
+        if d.websites.contains(where: { DomainUtil.host(fromURL: $0.value).map(hosts.contains) ?? false }) { s += 0.15; sig.append("website") }
         return (min(max(s, 0), 1), sig)
     }
 
     public func assess(_ d: ContactDraft, against candidates: [ExistingContact]) -> DuplicateAssessment {
+        // A contact that already holds everything this card says (and nothing contradicting it) is the same
+        // contact — e.g. the one we wrote just before the app was killed, or a card imported twice.
+        for c in candidates {
+            let (s, sig) = score(d, c)
+            guard !sig.contains("different_name") else { continue }
+            let (adds, conflicts) = diff(d, c)
+            if adds.isEmpty && conflicts.isEmpty && identifyingMatches(d, c) >= 2 {
+                return DuplicateAssessment(verdict: .alreadyExists, match: c, score: max(s, sameThreshold), signals: sig + ["identical"],
+                                           additions: [], conflicts: [])
+            }
+        }
         let scored = candidates.map { ($0, score(d, $0)) }.sorted { $0.1.0 > $1.1.0 }
         guard let (best, (s, sig)) = scored.first, s >= uncertainThreshold else {
             return DuplicateAssessment(verdict: .new, match: nil, score: scored.first?.1.0 ?? 0, signals: scored.first?.1.1 ?? [], additions: [], conflicts: [])
@@ -114,6 +133,23 @@ public struct DuplicateDetector: Sendable {
         let (adds, conflicts) = diff(d, best)
         let verdict: DuplicateVerdict = adds.isEmpty && conflicts.isEmpty ? .alreadyExists : (conflicts.isEmpty ? .update : .updateWithConflicts)
         return DuplicateAssessment(verdict: verdict, match: best, score: s, signals: sig, additions: adds, conflicts: conflicts)
+    }
+
+    /// How many identifying values of the draft the contact already holds (name, organisation, phones, emails, sites).
+    func identifyingMatches(_ d: ContactDraft, _ c: ExistingContact) -> Int {
+        var n = 0
+        let latin = [d.givenName?.value, d.familyName?.value].compactMap { $0 }.joined(separator: " ")
+        let cLatin = [c.givenName, c.familyName].filter { !$0.isEmpty }.joined(separator: " ")
+        if !latin.isEmpty && Set(TextNorm.tokens(latin)) == Set(TextNorm.tokens(cLatin)) { n += 1 }
+        if let cjk = d.cjkName?.value, [c.familyName + c.givenName, c.nickname].contains(where: { TextNorm.toSimplified($0) == TextNorm.toSimplified(cjk) }) { n += 1 }
+        if let comp = d.company?.value ?? d.companyCJK?.value, !c.organization.isEmpty, c.organization.contains(comp) || CompanyUtil.similarity(comp, c.organization) >= 0.85 { n += 1 }
+        let cPhones = normPhones(c.phones)
+        n += d.phones.filter { cPhones.contains($0.e164) }.count
+        let cEmails = Set(c.emails.map { EmailValidator.repair($0) })
+        n += d.emails.filter { cEmails.contains($0.value) }.count
+        let hosts = Set(c.urls.compactMap(DomainUtil.host(fromURL:)))
+        n += d.websites.filter { DomainUtil.host(fromURL: $0.value).map(hosts.contains) ?? false }.count
+        return n
     }
 
     /// Additive differences (safe) and conflicting single-valued fields (need a decision).
