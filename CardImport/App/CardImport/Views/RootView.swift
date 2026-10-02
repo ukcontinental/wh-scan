@@ -47,14 +47,9 @@ struct RootView: View {
             let source = router.pendingSource
             selection = []
             Task {
-                // Load all selected photos concurrently, keeping the user's selection order.
-                let datas = await withTaskGroup(of: (Int, Data?).self) { group -> [Data] in
-                    for (i, item) in items.enumerated() { group.addTask { (i, try? await item.loadTransferable(type: Data.self)) } }
-                    var out: [(Int, Data)] = []
-                    for await (i, d) in group { if let d { out.append((i, d)) } }
-                    return out.sorted { $0.0 < $1.0 }.map(\.1)
-                }
-                await engine.importImages(datas, source: source)
+                // Load each photo only when it is about to be prepared (selection order is kept).
+                let loaders: [@Sendable () async -> Data?] = items.map { item in { try? await item.loadTransferable(type: Data.self) } }
+                await engine.importImages(loaders: loaders, source: source)
             }
         }
         .onChange(of: router.pendingImages) { _, images in
@@ -62,7 +57,7 @@ struct RootView: View {
             router.pendingImages = nil
             Task { await engine.importImages(images, source: router.pendingSource) }
         }
-        .sheet(isPresented: $showSettings) { SettingsView(highlightKey: false, onClose: { showSettings = false }) }
+        .sheet(isPresented: $showSettings) { SettingsView(highlightKey: false, onClose: { showSettings = false }).environmentObject(engine) }
         .fullScreenCover(isPresented: $showOnboarding) { OnboardingView { showOnboarding = false } }
     }
 }

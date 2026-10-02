@@ -19,7 +19,14 @@ enum ImagePreparer {
 
     static func prepare(_ data: Data, maxLongEdge: CGFloat = 2000) -> Prepared? {
         let date = captureDate(from: data)
-        guard var image = CIImage(data: data, options: [.applyOrientationProperty: true]) else { return nil }
+        // Decode straight to a ≤2400 px upright bitmap (never the full 24–48 MP original).
+        guard let src = CGImageSourceCreateWithData(data as CFData, nil),
+              let thumb = CGImageSourceCreateThumbnailAtIndex(src, 0, [
+                  kCGImageSourceCreateThumbnailFromImageAlways: true,
+                  kCGImageSourceCreateThumbnailWithTransform: true,
+                  kCGImageSourceThumbnailMaxPixelSize: 2400,
+              ] as CFDictionary) else { return nil }
+        var image = CIImage(cgImage: thumb)
         var aspect: Double? = nil
         if let cropped = cropToCard(image) {
             image = cropped

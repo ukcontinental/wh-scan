@@ -25,11 +25,8 @@ final class ShareViewController: UIViewController {
         Task { @MainActor in
             // Without Contacts access in the extension: recognise now, the app writes the contacts later.
             engine.stopBeforeWriting = !ContactsService.authorized
-            var datas: [Data] = []
-            for p in providers {
-                if let d = await Self.load(p) { datas.append(d) }
-            }
-            await engine.importImages(datas, source: "share")
+            let loaders: [@Sendable () async -> Data?] = providers.map { p in { await Self.load(p) } }
+            await engine.importImages(loaders: loaders, source: "share")
         }
     }
 

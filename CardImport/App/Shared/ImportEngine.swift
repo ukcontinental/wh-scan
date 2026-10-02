@@ -31,6 +31,9 @@ final class ImportEngine: ObservableObject {
     let store = BatchStore(directory: AppGroup.batchesDir)
     /// Share extension: no Contacts access yet → recognise now, write later in the app.
     var stopBeforeWriting = false
+    /// Set synchronously before any suspension point so two triggers (launch + foreground, NFC + resume)
+    /// can never run the same batch twice at once.
+    private var busy = false
 
     func makeProcessor() -> BatchProcessor? {
         var config = BatchConfig()
@@ -54,16 +57,24 @@ final class ImportEngine: ObservableObject {
 
     /// Imports raw image data (from PhotosPicker, the share sheet or a Shortcut) and processes the batch.
     func importImages(_ datas: [Data], source: String) async {
-        guard !datas.isEmpty else { return }
+        await importImages(loaders: datas.map { d in { d } }, source: source)
+    }
+
+    /// Loads, prepares and stores one photo at a time so the original images are never all in memory
+    /// (the share extension has a small memory budget).
+    func importImages(loaders: [@Sendable () async -> Data?], source: String) async {
+        guard !loaders.isEmpty, !busy else { return }
+        busy = true
+        defer { busy = false }
         if AppSettings.useCloudAI && (KeychainStore.load() ?? "").isEmpty { stage = .needsAPIKey; return }
         if !stopBeforeWriting {
             let granted = await contacts.requestAccess()
             if !granted { stage = .needsContactsAccess; return }
         }
-        stage = .preparing(done: 0, total: datas.count)
+        stage = .preparing(done: 0, total: loaders.count)
         var photos: [PhotoRecord] = []
-        // Prepare sequentially to keep memory low (share extensions have a small memory budget).
-        for (i, data) in datas.enumerated() {
+        for (i, load) in loaders.enumerated() {
+            guard let data = await load() else { stage = .preparing(done: i + 1, total: loaders.count); continue }
             let prepared: ImagePreparer.Prepared? = await Task.detached(priority: .userInitiated) { ImagePreparer.prepare(data) }.value
             if let prepared {
                 let id = UUID().uuidString
@@ -72,14 +83,21 @@ final class ImportEngine: ObservableObject {
                     photos.append(PhotoRecord(id: id, index: i, captureDate: prepared.captureDate, visual: prepared.visual))
                 } catch { lastError = error.localizedDescription }
             }
-            stage = .preparing(done: i + 1, total: datas.count)
+            stage = .preparing(done: i + 1, total: loaders.count)
         }
         let batch = BatchState(source: source, photos: photos)
         try? await store.save(batch)
-        await run(batch)
+        await runLocked(batch)
     }
 
     func run(_ batch: BatchState) async {
+        guard !busy else { return }
+        busy = true
+        defer { busy = false }
+        await runLocked(batch)
+    }
+
+    private func runLocked(_ batch: BatchState) async {
         guard let processor = makeProcessor() else { stage = .needsAPIKey; return }
         state = batch
         stage = .processing(BatchProgressView(phase: "recognizing", recognized: 0, total: batch.photos.count, peopleDone: 0, peopleTotal: 0))
@@ -100,10 +118,17 @@ final class ImportEngine: ObservableObject {
 
     /// Resumes batches interrupted by a crash, a kill, lost network or a share extension without Contacts access.
     func resumeUnfinished() async {
-        guard case .idle = stage else { return }
+        guard case .idle = stage, !busy else { return }
+        busy = true
+        defer { busy = false }
         let unfinished = await store.unfinished()
         guard let next = unfinished.first else { return }
-        await run(next)
+        await runLocked(next)
+    }
+
+    /// Recent batches for the processing log (newest first).
+    func recentBatches(limit: Int = 20) async -> [BatchState] {
+        Array(await store.all().prefix(limit))
     }
 
     func answer(_ item: ReviewItem, with value: String?) async {
@@ -112,7 +137,7 @@ final class ImportEngine: ObservableObject {
     }
 
     func retryFailed() async {
-        guard let s = state, let processor = makeProcessor(), let retry = await processor.retryBatch(forFailedPhotosOf: s) else { return }
+        guard !busy, let s = state, let processor = makeProcessor(), let retry = await processor.retryBatch(forFailedPhotosOf: s) else { return }
         try? await store.save(retry)
         await run(retry)
     }

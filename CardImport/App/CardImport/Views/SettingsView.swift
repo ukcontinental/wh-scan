@@ -1,4 +1,5 @@
 import SwiftUI
+import CardCore
 
 struct SettingsView: View {
     var highlightKey: Bool
@@ -55,6 +56,9 @@ struct SettingsView: View {
                     4. 選「立即執行」，關閉「執行時通知」。
                     之後用 iPhone 碰貼紙，就會直接打開照片多選畫面。
                     """).font(.footnote)
+                }
+                Section("處理紀錄") {
+                    NavigationLink("最近的匯入批次") { ProcessingLogView() }
                 }
                 Section("隱私") {
                     Text("從「照片」選的原始照片不會被刪除或修改。App 只在處理期間保存暫存縮圖，完成後自動刪除；有待確認項目的照片會保留到你確認完。開啟 AI 辨識時，照片會傳到 Anthropic API 處理。")
@@ -121,5 +125,28 @@ struct OnboardingView: View {
                 }
             }
         }
+    }
+}
+
+/// Audit log: what each batch did. Read-only; never part of the import flow.
+struct ProcessingLogView: View {
+    @EnvironmentObject var engine: ImportEngine
+    @State private var batches: [BatchState] = []
+
+    var body: some View {
+        List(batches, id: \.id) { b in
+            let s = b.summary
+            VStack(alignment: .leading, spacing: 4) {
+                Text(b.createdAt.formatted(date: .abbreviated, time: .shortened)).font(.headline)
+                Text("照片 \(s.photos)・人數 \(s.peopleDetected)・新建 \(s.created)・更新 \(s.updated)・已存在 \(s.alreadyExisted)")
+                    .font(.footnote)
+                Text("待確認 \(s.openReviewItems)・失敗 \(s.failedPhotos)・US$\(String(format: "%.2f", s.costUSD))・\(Int(s.seconds)) 秒・\(b.source)")
+                    .font(.footnote).foregroundStyle(.secondary)
+                if b.phase != .done { Text("狀態：\(b.phase.rawValue)").font(.footnote).foregroundStyle(.orange) }
+            }
+        }
+        .overlay { if batches.isEmpty { Text("尚無紀錄").foregroundStyle(.secondary) } }
+        .navigationTitle("處理紀錄")
+        .task { batches = await engine.recentBatches() }
     }
 }

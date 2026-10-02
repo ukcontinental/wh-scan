@@ -60,7 +60,7 @@ struct CompletionView: View {
             .padding(.horizontal, 24)
             .padding(.bottom, 12)
         }
-        .sheet(isPresented: $showReview) { ReviewView() }
+        .sheet(isPresented: $showReview) { ReviewView().environmentObject(engine) }
         .onAppear { if autoOpenReview { showReview = true } }
         .sheet(isPresented: $showNotes) { VoiceNotePeopleView(state: state) }
     }
