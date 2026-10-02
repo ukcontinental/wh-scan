@@ -1,35 +1,47 @@
 # 名片匯入 iOS App：安裝到你的 iPhone
 
-需要：一台 Mac（Xcode 16 以上，建議 Xcode 26）、你的 iPhone（iOS 17 以上）、Apple ID。
+需要：一台 Mac（Xcode 16 以上，建議 Xcode 26）、你的 iPhone（iOS 17 以上）、Apple ID（免費的也可以）。
 
-## 1. 產生 Xcode 專案
+## 1. 下載程式碼
+
+打開 Mac 的「終端機」，貼上：
 
 ```bash
-brew install xcodegen
-cd CardImport/App
-xcodegen
-open CardImport.xcodeproj
+cd ~/Desktop
+git clone -b claude/zealous-thompson-5f6q83 https://github.com/ukcontinental/wh-scan.git
 ```
 
-## 2. 改成你自己的識別碼（一次）
+## 2. 產生 Xcode 專案
 
-打開 `project.yml`，改這三個值後重新執行 `xcodegen`：
+```bash
+cd ~/Desktop/wh-scan/CardImport/App
+./setup.sh
+```
 
-| 設定 | 範例 |
+腳本會問兩件事，然後自動打開 Xcode：
+
+1. 一個英文暱稱，用來組成 App 的唯一識別碼。
+2. 有沒有付費開發者帳號。
+
+| 帳號 | 包含的功能 |
 |---|---|
-| `bundleIdPrefix` 與兩個 `PRODUCT_BUNDLE_IDENTIFIER` | `com.yourname` |
-| `APP_GROUP_ID` | `group.com.yourname.cardimport` |
-| `DEVELOPMENT_TEAM` | 你的 Team ID（Xcode → Settings → Accounts 可看到） |
+| 免費 Apple ID | App 本體、NFC 捷徑、App 內選照片 |
+| 付費開發者帳號 | 以上全部，再加上「照片 → 分享 → 名片匯入」 |
 
-在 Xcode 的 **Signing & Capabilities**，確認兩個 target（CardImport、CardImportShare）都勾了同一個 App Group。
+免費帳號不能可靠地使用 App Group，所以免費版不含分享延伸。
 
 ## 3. 裝到 iPhone
 
-1. iPhone 用線接上 Mac，或在同一個 Wi-Fi 下配對。
-2. 選擇 CardImport scheme 和你的 iPhone，按 ▶︎。
-3. 第一次執行時，在 iPhone 的「設定 → 一般 → VPN 與裝置管理」信任你的開發者憑證。
+1. 在 Xcode 選 **Settings → Accounts**，按左下角「＋」登入你的 Apple ID。
+2. 在左側點最上面的 **CardImport** 專案，選 target **CardImport** → **Signing & Capabilities**。
+3. **Team** 選你的名字（Personal Team）。
+4. iPhone 用線接上 Mac，在 iPhone 上按「信任這部電腦」。
+5. 在 iPhone 打開「設定 → 隱私權與安全性 → 開發者模式」，開啟後重新開機。
+6. Xcode 上方的裝置選單選你的 iPhone，按 ▶︎。
+7. 第一次會顯示「未受信任的開發者」。到 iPhone「設定 → 一般 → VPN 與裝置管理」，點你的 Apple ID → 信任。
+8. 再按一次 ▶︎。
 
-使用免費 Apple ID 安裝的 App，7 天後需要重新安裝。付費開發者帳號（US$99/年）可以用 TestFlight 長期使用。
+用免費 Apple ID 安裝的 App，7 天後會打不開。到時候接上 Mac 再按一次 ▶︎ 即可，資料會保留。
 
 ## 4. 第一次打開 App
 
@@ -43,7 +55,7 @@ open CardImport.xcodeproj
 ## 5. 使用
 
 - **NFC**：碰貼紙 → 勾選名片照片 → 按「加入」→ 等完成畫面。
-- **照片 App**：選取多張 → 分享 → 名片匯入。
+- **照片 App**（付費帳號版）：選取多張 → 分享 → 名片匯入。
 - **App 內**：按「選擇名片照片」。
 
 ## 選用：寫入聯絡人「備註」

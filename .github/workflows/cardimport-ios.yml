@@ -24,7 +24,7 @@ jobs:
         run: swift test 2>&1 | tail -40
 
   app-build:
-    name: Build iOS app + share extension
+    name: Build iOS app + share extension (+ free-account variant)
     runs-on: macos-15
     permissions:
       contents: write
@@ -86,6 +86,15 @@ jobs:
               sleep $((i * 5))
             done
           fi
+      - name: Free Apple ID variant (setup.sh path, app only, no App Group)
+        working-directory: CardImport/App
+        run: |
+          set -o pipefail
+          sed "s/com\.example/com.cifree/g" project-free.yml > project.local.yml
+          xcodegen generate --spec project.local.yml --project . --quiet
+          xcodebuild -project CardImport.xcodeproj -scheme CardImport \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log | grep -E "error:|BUILD (SUCCEEDED|FAILED)" | head -100
       - name: Show errors
         if: failure()
         working-directory: CardImport/App
