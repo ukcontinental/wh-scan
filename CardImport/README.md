@@ -2,6 +2,21 @@
 
 目標：**選完名片照片之後，什麼都不用做，聯絡人就已經正確進入 iPhone。**
 
+## 目前狀態
+
+| 項目 | 狀態 |
+|---|---|
+| 辨識核心 | 完成；59 個單元測試（Linux 與 macOS CI）通過 |
+| iOS App + 照片分享延伸 + NFC／捷徑入口 | 完成；Xcode 26.3 編譯通過、模擬器截圖見 `docs/screenshots/` |
+| 準確度（模擬名片，AI 以代理方式執行） | 保留集：87% 聯絡人免人工即完全正確、人工介入 7%、錯配 0、去重 6/6 |
+| 尚未驗證 | 真實名片、正式 API（時間與成本）、iPhone 實機 |
+
+詳細數字與限制見 `docs/02-acceptance-report.md`。
+
+| 首頁 | 完成畫面 | 只確認不確定的欄位 |
+|---|---|---|
+| ![](docs/screenshots/home.png) | ![](docs/screenshots/completion.png) | ![](docs/screenshots/review.png) |
+
 | 目錄 | 內容 |
 |---|---|
 | `docs/01-technical-analysis.md` | iOS 限制、操作流程、方案比較、架構決策、信心分數、配對、去重、批次架構 |

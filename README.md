@@ -6,3 +6,7 @@ Internal mobile web tool for stock lookup. Access restricted by passcode.
 - Barcode engine: native BarcodeDetector (Android) / ZXing fallback (iPhone).
 - Works offline (Service Worker cache).
 - Read-only lookup. No backend, no external integrations.
+
+---
+
+This repository also contains **CardImport** (business-card → iPhone Contacts batch importer) in [`CardImport/`](CardImport/README.md).
