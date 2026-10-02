@@ -29,7 +29,7 @@ struct SettingsView: View {
                         Text("Claude Sonnet 5.5（較快、較便宜）").tag("claude-sonnet-5-5")
                     }.disabled(!useCloud)
                 } header: { Text("辨識") } footer: {
-                    Text("關閉 AI 辨識時只用手機內建的文字辨識（免費、不上傳），但需要確認的項目會明顯變多。每張名片的 AI 成本約 US$0.01–0.03。")
+                    Text("關閉 AI 辨識時只用手機內建的文字辨識（免費、不上傳），但需要確認的項目會明顯變多。AI 成本估計每張照片約 US$0.03–0.05（Opus 5.5），以實測為準。")
                 }
                 Section("聯絡人") {
                     Picker("預設國家/地區（電話沒寫國碼時）", selection: $region) {

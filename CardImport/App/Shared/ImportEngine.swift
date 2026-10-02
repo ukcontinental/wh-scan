@@ -56,7 +56,10 @@ final class ImportEngine: ObservableObject {
     func importImages(_ datas: [Data], source: String) async {
         guard !datas.isEmpty else { return }
         if AppSettings.useCloudAI && (KeychainStore.load() ?? "").isEmpty { stage = .needsAPIKey; return }
-        if !stopBeforeWriting && !(await contacts.requestAccess()) { stage = .needsContactsAccess; return }
+        if !stopBeforeWriting {
+            let granted = await contacts.requestAccess()
+            if !granted { stage = .needsContactsAccess; return }
+        }
         stage = .preparing(done: 0, total: datas.count)
         var photos: [PhotoRecord] = []
         // Prepare sequentially to keep memory low (share extensions have a small memory budget).
