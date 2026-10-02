@@ -46,6 +46,17 @@ python3 score.py runs/claude-ts/run.json --expectations runs/claude-ts/expectati
 
 ## 用你的真實名片驗收
 
+最快的方式（不需要準備標準答案）：
+
+```bash
+export ANTHROPIC_API_KEY=...
+python3 run_folder.py ~/my-card-photos --out runs/my-cards
+```
+
+會產生 `runs/my-cards/report.md`：每位聯絡人的每個欄位、信心值、是否自動寫入，以及待確認的問題。對照名片逐一核對即可。
+
+要計算正式指標時，再照以下步驟準備標準答案：
+
 1. 把名片照片（正反面照實際拍法）放進 `real/images/`。
 2. 複製 `dataset/ground_truth.json` 的格式，為每個人填寫正確答案。不用填 `printed` 等額外欄位。
 3. 參考 `make_inputs.py` 產生 `photos.json`。若要測正反面配對，請保留原始 EXIF：從 iPhone 用 AirDrop「選項 → 所有照片資料」傳出。
