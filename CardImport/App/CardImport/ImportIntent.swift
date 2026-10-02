@@ -9,7 +9,7 @@ struct ImportBusinessCardsIntent: AppIntent {
     static var description = IntentDescription("選擇名片照片，自動建立 iPhone 聯絡人。")
     static var openAppWhenRun: Bool = true
 
-    @Parameter(title: "照片", supportedContentTypes: [.image])
+    @Parameter(title: "照片", supportedTypeIdentifiers: ["public.image"])
     var photos: [IntentFile]?
 
     init() {}
