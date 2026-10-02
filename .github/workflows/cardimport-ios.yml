@@ -7,6 +7,10 @@ on:
       - ".github/workflows/cardimport-ios.yml"
   workflow_dispatch:
 
+concurrency:
+  group: cardimport-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   core-tests:
     name: CardCore tests (macOS)

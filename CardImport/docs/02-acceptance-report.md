@@ -9,6 +9,7 @@
 | 辨識核心（CardCore） | 59 個單元測試在 Linux 與 macOS（GitHub Actions）全數通過 |
 | iOS App + 照片分享延伸 | 在 GitHub 的 Mac 上以 Xcode 26.3 編譯成功；在 iOS 模擬器啟動並截圖（`docs/screenshots/`） |
 | 準確度 | 用模擬手機拍攝的名片資料集測試：開發集 45 人／63 張，另有**從未調整過的保留集** 30 人／42 張 |
+| API 請求 | 結構化輸出的 JSON Schema 只使用官方文件列為支援的功能（單元測試檢查）；HTTP 重試、429／5xx、金鑰錯誤、拒絕回應、Schema 被拒時改用提示詞 JSON，都以模擬伺服器測試 |
 | **尚未驗證** | 真實名片、正式 Anthropic API 呼叫、iPhone 實機（Apple Vision OCR、通訊錄寫入、NFC、分享延伸）、實際處理時間與 API 成本 |
 
 **為什麼還不能宣稱「完成」**：這次環境沒有 API 金鑰，也沒有你的真實名片與 iPhone。
