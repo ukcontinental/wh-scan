@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Andrew",
+      "confidence": 0.97,
+      "source_text": "Andrew Kim",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Kim",
+      "confidence": 0.97,
+      "source_text": "Andrew Kim",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Silverline Software Inc.",
+    "confidence": 0.97,
+    "source_text": "Silverline Software Inc.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": {
+    "value": "Founder & CEO",
+    "confidence": 0.96,
+    "source_text": "FOUNDER & CEO",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "department": {
+    "value": "R&D Center",
+    "confidence": 0.95,
+    "source_text": "R&D Center",
+    "alternatives": []
+  },
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "(212) 555-0126",
+      "kind": "mobile",
+      "source_text": "Mobile: (212) 555-0126",
+      "confidence": 0.97,
+      "country_hint": "US",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "andrew.kim@silverline.io",
+      "source_text": "Email: andrew.kim@silverline.io",
+      "confidence": 0.97,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.silverline.io",
+      "confidence": 0.97
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "1450 Broadway, 18th Floor, New York, NY 10018, USA",
+      "street": "1450 Broadway, 18th Floor",
+      "city": "New York",
+      "region": "NY",
+      "postal_code": "10018",
+      "country": "USA",
+      "confidence": 0.95
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "has_qr_code": false,
+    "has_person_photo": false,
+    "ignored_text": [],
+    "concerns": [],
+    "overall_confidence": 0.96
+  }
+}

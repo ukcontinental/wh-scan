@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Michelle",
+      "confidence": 0.97,
+      "source_text": "Michelle Ng",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Ng",
+      "confidence": 0.96,
+      "source_text": "Michelle Ng",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "CEDARLINE LOGISTICS INC.",
+    "confidence": 0.85,
+    "source_text": "CEDARLINE LOGISTICS INC.",
+    "alternatives": [
+      "Cedarline Logistics Inc."
+    ]
+  },
+  "company_cjk": null,
+  "job_title": {
+    "value": "General Manager",
+    "confidence": 0.96,
+    "source_text": "General Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "905 555 0138",
+      "kind": "mobile",
+      "source_text": "Cell: 905 555 0138",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "michelle.ng@cedarline.ca",
+      "confidence": 0.95,
+      "source_text": "E: michelle.ng@cedarline.ca",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.cedarline.ca",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada",
+      "confidence": 0.9,
+      "street": "6750 Mississauga Rd, Unit 7",
+      "city": "Mississauga",
+      "region": "ON",
+      "postal_code": "L5N 2L3",
+      "country": "Canada"
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": true,
+    "has_qr_code": false,
+    "ignored_text": [
+      "Established 2011"
+    ],
+    "overall_confidence": 0.92
+  }
+}

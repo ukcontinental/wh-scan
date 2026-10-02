@@ -143,7 +143,9 @@ public enum PhoneNormalizer {
             if n.hasPrefix("9") { return (n.count == 9, .mobile) }
             return (n.count == 8 || n.count == 9, .fixed)
         case "86":
-            if n.hasPrefix("1") { return (n.count == 11 && "3456789".contains(chars[1]), .mobile) }
+            if n.count == 11 && n.hasPrefix("1") && "3456789".contains(chars[1]) { return (true, .mobile) }
+            if n.hasPrefix("10") { return (n.count == 10, .fixed) }          // Beijing 010-xxxxxxxx
+            if n.hasPrefix("1") { return (false, .unknown) }
             return (n.count >= 9 && n.count <= 11, .fixed)
         case "852":
             guard n.count == 8, let f = chars.first else { return (false, .unknown) }
@@ -164,6 +166,15 @@ public enum PhoneNormalizer {
         default:
             return (n.count >= 6 && n.count <= 13, .unknown)
         }
+    }
+
+    /// ISO region for an E.164 number's country code ("+852…" → "HK").
+    public static func region(ofE164 e164: String) -> String? {
+        let d = TextNorm.digits(e164)
+        for len in [3, 2, 1] where d.count > len {
+            if let r = countryCodes[String(d.prefix(len))] { return r == "US" ? "CA" : r }
+        }
+        return nil
     }
 
     /// Label keywords printed next to a number → kind.

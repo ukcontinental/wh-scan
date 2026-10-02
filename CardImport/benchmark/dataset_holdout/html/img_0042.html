@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:600px;height:1050px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK TC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:600px;height:1050px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#00798c;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.dec{position:relative;font-size:3.0rem;letter-spacing:.12em;font-style:italic;text-align:center;padding:0 40px}
+.lg{position:relative}
+
+</style></head><body><div class="card fit"><svg width="600" height="1050" style="position:absolute;left:0;top:0" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 Q 150 -40 300 0 T 600 0" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 95 Q 150 55 300 95 T 600 95" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 191 Q 150 151 300 191 T 600 191" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 286 Q 150 246 300 286 T 600 286" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 382 Q 150 342 300 382 T 600 382" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 477 Q 150 437 300 477 T 600 477" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 573 Q 150 533 300 573 T 600 573" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 668 Q 150 628 300 668 T 600 668" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 764 Q 150 724 300 764 T 600 764" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 859 Q 150 819 300 859 T 600 859" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 955 Q 150 915 300 955 T 600 955" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 1050 Q 150 1010 300 1050 T 600 1050" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/></svg><div class="lg"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:30px"><svg width="170" height="170" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 96 C8 70 8 26 50 4 C92 26 92 70 50 96Z" fill="#ffffff"/><path d="M50 90 L50 18 M50 50 L30 35 M50 65 L70 48" stroke="#00798c" stroke-width="4" fill="none"/></svg><span class="wm" style="font-size:4.4rem;color:#ffffff;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">OCEAN CREST</span></div></div><div class="dec">用心 做好每一件事</div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

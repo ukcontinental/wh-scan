@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "吴婷婷",
+      "confidence": 0.95,
+      "source_text": "吴婷婷",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "杭州青禾茶业有限公司",
+    "confidence": 0.92,
+    "source_text": "杭州青禾茶业有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "总经理",
+    "confidence": 0.88,
+    "source_text": "总经理",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "15965807355",
+      "kind": "mobile",
+      "confidence": 0.88,
+      "source_text": "手机: 15965807355",
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "0571-66371924",
+      "kind": "work",
+      "confidence": 0.84,
+      "source_text": "座机: 0571-66371924 ext. 464",
+      "country_hint": "CN",
+      "extension": "464",
+      "alternatives": []
+    },
+    {
+      "number": "0571-87756714",
+      "kind": "fax",
+      "confidence": 0.78,
+      "source_text": "传真: 0571-87756714",
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": [
+        "0571-87756744"
+      ]
+    }
+  ],
+  "emails": [
+    {
+      "address": "wut@qinghetea.com",
+      "confidence": 0.72,
+      "source_text": "邮箱: wut@qinghetea.com",
+      "alternatives": [
+        "wu@qinghetea.com",
+        "wutt@qinghetea.com"
+      ]
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.qinghetea.com",
+      "confidence": 0.75
+    }
+  ],
+  "addresses": [],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "overall_confidence": 0.78,
+    "concerns": [
+      "glare",
+      "faded_text",
+      "address_unreadable",
+      "small_font"
+    ],
+    "ignored_text": [
+      "青禾"
+    ],
+    "has_qr_code": false,
+    "has_person_photo": false
+  }
+}

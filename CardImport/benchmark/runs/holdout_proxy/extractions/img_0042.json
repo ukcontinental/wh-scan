@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "back",
+  "language_hint": [
+    "en",
+    "zh-Hant"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": null,
+  "department": null,
+  "department_cjk": null,
+  "phones": [],
+  "emails": [],
+  "websites": [],
+  "addresses": [],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "has_qr_code": false,
+    "has_person_photo": false,
+    "ignored_text": [
+      "OCEAN CREST",
+      "用心 做好每一件事"
+    ],
+    "concerns": [
+      "logo_wordmark_only"
+    ],
+    "overall_confidence": 0.9
+  }
+}

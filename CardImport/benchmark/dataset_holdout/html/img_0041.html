@@ -1,0 +1,26 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK TC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#ffffff;color:#0b4f8a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;padding:40px}
+.web{font-size:2.6rem;letter-spacing:.08em}
+.co{font-size:2.3rem;font-weight:700;letter-spacing:.04em}
+.sl{font-size:1.9rem;font-style:italic;opacity:.85}
+.qrw{background:#fff;padding:10px;border-radius:6px;display:flex}
+
+</style></head><body><div class="card fit" style="flex-direction:row;gap:60px"><div style="display:flex;flex-direction:column;align-items:center;gap:20px"><div class="logo" style="display:flex;flex-direction:row;align-items:center;gap:36px"><svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#0b4f8a"/><path d="M12 38 Q31 26 50 38 T88 38" stroke="#ffffff" stroke-width="6" fill="none"/><path d="M12 54 Q31 42 50 54 T88 54" stroke="#ffffff" stroke-width="6" fill="none"/><path d="M12 70 Q31 58 50 70 T88 70" stroke="#ffffff" stroke-width="6" fill="none"/></svg><span class="wm" style="font-size:5.0rem;color:#0b4f8a;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">金穗</span></div><div class="co">嘉豐食品股份有限公司</div><div class="web">https://www.chiafeng.com.tw</div><div class="sl">嚴選食材 用心把關</div></div><div class="qrw"><img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACVUlEQVR4nO2bQWrkMBBFX0WCXtqQA+Qo8g3mrLmBfZQ5QMBaBmT+LCS504sMyUBPC1JaNG37LT4UpfpVsk18cW1PXyXBUUcdfYJsbS0cZmYRtnoj0h/FQbQ6SpAk1S1R61QgqSDtQJJU/42h1VFo2ZMvsiVHbMkXsb0UauYtdxfg6L+haQetHEbaHyLA0c9XvLk6TNuMwVSiQSj3F+Dot6N1tfGWdETIl35rEpDvJ8DRb6JH9X1AUA1U2sGWfLrDeRitPxuNLXsAyKBtxrS9FLTNgY+988O1Ooq0hxaTJIm0B8FUgEkfHmh9uFZHkVSAqaB1kmCStAItZARJe/BojYDWJrh1xzWZgqTeHeu6PFpDoH3DayOLqWBLvshsDjKbD2Ob7yrA0S+vWrdS/QHa1ndNq+J1axj07I4PE5QoOKz6xG0B0uuzID+XAbQ62l0GQd0TUi+v9sNzaxT0dtQeVMfv61nLVoK0Th6tIdDTDvaRYOqXLUaeWwOhH4362nvillEVaB7EozUAejPL2EML1NlvVX/vuTUI2qN1s+vVuOkMntetQdB+YpINmADycxEZLL0eBoBBdAc/AhrPCS6QI7TTyHejnkbm2UbR6mgvT9Ct3/lgpc83vG4NgkbOA30jz8D0FrX9eosGIHIoPssYBa11q7+DEYqlFRlTUN8EAwZhBK2O3qLNVmjNEVuqHXw3ksp/EuDo31fvt1qNaq3W7XwDd/AjoX2CK9X3qZcckX7H+upucx6DaP3JaOTc/2guYwcy2Onqrc7lH67VUfMvghx19C7oH6TlqfIw+zrUAAAAAElFTkSuQmCC" style="width:150px;height:150px;image-rendering:pixelated;flex:none"></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

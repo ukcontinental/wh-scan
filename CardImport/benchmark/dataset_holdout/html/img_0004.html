@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK TC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{display:grid;grid-template-columns:1fr 390px;background:#fbfbf8}
+.band{background:#0b4f8a;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:40px 30px;text-align:center;overflow:hidden}
+.bco{font-size:2.60rem;font-weight:700;line-height:1.25} .bco2{font-size:1.80rem;opacity:.85}
+.bsl{font-size:1.70rem;opacity:.85;font-style:italic}
+.main{padding:56px 60px;display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:hidden}
+.nm{font-size:5.00rem;font-weight:700;color:#1d1d1d;font-family:'Noto Serif CJK TC','Liberation Serif',serif;font-style:normal;white-space:nowrap;line-height:1.1}
+.nm2{font-size:2.80rem;color:#555;white-space:nowrap}
+.tt{font-size:2.40rem;color:#0b4f8a;white-space:nowrap} .tt2,.dp{font-size:2.00rem;color:#666;white-space:nowrap}
+.rule{height:3px;width:90px;background:#a12a5e;margin:6px 0}
+.ct{font-size:2.20rem;line-height:1.42;color:#333}
+.addr{font-size:2.00rem;line-height:1.35;color:#444} .addr+.addr{margin-top:6px} .alab{font-weight:700;color:#0b4f8a}
+.ex{font-size:1.70rem;color:#888}
+
+</style></head><body><div class="card"><div class="main fit"><div style="display:flex;gap:22px;align-items:center"><div><div class="nm">陳志豪</div></div></div><div><div class="tt">品保經理</div><div class="dp">品保部</div></div><div class="rule"></div><div style="display:flex;gap:24px;align-items:flex-end;justify-content:space-between"><div><div class="ct"><div class="ln">行動電話：0915-577-300</div><div class="ln">電話 (02) 2183-0943 #3340</div><div class="ln">FAX：+886 2 2070 1978</div><div class="ln">jasonc@chiafeng.com.tw</div><div class="ln">https://www.chiafeng.com.tw</div></div><div class="addr"><div class="alab">總公司</div><div>220 新北市板橋區文化路一段188號</div></div><div class="addr"><div class="alab">工廠</div><div>328 桃園市觀音區工業五路26號</div></div></div></div></div><div class="band fit"><div class="logo" style="display:flex;flex-direction:column;align-items:center;gap:30px"><svg width="170" height="170" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#ffffff"/><path d="M12 38 Q31 26 50 38 T88 38" stroke="#0b4f8a" stroke-width="6" fill="none"/><path d="M12 54 Q31 42 50 54 T88 54" stroke="#0b4f8a" stroke-width="6" fill="none"/><path d="M12 70 Q31 58 50 70 T88 70" stroke="#0b4f8a" stroke-width="6" fill="none"/></svg><span class="wm" style="font-size:3.0rem;color:#ffffff;font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;font-weight:700;letter-spacing:.06em;white-space:nowrap">金穗</span></div><div><div class="bco">嘉豐食品股份有限公司</div></div></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

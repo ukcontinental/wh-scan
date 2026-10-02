@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "刘洋",
+      "confidence": 0.95,
+      "source_text": "刘洋",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "上海鑫源食品有限公司",
+    "confidence": 0.94,
+    "source_text": "上海鑫源食品有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "采购经理",
+    "confidence": 0.95,
+    "source_text": "采购经理",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "186 8569 1395",
+      "kind": "mobile",
+      "source_text": "手机：186 8569 1395",
+      "confidence": 0.94,
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "021-67578779",
+      "kind": "work",
+      "source_text": "TEL：021-67578779 转 78",
+      "confidence": 0.93,
+      "country_hint": "CN",
+      "extension": "78",
+      "alternatives": []
+    },
+    {
+      "number": "+86 21 5680 1859",
+      "kind": "fax",
+      "source_text": "FAX：+86 21 5680 1859",
+      "confidence": 0.94,
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "yang.liu@xinyuanfood.com.cn",
+      "confidence": 0.95,
+      "source_text": "yang.liu@xinyuanfood.com.cn",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.xinyuanfood.com.cn",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "上海市浦东新区张江路88号3号楼501室 邮编：200120",
+      "street": "浦东新区张江路88号3号楼501室",
+      "city": "上海市",
+      "region": null,
+      "postal_code": "200120",
+      "country": "China",
+      "confidence": 0.88
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "liuyang97",
+      "confidence": 0.93
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "X",
+      "鲜之源",
+      "创立于1962年"
+    ],
+    "overall_confidence": 0.93
+  }
+}

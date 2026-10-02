@@ -9,3 +9,4 @@ benchmark/runs/*/state/
 benchmark/runs/*/run.json
 benchmark/runs/*/run.verify_requests.json
 benchmark/dataset/clean/
+benchmark/dataset_holdout/clean/

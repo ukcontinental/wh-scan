@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "back",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": null,
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "+1 647 555 0134",
+      "kind": "work",
+      "source_text": "Office: +1 647 555 0134",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+1-647-555-0118",
+      "kind": "fax",
+      "source_text": "F +1-647-555-0118",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "(647) 555-0102",
+      "kind": "work",
+      "source_text": "Direct: (647) 555-0102 Ext 31",
+      "confidence": 0.94,
+      "country_hint": "CA",
+      "extension": "31",
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "info@granitepeakcap.ca",
+      "confidence": 0.95,
+      "source_text": "info@granitepeakcap.ca",
+      "alternatives": []
+    },
+    {
+      "address": "sophie.lam@granitepeakcap.ca",
+      "confidence": 0.95,
+      "source_text": "sophie.lam@granitepeakcap.ca",
+      "alternatives": []
+    }
+  ],
+  "websites": [],
+  "addresses": [
+    {
+      "formatted": "333 Bay St, 18th Floor, Toronto, ON M5H 2R2, Canada",
+      "street": "333 Bay St, 18th Floor",
+      "city": "Toronto",
+      "region": "ON",
+      "postal_code": "M5H 2R2",
+      "country": "Canada",
+      "confidence": 0.93
+    },
+    {
+      "formatted": "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3, Canada",
+      "street": "1055 W Georgia St, Suite 2100",
+      "city": "Vancouver",
+      "region": "BC",
+      "postal_code": "V6E 3P3",
+      "country": "Canada",
+      "confidence": 0.93
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "no_name_on_side",
+      "multiple_addresses"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "Head Office",
+      "Warehouse & Distribution"
+    ],
+    "overall_confidence": 0.93
+  }
+}

@@ -1,0 +1,220 @@
+[
+ {
+  "key": "75c67b729998b24f",
+  "candidates": [
+   "220 新北市板橋區文化路一段188號"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “220 新北市板橋區文化路一段188號” (if several addresses are printed, read this same one)",
+  "photoIds": [
+   "img_0004",
+   "img_0041"
+  ],
+  "ocrHint": [
+   "zits — 0188"
+  ]
+ },
+ {
+  "ocrHint": [
+   "Vice President, Sales"
+  ],
+  "candidates": [
+   "Vice President, Sales",
+   "Vice President"
+  ],
+  "fieldLabel": "職稱 Job title",
+  "key": "2af5e13f1ec89823",
+  "photoIds": [
+   "img_0024",
+   "img_0027"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "0968976352",
+   "0968976362"
+  ],
+  "fieldLabel": "電話 Phone — the mobile number; the first reader saw it printed as “0968976352”",
+  "key": "6edbfcd87ea33cf5",
+  "photoIds": [
+   "img_0001",
+   "img_0011"
+  ]
+ },
+ {
+  "ocrHint": [
+   "info@dawnlight.design"
+  ],
+  "candidates": [
+   "henry@dawnlight.design"
+  ],
+  "fieldLabel": "Email — the email address read as “henry@dawnlight.design”",
+  "key": "d2d07d8bfc896174",
+  "photoIds": [
+   "img_0001",
+   "img_0011"
+  ]
+ },
+ {
+  "ocrHint": [
+   "電話 : (010) 6107-4045"
+  ],
+  "candidates": [
+   "(010) 6107-4045"
+  ],
+  "fieldLabel": "電話 Phone — the mobile number; the first reader saw it printed as “(010) 6107-4045”",
+  "key": "fdf5f796b88b4493",
+  "photoIds": [
+   "img_0014"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0024",
+   "img_0027"
+  ],
+  "key": "65ffe6dd2abbf9f1",
+  "ocrHint": [],
+  "fieldLabel": "地址 Address — the address the first reader read as “安大略省萬錦7號公路東3601號1008室 郵遞區號 L3R 0M3” (if several addresses are printed, read this same one)",
+  "candidates": [
+   "安大略省萬錦7號公路東3601號1008室 郵遞區號 L3R 0M3"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "Strategy Practice"
+  ],
+  "fieldLabel": "部門 Department",
+  "key": "80491103d7cd20cf",
+  "photoIds": [
+   "img_0021"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "加拿大安大略省多倫多前街西120號400室 郵遞區號 M5J 2M2"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “加拿大安大略省多倫多前街西120號400室 郵遞區號 M5J 2M2” (if several addresses are printed, read this same one)",
+  "key": "8c5d51c75f0d7a8e",
+  "photoIds": [
+   "img_0020"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0030"
+  ],
+  "key": "7763220039bb4db5",
+  "ocrHint": [
+   "源泰食品有限公司"
+  ],
+  "fieldLabel": "公司（中文）",
+  "candidates": [
+   "滙泰食品有限公司",
+   "匯泰食品有限公司"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0029"
+  ],
+  "key": "cd3bdcdeb6f00ea6",
+  "ocrHint": [],
+  "fieldLabel": "部門 Department",
+  "candidates": [
+   "International Trade Division"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0032"
+  ],
+  "key": "992414a877e4e81e",
+  "ocrHint": [],
+  "fieldLabel": "部門（中文）",
+  "candidates": [
+   "採購部"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0032"
+  ],
+  "key": "62e1958a8d5f25a9",
+  "ocrHint": [],
+  "fieldLabel": "電話 Phone — the mobile number; the first reader saw it printed as “0901-907-353”",
+  "candidates": [
+   "0901-907-353"
+  ]
+ },
+ {
+  "key": "7c03d0c1542ca0aa",
+  "candidates": [
+   "407 台中市西屯區台灣大道三段99號8樓"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “407 台中市西屯區台灣大道三段99號8樓” (if several addresses are printed, read this same one)",
+  "photoIds": [
+   "img_0008",
+   "img_0026"
+  ],
+  "ocrHint": [
+   "407 台中市西口台灣大人三有 59"
+  ]
+ },
+ {
+  "fieldLabel": "公司（中文）",
+  "candidates": [
+   "恆昌國際貿易有限公司",
+   "恒昌國際貿易有限公司"
+  ],
+  "key": "f850840eef9a30dd",
+  "ocrHint": [
+   "恆昌國際貿易有限公司"
+  ],
+  "photoIds": [
+   "img_0034"
+  ]
+ },
+ {
+  "fieldLabel": "公司（中文）",
+  "candidates": [
+   "花崗峰資本"
+  ],
+  "key": "6ff82f5d57109263",
+  "ocrHint": [
+   "花岗峰资本"
+  ],
+  "photoIds": [
+   "img_0015",
+   "img_0039"
+  ]
+ },
+ {
+  "ocrHint": [
+   "zits — 0188"
+  ],
+  "candidates": [
+   "220 新北市板橋區文化路一段188號"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “220 新北市板橋區文化路一段188號” (if several addresses are printed, read this same one)",
+  "key": "f7d23219c25342f4",
+  "photoIds": [
+   "img_0004"
+  ]
+ },
+ {
+  "ocrHint": [
+   "傳真 :+8864 2715"
+  ],
+  "photoIds": [
+   "img_0026"
+  ],
+  "candidates": [
+   "+886 4 2171 5115"
+  ],
+  "key": "8278475aba2b5a73",
+  "fieldLabel": "電話 Phone — the fax number; the first reader saw it printed as “+886 4 2171 5115”"
+ }
+]

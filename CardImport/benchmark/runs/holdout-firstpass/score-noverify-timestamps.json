@@ -1,0 +1,2116 @@
+{
+ "run": "runs/holdout-noverify-ts/run.json",
+ "config": {
+  "extractor": "replay:runs/holdout_proxy/extractions",
+  "ocr": "tesseract",
+  "region": "CA",
+  "verify": "true"
+ },
+ "photos": 42,
+ "gt_people": 30,
+ "pipeline_people": 30,
+ "pairing": {
+  "two_sided_people": 12,
+  "correctly_grouped": 12,
+  "accuracy_%": 100.0,
+  "wrong_merges": 0,
+  "decorative_backs_ignored": "2/2"
+ },
+ "contacts": {
+  "auto_saved": 29,
+  "perfect_without_human_%": 30.0,
+  "human_intervention_rate_%": 70.0,
+  "wrong_auto_save_rate_%": 3.3,
+  "people_with_missed_fields": 1,
+  "distractor_leaks": 0,
+  "open_review_items": 45,
+  "review_items_by_kind": {
+   "field": 43,
+   "duplicate": 1,
+   "conflict": 1
+  },
+  "review_items_by_field": {
+   "job_title": 1,
+   "address": 11,
+   "phone": 11,
+   "email": 8,
+   "website": 3,
+   "duplicate": 1,
+   "department": 2,
+   "department_cjk": 3,
+   "company_cjk": 3,
+   "cjk_name": 1,
+   "organization": 1
+  }
+ },
+ "field_accuracy": {
+  "name": {
+   "correct": 39,
+   "wrong": 0,
+   "held_for_review": 2,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 95.1
+  },
+  "company": {
+   "correct": 37,
+   "wrong": 1,
+   "held_for_review": 4,
+   "missed": 0,
+   "auto_accuracy_%": 97.4,
+   "coverage_%": 88.1
+  },
+  "job_title": {
+   "correct": 39,
+   "wrong": 0,
+   "held_for_review": 2,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 95.1
+  },
+  "department": {
+   "correct": 8,
+   "wrong": 0,
+   "held_for_review": 3,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 72.7
+  },
+  "phone": {
+   "correct": 44,
+   "wrong": 0,
+   "held_for_review": 14,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 75.9
+  },
+  "email": {
+   "correct": 28,
+   "wrong": 0,
+   "held_for_review": 9,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 75.7
+  },
+  "website": {
+   "correct": 26,
+   "wrong": 0,
+   "held_for_review": 4,
+   "missed": 0,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 86.7
+  },
+  "address": {
+   "correct": 23,
+   "wrong": 0,
+   "held_for_review": 10,
+   "missed": 1,
+   "auto_accuracy_%": 100.0,
+   "coverage_%": 67.6
+  }
+ },
+ "duplicates": [
+  {
+   "existing_id": "existing-1",
+   "person_id": "p023",
+   "expected": "update",
+   "got": [
+    {
+     "status": "updated",
+     "verdict": "update",
+     "matched": "existing-1"
+    }
+   ],
+   "ok": true
+  },
+  {
+   "existing_id": "existing-2",
+   "person_id": "p027",
+   "expected": "update",
+   "got": [
+    {
+     "status": "alreadyExists",
+     "verdict": "alreadyExists",
+     "matched": "existing-2"
+    }
+   ],
+   "ok": true
+  },
+  {
+   "existing_id": "existing-3",
+   "person_id": "p030",
+   "expected": "update+conflict",
+   "got": [
+    {
+     "status": "updated",
+     "verdict": "updateWithConflicts",
+     "matched": "existing-3"
+    }
+   ],
+   "ok": true
+  },
+  {
+   "existing_id": "existing-4",
+   "person_id": "p028",
+   "expected": "update",
+   "got": [
+    {
+     "status": "updated",
+     "verdict": "update",
+     "matched": "existing-4"
+    }
+   ],
+   "ok": true
+  },
+  {
+   "existing_id": "decoy-1",
+   "person_id": "p001",
+   "expected": "new",
+   "got": [
+    {
+     "status": "created",
+     "verdict": "new",
+     "matched": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "existing_id": "decoy-2",
+   "person_id": "p002",
+   "expected": "new_or_review",
+   "got": [
+    {
+     "status": "needsReview",
+     "verdict": "uncertain",
+     "matched": "decoy-2"
+    }
+   ],
+   "ok": true
+  }
+ ],
+ "dedup_ok": "6/6",
+ "failed_photos": 0,
+ "avg_seconds_per_photo": 0.01,
+ "wall_seconds": 2.1,
+ "cost_usd": 0,
+ "rows": [
+  {
+   "person": "p001",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p002",
+   "statuses": [
+    "needsReview"
+   ],
+   "needs_human": true,
+   "auto_saved": false,
+   "wrong": 0,
+   "missed": 0,
+   "held": 9,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "held"
+    ],
+    [
+     "company",
+     "held"
+    ],
+    [
+     "job_title",
+     "held"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "held"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "duplicate",
+     null
+    ]
+   ]
+  },
+  {
+   "person": "p003",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 1,
+   "held": 5,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "held"
+    ],
+    [
+     "address",
+     "missed"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "phone:+8615965807355"
+    ],
+    [
+     "field",
+     "phone:+8657166371924"
+    ],
+    [
+     "field",
+     "phone:+8657187756714"
+    ],
+    [
+     "field",
+     "email:wut@qinghetea.com"
+    ],
+    [
+     "field",
+     "website:www.qinghetea.com"
+    ]
+   ]
+  },
+  {
+   "person": "p004",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 5,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "held"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "held"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "department_cjk"
+    ],
+    [
+     "field",
+     "phone:+886901907353"
+    ],
+    [
+     "field",
+     "email:david@daming-food.com.tw"
+    ],
+    [
+     "field",
+     "website:daming-food.com.tw"
+    ],
+    [
+     "field",
+     "address:1101005"
+    ]
+   ]
+  },
+  {
+   "person": "p005",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 4,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "phone:+85239809110"
+    ],
+    [
+     "field",
+     "phone:+85224657607"
+    ],
+    [
+     "field",
+     "email:info@kblogistics.com.hk"
+    ],
+    [
+     "field",
+     "address:鴻圖道12號永發工業大廈9樓b室"
+    ],
+    [
+     "field",
+     "address:flatb9fwingfatindu"
+    ]
+   ]
+  },
+  {
+   "person": "p006",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "held"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "company_cjk"
+    ]
+   ]
+  },
+  {
+   "person": "p007",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "held"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "department"
+    ],
+    [
+     "field",
+     "department_cjk"
+    ]
+   ]
+  },
+  {
+   "person": "p008",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "address:1048812"
+    ]
+   ]
+  },
+  {
+   "person": "p009",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 2,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "phone:+886421715115"
+    ],
+    [
+     "field",
+     "address:407998"
+    ]
+   ]
+  },
+  {
+   "person": "p010",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 2,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "held"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "held"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "department"
+    ],
+    [
+     "field",
+     "website:www.taylorjordanlaw.com"
+    ]
+   ]
+  },
+  {
+   "person": "p011",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "held"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "job_title"
+    ],
+    [
+     "field",
+     "address:l3r0m3736011"
+    ]
+   ]
+  },
+  {
+   "person": "p012",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p013",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 4,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "held"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "company_cjk"
+    ],
+    [
+     "field",
+     "phone:+85226273144"
+    ],
+    [
+     "field",
+     "email:patrick_leung@wuitaifoods.com.hk"
+    ],
+    [
+     "field",
+     "address:flatb9fwingfatindu"
+    ]
+   ]
+  },
+  {
+   "person": "p014",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p015",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p016",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "address:510620385180"
+    ]
+   ]
+  },
+  {
+   "person": "p017",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 1,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": true,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "extra"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "email:leo.tseng@hebangbank.com.tw"
+    ]
+   ]
+  },
+  {
+   "person": "p018",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 2,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "held"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "cjk_name"
+    ],
+    [
+     "field",
+     "department_cjk"
+    ],
+    [
+     "field",
+     "email:karen_lam@harbourtrustcpa.com.hk"
+    ]
+   ]
+  },
+  {
+   "person": "p019",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p020",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 2,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "phone:+886968976352"
+    ],
+    [
+     "field",
+     "email:henry@dawnlight.design"
+    ]
+   ]
+  },
+  {
+   "person": "p021",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p022",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "phone:+16045550131"
+    ]
+   ]
+  },
+  {
+   "person": "p023",
+   "statuses": [
+    "updated"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p024",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "address:m5j2m2120400"
+    ]
+   ]
+  },
+  {
+   "person": "p025",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p026",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "held"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "phone:+861061074045"
+    ]
+   ]
+  },
+  {
+   "person": "p027",
+   "statuses": [
+    "alreadyExists"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "held"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "email:edmund_chow@kblogistics.com.hk"
+    ]
+   ]
+  },
+  {
+   "person": "p028",
+   "statuses": [
+    "updated"
+   ],
+   "needs_human": false,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 0,
+   "wrong_merge": false,
+   "perfect_auto": true,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": []
+  },
+  {
+   "person": "p029",
+   "statuses": [
+    "created"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 2,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "department",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "held"
+    ],
+    [
+     "address",
+     "held"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "address:220188"
+    ],
+    [
+     "field",
+     "address:32826"
+    ]
+   ]
+  },
+  {
+   "person": "p030",
+   "statuses": [
+    "updated"
+   ],
+   "needs_human": true,
+   "auto_saved": true,
+   "wrong": 0,
+   "missed": 0,
+   "held": 1,
+   "wrong_merge": false,
+   "perfect_auto": false,
+   "wrong_auto_save": false,
+   "leaks": [],
+   "outcomes": [
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "name",
+     "correct"
+    ],
+    [
+     "company",
+     "correct"
+    ],
+    [
+     "company",
+     "held"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "job_title",
+     "correct"
+    ],
+    [
+     "phone",
+     "correct"
+    ],
+    [
+     "email",
+     "correct"
+    ],
+    [
+     "website",
+     "correct"
+    ],
+    [
+     "address",
+     "correct"
+    ]
+   ],
+   "reviews": [
+    [
+     "field",
+     "company_cjk"
+    ],
+    [
+     "conflict",
+     "organization"
+    ]
+   ]
+  }
+ ]
+}

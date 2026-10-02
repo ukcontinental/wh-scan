@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Winnie",
+      "confidence": 0.97,
+      "source_text": "Winnie Cheung",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Cheung",
+      "confidence": 0.97,
+      "source_text": "Winnie Cheung",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "張美儀",
+      "confidence": 0.95,
+      "source_text": "張美儀",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Kowloon Bay Logistics Ltd.",
+    "confidence": 0.95,
+    "source_text": "Kowloon Bay Logistics Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "九龍灣物流有限公司",
+    "confidence": 0.94,
+    "source_text": "九龍灣物流有限公司",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Logistics Coordinator",
+    "confidence": 0.97,
+    "source_text": "Logistics Coordinator",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "物流專員",
+    "confidence": 0.95,
+    "source_text": "物流專員",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "+852-2078-5414",
+      "kind": "work",
+      "source_text": "T 電話 +852-2078-5414 轉 111",
+      "confidence": 0.94,
+      "country_hint": "HK",
+      "extension": "111",
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "wcheung@kblogistics.com.hk",
+      "confidence": 0.96,
+      "source_text": "電郵 Email: wcheung@kblogistics.com.hk",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.kblogistics.com.hk",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "九龍觀塘鴻圖道12號永發工業大廈9樓B室",
+      "street": "鴻圖道12號永發工業大廈9樓B室",
+      "city": "觀塘",
+      "region": "九龍",
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.85
+    }
+  ],
+  "social": [
+    {
+      "service": "wechat",
+      "handle": "winniecheung68",
+      "confidence": 0.94
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "slight_blur"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "KB LOGISTICS",
+      "KL",
+      "HACCP"
+    ],
+    "overall_confidence": 0.93
+  }
+}

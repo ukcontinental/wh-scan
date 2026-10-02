@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#c4561d;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.dec{position:relative;font-size:3.0rem;letter-spacing:.12em;font-style:italic;text-align:center;padding:0 40px}
+.lg{position:relative}
+
+</style></head><body><div class="card fit"><svg width="1050" height="600" style="position:absolute;left:0;top:0" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 Q 262 -40 525 0 T 1050 0" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 55 Q 262 15 525 55 T 1050 55" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 109 Q 262 69 525 109 T 1050 109" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 164 Q 262 124 525 164 T 1050 164" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 218 Q 262 178 525 218 T 1050 218" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 273 Q 262 233 525 273 T 1050 273" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 327 Q 262 287 525 327 T 1050 327" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 382 Q 262 342 525 382 T 1050 382" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 436 Q 262 396 525 436 T 1050 436" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 491 Q 262 451 525 491 T 1050 491" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 545 Q 262 505 525 545 T 1050 545" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/><path d="M0 600 Q 262 560 525 600 T 1050 600" stroke="#ffffff" stroke-width="3" fill="none" opacity=".25"/></svg><div class="dec">Thank you</div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

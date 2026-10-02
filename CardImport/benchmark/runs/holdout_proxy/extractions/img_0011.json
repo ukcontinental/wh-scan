@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "劉建宏",
+      "confidence": 0.95,
+      "source_text": "劉 建 宏",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "晨曦設計工作室",
+    "confidence": 0.88,
+    "source_text": "晨曦設計工作室",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "資深設計師",
+    "confidence": 0.9,
+    "source_text": "資深設計師",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "0968976352",
+      "kind": "mobile",
+      "source_text": "手機 0968976352",
+      "confidence": 0.88,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": [
+        "0968976362"
+      ]
+    }
+  ],
+  "emails": [
+    {
+      "address": "henry@dawnlight.design",
+      "confidence": 0.9,
+      "source_text": "E-mail · henry@dawnlight.design",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "dawnlight.design",
+      "confidence": 0.9
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "台灣 110 台北市信義區松仁路100號5樓",
+      "street": "信義區松仁路100號5樓",
+      "city": "台北市",
+      "region": null,
+      "postal_code": "110",
+      "country": "台灣",
+      "confidence": 0.75
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "vertical_text",
+      "small_font",
+      "slight_blur"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "dawnlight"
+    ],
+    "overall_confidence": 0.85
+  }
+}

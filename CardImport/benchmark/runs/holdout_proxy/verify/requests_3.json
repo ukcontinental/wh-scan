@@ -1,0 +1,207 @@
+[
+ {
+  "key": "7dd726d908f56a62",
+  "candidates": [
+   "(852) 3980 9110",
+   "(852) 3960 9110"
+  ],
+  "fieldLabel": "電話 Phone — the main number; the first reader saw it printed as “(852) 3980 9110”",
+  "photoIds": [
+   "img_0003",
+   "img_0038"
+  ],
+  "ocrHint": [
+   "General; (052) 3980 9110"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "15965807355"
+  ],
+  "fieldLabel": "電話 Phone — the mobile number; the first reader saw it printed as “15965807355”",
+  "key": "7c0c0620dd95aae9",
+  "photoIds": [
+   "img_0012"
+  ]
+ },
+ {
+  "key": "31bb46df4efaf378",
+  "candidates": [
+   "2465 7607",
+   "2466 7607",
+   "2465 7807"
+  ],
+  "fieldLabel": "電話 Phone — the fax number; the first reader saw it printed as “2465 7607”",
+  "photoIds": [
+   "img_0003",
+   "img_0038"
+  ],
+  "ocrHint": [
+   "240% 7607"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "0571-87756714",
+   "0571-87756744"
+  ],
+  "fieldLabel": "電話 Phone — the fax number; the first reader saw it printed as “0571-87756714”",
+  "key": "83c8dd2f7bd61e24",
+  "photoIds": [
+   "img_0012"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "wut@qinghetea.com",
+   "wu@qinghetea.com",
+   "wutt@qinghetea.com"
+  ],
+  "fieldLabel": "Email — the email address read as “wut@qinghetea.com”",
+  "key": "5b7918ec13b06508",
+  "photoIds": [
+   "img_0012"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "www.qinghetea.com"
+  ],
+  "fieldLabel": "網站 Website",
+  "key": "7fc30326730f3537",
+  "photoIds": [
+   "img_0012"
+  ]
+ },
+ {
+  "ocrHint": [
+   "aylorlordanla"
+  ],
+  "candidates": [
+   "www.taylorjordanlaw.com"
+  ],
+  "fieldLabel": "網站 Website",
+  "key": "cc6d03236610a77a",
+  "photoIds": [
+   "img_0021"
+  ]
+ },
+ {
+  "ocrHint": [
+   "1s@hebangbank.com.tw"
+  ],
+  "candidates": [
+   "leo.tseng@hebangbank.com.tw"
+  ],
+  "fieldLabel": "Email — the email address read as “leo.tseng@hebangbank.com.tw”",
+  "key": "601e1884d0f4b965",
+  "photoIds": [
+   "img_0028"
+  ]
+ },
+ {
+  "key": "7fd29c2c0c1ac8bd",
+  "candidates": [
+   "+886 4 2171 5115"
+  ],
+  "fieldLabel": "電話 Phone — the fax number; the first reader saw it printed as “+886 4 2171 5115”",
+  "photoIds": [
+   "img_0008",
+   "img_0026"
+  ],
+  "ocrHint": [
+   "傳真 :+8864 2715"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0030"
+  ],
+  "key": "ffefaa86aac379cf",
+  "ocrHint": [],
+  "fieldLabel": "Email — the email address read as “patrick_leung@wuitaifoods.com.hk”",
+  "candidates": [
+   "patrick_leung@wuitaifoods.com.hk",
+   "patrick.leung@wuitaifoods.com.hk"
+  ]
+ },
+ {
+  "photoIds": [
+   "img_0029"
+  ],
+  "key": "1454da2e659effdc",
+  "ocrHint": [],
+  "fieldLabel": "部門（中文）",
+  "candidates": [
+   "國際貿易部"
+  ]
+ },
+ {
+  "fieldLabel": "網站 Website",
+  "candidates": [
+   "daming-food.com.tw"
+  ],
+  "key": "d9c7c7526781a33c",
+  "ocrHint": [
+   "avid@daming.food.com.w",
+   "daming-foo"
+  ],
+  "photoIds": [
+   "img_0032"
+  ]
+ },
+ {
+  "fieldLabel": "中文姓名",
+  "candidates": [
+   "林曉彤",
+   "林曉肜"
+  ],
+  "key": "2d3f87f8c82bc86a",
+  "ocrHint": [],
+  "photoIds": [
+   "img_0033"
+  ]
+ },
+ {
+  "fieldLabel": "Email — the email address read as “karen_lam@harbourtrustcpa.com.hk”",
+  "candidates": [
+   "karen_lam@harbourtrustcpa.com.hk"
+  ],
+  "key": "f96e17399054ef6b",
+  "ocrHint": [
+   "arbourtrustepa.com-hk",
+   "www.harbourtrustcpa.com.hk"
+  ],
+  "photoIds": [
+   "img_0033"
+  ]
+ },
+ {
+  "ocrHint": [
+   "九龍觀塘滿圖道 12 號永發工業大廈 9 樓 B 室"
+  ],
+  "candidates": [
+   "九龍觀塘鴻圖道12號永發工業大廈9樓B室"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “九龍觀塘鴻圖道12號永發工業大廈9樓B室” (if several addresses are printed, read this same one)",
+  "key": "bddcb34bb77be2f5",
+  "photoIds": [
+   "img_0003"
+  ]
+ },
+ {
+  "ocrHint": [],
+  "candidates": [
+   "328 桃園市觀音區工業五路26號"
+  ],
+  "fieldLabel": "地址 Address — the address the first reader read as “328 桃園市觀音區工業五路26號” (if several addresses are printed, read this same one)",
+  "key": "9c5ef27c3388fb64",
+  "photoIds": [
+   "img_0004"
+  ]
+ }
+]

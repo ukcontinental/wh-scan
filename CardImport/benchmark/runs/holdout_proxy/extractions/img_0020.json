@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en",
+    "zh-Hant"
+  ],
+  "name": {
+    "given": {
+      "value": "Ethan",
+      "confidence": 0.97,
+      "source_text": "Ethan Wong",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Wong",
+      "confidence": 0.97,
+      "source_text": "Ethan Wong",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "黃以恆",
+      "confidence": 0.94,
+      "source_text": "黃以恆",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Harbourview Frozen Foods Ltd.",
+    "confidence": 0.95,
+    "source_text": "Harbourview Frozen Foods Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "海景冷凍食品有限公司",
+    "confidence": 0.95,
+    "source_text": "海景冷凍食品有限公司",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Export Manager",
+    "confidence": 0.96,
+    "source_text": "Export Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "外銷經理",
+    "confidence": 0.96,
+    "source_text": "外銷經理",
+    "alternatives": []
+  },
+  "department": {
+    "value": "Quality Assurance",
+    "confidence": 0.94,
+    "source_text": "品保部 Quality Assurance",
+    "alternatives": []
+  },
+  "department_cjk": {
+    "value": "品保部",
+    "confidence": 0.94,
+    "source_text": "品保部 Quality Assurance",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "+1 416 555 0126",
+      "kind": "mobile",
+      "confidence": 0.96,
+      "source_text": "M 手機 +1 416 555 0126",
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "ethan.wong@harbourviewfoods.ca",
+      "confidence": 0.96,
+      "source_text": "ethan.wong@harbourviewfoods.ca",
+      "alternatives": []
+    },
+    {
+      "address": "sales@harbourviewfoods.ca",
+      "confidence": 0.95,
+      "source_text": "sales@harbourviewfoods.ca",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.harbourviewfoods.ca",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "加拿大安大略省多倫多前街西120號400室 郵遞區號 M5J 2M2",
+      "street": "前街西120號400室",
+      "city": "多倫多",
+      "region": "安大略省",
+      "postal_code": "M5J 2M2",
+      "country": "加拿大",
+      "confidence": 0.9
+    }
+  ],
+  "social": [
+    {
+      "service": "linkedin",
+      "handle": "ethan-wong",
+      "confidence": 0.93
+    }
+  ],
+  "notes_on_card": null,
+  "evidence": {
+    "overall_confidence": 0.94,
+    "concerns": [],
+    "ignored_text": [
+      "OCEAN CREST"
+    ],
+    "has_qr_code": false,
+    "has_person_photo": true
+  }
+}

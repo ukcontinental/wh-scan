@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en",
+    "zh-Hant"
+  ],
+  "name": {
+    "given": {
+      "value": "Eric",
+      "confidence": 0.97,
+      "source_text": "Eric Lee, MBA",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Lee",
+      "confidence": 0.97,
+      "source_text": "Eric Lee, MBA",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "李承恩",
+      "confidence": 0.94,
+      "source_text": "李承恩",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": {
+      "value": "MBA",
+      "confidence": 0.95,
+      "source_text": "Eric Lee, MBA",
+      "alternatives": []
+    }
+  },
+  "company": {
+    "value": "Chia Feng Foods Co., Ltd.",
+    "confidence": 0.95,
+    "source_text": "Chia Feng Foods Co., Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "嘉豐食品股份有限公司",
+    "confidence": 0.94,
+    "source_text": "嘉豐食品股份有限公司",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Sales Manager",
+    "confidence": 0.92,
+    "source_text": "Sales Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "業務經理",
+    "confidence": 0.94,
+    "source_text": "業務經理",
+    "alternatives": []
+  },
+  "department": {
+    "value": "International Trade Division",
+    "confidence": 0.9,
+    "source_text": "國際貿易部 International Trade Division",
+    "alternatives": []
+  },
+  "department_cjk": {
+    "value": "國際貿易部",
+    "confidence": 0.9,
+    "source_text": "國際貿易部 International Trade Division",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "+886 929 815 950",
+      "kind": "mobile",
+      "source_text": "M 手機 +886 929 815 950",
+      "confidence": 0.95,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "(02) 2102-1275",
+      "kind": "work",
+      "source_text": "T 電話 (02) 2102-1275",
+      "confidence": 0.95,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+886 2 2135 3556",
+      "kind": "fax",
+      "source_text": "傳真 Fax: +886 2 2135 3556",
+      "confidence": 0.95,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "elee@chiafeng.com.tw",
+      "confidence": 0.95,
+      "source_text": "E-mail: elee@chiafeng.com.tw",
+      "alternatives": []
+    },
+    {
+      "address": "contact@chiafeng.com.tw",
+      "confidence": 0.95,
+      "source_text": "E-mail: contact@chiafeng.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "chiafeng.com.tw",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "No. 188, Sec. 1, Wenhua Rd., Banqiao Dist., New Taipei City 220",
+      "confidence": 0.9,
+      "street": "No. 188, Sec. 1, Wenhua Rd., Banqiao Dist.",
+      "city": "New Taipei City",
+      "region": null,
+      "postal_code": "220",
+      "country": "Taiwan"
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "CF",
+      "金穗",
+      "始於1985"
+    ],
+    "overall_confidence": 0.92
+  }
+}

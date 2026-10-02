@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1050px;height:600px;overflow:hidden;background:#fff}
+body{font-family:'Liberation Sans','DejaVu Sans','Noto Sans CJK TC',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:1050px;height:600px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#ffffff;color:#2a2a2a;padding:56px 64px;display:flex;flex-direction:column;gap:22px;justify-content:center}
+.co{font-size:2.5rem;font-weight:700;color:#b8860b}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;overflow:hidden}
+.addr{font-size:2.1rem;line-height:1.38} .addr+.addr{margin-top:16px} .alab{font-weight:700;color:#b8860b;font-size:1.9rem;letter-spacing:.05em}
+.ct{font-size:2.2rem;line-height:1.5}
+
+</style></head><body><div class="card fit"><div style="display:flex;align-items:center;gap:18px"><div class="logo" style="display:flex;flex-direction:row;align-items:center;gap:11px"><svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="47" fill="#b8860b"/><text x="50" y="64" font-size="40" font-weight="700" text-anchor="middle" fill="#ffffff" font-family="Liberation Sans">KL</text></svg></div><div class="co">Kowloon Bay Logistics Ltd.</div></div><div class="grid fit"><div><div class="addr"><div>Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong</div><div>Kowloon</div></div></div><div class="ct"><div class="ln">General: (852) 3980 9110</div><div class="ln">F: 2465 7607</div><div class="ln">info@kblogistics.com.hk</div><div class="ln">https://www.kblogistics.com.hk</div></div></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

@@ -304,13 +304,24 @@ public actor BatchProcessor {
                     usage = usage + ans.usage
                     verified.append(ref.description)
                     // Exact comparison: variant characters (恆/恒, 着/著) are different values on a contact card.
-                    let key: (String) -> String = { ref.kind == .phone ? TextNorm.digits(PhoneNormalizer.splitExtension($0).0) : TextNorm.alnum($0) }
+                    let key: (String) -> String = {
+                        switch ref.kind {
+                        case .phone: return TextNorm.digits(PhoneNormalizer.splitExtension($0).0)
+                        case .website: return DomainUtil.host(fromURL: $0) ?? TextNorm.alnum($0)
+                        case .email: return EmailValidator.repair($0)
+                        default: return TextNorm.alnum($0)
+                        }
+                    }
                     if case .address = ref {
                         // Addresses: agreement = same numbers and mostly the same words.
                         guard let v = ans.value else { continue }
-                        let sameDigits = Set(TextNorm.tokens(v).filter { $0.allSatisfy(\.isNumber) }) == Set(TextNorm.tokens(value).filter { $0.allSatisfy(\.isNumber) })
+                        // Same numbers (one reading may leave out the postcode) and mostly the same words.
+                        let nv = Set(TextNorm.tokens(v).filter { $0.allSatisfy(\.isNumber) })
+                        let nf = Set(TextNorm.tokens(value).filter { $0.allSatisfy(\.isNumber) })
+                        let sameDigits = nv == nf || (nv.symmetricDifference(nf).count == 1 && nv.symmetricDifference(nf).first!.count >= 5)
+                        let lettersV = TextNorm.alnum(v).filter { !$0.isNumber }, lettersF = TextNorm.alnum(value).filter { !$0.isNumber }
                         let model = config.confidence
-                        if sameDigits && TextNorm.similarity(v, value) >= 0.75 {
+                        if sameDigits && TextNorm.similarity(lettersV, lettersF) >= 0.75 {
                             draft.setVerified(ref, value: value, confidence: model.adjust(max(conf, ans.confidence * 0.9), deltas: [model.secondOpinionAgree]),
                                               signal: "second_opinion:agree", regionHint: region)
                         } else {

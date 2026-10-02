@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "劉德成",
+      "confidence": 0.96,
+      "source_text": "劉德成",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "湖濱貿易公司",
+    "confidence": 0.94,
+    "source_text": "湖濱貿易公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "業務副總經理",
+    "confidence": 0.95,
+    "source_text": "業務副總經理",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "+1 905 555 0171",
+      "kind": "work",
+      "source_text": "TEL：+1 905 555 0171 #13",
+      "confidence": 0.94,
+      "country_hint": "CA",
+      "extension": "13",
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "dlau@lakeshoretrading.ca",
+      "confidence": 0.96,
+      "source_text": "dlau@lakeshoretrading.ca",
+      "alternatives": []
+    },
+    {
+      "address": "service@lakeshoretrading.ca",
+      "confidence": 0.96,
+      "source_text": "service@lakeshoretrading.ca",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.lakeshoretrading.ca",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "安大略省萬錦7號公路東3601號1008室 郵遞區號 L3R 0M3",
+      "street": "7號公路東3601號1008室",
+      "city": "萬錦",
+      "region": "安大略省",
+      "postal_code": "L3R 0M3",
+      "country": "Canada",
+      "confidence": 0.85
+    },
+    {
+      "formatted": "安大略省密西沙加密西沙加路6750號7單元 郵遞區號 L5N 2L3",
+      "street": "密西沙加路6750號7單元",
+      "city": "密西沙加",
+      "region": "安大略省",
+      "postal_code": "L5N 2L3",
+      "country": "Canada",
+      "confidence": 0.85
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "multiple_addresses"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "湖濱",
+      "誠信經營 互利共贏",
+      "ISO 9001:2015",
+      "總公司",
+      "工廠"
+    ],
+    "overall_confidence": 0.92
+  }
+}

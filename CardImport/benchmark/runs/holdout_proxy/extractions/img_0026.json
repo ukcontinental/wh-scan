@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "楊志偉",
+      "confidence": 0.97,
+      "source_text": "楊志偉",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "福源水產有限公司",
+    "confidence": 0.95,
+    "source_text": "福源水產有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "品保經理",
+    "confidence": 0.95,
+    "source_text": "品保經理",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": {
+    "value": "品保部",
+    "confidence": 0.93,
+    "source_text": "品保部",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "0981-594-499",
+      "kind": "mobile",
+      "source_text": "行動電話：0981-594-499",
+      "confidence": 0.95,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+886 4 2330 1392",
+      "kind": "work",
+      "source_text": "TEL：+886 4 2330 1392 ext. 4518",
+      "confidence": 0.94,
+      "country_hint": "TW",
+      "extension": "4518",
+      "alternatives": []
+    },
+    {
+      "number": "+886 4 2171 5115",
+      "kind": "fax",
+      "source_text": "傳真：+886 4 2171 5115",
+      "confidence": 0.94,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "wilson.yang@fuyuanseafood.com.tw",
+      "source_text": "E-mail：wilson.yang@fuyuanseafood.com.tw",
+      "confidence": 0.95,
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.fuyuanseafood.com.tw",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "407 台中市西屯區台灣大道三段99號8樓",
+      "street": "西屯區台灣大道三段99號8樓",
+      "city": "台中市",
+      "region": null,
+      "postal_code": "407",
+      "country": "Taiwan",
+      "confidence": 0.85
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "has_qr_code": false,
+    "has_person_photo": true,
+    "ignored_text": [
+      "海之味",
+      "創立於1992年"
+    ],
+    "concerns": [],
+    "overall_confidence": 0.93
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "back",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": null,
+  "job_title": null,
+  "job_title_cjk": null,
+  "department": null,
+  "department_cjk": null,
+  "phones": [],
+  "emails": [],
+  "websites": [
+    {
+      "url": "www.fuyuanseafood.com.tw",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "overall_confidence": 0.9,
+    "concerns": [
+      "no_person_on_side",
+      "logo_wordmark_only"
+    ],
+    "ignored_text": [
+      "海之味",
+      "新鮮直送 安心美味"
+    ],
+    "has_qr_code": true,
+    "has_person_photo": false
+  }
+}

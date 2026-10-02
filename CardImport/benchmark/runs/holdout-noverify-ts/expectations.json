@@ -1,0 +1,35 @@
+{
+ "scenario": "timestamps",
+ "dedup": [
+  {
+   "existing_id": "existing-1",
+   "person_id": "p023",
+   "expected": "update"
+  },
+  {
+   "existing_id": "existing-2",
+   "person_id": "p027",
+   "expected": "update"
+  },
+  {
+   "existing_id": "existing-3",
+   "person_id": "p030",
+   "expected": "update+conflict"
+  },
+  {
+   "existing_id": "existing-4",
+   "person_id": "p028",
+   "expected": "update"
+  },
+  {
+   "existing_id": "decoy-1",
+   "person_id": "p001",
+   "expected": "new"
+  },
+  {
+   "existing_id": "decoy-2",
+   "person_id": "p002",
+   "expected": "new_or_review"
+  }
+ ]
+}

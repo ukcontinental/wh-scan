@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "廖思妤",
+      "confidence": 0.96,
+      "source_text": "廖思妤",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "瑞光冷鏈物流股份有限公司",
+    "confidence": 0.95,
+    "source_text": "瑞光冷鏈物流股份有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "業務開發經理",
+    "confidence": 0.96,
+    "source_text": "業務開發經理",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "0914-332-774",
+      "kind": "mobile",
+      "source_text": "行動電話：0914-332-774",
+      "confidence": 0.96,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "+886 2 2649 7825",
+      "kind": "work",
+      "source_text": "電話：+886 2 2649 7825",
+      "confidence": 0.96,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "02-24750622",
+      "kind": "fax",
+      "source_text": "FAX：02-24750622",
+      "confidence": 0.95,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "cliao@ruiguang-logistics.com.tw",
+      "confidence": 0.96,
+      "source_text": "cliao@ruiguang-logistics.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "ruiguang-logistics.com.tw",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "114 台北市內湖區瑞光路35號8樓",
+      "street": "內湖區瑞光路35號8樓",
+      "city": "台北市",
+      "region": null,
+      "postal_code": "114",
+      "country": "Taiwan",
+      "confidence": 0.9
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "瑞光",
+      "創立於1962年"
+    ],
+    "overall_confidence": 0.95
+  }
+}

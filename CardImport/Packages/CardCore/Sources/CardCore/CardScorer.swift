@@ -46,9 +46,17 @@ public struct CardScorer: Sendable {
         return out
     }
 
+    /// Model-supplied country hints are free text in practice ("Hong Kong", "HK", "Canada"): map to ISO alpha-2.
+    static func isoRegion(_ raw: String?) -> String? {
+        guard let raw, !raw.isEmpty else { return nil }
+        let t = raw.trimmingCharacters(in: .whitespaces)
+        if t.count == 2, t.allSatisfy(\.isLetter) { return t.uppercased() == "UK" ? "GB" : t.uppercased() }
+        return AddressValidator.inferCountry(ExtractedAddress(country: t, confidence: 1))
+    }
+
     public func regionHint(for card: ExtractedCard) -> String {
         for p in card.phones {
-            if let h = p.countryHint, h.count == 2 { return h.uppercased() }
+            if let h = Self.isoRegion(p.countryHint) { return h }
             let n = TextNorm.nfkc(p.number)
             if n.hasPrefix("+886") { return "TW" }
             if n.hasPrefix("+86") { return "CN" }
@@ -166,7 +174,8 @@ public struct CardScorer: Sendable {
         // Phones
         let region = regionHint(for: card)
         for p in card.phones {
-            guard let n = PhoneNormalizer.normalize(p.number, regionHint: p.countryHint ?? region, defaultRegion: defaultRegion,
+            let hint = Self.isoRegion(p.countryHint) ?? region
+            guard let n = PhoneNormalizer.normalize(p.number, regionHint: hint, defaultRegion: defaultRegion,
                                                     extensionHint: p.extension) else { continue }
             let support = OCRCrossCheck.support(value: p.number, kind: .phone, ocr: ocr)
             var deltas = [model.delta(for: support, reliability: rel)]

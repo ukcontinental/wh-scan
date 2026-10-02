@@ -1,0 +1,6499 @@
+{
+ "generator_version": "1",
+ "seed": 4242,
+ "people": [
+  {
+   "id": "p001",
+   "name": {
+    "given": "Victoria",
+    "family": "Chan",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Chan & Chan Trading Ltd.",
+   "company_cjk": null,
+   "job_title": "Vice President, Sales",
+   "job_title_cjk": null,
+   "department": "Import & Export Dept.",
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+85256648034",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "victoria@chanandchan.com.hk"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.chanandchan.com.hk"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "Unit 1503, 15/F, Harbour Crest Centre, 30 Canton Road, Tsim Sha Tsui",
+     "city": "Kowloon",
+     "region": null,
+     "postal_code": null,
+     "country": "Hong Kong",
+     "country_code": "HK",
+     "formatted": "Unit 1503, 15/F, Harbour Crest Centre, 30 Canton Road, Tsim Sha Tsui, Kowloon, Hong Kong",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Global Sourcing, Local Service"
+   ],
+   "meta": {
+    "flavour": "HK",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": "victoria",
+    "email_domain": "chanandchan.com.hk"
+   }
+  },
+  {
+   "id": "p002",
+   "name": {
+    "given": "Morgan",
+    "family": "Lee",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Morgan Consulting Group",
+   "company_cjk": null,
+   "job_title": "Partner",
+   "job_title_cjk": null,
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+14165550128",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+14165550171",
+     "extension": "504"
+    },
+    {
+     "kind": "fax",
+     "number": "+14165550158",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "morgan_lee@morganconsulting.ca"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.morganconsulting.ca"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "120 Front St W, Suite 400",
+     "city": "Toronto",
+     "region": "ON",
+     "postal_code": "M5J 2M2",
+     "country": "Canada",
+     "country_code": "CA",
+     "formatted": "120 Front St W, Suite 400, Toronto, ON M5J 2M2, Canada",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Advice that Moves You Forward"
+   ],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": "morgan",
+    "email_domain": "morganconsulting.ca"
+   }
+  },
+  {
+   "id": "p003",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "吴婷婷",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "杭州青禾茶业有限公司",
+   "job_title": null,
+   "job_title_cjk": "总经理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+8615965807355",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+8657166371924",
+     "extension": "464"
+    },
+    {
+     "kind": "fax",
+     "number": "+8657187756714",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "wut@qinghetea.com"
+    }
+   ],
+   "websites": [
+    {
+     "url": "https://www.qinghetea.com"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "西湖区龙井路16号",
+     "city": "杭州市",
+     "region": "浙江省",
+     "postal_code": "310013",
+     "country": null,
+     "country_code": "CN",
+     "formatted": "浙江省杭州市西湖区龙井路16号, 邮编：310013",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "CN",
+    "front_script": "zh-Hans",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "qinghetea.com"
+   }
+  },
+  {
+   "id": "p004",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "王大明",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "大明食品股份有限公司",
+   "job_title": null,
+   "job_title_cjk": "總經理",
+   "department": null,
+   "department_cjk": "採購部",
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886901907353",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "david@daming-food.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "daming-food.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "信義區松仁路100號5樓",
+     "city": "台北市",
+     "region": null,
+     "postal_code": "110",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "110 台北市信義區松仁路100號5樓",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Thank you"
+   ],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": true,
+    "back_type": "d",
+    "confusable_case": "wangdaming",
+    "email_domain": "daming-food.com.tw"
+   }
+  },
+  {
+   "id": "p005",
+   "name": {
+    "given": "Winnie",
+    "family": "Cheung",
+    "cjk_full": "張美儀",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Kowloon Bay Logistics Ltd.",
+   "company_cjk": "九龍灣物流有限公司",
+   "job_title": "Logistics Coordinator",
+   "job_title_cjk": "物流專員",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "work",
+     "number": "+85220785414",
+     "extension": "111"
+    },
+    {
+     "kind": "main",
+     "number": "+85239809110",
+     "extension": null
+    },
+    {
+     "kind": "fax",
+     "number": "+85224657607",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "wcheung@kblogistics.com.hk"
+    },
+    {
+     "address": "info@kblogistics.com.hk"
+    }
+   ],
+   "websites": [
+    {
+     "url": "https://www.kblogistics.com.hk"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "觀塘鴻圖道12號永發工業大廈9樓B室",
+     "city": "九龍",
+     "region": null,
+     "postal_code": null,
+     "country": null,
+     "country_code": "HK",
+     "formatted": "九龍觀塘鴻圖道12號永發工業大廈9樓B室",
+     "alt": {
+      "street": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong",
+      "city": "Kowloon",
+      "region": null,
+      "postal_code": null,
+      "country": null,
+      "country_code": "HK",
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon"
+     }
+    }
+   ],
+   "social": [
+    {
+     "service": "wechat",
+     "handle": "winniecheung68"
+    }
+   ],
+   "distractors": [
+    "HACCP"
+   ],
+   "meta": {
+    "flavour": "HK",
+    "front_script": "mixed",
+    "two_sided": true,
+    "back_type": "b",
+    "confusable_case": null,
+    "email_domain": "kblogistics.com.hk"
+   }
+  },
+  {
+   "id": "p006",
+   "name": {
+    "given": "Sophie",
+    "family": "Lam",
+    "cjk_full": "林淑慧",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Granite Peak Capital Partners",
+   "company_cjk": "花崗峰資本",
+   "job_title": "Partner",
+   "job_title_cjk": "合夥人",
+   "department": "Wealth Management",
+   "department_cjk": "財富管理部",
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+16475550113",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+16475550102",
+     "extension": "31"
+    },
+    {
+     "kind": "main",
+     "number": "+16475550134",
+     "extension": null
+    },
+    {
+     "kind": "fax",
+     "number": "+16475550118",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "sophie.lam@granitepeakcap.ca"
+    },
+    {
+     "address": "info@granitepeakcap.ca"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.granitepeakcap.ca"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "333 Bay St, 18th Floor",
+     "city": "Toronto",
+     "region": "ON",
+     "postal_code": "M5H 2R2",
+     "country": "Canada",
+     "country_code": "CA",
+     "formatted": "333 Bay St, 18th Floor, Toronto, ON M5H 2R2, Canada",
+     "alt": null
+    },
+    {
+     "street": "1055 W Georgia St, Suite 2100",
+     "city": "Vancouver",
+     "region": "BC",
+     "postal_code": "V6E 3P3",
+     "country": "Canada",
+     "country_code": "CA",
+     "formatted": "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3, Canada",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "mixed",
+    "two_sided": true,
+    "back_type": "b",
+    "confusable_case": null,
+    "email_domain": "granitepeakcap.ca"
+   }
+  },
+  {
+   "id": "p007",
+   "name": {
+    "given": "Eric",
+    "family": "Lee",
+    "cjk_full": "李承恩",
+    "prefix": null,
+    "suffix": "MBA"
+   },
+   "company": "Chia Feng Foods Co., Ltd.",
+   "company_cjk": "嘉豐食品股份有限公司",
+   "job_title": "Sales Manager",
+   "job_title_cjk": "業務經理",
+   "department": "International Trade Division",
+   "department_cjk": "國際貿易部",
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886929815950",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+886221021275",
+     "extension": null
+    },
+    {
+     "kind": "fax",
+     "number": "+886221353556",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "elee@chiafeng.com.tw"
+    },
+    {
+     "address": "contact@chiafeng.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "chiafeng.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "No. 188, Sec. 1, Wenhua Rd., Banqiao Dist.",
+     "city": "New Taipei City",
+     "region": null,
+     "postal_code": "220",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "No. 188, Sec. 1, Wenhua Rd., Banqiao Dist., New Taipei City 220",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "始於1985",
+    "金穗"
+   ],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "mixed",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "chiafeng.com.tw"
+   }
+  },
+  {
+   "id": "p008",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "蕭博文",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "恆昌國際貿易有限公司",
+   "job_title": null,
+   "job_title_cjk": "採購經理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886994109193",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "vincenth@hengchang-trade.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "https://www.hengchang-trade.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "中山區南京東路二段88號12樓",
+     "city": "台北市",
+     "region": null,
+     "postal_code": "104",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "104 台北市中山區南京東路二段88號12樓",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "hengchang-trade.com.tw"
+   }
+  },
+  {
+   "id": "p009",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "楊志偉",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "福源水產有限公司",
+   "job_title": null,
+   "job_title_cjk": "品保經理",
+   "department": null,
+   "department_cjk": "品保部",
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886981594499",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+886423301392",
+     "extension": "4518"
+    },
+    {
+     "kind": "fax",
+     "number": "+886421715115",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "wilson.yang@fuyuanseafood.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.fuyuanseafood.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "西屯區台灣大道三段99號8樓",
+     "city": "台中市",
+     "region": null,
+     "postal_code": "407",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "407 台中市西屯區台灣大道三段99號8樓",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "創立於1992年",
+    "海之味",
+    "新鮮直送 安心美味"
+   ],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": true,
+    "back_type": "c",
+    "confusable_case": null,
+    "email_domain": "fuyuanseafood.com.tw"
+   }
+  },
+  {
+   "id": "p010",
+   "name": {
+    "given": "Jordan",
+    "family": "Taylor",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Taylor Jordan & Associates LLP",
+   "company_cjk": null,
+   "job_title": "Senior Consultant",
+   "job_title_cjk": null,
+   "department": "Strategy Practice",
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+12125550156",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "jordant@taylorjordanlaw.com"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.taylorjordanlaw.com"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "420 Madison Ave, Suite 1201",
+     "city": "New York",
+     "region": "NY",
+     "postal_code": "10017",
+     "country": null,
+     "country_code": "US",
+     "formatted": "420 Madison Ave, Suite 1201, New York, NY 10017",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "US",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": "jordan",
+    "email_domain": "taylorjordanlaw.com"
+   }
+  },
+  {
+   "id": "p011",
+   "name": {
+    "given": "Derek",
+    "family": "Lau",
+    "cjk_full": "劉德成",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Lakeshore Trading Co.",
+   "company_cjk": "湖濱貿易公司",
+   "job_title": "Vice President, Sales",
+   "job_title_cjk": "業務副總經理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "work",
+     "number": "+19055550171",
+     "extension": "13"
+    }
+   ],
+   "emails": [
+    {
+     "address": "dlau@lakeshoretrading.ca"
+    },
+    {
+     "address": "service@lakeshoretrading.ca"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.lakeshoretrading.ca"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "3601 Highway 7 E, Suite 1008",
+     "city": "Markham",
+     "region": "ON",
+     "postal_code": "L3R 0M3",
+     "country": null,
+     "country_code": "CA",
+     "formatted": "3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3",
+     "alt": {
+      "street": "7號公路東3601號1008室",
+      "city": "萬錦",
+      "region": "安大略省",
+      "postal_code": "L3R 0M3",
+      "country": null,
+      "country_code": "CA",
+      "formatted": "安大略省萬錦7號公路東3601號1008室, 郵遞區號 L3R 0M3"
+     }
+    },
+    {
+     "street": "6750 Mississauga Rd, Unit 7",
+     "city": "Mississauga",
+     "region": "ON",
+     "postal_code": "L5N 2L3",
+     "country": null,
+     "country_code": "CA",
+     "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3",
+     "alt": {
+      "street": "密西沙加路6750號7單元",
+      "city": "密西沙加",
+      "region": "安大略省",
+      "postal_code": "L5N 2L3",
+      "country": null,
+      "country_code": "CA",
+      "formatted": "安大略省密西沙加密西沙加路6750號7單元, 郵遞區號 L5N 2L3"
+     }
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Global Sourcing, Local Service",
+    "ISO 9001:2015",
+    "誠信經營 互利共贏"
+   ],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "en",
+    "two_sided": true,
+    "back_type": "a",
+    "confusable_case": null,
+    "email_domain": "lakeshoretrading.ca"
+   }
+  },
+  {
+   "id": "p012",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "刘洋",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "上海鑫源食品有限公司",
+   "job_title": null,
+   "job_title_cjk": "采购经理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+8618685691395",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+862167578779",
+     "extension": "78"
+    },
+    {
+     "kind": "fax",
+     "number": "+862156801859",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "yang.liu@xinyuanfood.com.cn"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.xinyuanfood.com.cn"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "浦东新区张江路88号3号楼501室",
+     "city": "上海市",
+     "region": null,
+     "postal_code": "200120",
+     "country": null,
+     "country_code": "CN",
+     "formatted": "上海市浦东新区张江路88号3号楼501室, 邮编：200120",
+     "alt": null
+    }
+   ],
+   "social": [
+    {
+     "service": "wechat",
+     "handle": "liuyang97"
+    }
+   ],
+   "distractors": [
+    "创立于1962年",
+    "鲜之源"
+   ],
+   "meta": {
+    "flavour": "CN",
+    "front_script": "zh-Hans",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "xinyuanfood.com.cn"
+   }
+  },
+  {
+   "id": "p013",
+   "name": {
+    "given": "Patrick",
+    "family": "Leung",
+    "cjk_full": "梁家輝",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Wui Tai Foods Limited",
+   "company_cjk": "滙泰食品有限公司",
+   "job_title": "Export Manager",
+   "job_title_cjk": "外銷經理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "work",
+     "number": "+85226273144",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "patrick_leung@wuitaifoods.com.hk"
+    }
+   ],
+   "websites": [
+    {
+     "url": "https://www.wuitaifoods.com.hk"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong",
+     "city": "Kowloon",
+     "region": null,
+     "postal_code": null,
+     "country": null,
+     "country_code": "HK",
+     "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Your Trusted Partner in Frozen Foods",
+    "GOLDEN BOWL"
+   ],
+   "meta": {
+    "flavour": "HK",
+    "front_script": "mixed",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "wuitaifoods.com.hk"
+   }
+  },
+  {
+   "id": "p014",
+   "name": {
+    "given": "Laura",
+    "family": "Bennett",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": "CPA"
+   },
+   "company": "Hudson & Pine Advisory LLC",
+   "company_cjk": null,
+   "job_title": "Partner",
+   "job_title_cjk": null,
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "work",
+     "number": "+12125550122",
+     "extension": "91"
+    }
+   ],
+   "emails": [
+    {
+     "address": "laura.bennett@hudsonpine.com"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.hudsonpine.com"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "420 Madison Ave, Suite 1201",
+     "city": "New York",
+     "region": "NY",
+     "postal_code": "10017",
+     "country": "USA",
+     "country_code": "US",
+     "formatted": "420 Madison Ave, Suite 1201, New York, NY 10017, USA",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "US",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "hudsonpine.com"
+   }
+  },
+  {
+   "id": "p015",
+   "name": {
+    "given": "Michelle",
+    "family": "Ng",
+    "cjk_full": "吳美華",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Cedarline Logistics Inc.",
+   "company_cjk": "雪松物流有限公司",
+   "job_title": "General Manager",
+   "job_title_cjk": "總經理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+19055550138",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "michelle.ng@cedarline.ca"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.cedarline.ca"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "6750 Mississauga Rd, Unit 7",
+     "city": "Mississauga",
+     "region": "ON",
+     "postal_code": "L5N 2L3",
+     "country": "Canada",
+     "country_code": "CA",
+     "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada",
+     "alt": {
+      "street": "密西沙加路6750號7單元",
+      "city": "密西沙加",
+      "region": "安大略省",
+      "postal_code": "L5N 2L3",
+      "country": "加拿大",
+      "country_code": "CA",
+      "formatted": "加拿大安大略省密西沙加密西沙加路6750號7單元, 郵遞區號 L5N 2L3"
+     }
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Established 2011",
+    "始於2011"
+   ],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "en",
+    "two_sided": true,
+    "back_type": "a",
+    "confusable_case": null,
+    "email_domain": "cedarline.ca"
+   }
+  },
+  {
+   "id": "p016",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "马俊",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "广州恒泰进出口贸易有限公司",
+   "job_title": null,
+   "job_title_cjk": "销售副总裁",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+8618861094756",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "maj@hengtai-trade.com"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.hengtai-trade.com"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "天河区天河路385号1806室",
+     "city": "广州市",
+     "region": "广东省",
+     "postal_code": "510620",
+     "country": "中国",
+     "country_code": "CN",
+     "formatted": "中国广东省广州市天河区天河路385号1806室, 邮编：510620",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "CN",
+    "front_script": "zh-Hans",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "hengtai-trade.com"
+   }
+  },
+  {
+   "id": "p017",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "曾冠宇",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "合邦商業銀行",
+   "job_title": null,
+   "job_title_cjk": "副總裁",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886999720265",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "leo.tseng@hebangbank.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "https://www.hebangbank.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "中山區南京東路二段88號12樓",
+     "city": "台北市",
+     "region": null,
+     "postal_code": "104",
+     "country": "台灣",
+     "country_code": "TW",
+     "formatted": "台灣 104 台北市中山區南京東路二段88號12樓",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "hebangbank.com.tw"
+   }
+  },
+  {
+   "id": "p018",
+   "name": {
+    "given": "Karen",
+    "family": "Lam",
+    "cjk_full": "林曉彤",
+    "prefix": null,
+    "suffix": "CPA"
+   },
+   "company": "Harbour Trust CPA Limited",
+   "company_cjk": "港信會計師事務所有限公司",
+   "job_title": "Chief Financial Officer",
+   "job_title_cjk": "財務長",
+   "department": "Wealth Management",
+   "department_cjk": "財富管理部",
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+85296063732",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "karen_lam@harbourtrustcpa.com.hk"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.harbourtrustcpa.com.hk"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central",
+     "city": "Central",
+     "region": null,
+     "postal_code": null,
+     "country": "Hong Kong",
+     "country_code": "HK",
+     "formatted": "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central, Central, Hong Kong",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Est. 1962"
+   ],
+   "meta": {
+    "flavour": "HK",
+    "front_script": "mixed",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "harbourtrustcpa.com.hk"
+   }
+  },
+  {
+   "id": "p019",
+   "name": {
+    "given": "Cindy",
+    "family": "Liao",
+    "cjk_full": "廖思妤",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Ruiguang Cold Chain Logistics Co., Ltd.",
+   "company_cjk": "瑞光冷鏈物流股份有限公司",
+   "job_title": "Business Development Manager",
+   "job_title_cjk": "業務開發經理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886914332774",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+886226497825",
+     "extension": null
+    },
+    {
+     "kind": "fax",
+     "number": "+886224750622",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "cliao@ruiguang-logistics.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "ruiguang-logistics.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "內湖區瑞光路35號8樓",
+     "city": "台北市",
+     "region": null,
+     "postal_code": "114",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "114 台北市內湖區瑞光路35號8樓",
+     "alt": {
+      "street": "8F., No. 35, Ruiguang Rd., Neihu Dist.",
+      "city": "Taipei City",
+      "region": null,
+      "postal_code": "114",
+      "country": null,
+      "country_code": "TW",
+      "formatted": "8F., No. 35, Ruiguang Rd., Neihu Dist., Taipei City 114"
+     }
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "創立於1962年",
+    "Established 1962"
+   ],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": true,
+    "back_type": "a",
+    "confusable_case": null,
+    "email_domain": "ruiguang-logistics.com.tw"
+   }
+  },
+  {
+   "id": "p020",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "劉建宏",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "晨曦設計工作室",
+   "job_title": null,
+   "job_title_cjk": "資深設計師",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886968976352",
+     "extension": null
+    },
+    {
+     "kind": "main",
+     "number": "+886228236569",
+     "extension": null
+    },
+    {
+     "kind": "fax",
+     "number": "+886225046049",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "henry@dawnlight.design"
+    },
+    {
+     "address": "info@dawnlight.design"
+    }
+   ],
+   "websites": [
+    {
+     "url": "dawnlight.design"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "信義區松仁路100號5樓",
+     "city": "台北市",
+     "region": null,
+     "postal_code": "110",
+     "country": "台灣",
+     "country_code": "TW",
+     "formatted": "台灣 110 台北市信義區松仁路100號5樓",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": true,
+    "back_type": "b",
+    "confusable_case": null,
+    "email_domain": "dawnlight.design"
+   }
+  },
+  {
+   "id": "p021",
+   "name": {
+    "given": "Kevin",
+    "family": "Zhang",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Northstar Cold Chain Inc.",
+   "company_cjk": null,
+   "job_title": "Logistics Coordinator",
+   "job_title_cjk": null,
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+16045550123",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+16045550156",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "kevin.zhang@northstarcoldchain.com"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.northstarcoldchain.com"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "4321 Still Creek Dr, Unit 110",
+     "city": "Burnaby",
+     "region": "BC",
+     "postal_code": "V5C 6S7",
+     "country": "Canada",
+     "country_code": "CA",
+     "formatted": "4321 Still Creek Dr, Unit 110, Burnaby, BC V5C 6S7, Canada",
+     "alt": null
+    },
+    {
+     "street": "1055 W Georgia St, Suite 2100",
+     "city": "Vancouver",
+     "region": "BC",
+     "postal_code": "V6E 3P3",
+     "country": "Canada",
+     "country_code": "CA",
+     "formatted": "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3, Canada",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "northstarcoldchain.com"
+   }
+  },
+  {
+   "id": "p022",
+   "name": {
+    "given": "Justin",
+    "family": "Tang",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Brightwater Seafood Inc.",
+   "company_cjk": null,
+   "job_title": "General Manager",
+   "job_title_cjk": null,
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+16045550166",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+16045550131",
+     "extension": null
+    },
+    {
+     "kind": "fax",
+     "number": "+16045550122",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "justint@brightwaterseafood.ca"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.brightwaterseafood.ca"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "1055 W Georgia St, Suite 2100",
+     "city": "Vancouver",
+     "region": "BC",
+     "postal_code": "V6E 3P3",
+     "country": null,
+     "country_code": "CA",
+     "formatted": "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "TIDEWELL"
+   ],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "brightwaterseafood.ca"
+   }
+  },
+  {
+   "id": "p023",
+   "name": {
+    "given": "Andrew",
+    "family": "Kim",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Silverline Software Inc.",
+   "company_cjk": null,
+   "job_title": "Founder & CEO",
+   "job_title_cjk": null,
+   "department": "R&D Center",
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+12125550126",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "andrew.kim@silverline.io"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.silverline.io"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "1450 Broadway, 18th Floor",
+     "city": "New York",
+     "region": "NY",
+     "postal_code": "10018",
+     "country": "USA",
+     "country_code": "US",
+     "formatted": "1450 Broadway, 18th Floor, New York, NY 10018, USA",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [],
+   "meta": {
+    "flavour": "US",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "silverline.io"
+   }
+  },
+  {
+   "id": "p024",
+   "name": {
+    "given": "Ethan",
+    "family": "Wong",
+    "cjk_full": "黃以恆",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Harbourview Frozen Foods Ltd.",
+   "company_cjk": "海景冷凍食品有限公司",
+   "job_title": "Export Manager",
+   "job_title_cjk": "外銷經理",
+   "department": "Quality Assurance",
+   "department_cjk": "品保部",
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+14165550126",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "ethan.wong@harbourviewfoods.ca"
+    },
+    {
+     "address": "sales@harbourviewfoods.ca"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.harbourviewfoods.ca"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "前街西120號400室",
+     "city": "多倫多",
+     "region": "安大略省",
+     "postal_code": "M5J 2M2",
+     "country": "加拿大",
+     "country_code": "CA",
+     "formatted": "加拿大安大略省多倫多前街西120號400室, 郵遞區號 M5J 2M2",
+     "alt": null
+    }
+   ],
+   "social": [
+    {
+     "service": "linkedin",
+     "handle": "ethan-wong"
+    }
+   ],
+   "distractors": [
+    "OCEAN CREST",
+    "用心 做好每一件事"
+   ],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "mixed",
+    "two_sided": true,
+    "back_type": "d",
+    "confusable_case": null,
+    "email_domain": "harbourviewfoods.ca"
+   }
+  },
+  {
+   "id": "p025",
+   "name": {
+    "given": "Sandy",
+    "family": "Hung",
+    "cjk_full": "洪詩涵",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Xinhe Technology Inc.",
+   "company_cjk": "新禾科技股份有限公司",
+   "job_title": "Founder & CEO",
+   "job_title_cjk": "創辦人暨執行長",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886982141192",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+886226822359",
+     "extension": null
+    },
+    {
+     "kind": "fax",
+     "number": "+886224410243",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "sandyh@xinhetech.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "xinhetech.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "內湖區瑞光路35號8樓",
+     "city": "台北市",
+     "region": null,
+     "postal_code": "114",
+     "country": "台灣",
+     "country_code": "TW",
+     "formatted": "台灣 114 台北市內湖區瑞光路35號8樓",
+     "alt": {
+      "street": "8F., No. 35, Ruiguang Rd., Neihu Dist.",
+      "city": "Taipei City",
+      "region": null,
+      "postal_code": "114",
+      "country": "Taiwan",
+      "country_code": "TW",
+      "formatted": "8F., No. 35, Ruiguang Rd., Neihu Dist., Taipei City 114, Taiwan"
+     }
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "ISO 27001"
+   ],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": true,
+    "back_type": "a",
+    "confusable_case": null,
+    "email_domain": "xinhetech.com.tw"
+   }
+  },
+  {
+   "id": "p026",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "徐浩",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "北京云帆软件有限公司",
+   "job_title": null,
+   "job_title_cjk": "市场专员",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "work",
+     "number": "+861061074045",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "hao.xu@yunfansoft.cn"
+    },
+    {
+     "address": "contact@yunfansoft.cn"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.yunfansoft.cn"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "朝阳区建国路93号1203室",
+     "city": "北京市",
+     "region": null,
+     "postal_code": "100022",
+     "country": "中国",
+     "country_code": "CN",
+     "formatted": "中国北京市朝阳区建国路93号1203室（100022）",
+     "alt": null
+    }
+   ],
+   "social": [
+    {
+     "service": "wechat",
+     "handle": "xuhao80"
+    }
+   ],
+   "distractors": [
+    "科技创新 引领未来"
+   ],
+   "meta": {
+    "flavour": "CN",
+    "front_script": "zh-Hans",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "yunfansoft.cn"
+   }
+  },
+  {
+   "id": "p027",
+   "name": {
+    "given": "Edmund",
+    "family": "Chow",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Kowloon Bay Logistics Ltd.",
+   "company_cjk": null,
+   "job_title": "Logistics Coordinator",
+   "job_title_cjk": null,
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+85295412821",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "edmund_chow@kblogistics.com.hk"
+    }
+   ],
+   "websites": [
+    {
+     "url": "https://www.kblogistics.com.hk"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong",
+     "city": "Kowloon",
+     "region": null,
+     "postal_code": null,
+     "country": "Hong Kong",
+     "country_code": "HK",
+     "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon, Hong Kong",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Delivering Freshness, Every Mile"
+   ],
+   "meta": {
+    "flavour": "HK",
+    "front_script": "en",
+    "two_sided": true,
+    "back_type": "c",
+    "confusable_case": null,
+    "email_domain": "kblogistics.com.hk"
+   }
+  },
+  {
+   "id": "p028",
+   "name": {
+    "given": "Owen",
+    "family": "Campbell",
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "True North Food Distributors Ltd.",
+   "company_cjk": null,
+   "job_title": "General Manager",
+   "job_title_cjk": null,
+   "department": "International Trade Division",
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+19055550139",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+19055550112",
+     "extension": "352"
+    },
+    {
+     "kind": "fax",
+     "number": "+19055550107",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "ocampbell@truenorthfood.ca"
+    }
+   ],
+   "websites": [
+    {
+     "url": "www.truenorthfood.ca"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "3601 Highway 7 E, Suite 1008",
+     "city": "Markham",
+     "region": "ON",
+     "postal_code": "L3R 0M3",
+     "country": "Canada",
+     "country_code": "CA",
+     "formatted": "3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3, Canada",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "Fresh from Ocean to Table",
+    "Est. 1992"
+   ],
+   "meta": {
+    "flavour": "CA",
+    "front_script": "en",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "truenorthfood.ca"
+   }
+  },
+  {
+   "id": "p029",
+   "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": "陳志豪",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": null,
+   "company_cjk": "嘉豐食品股份有限公司",
+   "job_title": null,
+   "job_title_cjk": "品保經理",
+   "department": null,
+   "department_cjk": "品保部",
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886915577300",
+     "extension": null
+    },
+    {
+     "kind": "work",
+     "number": "+886221830943",
+     "extension": "3340"
+    },
+    {
+     "kind": "fax",
+     "number": "+886220701978",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "jasonc@chiafeng.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "https://www.chiafeng.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "板橋區文化路一段188號",
+     "city": "新北市",
+     "region": null,
+     "postal_code": "220",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "220 新北市板橋區文化路一段188號",
+     "alt": null
+    },
+    {
+     "street": "觀音區工業五路26號",
+     "city": "桃園市",
+     "region": null,
+     "postal_code": "328",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "328 桃園市觀音區工業五路26號",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "金穗",
+    "嚴選食材 用心把關"
+   ],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "zh-Hant",
+    "two_sided": true,
+    "back_type": "c",
+    "confusable_case": null,
+    "email_domain": "chiafeng.com.tw"
+   }
+  },
+  {
+   "id": "p030",
+   "name": {
+    "given": "Tina",
+    "family": "Hsu",
+    "cjk_full": "許雅婷",
+    "prefix": null,
+    "suffix": null
+   },
+   "company": "Heng Chang International Trading Co., Ltd.",
+   "company_cjk": "恆昌國際貿易有限公司",
+   "job_title": "Vice President, Sales",
+   "job_title_cjk": "業務副總經理",
+   "department": null,
+   "department_cjk": null,
+   "phones": [
+    {
+     "kind": "mobile",
+     "number": "+886909825309",
+     "extension": null
+    }
+   ],
+   "emails": [
+    {
+     "address": "tina.hsu@hengchang-trade.com.tw"
+    }
+   ],
+   "websites": [
+    {
+     "url": "hengchang-trade.com.tw"
+    }
+   ],
+   "addresses": [
+    {
+     "street": "中山區南京東路二段88號12樓",
+     "city": "台北市",
+     "region": null,
+     "postal_code": "104",
+     "country": null,
+     "country_code": "TW",
+     "formatted": "104 台北市中山區南京東路二段88號12樓",
+     "alt": null
+    }
+   ],
+   "social": [],
+   "distractors": [
+    "連結全球 服務在地"
+   ],
+   "meta": {
+    "flavour": "TW",
+    "front_script": "mixed",
+    "two_sided": false,
+    "back_type": null,
+    "confusable_case": null,
+    "email_domain": "hengchang-trade.com.tw"
+   }
+  }
+ ],
+ "photos": [
+  {
+   "id": "img_0001",
+   "file": "images/img_0001.jpg",
+   "clean_file": "clean/img_0001.png",
+   "person_id": "p020",
+   "side": "back",
+   "pair_id": "p020",
+   "layout": "vertical",
+   "script": "zh-Hant",
+   "template": "back_contact",
+   "back_type": "b",
+   "degradations": [
+    "tilt_6deg",
+    "bg_white_table",
+    "busy_background",
+    "glare",
+    "blur_small",
+    "jpeg_q74",
+    "res_1641px"
+   ],
+   "features": [
+    "multi_phone",
+    "no_name"
+   ],
+   "visible_fields": [
+    "phones",
+    "emails",
+    "addresses"
+   ],
+   "width": 1230,
+   "height": 1641,
+   "card_quad": [
+    [
+     279.4,
+     81.8
+    ],
+    [
+     1025.8,
+     88.5
+    ],
+    [
+     1096.5,
+     1423.9
+    ],
+    [
+     283.4,
+     1472.4
+    ]
+   ],
+   "card_fill": 0.831,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": null,
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "main",
+      "number": "+886228236569",
+      "extension": null,
+      "text": "總機：+886-2-2823-6569"
+     },
+     {
+      "kind": "fax",
+      "number": "+886225046049",
+      "extension": null,
+      "text": "FAX：+886-2-2504-6049"
+     }
+    ],
+    "emails": [
+     {
+      "address": "info@dawnlight.design",
+      "text": "info@dawnlight.design"
+     }
+    ],
+    "websites": [],
+    "addresses": [
+     {
+      "key": "tpe_songren",
+      "form": "cjk",
+      "label": "地址",
+      "formatted": "台灣 110 台北市信義區松仁路100號5樓"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0002",
+   "file": "images/img_0002.jpg",
+   "clean_file": "clean/img_0002.png",
+   "person_id": "p023",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "en",
+   "template": "navy_gold",
+   "back_type": null,
+   "degradations": [
+    "tilt_7deg",
+    "bg_white_table",
+    "shadow",
+    "jpeg_q69",
+    "res_1328px"
+   ],
+   "features": [
+    "department"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1328,
+   "height": 996,
+   "card_quad": [
+    [
+     91.7,
+     234.1
+    ],
+    [
+     1208.6,
+     217.5
+    ],
+    [
+     1182.0,
+     856.5
+    ],
+    [
+     120.2,
+     836.7
+    ]
+   ],
+   "card_fill": 0.821,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Andrew",
+     "family": "Kim",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Silverline Software Inc.",
+    "company_cjk": null,
+    "job_title": "Founder & CEO",
+    "job_title_cjk": null,
+    "department": "R&D Center",
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+12125550126",
+      "extension": null,
+      "text": "Mobile: (212) 555-0126"
+     }
+    ],
+    "emails": [
+     {
+      "address": "andrew.kim@silverline.io",
+      "text": "Email: andrew.kim@silverline.io"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.silverline.io",
+      "text": "www.silverline.io"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "nyc_bway",
+      "form": "en",
+      "label": null,
+      "formatted": "1450 Broadway, 18th Floor, New York, NY 10018, USA"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0003",
+   "file": "images/img_0003.jpg",
+   "clean_file": "clean/img_0003.png",
+   "person_id": "p005",
+   "side": "front",
+   "pair_id": "p005",
+   "layout": "horizontal",
+   "script": "mixed",
+   "template": "color_band",
+   "back_type": null,
+   "degradations": [
+    "tilt_8deg",
+    "bg_wood",
+    "blur_small",
+    "jpeg_q67",
+    "res_1659px"
+   ],
+   "features": [
+    "fancy_font",
+    "certification",
+    "social_handle",
+    "phone_extension",
+    "bilingual_title",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses",
+    "social"
+   ],
+   "width": 1659,
+   "height": 1244,
+   "card_quad": [
+    [
+     289.8,
+     388.1
+    ],
+    [
+     1452.1,
+     363.0
+    ],
+    [
+     1476.5,
+     1055.2
+    ],
+    [
+     267.3,
+     1047.3
+    ]
+   ],
+   "card_fill": 0.716,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Winnie",
+     "family": "Cheung",
+     "cjk_full": "張美儀",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Kowloon Bay Logistics Ltd.",
+    "company_cjk": "九龍灣物流有限公司",
+    "job_title": "Logistics Coordinator",
+    "job_title_cjk": "物流專員",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "work",
+      "number": "+85220785414",
+      "extension": "111",
+      "text": "T 電話 +852-2078-5414 轉 111"
+     }
+    ],
+    "emails": [
+     {
+      "address": "wcheung@kblogistics.com.hk",
+      "text": "電郵 Email: wcheung@kblogistics.com.hk"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.kblogistics.com.hk",
+      "text": "網址：https://www.kblogistics.com.hk"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "hk_kwuntong",
+      "form": "cjk",
+      "label": null,
+      "formatted": "九龍觀塘鴻圖道12號永發工業大廈9樓B室"
+     }
+    ],
+    "social": [
+     {
+      "service": "wechat",
+      "handle": "winniecheung68",
+      "text": "微信 WeChat: winniecheung68"
+     }
+    ],
+    "distractors": [
+     "HACCP"
+    ]
+   }
+  },
+  {
+   "id": "img_0004",
+   "file": "images/img_0004.jpg",
+   "clean_file": "clean/img_0004.png",
+   "person_id": "p029",
+   "side": "front",
+   "pair_id": "p029",
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "color_band",
+   "back_type": null,
+   "degradations": [
+    "tilt_6deg",
+    "rotate_4deg",
+    "bg_white_table",
+    "shadow",
+    "blur_small",
+    "noise",
+    "jpeg_q85",
+    "res_1325px"
+   ],
+   "features": [
+    "logo_large",
+    "multi_phone",
+    "multi_address",
+    "fancy_font",
+    "phone_extension",
+    "department",
+    "wordmark_differs_from_company"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1325,
+   "height": 993,
+   "card_quad": [
+    [
+     156.2,
+     342.6
+    ],
+    [
+     1086.1,
+     285.1
+    ],
+    [
+     1105.4,
+     799.1
+    ],
+    [
+     207.5,
+     870.3
+    ]
+   ],
+   "card_fill": 0.692,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "陳志豪",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "嘉豐食品股份有限公司",
+    "job_title": null,
+    "job_title_cjk": "品保經理",
+    "department": null,
+    "department_cjk": "品保部",
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886915577300",
+      "extension": null,
+      "text": "行動電話：0915-577-300"
+     },
+     {
+      "kind": "work",
+      "number": "+886221830943",
+      "extension": "3340",
+      "text": "電話 (02) 2183-0943 #3340"
+     },
+     {
+      "kind": "fax",
+      "number": "+886220701978",
+      "extension": null,
+      "text": "FAX：+886 2 2070 1978"
+     }
+    ],
+    "emails": [
+     {
+      "address": "jasonc@chiafeng.com.tw",
+      "text": "jasonc@chiafeng.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.chiafeng.com.tw",
+      "text": "https://www.chiafeng.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "ntp_wenhua",
+      "form": "cjk",
+      "label": "總公司",
+      "formatted": "220 新北市板橋區文化路一段188號"
+     },
+     {
+      "key": "tyn_factory",
+      "form": "cjk",
+      "label": "工廠",
+      "formatted": "328 桃園市觀音區工業五路26號"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "金穗"
+    ]
+   }
+  },
+  {
+   "id": "img_0005",
+   "file": "images/img_0005.jpg",
+   "clean_file": "clean/img_0005.png",
+   "person_id": "p027",
+   "side": "front",
+   "pair_id": "p027",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "bank_style",
+   "back_type": null,
+   "degradations": [
+    "tilt_7deg",
+    "bg_dark_fabric",
+    "shadow",
+    "noise",
+    "jpeg_q69",
+    "res_2040px"
+   ],
+   "features": [
+    "fancy_font",
+    "slogan"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1530,
+   "height": 2040,
+   "card_quad": [
+    [
+     184.9,
+     801.4
+    ],
+    [
+     1255.7,
+     792.6
+    ],
+    [
+     1271.0,
+     1436.5
+    ],
+    [
+     152.8,
+     1406.4
+    ]
+   ],
+   "card_fill": 0.716,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Edmund",
+     "family": "Chow",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Kowloon Bay Logistics Ltd.",
+    "company_cjk": null,
+    "job_title": "Logistics Coordinator",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+85295412821",
+      "extension": null,
+      "text": "Mobile: +852-9541-2821"
+     }
+    ],
+    "emails": [
+     {
+      "address": "edmund_chow@kblogistics.com.hk",
+      "text": "E: edmund_chow@kblogistics.com.hk"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.kblogistics.com.hk",
+      "text": "W https://www.kblogistics.com.hk"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "hk_kwuntong",
+      "form": "en",
+      "label": null,
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon, Hong Kong"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Delivering Freshness, Every Mile"
+    ]
+   }
+  },
+  {
+   "id": "img_0006",
+   "file": "images/img_0006.jpg",
+   "clean_file": "clean/img_0006.png",
+   "person_id": "p001",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "en",
+   "template": "minimal_white",
+   "back_type": null,
+   "degradations": [
+    "tilt_8deg",
+    "rotate_4deg",
+    "bg_white_table",
+    "busy_background",
+    "uneven_light",
+    "shadow",
+    "noise",
+    "jpeg_q67",
+    "res_1900px"
+   ],
+   "features": [
+    "name_company_confusable",
+    "slogan",
+    "department"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1900,
+   "height": 1425,
+   "card_quad": [
+    [
+     112.6,
+     384.7
+    ],
+    [
+     1641.2,
+     313.5
+    ],
+    [
+     1664.8,
+     1142.9
+    ],
+    [
+     193.3,
+     1272.5
+    ]
+   ],
+   "card_fill": 0.794,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Victoria",
+     "family": "Chan",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Chan & Chan Trading Ltd.",
+    "company_cjk": null,
+    "job_title": "Vice President, Sales",
+    "job_title_cjk": null,
+    "department": "Import & Export Dept.",
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+85256648034",
+      "extension": null,
+      "text": "M: (852) 5664 8034"
+     }
+    ],
+    "emails": [
+     {
+      "address": "victoria@chanandchan.com.hk",
+      "text": "Email: victoria@chanandchan.com.hk"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.chanandchan.com.hk",
+      "text": "www.chanandchan.com.hk"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "hk_canton",
+      "form": "en",
+      "label": null,
+      "formatted": "Unit 1503, 15/F, Harbour Crest Centre, 30 Canton Road, Tsim Sha Tsui, Kowloon, Hong Kong"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Global Sourcing, Local Service"
+    ]
+   }
+  },
+  {
+   "id": "img_0007",
+   "file": "images/img_0007.jpg",
+   "clean_file": "clean/img_0007.png",
+   "person_id": "p028",
+   "side": "front",
+   "pair_id": null,
+   "layout": "vertical",
+   "script": "en",
+   "template": "portrait_modern",
+   "back_type": null,
+   "degradations": [
+    "tilt_4deg",
+    "rotate_2deg",
+    "bg_dark_fabric",
+    "busy_background",
+    "uneven_light",
+    "noise",
+    "jpeg_q63",
+    "res_2119px"
+   ],
+   "features": [
+    "multi_phone",
+    "slogan",
+    "established_year",
+    "phone_extension",
+    "department",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 2119,
+   "height": 1589,
+   "card_quad": [
+    [
+     821.4,
+     152.6
+    ],
+    [
+     1559.3,
+     110.0
+    ],
+    [
+     1618.8,
+     1438.2
+    ],
+    [
+     855.9,
+     1452.5
+    ]
+   ],
+   "card_fill": 0.828,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Owen",
+     "family": "Campbell",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "True North Food Distributors Ltd.",
+    "company_cjk": null,
+    "job_title": "General Manager",
+    "job_title_cjk": null,
+    "department": "International Trade Division",
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+19055550139",
+      "extension": null,
+      "text": "Cell: +1 905 555 0139"
+     },
+     {
+      "kind": "work",
+      "number": "+19055550112",
+      "extension": "352",
+      "text": "T: (905) 555-0112 x352"
+     },
+     {
+      "kind": "fax",
+      "number": "+19055550107",
+      "extension": null,
+      "text": "F: 905 555 0107"
+     }
+    ],
+    "emails": [
+     {
+      "address": "ocampbell@truenorthfood.ca",
+      "text": "Email: ocampbell@truenorthfood.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.truenorthfood.ca",
+      "text": "www.truenorthfood.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "mkm_hwy7",
+      "form": "en",
+      "label": null,
+      "formatted": "3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3, Canada"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Fresh from Ocean to Table",
+     "Est. 1992"
+    ]
+   }
+  },
+  {
+   "id": "img_0008",
+   "file": "images/img_0008.jpg",
+   "clean_file": "clean/img_0008.png",
+   "person_id": "p009",
+   "side": "back",
+   "pair_id": "p009",
+   "layout": "horizontal",
+   "script": "mixed",
+   "template": "back_logo",
+   "back_type": "c",
+   "degradations": [
+    "tilt_5deg",
+    "rotate_4deg",
+    "bg_wood",
+    "uneven_light",
+    "noise",
+    "jpeg_q71",
+    "res_1402px"
+   ],
+   "features": [
+    "logo_large",
+    "qr_code",
+    "slogan",
+    "wordmark_differs_from_company",
+    "no_name"
+   ],
+   "visible_fields": [
+    "websites"
+   ],
+   "width": 1402,
+   "height": 1051,
+   "card_quad": [
+    [
+     150.5,
+     272.1
+    ],
+    [
+     1098.3,
+     213.4
+    ],
+    [
+     1126.8,
+     737.2
+    ],
+    [
+     200.5,
+     820.5
+    ]
+   ],
+   "card_fill": 0.671,
+   "text_fit_scale": 1,
+   "qr_payload": "https://www.fuyuanseafood.com.tw",
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": null,
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [],
+    "emails": [],
+    "websites": [
+     {
+      "url": "www.fuyuanseafood.com.tw",
+      "text": "www.fuyuanseafood.com.tw"
+     }
+    ],
+    "addresses": [],
+    "social": [],
+    "distractors": [
+     "海之味",
+     "新鮮直送 安心美味"
+    ]
+   }
+  },
+  {
+   "id": "img_0009",
+   "file": "images/img_0009.jpg",
+   "clean_file": "clean/img_0009.png",
+   "person_id": "p027",
+   "side": "back",
+   "pair_id": "p027",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "back_logo",
+   "back_type": "c",
+   "degradations": [
+    "tilt_5deg",
+    "rotate_2deg",
+    "bg_wood",
+    "shadow",
+    "noise",
+    "jpeg_q83",
+    "res_1369px"
+   ],
+   "features": [
+    "logo_large",
+    "qr_code",
+    "no_name"
+   ],
+   "visible_fields": [
+    "company",
+    "websites"
+   ],
+   "width": 1369,
+   "height": 1026,
+   "card_quad": [
+    [
+     223.0,
+     215.5
+    ],
+    [
+     1211.2,
+     236.2
+    ],
+    [
+     1209.6,
+     818.3
+    ],
+    [
+     188.5,
+     779.2
+    ]
+   ],
+   "card_fill": 0.734,
+   "text_fit_scale": 1,
+   "qr_payload": "https://www.kblogistics.com.hk",
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Kowloon Bay Logistics Ltd.",
+    "company_cjk": null,
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [],
+    "emails": [],
+    "websites": [
+     {
+      "url": "https://www.kblogistics.com.hk",
+      "text": "https://www.kblogistics.com.hk"
+     }
+    ],
+    "addresses": [],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0010",
+   "file": "images/img_0010.jpg",
+   "clean_file": "clean/img_0010.png",
+   "person_id": "p004",
+   "side": "back",
+   "pair_id": "p004",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "back_decor",
+   "back_type": "d",
+   "degradations": [
+    "tilt_4deg",
+    "bg_wood",
+    "uneven_light",
+    "jpeg_q84",
+    "low_res_1180px"
+   ],
+   "features": [
+    "logo_large",
+    "no_name",
+    "decorative_only"
+   ],
+   "visible_fields": [],
+   "width": 1180,
+   "height": 885,
+   "card_quad": [
+    [
+     168.3,
+     224.2
+    ],
+    [
+     1019.8,
+     219.3
+    ],
+    [
+     1026.4,
+     719.4
+    ],
+    [
+     156.5,
+     707.6
+    ]
+   ],
+   "card_fill": 0.73,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": null,
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [],
+    "emails": [],
+    "websites": [],
+    "addresses": [],
+    "social": [],
+    "distractors": [
+     "Thank you"
+    ]
+   }
+  },
+  {
+   "id": "img_0011",
+   "file": "images/img_0011.jpg",
+   "clean_file": "clean/img_0011.png",
+   "person_id": "p020",
+   "side": "front",
+   "pair_id": "p020",
+   "layout": "vertical",
+   "script": "zh-Hant",
+   "template": "vertical_cjk",
+   "back_type": null,
+   "degradations": [
+    "tilt_5deg",
+    "rotate_4deg",
+    "bg_wood",
+    "uneven_light",
+    "blur_motion",
+    "jpeg_q72",
+    "low_res_991px"
+   ],
+   "features": [
+    "fancy_font",
+    "vertical_text",
+    "cjk_name_spaced"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 743,
+   "height": 991,
+   "card_quad": [
+    [
+     193.0,
+     92.9
+    ],
+    [
+     677.2,
+     112.4
+    ],
+    [
+     602.3,
+     951.5
+    ],
+    [
+     146.5,
+     900.5
+    ]
+   ],
+   "card_fill": 0.833,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "劉建宏",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "晨曦設計工作室",
+    "job_title": null,
+    "job_title_cjk": "資深設計師",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886968976352",
+      "extension": null,
+      "text": "手機 0968976352"
+     }
+    ],
+    "emails": [
+     {
+      "address": "henry@dawnlight.design",
+      "text": "E-mail：henry@dawnlight.design"
+     }
+    ],
+    "websites": [
+     {
+      "url": "dawnlight.design",
+      "text": "dawnlight.design"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_songren",
+      "form": "cjk",
+      "label": null,
+      "formatted": "台灣 110 台北市信義區松仁路100號5樓"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0012",
+   "file": "images/img_0012.jpg",
+   "clean_file": "clean/img_0012.png",
+   "person_id": "p003",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "zh-Hans",
+   "template": "bank_style",
+   "back_type": null,
+   "degradations": [
+    "tilt_6deg",
+    "rotate_6deg",
+    "bg_wood",
+    "busy_background",
+    "uneven_light",
+    "glare",
+    "blur_small",
+    "noise",
+    "jpeg_q57",
+    "low_res_933px"
+   ],
+   "features": [
+    "multi_phone",
+    "phone_extension",
+    "cjk_name_spaced"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 933,
+   "height": 699,
+   "card_quad": [
+    [
+     175.3,
+     258.2
+    ],
+    [
+     801.7,
+     200.6
+    ],
+    [
+     827.2,
+     547.3
+    ],
+    [
+     219.3,
+     616.0
+    ]
+   ],
+   "card_fill": 0.666,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "吴婷婷",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "杭州青禾茶业有限公司",
+    "job_title": null,
+    "job_title_cjk": "总经理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+8615965807355",
+      "extension": null,
+      "text": "手机：15965807355"
+     },
+     {
+      "kind": "work",
+      "number": "+8657166371924",
+      "extension": "464",
+      "text": "座机：0571-66371924 ext. 464"
+     },
+     {
+      "kind": "fax",
+      "number": "+8657187756714",
+      "extension": null,
+      "text": "传真：0571-87756714"
+     }
+    ],
+    "emails": [
+     {
+      "address": "wut@qinghetea.com",
+      "text": "邮箱：wut@qinghetea.com"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.qinghetea.com",
+      "text": "https://www.qinghetea.com"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "hz_xihu",
+      "form": "cjk",
+      "label": null,
+      "formatted": "浙江省杭州市西湖区龙井路16号, 邮编：310013"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0013",
+   "file": "images/img_0013.jpg",
+   "clean_file": "clean/img_0013.png",
+   "person_id": "p025",
+   "side": "front",
+   "pair_id": "p025",
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "japanese_minimal",
+   "back_type": null,
+   "degradations": [
+    "tilt_7deg",
+    "rotate_3deg",
+    "bg_dark_fabric",
+    "busy_background",
+    "uneven_light",
+    "glare",
+    "noise",
+    "jpeg_q67",
+    "res_1989px"
+   ],
+   "features": [
+    "person_photo",
+    "multi_phone",
+    "fancy_font",
+    "certification"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1989,
+   "height": 1491,
+   "card_quad": [
+    [
+     189.9,
+     243.6
+    ],
+    [
+     1591.7,
+     161.7
+    ],
+    [
+     1666.9,
+     997.8
+    ],
+    [
+     184.2,
+     1047.4
+    ]
+   ],
+   "card_fill": 0.726,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "洪詩涵",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "新禾科技股份有限公司",
+    "job_title": null,
+    "job_title_cjk": "創辦人暨執行長",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886982141192",
+      "extension": null,
+      "text": "行動電話：0982 141 192"
+     },
+     {
+      "kind": "work",
+      "number": "+886226822359",
+      "extension": null,
+      "text": "TEL：886-2-2682-2359"
+     },
+     {
+      "kind": "fax",
+      "number": "+886224410243",
+      "extension": null,
+      "text": "FAX：(02) 2441-0243"
+     }
+    ],
+    "emails": [
+     {
+      "address": "sandyh@xinhetech.com.tw",
+      "text": "信箱：sandyh@xinhetech.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "xinhetech.com.tw",
+      "text": "xinhetech.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_neihu",
+      "form": "cjk",
+      "label": null,
+      "formatted": "台灣 114 台北市內湖區瑞光路35號8樓"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "ISO 27001"
+    ]
+   }
+  },
+  {
+   "id": "img_0014",
+   "file": "images/img_0014.jpg",
+   "clean_file": "clean/img_0014.png",
+   "person_id": "p026",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "zh-Hans",
+   "template": "minimal_white",
+   "back_type": null,
+   "degradations": [
+    "tilt_5deg",
+    "bg_wood",
+    "blur_small",
+    "noise",
+    "jpeg_q78",
+    "res_1922px"
+   ],
+   "features": [
+    "person_photo",
+    "multi_email",
+    "slogan",
+    "social_handle"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses",
+    "social"
+   ],
+   "width": 1922,
+   "height": 1441,
+   "card_quad": [
+    [
+     187.0,
+     407.2
+    ],
+    [
+     1597.7,
+     365.6
+    ],
+    [
+     1592.1,
+     1173.8
+    ],
+    [
+     226.1,
+     1183.1
+    ]
+   ],
+   "card_fill": 0.723,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "徐浩",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "北京云帆软件有限公司",
+    "job_title": null,
+    "job_title_cjk": "市场专员",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "work",
+      "number": "+861061074045",
+      "extension": null,
+      "text": "电话：(010) 6107-4045"
+     }
+    ],
+    "emails": [
+     {
+      "address": "hao.xu@yunfansoft.cn",
+      "text": "E-mail：hao.xu@yunfansoft.cn"
+     },
+     {
+      "address": "contact@yunfansoft.cn",
+      "text": "E-mail：contact@yunfansoft.cn"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.yunfansoft.cn",
+      "text": "www.yunfansoft.cn"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "bj_jianguo",
+      "form": "cjk",
+      "label": null,
+      "formatted": "中国北京市朝阳区建国路93号1203室（100022）"
+     }
+    ],
+    "social": [
+     {
+      "service": "wechat",
+      "handle": "xuhao80",
+      "text": "微信：xuhao80"
+     }
+    ],
+    "distractors": [
+     "科技创新 引领未来"
+    ]
+   }
+  },
+  {
+   "id": "img_0015",
+   "file": "images/img_0015.jpg",
+   "clean_file": "clean/img_0015.png",
+   "person_id": "p006",
+   "side": "back",
+   "pair_id": "p006",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "back_contact",
+   "back_type": "b",
+   "degradations": [
+    "tilt_5deg",
+    "rotate_3deg",
+    "bg_wood",
+    "uneven_light",
+    "shadow",
+    "noise",
+    "jpeg_q51",
+    "res_2306px"
+   ],
+   "features": [
+    "multi_phone",
+    "multi_email",
+    "multi_address",
+    "phone_extension",
+    "no_name",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "phones",
+    "emails",
+    "addresses"
+   ],
+   "width": 2306,
+   "height": 1729,
+   "card_quad": [
+    [
+     362.9,
+     563.1
+    ],
+    [
+     1787.2,
+     648.3
+    ],
+    [
+     1722.9,
+     1444.5
+    ],
+    [
+     334.2,
+     1369.5
+    ]
+   ],
+   "card_fill": 0.611,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": null,
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "main",
+      "number": "+16475550134",
+      "extension": null,
+      "text": "Office: +1 647 555 0134"
+     },
+     {
+      "kind": "fax",
+      "number": "+16475550118",
+      "extension": null,
+      "text": "F +1-647-555-0118"
+     },
+     {
+      "kind": "work",
+      "number": "+16475550102",
+      "extension": "31",
+      "text": "Direct: (647) 555-0102 Ext 31"
+     }
+    ],
+    "emails": [
+     {
+      "address": "info@granitepeakcap.ca",
+      "text": "info@granitepeakcap.ca"
+     },
+     {
+      "address": "sophie.lam@granitepeakcap.ca",
+      "text": "sophie.lam@granitepeakcap.ca"
+     }
+    ],
+    "websites": [],
+    "addresses": [
+     {
+      "key": "tor_bay",
+      "form": "en",
+      "label": "Head Office",
+      "formatted": "333 Bay St, 18th Floor, Toronto, ON M5H 2R2, Canada"
+     },
+     {
+      "key": "van_burr",
+      "form": "en",
+      "label": "Warehouse & Distribution",
+      "formatted": "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3, Canada"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0016",
+   "file": "images/img_0016.jpg",
+   "clean_file": "clean/img_0016.png",
+   "person_id": "p016",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "zh-Hans",
+   "template": "minimal_white",
+   "back_type": null,
+   "degradations": [
+    "tilt_6deg",
+    "rotate_5deg",
+    "bg_wood",
+    "shadow",
+    "jpeg_q60",
+    "res_1675px"
+   ],
+   "features": [],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1675,
+   "height": 1256,
+   "card_quad": [
+    [
+     251.3,
+     466.5
+    ],
+    [
+     1391.6,
+     359.8
+    ],
+    [
+     1424.2,
+     1008.1
+    ],
+    [
+     329.4,
+     1090.2
+    ]
+   ],
+   "card_fill": 0.67,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "马俊",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "广州恒泰进出口贸易有限公司",
+    "job_title": null,
+    "job_title_cjk": "销售副总裁",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+8618861094756",
+      "extension": null,
+      "text": "手机：18861094756"
+     }
+    ],
+    "emails": [
+     {
+      "address": "maj@hengtai-trade.com",
+      "text": "maj@hengtai-trade.com"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.hengtai-trade.com",
+      "text": "www.hengtai-trade.com"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "gz_tianhe",
+      "form": "cjk",
+      "label": null,
+      "formatted": "中国广东省广州市天河区天河路385号1806室, 邮编：510620"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0017",
+   "file": "images/img_0017.jpg",
+   "clean_file": "clean/img_0017.png",
+   "person_id": "p015",
+   "side": "front",
+   "pair_id": "p015",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "startup",
+   "back_type": null,
+   "degradations": [
+    "tilt_2deg",
+    "rotate_5deg",
+    "bg_dark_fabric",
+    "busy_background",
+    "noise",
+    "jpeg_q55",
+    "low_res_1189px"
+   ],
+   "features": [
+    "person_photo",
+    "established_year"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1189,
+   "height": 891,
+   "card_quad": [
+    [
+     171.4,
+     198.7
+    ],
+    [
+     968.3,
+     269.0
+    ],
+    [
+     936.2,
+     724.7
+    ],
+    [
+     127.1,
+     660.4
+    ]
+   ],
+   "card_fill": 0.678,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Michelle",
+     "family": "Ng",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Cedarline Logistics Inc.",
+    "company_cjk": null,
+    "job_title": "General Manager",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+19055550138",
+      "extension": null,
+      "text": "Cell: 905 555 0138"
+     }
+    ],
+    "emails": [
+     {
+      "address": "michelle.ng@cedarline.ca",
+      "text": "E: michelle.ng@cedarline.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.cedarline.ca",
+      "text": "www.cedarline.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "mis_ware",
+      "form": "en",
+      "label": null,
+      "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3, Canada"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Established 2011"
+    ]
+   }
+  },
+  {
+   "id": "img_0018",
+   "file": "images/img_0018.jpg",
+   "clean_file": "clean/img_0018.png",
+   "person_id": "p002",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "en",
+   "template": "navy_gold",
+   "back_type": null,
+   "degradations": [
+    "tilt_6deg",
+    "rotate_3deg",
+    "bg_dark_fabric",
+    "uneven_light",
+    "shadow",
+    "noise",
+    "jpeg_q73",
+    "res_1435px"
+   ],
+   "features": [
+    "person_photo",
+    "multi_phone",
+    "name_company_confusable",
+    "slogan",
+    "phone_extension",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1435,
+   "height": 1076,
+   "card_quad": [
+    [
+     244.2,
+     255.0
+    ],
+    [
+     1199.8,
+     198.7
+    ],
+    [
+     1216.5,
+     748.8
+    ],
+    [
+     283.2,
+     783.4
+    ]
+   ],
+   "card_fill": 0.66,
+   "text_fit_scale": 0.97,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Morgan",
+     "family": "Lee",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Morgan Consulting Group",
+    "company_cjk": null,
+    "job_title": "Partner",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+14165550128",
+      "extension": null,
+      "text": "M +1-416-555-0128"
+     },
+     {
+      "kind": "work",
+      "number": "+14165550171",
+      "extension": "504",
+      "text": "P: +1 416 555 0171 ext 504"
+     },
+     {
+      "kind": "fax",
+      "number": "+14165550158",
+      "extension": null,
+      "text": "Fax: 416 555 0158"
+     }
+    ],
+    "emails": [
+     {
+      "address": "morgan_lee@morganconsulting.ca",
+      "text": "Email: morgan_lee@morganconsulting.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.morganconsulting.ca",
+      "text": "www.morganconsulting.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tor_front",
+      "form": "en",
+      "label": null,
+      "formatted": "120 Front St W, Suite 400, Toronto, ON M5J 2M2, Canada"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Advice that Moves You Forward"
+    ]
+   }
+  },
+  {
+   "id": "img_0019",
+   "file": "images/img_0019.jpg",
+   "clean_file": "clean/img_0019.png",
+   "person_id": "p019",
+   "side": "front",
+   "pair_id": "p019",
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "color_band",
+   "back_type": null,
+   "degradations": [
+    "tilt_8deg",
+    "rotate_6deg",
+    "bg_dark_fabric",
+    "uneven_light",
+    "noise",
+    "jpeg_q82",
+    "res_1733px"
+   ],
+   "features": [
+    "multi_phone",
+    "established_year"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1733,
+   "height": 1299,
+   "card_quad": [
+    [
+     107.4,
+     384.5
+    ],
+    [
+     1530.9,
+     265.3
+    ],
+    [
+     1563.9,
+     1038.1
+    ],
+    [
+     219.2,
+     1185.1
+    ]
+   ],
+   "card_fill": 0.803,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "廖思妤",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "瑞光冷鏈物流股份有限公司",
+    "job_title": null,
+    "job_title_cjk": "業務開發經理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886914332774",
+      "extension": null,
+      "text": "行動電話：0914-332-774"
+     },
+     {
+      "kind": "work",
+      "number": "+886226497825",
+      "extension": null,
+      "text": "電話：+886 2 2649 7825"
+     },
+     {
+      "kind": "fax",
+      "number": "+886224750622",
+      "extension": null,
+      "text": "FAX：02-24750622"
+     }
+    ],
+    "emails": [
+     {
+      "address": "cliao@ruiguang-logistics.com.tw",
+      "text": "cliao@ruiguang-logistics.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "ruiguang-logistics.com.tw",
+      "text": "網址：ruiguang-logistics.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_neihu",
+      "form": "cjk",
+      "label": null,
+      "formatted": "114 台北市內湖區瑞光路35號8樓"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "創立於1962年"
+    ]
+   }
+  },
+  {
+   "id": "img_0020",
+   "file": "images/img_0020.jpg",
+   "clean_file": "clean/img_0020.png",
+   "person_id": "p024",
+   "side": "front",
+   "pair_id": "p024",
+   "layout": "vertical",
+   "script": "mixed",
+   "template": "portrait_classic",
+   "back_type": null,
+   "degradations": [
+    "tilt_3deg",
+    "bg_dark_fabric",
+    "uneven_light",
+    "jpeg_q61",
+    "res_1754px"
+   ],
+   "features": [
+    "person_photo",
+    "multi_email",
+    "small_font",
+    "social_handle",
+    "bilingual_title",
+    "department",
+    "wordmark_differs_from_company",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses",
+    "social"
+   ],
+   "width": 1315,
+   "height": 1754,
+   "card_quad": [
+    [
+     363.1,
+     424.3
+    ],
+    [
+     999.0,
+     413.8
+    ],
+    [
+     1038.0,
+     1548.6
+    ],
+    [
+     371.9,
+     1565.3
+    ]
+   ],
+   "card_fill": 0.649,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Ethan",
+     "family": "Wong",
+     "cjk_full": "黃以恆",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Harbourview Frozen Foods Ltd.",
+    "company_cjk": "海景冷凍食品有限公司",
+    "job_title": "Export Manager",
+    "job_title_cjk": "外銷經理",
+    "department": "Quality Assurance",
+    "department_cjk": "品保部",
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+14165550126",
+      "extension": null,
+      "text": "M 手機 +1 416 555 0126"
+     }
+    ],
+    "emails": [
+     {
+      "address": "ethan.wong@harbourviewfoods.ca",
+      "text": "ethan.wong@harbourviewfoods.ca"
+     },
+     {
+      "address": "sales@harbourviewfoods.ca",
+      "text": "sales@harbourviewfoods.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.harbourviewfoods.ca",
+      "text": "www.harbourviewfoods.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tor_front",
+      "form": "cjk",
+      "label": null,
+      "formatted": "加拿大安大略省多倫多前街西120號400室, 郵遞區號 M5J 2M2"
+     }
+    ],
+    "social": [
+     {
+      "service": "linkedin",
+      "handle": "ethan-wong",
+      "text": "in /ethan-wong"
+     }
+    ],
+    "distractors": [
+     "OCEAN CREST"
+    ]
+   }
+  },
+  {
+   "id": "img_0021",
+   "file": "images/img_0021.jpg",
+   "clean_file": "clean/img_0021.png",
+   "person_id": "p010",
+   "side": "front",
+   "pair_id": null,
+   "layout": "vertical",
+   "script": "en",
+   "template": "portrait_modern",
+   "back_type": null,
+   "degradations": [
+    "tilt_5deg",
+    "rotate_3deg",
+    "bg_wood",
+    "uneven_light",
+    "shadow",
+    "glare",
+    "blur_small",
+    "jpeg_q73",
+    "res_1616px"
+   ],
+   "features": [
+    "name_company_confusable",
+    "department"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1212,
+   "height": 1616,
+   "card_quad": [
+    [
+     242.2,
+     320.8
+    ],
+    [
+     903.3,
+     297.5
+    ],
+    [
+     950.1,
+     1410.1
+    ],
+    [
+     323.2,
+     1461.9
+    ]
+   ],
+   "card_fill": 0.699,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Jordan",
+     "family": "Taylor",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Taylor Jordan & Associates LLP",
+    "company_cjk": null,
+    "job_title": "Senior Consultant",
+    "job_title_cjk": null,
+    "department": "Strategy Practice",
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+12125550156",
+      "extension": null,
+      "text": "M 212-555-0156"
+     }
+    ],
+    "emails": [
+     {
+      "address": "jordant@taylorjordanlaw.com",
+      "text": "E jordant@taylorjordanlaw.com"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.taylorjordanlaw.com",
+      "text": "Web: www.taylorjordanlaw.com"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "nyc_madison",
+      "form": "en",
+      "label": null,
+      "formatted": "420 Madison Ave, Suite 1201, New York, NY 10017"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0022",
+   "file": "images/img_0022.jpg",
+   "clean_file": "clean/img_0022.png",
+   "person_id": "p021",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "en",
+   "template": "bank_style",
+   "back_type": null,
+   "degradations": [
+    "tilt_2deg",
+    "bg_white_table",
+    "shadow",
+    "jpeg_q67",
+    "res_2087px"
+   ],
+   "features": [
+    "qr_code",
+    "multi_phone",
+    "multi_address",
+    "small_font",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 2087,
+   "height": 1565,
+   "card_quad": [
+    [
+     167.8,
+     390.9
+    ],
+    [
+     1933.8,
+     367.3
+    ],
+    [
+     1931.2,
+     1375.1
+    ],
+    [
+     190.7,
+     1386.0
+    ]
+   ],
+   "card_fill": 0.84,
+   "text_fit_scale": 1,
+   "qr_payload": "https://www.northstarcoldchain.com",
+   "printed": {
+    "name": {
+     "given": "Kevin",
+     "family": "Zhang",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Northstar Cold Chain Inc.",
+    "company_cjk": null,
+    "job_title": "Logistics Coordinator",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+16045550123",
+      "extension": null,
+      "text": "Cell: 604-555-0123"
+     },
+     {
+      "kind": "work",
+      "number": "+16045550156",
+      "extension": null,
+      "text": "T +1.604.555.0156"
+     }
+    ],
+    "emails": [
+     {
+      "address": "kevin.zhang@northstarcoldchain.com",
+      "text": "kevin.zhang@northstarcoldchain.com"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.northstarcoldchain.com",
+      "text": "www.northstarcoldchain.com"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "bby_ware",
+      "form": "en",
+      "label": "Head Office",
+      "formatted": "4321 Still Creek Dr, Unit 110, Burnaby, BC V5C 6S7, Canada"
+     },
+     {
+      "key": "van_burr",
+      "form": "en",
+      "label": "Warehouse",
+      "formatted": "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3, Canada"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0023",
+   "file": "images/img_0023.jpg",
+   "clean_file": "clean/img_0023.png",
+   "person_id": "p014",
+   "side": "front",
+   "pair_id": null,
+   "layout": "vertical",
+   "script": "en",
+   "template": "portrait_classic",
+   "back_type": null,
+   "degradations": [
+    "tilt_6deg",
+    "bg_wood",
+    "noise",
+    "jpeg_q68",
+    "res_1938px"
+   ],
+   "features": [
+    "qr_code",
+    "small_font",
+    "phone_extension",
+    "name_prefix_suffix"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1453,
+   "height": 1938,
+   "card_quad": [
+    [
+     340.3,
+     147.2
+    ],
+    [
+     1162.2,
+     202.1
+    ],
+    [
+     1099.6,
+     1549.3
+    ],
+    [
+     340.0,
+     1570.1
+    ]
+   ],
+   "card_fill": 0.715,
+   "text_fit_scale": 1,
+   "qr_payload": "https://www.hudsonpine.com",
+   "printed": {
+    "name": {
+     "given": "Laura",
+     "family": "Bennett",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": "CPA"
+    },
+    "company": "Hudson & Pine Advisory LLC",
+    "company_cjk": null,
+    "job_title": "Partner",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "work",
+      "number": "+12125550122",
+      "extension": "91",
+      "text": "T (212) 555-0122 ext. 91"
+     }
+    ],
+    "emails": [
+     {
+      "address": "laura.bennett@hudsonpine.com",
+      "text": "laura.bennett@hudsonpine.com"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.hudsonpine.com",
+      "text": "W www.hudsonpine.com"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "nyc_madison",
+      "form": "en",
+      "label": null,
+      "formatted": "420 Madison Ave, Suite 1201, New York, NY 10017, USA"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0024",
+   "file": "images/img_0024.jpg",
+   "clean_file": "clean/img_0024.png",
+   "person_id": "p011",
+   "side": "front",
+   "pair_id": "p011",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "color_band",
+   "back_type": null,
+   "degradations": [
+    "tilt_4deg",
+    "bg_wood",
+    "busy_background",
+    "noise",
+    "jpeg_q55",
+    "res_2137px"
+   ],
+   "features": [
+    "logo_large",
+    "multi_email",
+    "multi_address",
+    "small_font",
+    "slogan",
+    "certification",
+    "phone_extension"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 2137,
+   "height": 1602,
+   "card_quad": [
+    [
+     207.9,
+     200.6
+    ],
+    [
+     1966.6,
+     161.5
+    ],
+    [
+     2005.1,
+     1192.7
+    ],
+    [
+     197.0,
+     1205.3
+    ]
+   ],
+   "card_fill": 0.835,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Derek",
+     "family": "Lau",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Lakeshore Trading Co.",
+    "company_cjk": null,
+    "job_title": "Vice President, Sales",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "work",
+      "number": "+19055550171",
+      "extension": "13",
+      "text": "Office: +1-905-555-0171 ext. 13"
+     }
+    ],
+    "emails": [
+     {
+      "address": "dlau@lakeshoretrading.ca",
+      "text": "dlau@lakeshoretrading.ca"
+     },
+     {
+      "address": "service@lakeshoretrading.ca",
+      "text": "service@lakeshoretrading.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.lakeshoretrading.ca",
+      "text": "www.lakeshoretrading.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "mkm_hwy7",
+      "form": "en",
+      "label": "Head Office",
+      "formatted": "3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3"
+     },
+     {
+      "key": "mis_ware",
+      "form": "en",
+      "label": "Warehouse",
+      "formatted": "6750 Mississauga Rd, Unit 7, Mississauga, ON L5N 2L3"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Global Sourcing, Local Service",
+     "ISO 9001:2015"
+    ]
+   }
+  },
+  {
+   "id": "img_0025",
+   "file": "images/img_0025.jpg",
+   "clean_file": "clean/img_0025.png",
+   "person_id": "p022",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "en",
+   "template": "startup",
+   "back_type": null,
+   "degradations": [
+    "tilt_5deg",
+    "rotate_4deg",
+    "bg_wood",
+    "blur_small",
+    "noise",
+    "jpeg_q73",
+    "res_2240px"
+   ],
+   "features": [
+    "multi_phone",
+    "wordmark_differs_from_company",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 2240,
+   "height": 1680,
+   "card_quad": [
+    [
+     388.5,
+     350.3
+    ],
+    [
+     2091.9,
+     477.1
+    ],
+    [
+     2009.3,
+     1417.5
+    ],
+    [
+     345.5,
+     1333.2
+    ]
+   ],
+   "card_fill": 0.754,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Justin",
+     "family": "Tang",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Brightwater Seafood Inc.",
+    "company_cjk": null,
+    "job_title": "General Manager",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+16045550166",
+      "extension": null,
+      "text": "Mobile: (604) 555-0166"
+     },
+     {
+      "kind": "work",
+      "number": "+16045550131",
+      "extension": null,
+      "text": "T +1-604-555-0131"
+     },
+     {
+      "kind": "fax",
+      "number": "+16045550122",
+      "extension": null,
+      "text": "F: +1 604 555 0122"
+     }
+    ],
+    "emails": [
+     {
+      "address": "justint@brightwaterseafood.ca",
+      "text": "E: justint@brightwaterseafood.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.brightwaterseafood.ca",
+      "text": "www.brightwaterseafood.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "van_burr",
+      "form": "en",
+      "label": null,
+      "formatted": "1055 W Georgia St, Suite 2100, Vancouver, BC V6E 3P3"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "TIDEWELL"
+    ]
+   }
+  },
+  {
+   "id": "img_0026",
+   "file": "images/img_0026.jpg",
+   "clean_file": "clean/img_0026.png",
+   "person_id": "p009",
+   "side": "front",
+   "pair_id": "p009",
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "minimal_white",
+   "back_type": null,
+   "degradations": [
+    "tilt_7deg",
+    "rotate_5deg",
+    "bg_white_table",
+    "jpeg_q73",
+    "res_1857px"
+   ],
+   "features": [
+    "person_photo",
+    "multi_phone",
+    "small_font",
+    "established_year",
+    "phone_extension",
+    "department",
+    "wordmark_differs_from_company"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1857,
+   "height": 1392,
+   "card_quad": [
+    [
+     388.9,
+     380.5
+    ],
+    [
+     1578.3,
+     271.7
+    ],
+    [
+     1616.7,
+     953.9
+    ],
+    [
+     464.9,
+     1031.7
+    ]
+   ],
+   "card_fill": 0.634,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "楊志偉",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "福源水產有限公司",
+    "job_title": null,
+    "job_title_cjk": "品保經理",
+    "department": null,
+    "department_cjk": "品保部",
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886981594499",
+      "extension": null,
+      "text": "行動電話：0981-594-499"
+     },
+     {
+      "kind": "work",
+      "number": "+886423301392",
+      "extension": "4518",
+      "text": "TEL：+886 4 2330 1392 ext. 4518"
+     },
+     {
+      "kind": "fax",
+      "number": "+886421715115",
+      "extension": null,
+      "text": "傳真：+886 4 2171 5115"
+     }
+    ],
+    "emails": [
+     {
+      "address": "wilson.yang@fuyuanseafood.com.tw",
+      "text": "E-mail：wilson.yang@fuyuanseafood.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.fuyuanseafood.com.tw",
+      "text": "www.fuyuanseafood.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "txg_taiwan",
+      "form": "cjk",
+      "label": null,
+      "formatted": "407 台中市西屯區台灣大道三段99號8樓"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "創立於1992年",
+     "海之味"
+    ]
+   }
+  },
+  {
+   "id": "img_0027",
+   "file": "images/img_0027.jpg",
+   "clean_file": "clean/img_0027.png",
+   "person_id": "p011",
+   "side": "back",
+   "pair_id": "p011",
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "bank_style",
+   "back_type": "a",
+   "degradations": [
+    "tilt_3deg",
+    "bg_dark_fabric",
+    "uneven_light",
+    "shadow",
+    "noise",
+    "jpeg_q76",
+    "res_1854px"
+   ],
+   "features": [
+    "multi_email",
+    "multi_address",
+    "slogan",
+    "certification",
+    "phone_extension"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1854,
+   "height": 1390,
+   "card_quad": [
+    [
+     312.5,
+     286.1
+    ],
+    [
+     1683.5,
+     293.9
+    ],
+    [
+     1698.2,
+     1076.0
+    ],
+    [
+     299.8,
+     1085.8
+    ]
+   ],
+   "card_fill": 0.747,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "劉德成",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "湖濱貿易公司",
+    "job_title": null,
+    "job_title_cjk": "業務副總經理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "work",
+      "number": "+19055550171",
+      "extension": "13",
+      "text": "TEL：+1 905 555 0171 #13"
+     }
+    ],
+    "emails": [
+     {
+      "address": "dlau@lakeshoretrading.ca",
+      "text": "dlau@lakeshoretrading.ca"
+     },
+     {
+      "address": "service@lakeshoretrading.ca",
+      "text": "service@lakeshoretrading.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.lakeshoretrading.ca",
+      "text": "網址：www.lakeshoretrading.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "mkm_hwy7",
+      "form": "cjk",
+      "label": "總公司",
+      "formatted": "安大略省萬錦7號公路東3601號1008室, 郵遞區號 L3R 0M3"
+     },
+     {
+      "key": "mis_ware",
+      "form": "cjk",
+      "label": "工廠",
+      "formatted": "安大略省密西沙加密西沙加路6750號7單元, 郵遞區號 L5N 2L3"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "誠信經營 互利共贏",
+     "ISO 9001:2015"
+    ]
+   }
+  },
+  {
+   "id": "img_0028",
+   "file": "images/img_0028.jpg",
+   "clean_file": "clean/img_0028.png",
+   "person_id": "p017",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "japanese_minimal",
+   "back_type": null,
+   "degradations": [
+    "tilt_6deg",
+    "rotate_3deg",
+    "bg_white_table",
+    "jpeg_q60",
+    "res_2191px"
+   ],
+   "features": [
+    "person_photo"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 2191,
+   "height": 1643,
+   "card_quad": [
+    [
+     257.9,
+     276.1
+    ],
+    [
+     1799.7,
+     343.9
+    ],
+    [
+     1779.7,
+     1252.4
+    ],
+    [
+     180.6,
+     1156.4
+    ]
+   ],
+   "card_fill": 0.718,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "曾冠宇",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "合邦商業銀行",
+    "job_title": null,
+    "job_title_cjk": "副總裁",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886999720265",
+      "extension": null,
+      "text": "行動電話：0999-720-265"
+     }
+    ],
+    "emails": [
+     {
+      "address": "leo.tseng@hebangbank.com.tw",
+      "text": "E-mail：leo.tseng@hebangbank.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.hebangbank.com.tw",
+      "text": "https://www.hebangbank.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_nanjing",
+      "form": "cjk",
+      "label": null,
+      "formatted": "台灣 104 台北市中山區南京東路二段88號12樓"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0029",
+   "file": "images/img_0029.jpg",
+   "clean_file": "clean/img_0029.png",
+   "person_id": "p007",
+   "side": "front",
+   "pair_id": null,
+   "layout": "vertical",
+   "script": "mixed",
+   "template": "portrait_classic",
+   "back_type": null,
+   "degradations": [
+    "tilt_7deg",
+    "bg_white_table",
+    "glare",
+    "jpeg_q69",
+    "res_2021px"
+   ],
+   "features": [
+    "multi_phone",
+    "multi_email",
+    "established_year",
+    "bilingual_title",
+    "department",
+    "wordmark_differs_from_company",
+    "name_prefix_suffix",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1515,
+   "height": 2021,
+   "card_quad": [
+    [
+     437.7,
+     374.0
+    ],
+    [
+     1229.7,
+     413.6
+    ],
+    [
+     1267.2,
+     1833.7
+    ],
+    [
+     393.9,
+     1865.3
+    ]
+   ],
+   "card_fill": 0.721,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Eric",
+     "family": "Lee",
+     "cjk_full": "李承恩",
+     "prefix": null,
+     "suffix": "MBA"
+    },
+    "company": "Chia Feng Foods Co., Ltd.",
+    "company_cjk": "嘉豐食品股份有限公司",
+    "job_title": "Sales Manager",
+    "job_title_cjk": "業務經理",
+    "department": "International Trade Division",
+    "department_cjk": "國際貿易部",
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886929815950",
+      "extension": null,
+      "text": "M 手機 +886 929 815 950"
+     },
+     {
+      "kind": "work",
+      "number": "+886221021275",
+      "extension": null,
+      "text": "T 電話 (02) 2102-1275"
+     },
+     {
+      "kind": "fax",
+      "number": "+886221353556",
+      "extension": null,
+      "text": "傳真 Fax: +886 2 2135 3556"
+     }
+    ],
+    "emails": [
+     {
+      "address": "elee@chiafeng.com.tw",
+      "text": "E-mail: elee@chiafeng.com.tw"
+     },
+     {
+      "address": "contact@chiafeng.com.tw",
+      "text": "E-mail: contact@chiafeng.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "chiafeng.com.tw",
+      "text": "chiafeng.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "ntp_wenhua",
+      "form": "en",
+      "label": null,
+      "formatted": "No. 188, Sec. 1, Wenhua Rd., Banqiao Dist., New Taipei City 220"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "始於1985",
+     "金穗"
+    ]
+   }
+  },
+  {
+   "id": "img_0030",
+   "file": "images/img_0030.jpg",
+   "clean_file": "clean/img_0030.png",
+   "person_id": "p013",
+   "side": "front",
+   "pair_id": null,
+   "layout": "vertical",
+   "script": "mixed",
+   "template": "portrait_modern",
+   "back_type": null,
+   "degradations": [
+    "tilt_3deg",
+    "bg_dark_fabric",
+    "uneven_light",
+    "blur_small",
+    "jpeg_q66",
+    "res_1578px"
+   ],
+   "features": [
+    "slogan",
+    "bilingual_title",
+    "wordmark_differs_from_company"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1183,
+   "height": 1578,
+   "card_quad": [
+    [
+     231.3,
+     261.3
+    ],
+    [
+     793.9,
+     273.6
+    ],
+    [
+     768.0,
+     1226.3
+    ],
+    [
+     233.7,
+     1225.8
+    ]
+   ],
+   "card_fill": 0.608,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Patrick",
+     "family": "Leung",
+     "cjk_full": "梁家輝",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Wui Tai Foods Limited",
+    "company_cjk": "滙泰食品有限公司",
+    "job_title": "Export Manager",
+    "job_title_cjk": "外銷經理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "work",
+      "number": "+85226273144",
+      "extension": null,
+      "text": "T 電話 2627 3144"
+     }
+    ],
+    "emails": [
+     {
+      "address": "patrick_leung@wuitaifoods.com.hk",
+      "text": "電郵 Email: patrick_leung@wuitaifoods.com.hk"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.wuitaifoods.com.hk",
+      "text": "https://www.wuitaifoods.com.hk"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "hk_kwuntong",
+      "form": "en",
+      "label": null,
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Your Trusted Partner in Frozen Foods",
+     "GOLDEN BOWL"
+    ]
+   }
+  },
+  {
+   "id": "img_0031",
+   "file": "images/img_0031.jpg",
+   "clean_file": "clean/img_0031.png",
+   "person_id": "p008",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "japanese_minimal",
+   "back_type": null,
+   "degradations": [
+    "tilt_8deg",
+    "rotate_2deg",
+    "bg_wood",
+    "uneven_light",
+    "blur_small",
+    "jpeg_q76",
+    "res_1424px"
+   ],
+   "features": [
+    "person_photo"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1424,
+   "height": 1068,
+   "card_quad": [
+    [
+     168.0,
+     123.7
+    ],
+    [
+     1223.7,
+     141.7
+    ],
+    [
+     1212.1,
+     779.4
+    ],
+    [
+     124.0,
+     714.1
+    ]
+   ],
+   "card_fill": 0.757,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "蕭博文",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "恆昌國際貿易有限公司",
+    "job_title": null,
+    "job_title_cjk": "採購經理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886994109193",
+      "extension": null,
+      "text": "手機：+886 994 109 193"
+     }
+    ],
+    "emails": [
+     {
+      "address": "vincenth@hengchang-trade.com.tw",
+      "text": "E-mail：vincenth@hengchang-trade.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.hengchang-trade.com.tw",
+      "text": "https://www.hengchang-trade.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_nanjing",
+      "form": "cjk",
+      "label": null,
+      "formatted": "104 台北市中山區南京東路二段88號12樓"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0032",
+   "file": "images/img_0032.jpg",
+   "clean_file": "clean/img_0032.png",
+   "person_id": "p004",
+   "side": "front",
+   "pair_id": "p004",
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "logo_heavy",
+   "back_type": null,
+   "degradations": [
+    "tilt_4deg",
+    "rotate_3deg",
+    "bg_white_table",
+    "jpeg_q79",
+    "low_res_916px"
+   ],
+   "features": [
+    "logo_large",
+    "name_company_confusable",
+    "department"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 916,
+   "height": 687,
+   "card_quad": [
+    [
+     122.9,
+     194.8
+    ],
+    [
+     682.7,
+     162.2
+    ],
+    [
+     695.1,
+     485.2
+    ],
+    [
+     142.8,
+     507.5
+    ]
+   ],
+   "card_fill": 0.608,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "王大明",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "大明食品股份有限公司",
+    "job_title": null,
+    "job_title_cjk": "總經理",
+    "department": null,
+    "department_cjk": "採購部",
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886901907353",
+      "extension": null,
+      "text": "手機 0901-907-353"
+     }
+    ],
+    "emails": [
+     {
+      "address": "david@daming-food.com.tw",
+      "text": "信箱：david@daming-food.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "daming-food.com.tw",
+      "text": "daming-food.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_songren",
+      "form": "cjk",
+      "label": null,
+      "formatted": "110 台北市信義區松仁路100號5樓"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0033",
+   "file": "images/img_0033.jpg",
+   "clean_file": "clean/img_0033.png",
+   "person_id": "p018",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "mixed",
+   "template": "bilingual_columns",
+   "back_type": null,
+   "degradations": [
+    "tilt_5deg",
+    "rotate_4deg",
+    "bg_wood",
+    "busy_background",
+    "uneven_light",
+    "noise",
+    "jpeg_q50",
+    "res_2120px"
+   ],
+   "features": [
+    "person_photo",
+    "established_year",
+    "bilingual_title",
+    "department",
+    "name_prefix_suffix",
+    "cjk_name_spaced"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1590,
+   "height": 2120,
+   "card_quad": [
+    [
+     144.6,
+     796.3
+    ],
+    [
+     1150.2,
+     709.3
+    ],
+    [
+     1185.4,
+     1292.1
+    ],
+    [
+     196.9,
+     1353.6
+    ]
+   ],
+   "card_fill": 0.63,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Karen",
+     "family": "Lam",
+     "cjk_full": "林曉彤",
+     "prefix": null,
+     "suffix": "CPA"
+    },
+    "company": "Harbour Trust CPA Limited",
+    "company_cjk": "港信會計師事務所有限公司",
+    "job_title": "Chief Financial Officer",
+    "job_title_cjk": "財務長",
+    "department": "Wealth Management",
+    "department_cjk": "財富管理部",
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+85296063732",
+      "extension": null,
+      "text": "M 手機 (852) 9606 3732"
+     }
+    ],
+    "emails": [
+     {
+      "address": "karen_lam@harbourtrustcpa.com.hk",
+      "text": "電郵 Email: karen_lam@harbourtrustcpa.com.hk"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.harbourtrustcpa.com.hk",
+      "text": "www.harbourtrustcpa.com.hk"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "hk_queens",
+      "form": "en",
+      "label": null,
+      "formatted": "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central, Central, Hong Kong"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Est. 1962"
+    ]
+   }
+  },
+  {
+   "id": "img_0034",
+   "file": "images/img_0034.jpg",
+   "clean_file": "clean/img_0034.png",
+   "person_id": "p030",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "mixed",
+   "template": "bilingual_columns",
+   "back_type": null,
+   "degradations": [
+    "tilt_3deg",
+    "bg_wood",
+    "blur_small",
+    "jpeg_q71",
+    "res_2119px"
+   ],
+   "features": [
+    "qr_code",
+    "small_font",
+    "slogan",
+    "bilingual_title"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 2119,
+   "height": 1589,
+   "card_quad": [
+    [
+     218.2,
+     351.3
+    ],
+    [
+     1724.8,
+     333.1
+    ],
+    [
+     1737.6,
+     1207.9
+    ],
+    [
+     214.5,
+     1208.0
+    ]
+   ],
+   "card_fill": 0.715,
+   "text_fit_scale": 1,
+   "qr_payload": "https://hengchang-trade.com.tw",
+   "printed": {
+    "name": {
+     "given": "Tina",
+     "family": "Hsu",
+     "cjk_full": "許雅婷",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Heng Chang International Trading Co., Ltd.",
+    "company_cjk": "恆昌國際貿易有限公司",
+    "job_title": "Vice President, Sales",
+    "job_title_cjk": "業務副總經理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886909825309",
+      "extension": null,
+      "text": "M 手機 0909-825-309"
+     }
+    ],
+    "emails": [
+     {
+      "address": "tina.hsu@hengchang-trade.com.tw",
+      "text": "E-mail: tina.hsu@hengchang-trade.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "hengchang-trade.com.tw",
+      "text": "hengchang-trade.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_nanjing",
+      "form": "cjk",
+      "label": null,
+      "formatted": "104 台北市中山區南京東路二段88號12樓"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "連結全球 服務在地"
+    ]
+   }
+  },
+  {
+   "id": "img_0035",
+   "file": "images/img_0035.jpg",
+   "clean_file": "clean/img_0035.png",
+   "person_id": "p012",
+   "side": "front",
+   "pair_id": null,
+   "layout": "horizontal",
+   "script": "zh-Hans",
+   "template": "navy_gold",
+   "back_type": null,
+   "degradations": [
+    "tilt_8deg",
+    "bg_white_table",
+    "jpeg_q74",
+    "low_res_1121px"
+   ],
+   "features": [
+    "multi_phone",
+    "established_year",
+    "social_handle",
+    "phone_extension",
+    "wordmark_differs_from_company"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses",
+    "social"
+   ],
+   "width": 1121,
+   "height": 840,
+   "card_quad": [
+    [
+     138.3,
+     237.4
+    ],
+    [
+     912.2,
+     225.2
+    ],
+    [
+     945.6,
+     671.6
+    ],
+    [
+     126.1,
+     693.3
+    ]
+   ],
+   "card_fill": 0.71,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "刘洋",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "上海鑫源食品有限公司",
+    "job_title": null,
+    "job_title_cjk": "采购经理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+8618685691395",
+      "extension": null,
+      "text": "手机：186 8569 1395"
+     },
+     {
+      "kind": "work",
+      "number": "+862167578779",
+      "extension": "78",
+      "text": "TEL：021-67578779 转 78"
+     },
+     {
+      "kind": "fax",
+      "number": "+862156801859",
+      "extension": null,
+      "text": "FAX：+86 21 5680 1859"
+     }
+    ],
+    "emails": [
+     {
+      "address": "yang.liu@xinyuanfood.com.cn",
+      "text": "yang.liu@xinyuanfood.com.cn"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.xinyuanfood.com.cn",
+      "text": "网址：www.xinyuanfood.com.cn"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "sh_zhangjiang",
+      "form": "cjk",
+      "label": null,
+      "formatted": "上海市浦东新区张江路88号3号楼501室, 邮编：200120"
+     }
+    ],
+    "social": [
+     {
+      "service": "wechat",
+      "handle": "liuyang97",
+      "text": "微信：liuyang97"
+     }
+    ],
+    "distractors": [
+     "创立于1962年",
+     "鲜之源"
+    ]
+   }
+  },
+  {
+   "id": "img_0036",
+   "file": "images/img_0036.jpg",
+   "clean_file": "clean/img_0036.png",
+   "person_id": "p025",
+   "side": "back",
+   "pair_id": "p025",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "logo_heavy",
+   "back_type": "a",
+   "degradations": [
+    "tilt_4deg",
+    "rotate_4deg",
+    "bg_dark_fabric",
+    "busy_background",
+    "shadow",
+    "blur_small",
+    "noise",
+    "jpeg_q70",
+    "res_1338px"
+   ],
+   "features": [
+    "logo_large",
+    "multi_phone",
+    "fancy_font",
+    "certification"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1338,
+   "height": 1003,
+   "card_quad": [
+    [
+     145.4,
+     78.8
+    ],
+    [
+     1286.7,
+     143.1
+    ],
+    [
+     1229.2,
+     800.6
+    ],
+    [
+     115.6,
+     710.1
+    ]
+   ],
+   "card_fill": 0.845,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Sandy",
+     "family": "Hung",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Xinhe Technology Inc.",
+    "company_cjk": null,
+    "job_title": "Founder & CEO",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886982141192",
+      "extension": null,
+      "text": "C 0982-141-192"
+     },
+     {
+      "kind": "work",
+      "number": "+886226822359",
+      "extension": null,
+      "text": "Office: +886-2-2682-2359"
+     },
+     {
+      "kind": "fax",
+      "number": "+886224410243",
+      "extension": null,
+      "text": "F 886-2-2441-0243"
+     }
+    ],
+    "emails": [
+     {
+      "address": "sandyh@xinhetech.com.tw",
+      "text": "Email: sandyh@xinhetech.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "xinhetech.com.tw",
+      "text": "xinhetech.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_neihu",
+      "form": "en",
+      "label": null,
+      "formatted": "8F., No. 35, Ruiguang Rd., Neihu Dist., Taipei City 114, Taiwan"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "ISO 27001"
+    ]
+   }
+  },
+  {
+   "id": "img_0037",
+   "file": "images/img_0037.jpg",
+   "clean_file": "clean/img_0037.png",
+   "person_id": "p015",
+   "side": "back",
+   "pair_id": "p015",
+   "layout": "horizontal",
+   "script": "zh-Hant",
+   "template": "logo_heavy",
+   "back_type": "a",
+   "degradations": [
+    "tilt_6deg",
+    "bg_white_table",
+    "uneven_light",
+    "jpeg_q84",
+    "res_1362px"
+   ],
+   "features": [
+    "logo_large",
+    "established_year",
+    "cjk_name_spaced",
+    "phone_intl_format"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1362,
+   "height": 1021,
+   "card_quad": [
+    [
+     296.5,
+     145.4
+    ],
+    [
+     1157.5,
+     138.7
+    ],
+    [
+     1146.3,
+     630.5
+    ],
+    [
+     309.9,
+     621.5
+    ]
+   ],
+   "card_fill": 0.624,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": "吳美華",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "雪松物流有限公司",
+    "job_title": null,
+    "job_title_cjk": "總經理",
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+19055550138",
+      "extension": null,
+      "text": "手機 +1 905 555 0138"
+     }
+    ],
+    "emails": [
+     {
+      "address": "michelle.ng@cedarline.ca",
+      "text": "信箱：michelle.ng@cedarline.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.cedarline.ca",
+      "text": "www.cedarline.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "mis_ware",
+      "form": "cjk",
+      "label": null,
+      "formatted": "加拿大安大略省密西沙加密西沙加路6750號7單元, 郵遞區號 L5N 2L3"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "始於2011"
+    ]
+   }
+  },
+  {
+   "id": "img_0038",
+   "file": "images/img_0038.jpg",
+   "clean_file": "clean/img_0038.png",
+   "person_id": "p005",
+   "side": "back",
+   "pair_id": "p005",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "back_contact",
+   "back_type": "b",
+   "degradations": [
+    "tilt_7deg",
+    "bg_wood",
+    "blur_motion",
+    "noise",
+    "jpeg_q72",
+    "res_1496px"
+   ],
+   "features": [
+    "multi_phone",
+    "no_name"
+   ],
+   "visible_fields": [
+    "company",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1496,
+   "height": 1122,
+   "card_quad": [
+    [
+     181.0,
+     251.1
+    ],
+    [
+     1083.8,
+     235.3
+    ],
+    [
+     1108.7,
+     765.0
+    ],
+    [
+     165.4,
+     770.1
+    ]
+   ],
+   "card_fill": 0.617,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Kowloon Bay Logistics Ltd.",
+    "company_cjk": null,
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "main",
+      "number": "+85239809110",
+      "extension": null,
+      "text": "General: (852) 3980 9110"
+     },
+     {
+      "kind": "fax",
+      "number": "+85224657607",
+      "extension": null,
+      "text": "F: 2465 7607"
+     }
+    ],
+    "emails": [
+     {
+      "address": "info@kblogistics.com.hk",
+      "text": "info@kblogistics.com.hk"
+     }
+    ],
+    "websites": [
+     {
+      "url": "https://www.kblogistics.com.hk",
+      "text": "https://www.kblogistics.com.hk"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "hk_kwuntong",
+      "form": "en",
+      "label": null,
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0039",
+   "file": "images/img_0039.jpg",
+   "clean_file": "clean/img_0039.png",
+   "person_id": "p006",
+   "side": "front",
+   "pair_id": "p006",
+   "layout": "horizontal",
+   "script": "mixed",
+   "template": "startup",
+   "back_type": null,
+   "degradations": [
+    "tilt_3deg",
+    "bg_dark_fabric",
+    "busy_background",
+    "uneven_light",
+    "shadow",
+    "noise",
+    "jpeg_q82",
+    "res_1716px"
+   ],
+   "features": [
+    "person_photo",
+    "multi_phone",
+    "phone_extension",
+    "bilingual_title",
+    "department"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "department",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 1716,
+   "height": 1287,
+   "card_quad": [
+    [
+     244.6,
+     161.1
+    ],
+    [
+     1592.0,
+     173.0
+    ],
+    [
+     1604.8,
+     937.8
+    ],
+    [
+     233.3,
+     949.9
+    ]
+   ],
+   "card_fill": 0.793,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Sophie",
+     "family": "Lam",
+     "cjk_full": "林淑慧",
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Granite Peak Capital Partners",
+    "company_cjk": "花崗峰資本",
+    "job_title": "Partner",
+    "job_title_cjk": "合夥人",
+    "department": "Wealth Management",
+    "department_cjk": "財富管理部",
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+16475550113",
+      "extension": null,
+      "text": "手機 Mobile: 647 555 0113"
+     },
+     {
+      "kind": "work",
+      "number": "+16475550102",
+      "extension": "31",
+      "text": "電話 Tel: 647 555 0102 #31"
+     }
+    ],
+    "emails": [
+     {
+      "address": "sophie.lam@granitepeakcap.ca",
+      "text": "sophie.lam@granitepeakcap.ca"
+     }
+    ],
+    "websites": [
+     {
+      "url": "www.granitepeakcap.ca",
+      "text": "www.granitepeakcap.ca"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tor_bay",
+      "form": "en",
+      "label": null,
+      "formatted": "333 Bay St, 18th Floor, Toronto, ON M5H 2R2, Canada"
+     }
+    ],
+    "social": [],
+    "distractors": []
+   }
+  },
+  {
+   "id": "img_0040",
+   "file": "images/img_0040.jpg",
+   "clean_file": "clean/img_0040.png",
+   "person_id": "p019",
+   "side": "back",
+   "pair_id": "p019",
+   "layout": "horizontal",
+   "script": "en",
+   "template": "logo_heavy",
+   "back_type": "a",
+   "degradations": [
+    "tilt_7deg",
+    "bg_white_table",
+    "uneven_light",
+    "noise",
+    "jpeg_q53",
+    "res_2206px"
+   ],
+   "features": [
+    "logo_large",
+    "multi_phone",
+    "established_year"
+   ],
+   "visible_fields": [
+    "name",
+    "company",
+    "job_title",
+    "phones",
+    "emails",
+    "websites",
+    "addresses"
+   ],
+   "width": 2206,
+   "height": 1654,
+   "card_quad": [
+    [
+     280.8,
+     245.5
+    ],
+    [
+     1691.5,
+     249.5
+    ],
+    [
+     1701.2,
+     1087.4
+    ],
+    [
+     236.0,
+     1045.7
+    ]
+   ],
+   "card_fill": 0.653,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": "Cindy",
+     "family": "Liao",
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": "Ruiguang Cold Chain Logistics Co., Ltd.",
+    "company_cjk": null,
+    "job_title": "Business Development Manager",
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [
+     {
+      "kind": "mobile",
+      "number": "+886914332774",
+      "extension": null,
+      "text": "M: 0914332774"
+     },
+     {
+      "kind": "work",
+      "number": "+886226497825",
+      "extension": null,
+      "text": "Office: 02-26497825"
+     }
+    ],
+    "emails": [
+     {
+      "address": "cliao@ruiguang-logistics.com.tw",
+      "text": "Email: cliao@ruiguang-logistics.com.tw"
+     }
+    ],
+    "websites": [
+     {
+      "url": "ruiguang-logistics.com.tw",
+      "text": "W ruiguang-logistics.com.tw"
+     }
+    ],
+    "addresses": [
+     {
+      "key": "tpe_neihu",
+      "form": "en",
+      "label": null,
+      "formatted": "8F., No. 35, Ruiguang Rd., Neihu Dist., Taipei City 114"
+     }
+    ],
+    "social": [],
+    "distractors": [
+     "Established 1962"
+    ]
+   }
+  },
+  {
+   "id": "img_0041",
+   "file": "images/img_0041.jpg",
+   "clean_file": "clean/img_0041.png",
+   "person_id": "p029",
+   "side": "back",
+   "pair_id": "p029",
+   "layout": "horizontal",
+   "script": "mixed",
+   "template": "back_logo",
+   "back_type": "c",
+   "degradations": [
+    "tilt_3deg",
+    "bg_dark_fabric",
+    "busy_background",
+    "jpeg_q59",
+    "low_res_1042px"
+   ],
+   "features": [
+    "logo_large",
+    "qr_code",
+    "slogan",
+    "wordmark_differs_from_company",
+    "no_name"
+   ],
+   "visible_fields": [
+    "company",
+    "websites"
+   ],
+   "width": 1042,
+   "height": 781,
+   "card_quad": [
+    [
+     164.2,
+     252.5
+    ],
+    [
+     850.5,
+     241.6
+    ],
+    [
+     866.2,
+     631.2
+    ],
+    [
+     168.6,
+     653.7
+    ]
+   ],
+   "card_fill": 0.665,
+   "text_fit_scale": 1,
+   "qr_payload": "https://www.chiafeng.com.tw",
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": "嘉豐食品股份有限公司",
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [],
+    "emails": [],
+    "websites": [
+     {
+      "url": "https://www.chiafeng.com.tw",
+      "text": "https://www.chiafeng.com.tw"
+     }
+    ],
+    "addresses": [],
+    "social": [],
+    "distractors": [
+     "金穗",
+     "嚴選食材 用心把關"
+    ]
+   }
+  },
+  {
+   "id": "img_0042",
+   "file": "images/img_0042.jpg",
+   "clean_file": "clean/img_0042.png",
+   "person_id": "p024",
+   "side": "back",
+   "pair_id": "p024",
+   "layout": "vertical",
+   "script": "zh-Hant",
+   "template": "back_decor",
+   "back_type": "d",
+   "degradations": [
+    "tilt_5deg",
+    "rotate_4deg",
+    "bg_white_table",
+    "noise",
+    "jpeg_q84",
+    "res_2168px"
+   ],
+   "features": [
+    "logo_large",
+    "wordmark_differs_from_company",
+    "no_name",
+    "decorative_only"
+   ],
+   "visible_fields": [],
+   "width": 1626,
+   "height": 2168,
+   "card_quad": [
+    [
+     361.8,
+     353.3
+    ],
+    [
+     1323.5,
+     268.9
+    ],
+    [
+     1412.1,
+     1896.2
+    ],
+    [
+     523.4,
+     1954.1
+    ]
+   ],
+   "card_fill": 0.748,
+   "text_fit_scale": 1,
+   "qr_payload": null,
+   "printed": {
+    "name": {
+     "given": null,
+     "family": null,
+     "cjk_full": null,
+     "prefix": null,
+     "suffix": null
+    },
+    "company": null,
+    "company_cjk": null,
+    "job_title": null,
+    "job_title_cjk": null,
+    "department": null,
+    "department_cjk": null,
+    "phones": [],
+    "emails": [],
+    "websites": [],
+    "addresses": [],
+    "social": [],
+    "distractors": [
+     "OCEAN CREST",
+     "用心 做好每一件事"
+    ]
+   }
+  }
+ ]
+}

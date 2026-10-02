@@ -348,7 +348,9 @@ extension ContactDraft {
         case .phone(let k):
             guard let i = phones.firstIndex(where: { $0.e164 == k }) else { return ref }
             var p = phones[i]
-            if let n = PhoneNormalizer.normalize(value, regionHint: regionHint), n.e164 != p.e164 {
+            // Re-read numbers are normalised in the region of the number being verified, not the device default.
+            let hint = PhoneNormalizer.region(ofE164: p.e164) ?? regionHint
+            if let n = PhoneNormalizer.normalize(value, regionHint: hint), n.e164 != p.e164 {
                 p.alternatives = Array(Set(p.alternatives + [p.printed])).sorted()
                 p.e164 = n.e164; p.printed = value; p.isValid = n.isValid
                 if let e = n.extensionNumber { p.extensionNumber = e }

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "洪詩涵",
+      "confidence": 0.95,
+      "source_text": "洪 詩 涵",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "新禾科技股份有限公司",
+    "confidence": 0.95,
+    "source_text": "新禾科技股份有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "創辦人暨執行長",
+    "confidence": 0.94,
+    "source_text": "創辦人暨執行長",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "0982 141 192",
+      "kind": "mobile",
+      "source_text": "行動電話：0982 141 192",
+      "confidence": 0.95,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "886-2-2682-2359",
+      "kind": "work",
+      "source_text": "TEL：886-2-2682-2359",
+      "confidence": 0.94,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "(02) 2441-0243",
+      "kind": "fax",
+      "source_text": "FAX：(02) 2441-0243",
+      "confidence": 0.94,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "sandyh@xinhetech.com.tw",
+      "confidence": 0.95,
+      "source_text": "信箱：sandyh@xinhetech.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "xinhetech.com.tw",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "台灣 114 台北市內湖區瑞光路35號8樓",
+      "confidence": 0.9,
+      "street": "內湖區瑞光路35號8樓",
+      "city": "台北市",
+      "region": null,
+      "postal_code": "114",
+      "country": "台灣"
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "XINHE",
+      "ISO 27001"
+    ],
+    "overall_confidence": 0.92
+  }
+}

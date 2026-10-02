@@ -1,0 +1,26 @@
+<!doctype html><html lang="zh-TW"><head><meta charset="utf-8">
+<style>
+:root{--s:1}
+html{font-size:calc(10px * var(--s))}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:600px;height:1050px;overflow:hidden;background:#fff}
+body{font-family:'Noto Sans CJK TC','WenQuanYi Zen Hei','Liberation Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{width:600px;height:1050px;overflow:hidden;position:relative}
+.ln{white-space:nowrap}
+
+.card{background:#3b5d2a;color:#f5f5f5;padding:70px 50px;display:flex;flex-direction:column;gap:22px;justify-content:center}
+.co{font-size:2.5rem;font-weight:700;color:#ffffff}
+.grid{display:flex;flex-direction:column;gap:22px;overflow:hidden}
+.addr{font-size:2.1rem;line-height:1.38} .addr+.addr{margin-top:16px} .alab{font-weight:700;color:#ffffff;font-size:1.9rem;letter-spacing:.05em}
+.ct{font-size:2.2rem;line-height:1.5}
+
+</style></head><body><div class="card fit"><div><div class="logo" style="display:flex;flex-direction:row;align-items:center;gap:11px"><svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 96 C8 70 8 26 50 4 C92 26 92 70 50 96Z" fill="#ffffff"/><path d="M50 90 L50 18 M50 50 L30 35 M50 65 L70 48" stroke="#3b5d2a" stroke-width="4" fill="none"/></svg></div></div><div class="grid fit"><div><div class="addr"><div class="alab">地址</div><div>台灣 110 台北市信義區松仁路100號5樓</div></div></div><div class="ct"><div class="ln">總機：+886-2-2823-6569</div><div class="ln">FAX：+886-2-2504-6049</div><div class="ln">info@dawnlight.design</div></div></div></div>
+<script>
+window.__fit = function(){
+  const root = document.documentElement; let s = 1.0;
+  const els = Array.from(document.querySelectorAll('.fit'));
+  const over = () => els.some(el => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1);
+  while (over() && s > 0.5) { s = Math.round((s - 0.03) * 100) / 100; root.style.setProperty('--s', s); }
+  return s;
+};
+</script></body></html>

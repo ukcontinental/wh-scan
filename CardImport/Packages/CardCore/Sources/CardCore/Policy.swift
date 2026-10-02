@@ -15,6 +15,8 @@ public struct PolicyConfig: Codable, Sendable {
     /// True when this value may be written without review.
     public func accepts(_ ref: FieldRef, confidence: Double, alternatives: [String], in draft: ContactDraft) -> Bool {
         guard confidence >= threshold(for: ref) else { return false }
+        // A number that fails the numbering plan is never written unasked, whatever the readers say.
+        if case .phone(let k) = ref, let p = draft.phones.first(where: { $0.e164 == k }), !p.isValid { return false }
         if alternativesNeedConfirmation && !CardScorer.realAlternatives(alternatives, to: draft.current(ref)?.value ?? "").isEmpty
             && !draft.isSettled(ref) { return false }
         return true
@@ -99,7 +101,8 @@ public struct ReviewPolicy: Sendable {
         for (ref, value, conf, alts) in draft.allFields() {
             if config.accepts(ref, confidence: conf, alternatives: alts, in: draft) { continue }
             writable.remove(ref)
-            if conf < config.dropBelow && alts.isEmpty {
+            let disputed = draft.signals(ref).contains { $0.hasPrefix("second_opinion") }
+            if conf < config.dropBelow && alts.isEmpty && !disputed {
                 dropped.append("\(ref)=\(value)@\(String(format: "%.2f", conf))")
                 continue
             }

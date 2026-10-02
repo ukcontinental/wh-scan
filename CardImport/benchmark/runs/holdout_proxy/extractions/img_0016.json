@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hans"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "马俊",
+      "confidence": 0.97,
+      "source_text": "马俊",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "广州恒泰进出口贸易有限公司",
+    "confidence": 0.96,
+    "source_text": "广州恒泰进出口贸易有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "销售副总裁",
+    "confidence": 0.96,
+    "source_text": "销售副总裁",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "18861094756",
+      "kind": "mobile",
+      "confidence": 0.96,
+      "source_text": "手机：18861094756",
+      "country_hint": "CN",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "maj@hengtai-trade.com",
+      "confidence": 0.96,
+      "source_text": "maj@hengtai-trade.com",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.hengtai-trade.com",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "中国广东省广州市天河区天河路385号1806室 510620",
+      "street": "天河区天河路385号1806室",
+      "city": "广州市",
+      "region": "广东省",
+      "postal_code": "510620",
+      "country": "中国",
+      "confidence": 0.92
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "overall_confidence": 0.95,
+    "concerns": [],
+    "ignored_text": [
+      "恒泰"
+    ],
+    "has_qr_code": false,
+    "has_person_photo": false
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Sophie",
+      "confidence": 0.97,
+      "source_text": "Sophie LAM",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Lam",
+      "confidence": 0.97,
+      "source_text": "Sophie LAM",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "林淑慧",
+      "confidence": 0.96,
+      "source_text": "林淑慧",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Granite Peak Capital Partners",
+    "confidence": 0.95,
+    "source_text": "Granite Peak Capital Partners",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "花崗峰資本",
+    "confidence": 0.93,
+    "source_text": "花崗峰資本",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Partner",
+    "confidence": 0.97,
+    "source_text": "Partner",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "合夥人",
+    "confidence": 0.96,
+    "source_text": "合夥人",
+    "alternatives": []
+  },
+  "department": {
+    "value": "Wealth Management",
+    "confidence": 0.95,
+    "source_text": "財富管理部 Wealth Management",
+    "alternatives": []
+  },
+  "department_cjk": {
+    "value": "財富管理部",
+    "confidence": 0.95,
+    "source_text": "財富管理部 Wealth Management",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "647 555 0113",
+      "kind": "mobile",
+      "source_text": "手機 Mobile: 647 555 0113",
+      "confidence": 0.96,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "647 555 0102",
+      "kind": "work",
+      "source_text": "電話 Tel: 647 555 0102 #31",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": "31",
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "sophie.lam@granitepeakcap.ca",
+      "confidence": 0.97,
+      "source_text": "sophie.lam@granitepeakcap.ca",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.granitepeakcap.ca",
+      "confidence": 0.97
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "333 Bay St, 18th Floor, Toronto, ON M5H 2R2, Canada",
+      "street": "333 Bay St, 18th Floor",
+      "city": "Toronto",
+      "region": "ON",
+      "postal_code": "M5H 2R2",
+      "country": "Canada",
+      "confidence": 0.95
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": true,
+    "has_qr_code": false,
+    "ignored_text": [],
+    "overall_confidence": 0.95
+  }
+}

@@ -101,3 +101,48 @@ final class NameIdentityTests: XCTestCase {
         XCTAssertTrue(e3.signals.contains("same_name"))
     }
 }
+
+/// Bugs found on the held-out benchmark set.
+final class HoldoutRegressionTests: XCTestCase {
+    func testFreeTextCountryHint() {
+        let card = ExtractedCard(phones: [ExtractedPhone(kind: .work, number: "2465 7607", countryHint: "Hong Kong", confidence: 0.9)])
+        let d = CardScorer().score(F.obs("a", 0, card))
+        XCTAssertEqual(d.phones.first?.e164, "+85224657607")
+        XCTAssertTrue(d.phones.first?.isValid ?? false)
+    }
+
+    func testInvalidNumberNeverAutoAccepted() {
+        var d = ContactDraft(id: "x", photoIDs: [])
+        d.givenName = DraftValue(value: "A", confidence: 0.99)
+        d.phones = [DraftPhone(kind: .work, e164: "+124657607", printed: "2465 7607", confidence: 0.99,
+                               signals: ["second_opinion:agree"], isValid: false)]
+        let out = ReviewPolicy().evaluate(d)
+        XCTAssertEqual(out.review.map(\.field), ["phone:+124657607"])
+    }
+
+    func testDisputedValueGoesToReviewNotDropped() {
+        var d = ContactDraft(id: "x", photoIDs: [])
+        d.givenName = DraftValue(value: "A", confidence: 0.99)
+        d.addresses = [DraftAddress(street: "天河路385号", formatted: "广州市天河路385号1806室 510620", confidence: 0.2,
+                                    signals: ["second_opinion:disagree"])]
+        let out = ReviewPolicy().evaluate(d)
+        XCTAssertTrue(out.dropped.isEmpty)
+        XCTAssertEqual(out.review.count, 1)
+    }
+}
+
+final class HoldoutPhoneRegressionTests: XCTestCase {
+    func testBeijingLandline() {
+        let n = PhoneNormalizer.normalize("(010) 6107-4045", regionHint: "CN")
+        XCTAssertEqual(n?.e164, "+861061074045")
+        XCTAssertEqual(n?.isValid, true)
+        XCTAssertEqual(n?.planType, .fixed)
+    }
+
+    func testVerifiedNumberKeepsItsCountry() {
+        var d = ContactDraft(id: "x", photoIDs: [])
+        d.phones = [DraftPhone(kind: .fax, e164: "+85224657607", printed: "2465 7607", confidence: 0.7)]
+        d.setVerified(.phone("+85224657607"), value: "2465 7607", confidence: 0.98, signal: "second_opinion:agree", regionHint: "CA")
+        XCTAssertEqual(d.phones.first?.e164, "+85224657607")
+    }
+}

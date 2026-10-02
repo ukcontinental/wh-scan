@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Owen",
+      "confidence": 0.98,
+      "source_text": "Owen Campbell",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Campbell",
+      "confidence": 0.98,
+      "source_text": "Owen Campbell",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "True North Food Distributors Ltd.",
+    "confidence": 0.96,
+    "source_text": "True North Food Distributors Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": {
+    "value": "General Manager",
+    "confidence": 0.97,
+    "source_text": "General Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "department": {
+    "value": "International Trade Division",
+    "confidence": 0.95,
+    "source_text": "International Trade Division",
+    "alternatives": []
+  },
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "+1 905 555 0139",
+      "kind": "mobile",
+      "source_text": "Cell: +1 905 555 0139",
+      "confidence": 0.96,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    },
+    {
+      "number": "(905) 555-0112",
+      "kind": "work",
+      "source_text": "T: (905) 555-0112 x352",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": "352",
+      "alternatives": []
+    },
+    {
+      "number": "905 555 0107",
+      "kind": "fax",
+      "source_text": "F: 905 555 0107",
+      "confidence": 0.95,
+      "country_hint": "CA",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "ocampbell@truenorthfood.ca",
+      "confidence": 0.96,
+      "source_text": "Email: ocampbell@truenorthfood.ca",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.truenorthfood.ca",
+      "confidence": 0.96
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "3601 Highway 7 E, Suite 1008, Markham, ON L3R 0M3, Canada",
+      "street": "3601 Highway 7 E, Suite 1008",
+      "city": "Markham",
+      "region": "ON",
+      "postal_code": "L3R 0M3",
+      "country": "Canada",
+      "confidence": 0.92
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "TRUE NORTH",
+      "Fresh from Ocean to Table",
+      "Est. 1992"
+    ],
+    "overall_confidence": 0.95
+  }
+}

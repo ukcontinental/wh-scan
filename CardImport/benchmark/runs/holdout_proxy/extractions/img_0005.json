@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Edmund",
+      "confidence": 0.97,
+      "source_text": "Edmund Chow",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Chow",
+      "confidence": 0.97,
+      "source_text": "Edmund Chow",
+      "alternatives": []
+    },
+    "cjk_full": null,
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Kowloon Bay Logistics Ltd.",
+    "confidence": 0.95,
+    "source_text": "Kowloon Bay Logistics Ltd.",
+    "alternatives": []
+  },
+  "company_cjk": null,
+  "job_title": {
+    "value": "Logistics Coordinator",
+    "confidence": 0.96,
+    "source_text": "Logistics Coordinator",
+    "alternatives": []
+  },
+  "job_title_cjk": null,
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "+852-9541-2821",
+      "kind": "mobile",
+      "source_text": "Mobile: +852-9541-2821",
+      "confidence": 0.96,
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "edmund_chow@kblogistics.com.hk",
+      "confidence": 0.95,
+      "source_text": "E: edmund_chow@kblogistics.com.hk",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.kblogistics.com.hk",
+      "confidence": 0.94
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon, Hong Kong",
+      "confidence": 0.88,
+      "street": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road",
+      "city": "Kwun Tong",
+      "region": "Kowloon",
+      "postal_code": null,
+      "country": "Hong Kong"
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "KB LOGISTICS",
+      "九龍",
+      "Delivering Freshness, Every Mile"
+    ],
+    "overall_confidence": 0.93
+  }
+}

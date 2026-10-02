@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "en",
+    "zh-Hant"
+  ],
+  "name": {
+    "given": {
+      "value": "Karen",
+      "confidence": 0.96,
+      "source_text": "Karen Lam, CPA",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Lam",
+      "confidence": 0.96,
+      "source_text": "Karen Lam, CPA",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "林曉彤",
+      "confidence": 0.88,
+      "source_text": "林 曉 彤",
+      "alternatives": [
+        "林曉肜"
+      ]
+    },
+    "prefix": null,
+    "suffix": {
+      "value": "CPA",
+      "confidence": 0.95,
+      "source_text": "Karen Lam, CPA",
+      "alternatives": []
+    }
+  },
+  "company": {
+    "value": "Harbour Trust CPA Limited",
+    "confidence": 0.94,
+    "source_text": "Harbour Trust CPA Limited",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "港信會計師事務所有限公司",
+    "confidence": 0.92,
+    "source_text": "港信會計師事務所有限公司",
+    "alternatives": []
+  },
+  "job_title": {
+    "value": "Chief Financial Officer",
+    "confidence": 0.95,
+    "source_text": "Chief Financial Officer",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "財務長",
+    "confidence": 0.93,
+    "source_text": "財務長",
+    "alternatives": []
+  },
+  "department": {
+    "value": "Wealth Management",
+    "confidence": 0.92,
+    "source_text": "財富管理部 Wealth Management",
+    "alternatives": []
+  },
+  "department_cjk": {
+    "value": "財富管理部",
+    "confidence": 0.88,
+    "source_text": "財富管理部 Wealth Management",
+    "alternatives": []
+  },
+  "phones": [
+    {
+      "number": "(852) 9606 3732",
+      "kind": "mobile",
+      "source_text": "M 手機 (852) 9606 3732",
+      "confidence": 0.94,
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "karen_lam@harbourtrustcpa.com.hk",
+      "confidence": 0.93,
+      "source_text": "電郵 Email: karen_lam@harbourtrustcpa.com.hk",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "www.harbourtrustcpa.com.hk",
+      "confidence": 0.93
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central, Central, Hong Kong",
+      "confidence": 0.86,
+      "street": "Room 2208, 22/F, Kingsfield Tower, 88 Des Voeux Road Central",
+      "city": "Central",
+      "region": null,
+      "postal_code": null,
+      "country": "Hong Kong"
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "Est. 1962"
+    ],
+    "overall_confidence": 0.9
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": {
+      "value": "Patrick",
+      "confidence": 0.92,
+      "source_text": "Patrick Leung",
+      "alternatives": []
+    },
+    "family": {
+      "value": "Leung",
+      "confidence": 0.92,
+      "source_text": "Patrick Leung",
+      "alternatives": []
+    },
+    "cjk_full": {
+      "value": "梁家輝",
+      "confidence": 0.9,
+      "source_text": "梁家輝",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "Wui Tai Foods Limited",
+    "confidence": 0.85,
+    "source_text": "Wui Tai Foods Limited",
+    "alternatives": []
+  },
+  "company_cjk": {
+    "value": "滙泰食品有限公司",
+    "confidence": 0.75,
+    "source_text": "滙泰食品有限公司",
+    "alternatives": [
+      "匯泰食品有限公司"
+    ]
+  },
+  "job_title": {
+    "value": "Export Manager",
+    "confidence": 0.9,
+    "source_text": "Export Manager",
+    "alternatives": []
+  },
+  "job_title_cjk": {
+    "value": "外銷經理",
+    "confidence": 0.88,
+    "source_text": "外銷經理",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "2627 3144",
+      "kind": "work",
+      "source_text": "T 電話 2627 3144",
+      "confidence": 0.88,
+      "country_hint": "HK",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "patrick_leung@wuitaifoods.com.hk",
+      "source_text": "電郵 Email: patrick_leung@wuitaifoods.com.hk",
+      "confidence": 0.85,
+      "alternatives": [
+        "patrick.leung@wuitaifoods.com.hk"
+      ]
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.wuitaifoods.com.hk",
+      "confidence": 0.88
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong, Kowloon",
+      "street": "Flat B, 9/F, Wing Fat Industrial Building, 12 Hung To Road, Kwun Tong",
+      "city": "Kowloon",
+      "region": null,
+      "postal_code": null,
+      "country": "Hong Kong",
+      "confidence": 0.75
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "has_qr_code": false,
+    "has_person_photo": false,
+    "ignored_text": [
+      "WT",
+      "GOLDEN BOWL"
+    ],
+    "concerns": [
+      "blurry_text",
+      "illegible_faded_line_below_address"
+    ],
+    "overall_confidence": 0.82
+  }
+}

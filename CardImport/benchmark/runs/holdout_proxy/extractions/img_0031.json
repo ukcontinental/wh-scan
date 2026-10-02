@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "蕭博文",
+      "confidence": 0.94,
+      "source_text": "蕭 博 文",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": null,
+  "company_cjk": {
+    "value": "恆昌國際貿易有限公司",
+    "confidence": 0.9,
+    "source_text": "恆昌國際貿易有限公司",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "採購經理",
+    "confidence": 0.93,
+    "source_text": "採購經理",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "+886 994 109 193",
+      "kind": "mobile",
+      "source_text": "手機：+886 994 109 193",
+      "confidence": 0.88,
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "vincenth@hengchang-trade.com.tw",
+      "confidence": 0.9,
+      "source_text": "E-mail：vincenth@hengchang-trade.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.hengchang-trade.com.tw",
+      "confidence": 0.9
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "104 台北市中山區南京東路二段88號12樓",
+      "street": "中山區南京東路二段88號12樓",
+      "city": "台北市",
+      "region": null,
+      "postal_code": "104",
+      "country": "Taiwan",
+      "confidence": 0.82
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "concerns": [
+      "slight_blur",
+      "small_font"
+    ],
+    "has_person_photo": false,
+    "has_qr_code": false,
+    "ignored_text": [
+      "HENG CHANG"
+    ],
+    "overall_confidence": 0.88
+  }
+}

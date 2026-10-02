@@ -1,0 +1,88 @@
+[
+ {
+  "identifier": "existing-1",
+  "givenName": "Andrew",
+  "familyName": "Kim",
+  "nickname": "",
+  "organization": "Silverline Software Inc.",
+  "jobTitle": "",
+  "phones": [],
+  "emails": [
+   "andrew.kim@silverline.io"
+  ],
+  "urls": []
+ },
+ {
+  "identifier": "existing-2",
+  "givenName": "Edmund",
+  "familyName": "Chow",
+  "nickname": "",
+  "organization": "Kowloon Bay Logistics Ltd.",
+  "jobTitle": "Logistics Coordinator",
+  "phones": [
+   "+85295412821"
+  ],
+  "emails": [
+   "edmund_chow@kblogistics.com.hk"
+  ],
+  "urls": [
+   "https://www.kblogistics.com.hk"
+  ]
+ },
+ {
+  "identifier": "existing-3",
+  "givenName": "Tina",
+  "familyName": "Hsu",
+  "nickname": "",
+  "organization": "Previous Employer Inc.",
+  "jobTitle": "",
+  "phones": [],
+  "emails": [
+   "tina.hsu@hengchang-trade.com.tw"
+  ],
+  "urls": []
+ },
+ {
+  "identifier": "existing-4",
+  "givenName": "Owen",
+  "familyName": "Campbell",
+  "nickname": "",
+  "organization": "True North Food Distributors Ltd.",
+  "jobTitle": "",
+  "phones": [
+   "+19055550139"
+  ],
+  "emails": [],
+  "urls": []
+ },
+ {
+  "identifier": "decoy-1",
+  "givenName": "Victoria",
+  "familyName": "Chan",
+  "nickname": "",
+  "organization": "Unrelated Holdings Ltd.",
+  "jobTitle": "",
+  "phones": [
+   "+14165559999"
+  ],
+  "emails": [
+   "someone0@elsewhere.example"
+  ],
+  "urls": []
+ },
+ {
+  "identifier": "decoy-2",
+  "givenName": "Morgan",
+  "familyName": "Lee",
+  "nickname": "",
+  "organization": "Morgan Consulting Group",
+  "jobTitle": "",
+  "phones": [
+   "+14165559999"
+  ],
+  "emails": [
+   "someone1@elsewhere.example"
+  ],
+  "urls": []
+ }
+]

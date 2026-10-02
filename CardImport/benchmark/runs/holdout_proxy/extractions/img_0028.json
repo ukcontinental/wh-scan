@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "is_business_card": true,
+  "card_side": "front",
+  "language_hint": [
+    "zh-Hant",
+    "en"
+  ],
+  "name": {
+    "given": null,
+    "family": null,
+    "cjk_full": {
+      "value": "曾冠宇",
+      "confidence": 0.97,
+      "source_text": "曾 冠 宇",
+      "alternatives": []
+    },
+    "prefix": null,
+    "suffix": null
+  },
+  "company": {
+    "value": "HEBANG BANK",
+    "confidence": 0.8,
+    "source_text": "HEBANG BANK",
+    "alternatives": [
+      "Hebang Bank"
+    ]
+  },
+  "company_cjk": {
+    "value": "合邦商業銀行",
+    "confidence": 0.96,
+    "source_text": "合 邦 商 業 銀 行",
+    "alternatives": []
+  },
+  "job_title": null,
+  "job_title_cjk": {
+    "value": "副總裁",
+    "confidence": 0.96,
+    "source_text": "副 總 裁",
+    "alternatives": []
+  },
+  "department": null,
+  "department_cjk": null,
+  "phones": [
+    {
+      "number": "0999-720-265",
+      "kind": "mobile",
+      "confidence": 0.95,
+      "source_text": "行動電話：0999-720-265",
+      "country_hint": "TW",
+      "extension": null,
+      "alternatives": []
+    }
+  ],
+  "emails": [
+    {
+      "address": "leo.tseng@hebangbank.com.tw",
+      "confidence": 0.95,
+      "source_text": "E-mail：leo.tseng@hebangbank.com.tw",
+      "alternatives": []
+    }
+  ],
+  "websites": [
+    {
+      "url": "https://www.hebangbank.com.tw",
+      "confidence": 0.95
+    }
+  ],
+  "addresses": [
+    {
+      "formatted": "台灣 104 台北市中山區南京東路二段88號12樓",
+      "street": "南京東路二段88號12樓",
+      "city": "中山區",
+      "region": "台北市",
+      "postal_code": "104",
+      "country": "台灣",
+      "confidence": 0.92
+    }
+  ],
+  "social": [],
+  "notes_on_card": null,
+  "evidence": {
+    "overall_confidence": 0.93,
+    "concerns": [],
+    "ignored_text": [
+      "合邦"
+    ],
+    "has_qr_code": false,
+    "has_person_photo": false
+  }
+}
