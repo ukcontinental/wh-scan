@@ -50,7 +50,11 @@ final class ImportEngine: ObservableObject {
                                   verifier: AppSettings.secondOpinion ? ClaudeFieldVerifier(client: client) : nil,
                                   resolver: ClaudeGroupingResolver(client: client), index: contacts, writer: contacts, config: config)
         }
-        // On-device only: free and private, but expect more review items.
+        // On-device only (user turned AI off for privacy). Rule-based field classification is not reliable
+        // (benchmark: ~50% of contacts would get a wrong value at normal thresholds), so nothing is written
+        // unasked unless it is near-certain: correctness over automation.
+        config.policy.autoAcceptCritical = 0.98
+        config.policy.autoAcceptOther = 0.97
         return BatchProcessor(store: store, images: images, ocr: ocr, extractor: HeuristicExtractor(defaultRegion: config.defaultRegion),
                               verifier: nil, resolver: nil, index: contacts, writer: contacts, config: config)
     }

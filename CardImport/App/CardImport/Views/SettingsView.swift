@@ -35,7 +35,7 @@ struct SettingsView: View {
                         Text("Claude Fable 5.1（最強、較貴）").tag("claude-fable-5-1")
                     }.disabled(!useCloud || !secondOpinion)
                 } header: { Text("辨識") } footer: {
-                    Text("關閉 AI 辨識時只用手機內建的文字辨識（免費、不上傳），但需要確認的項目會明顯變多。AI 成本估計每張照片約 US$0.05–0.12（含複核），以實測為準。")
+                    Text("關閉 AI 辨識時只用手機內建的文字辨識（免費、不上傳）。為了不寫錯資料，幾乎每位聯絡人都需要你確認。斷網不需要關閉 AI：沒有網路時批次會暫停，連線後自動繼續。AI 成本估計每張照片約 US$0.05–0.12（含複核），以實測為準。")
                 }
                 Section("聯絡人") {
                     Picker("預設國家/地區（電話沒寫國碼時）", selection: $region) {
