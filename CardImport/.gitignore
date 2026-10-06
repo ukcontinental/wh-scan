@@ -1,12 +1,11 @@
+# Build caches
 .build/
 .swiftpm/
 *.xcodeproj/
 DerivedData/
-benchmark/dataset/clean/
-benchmark/runs/*/tmp/
 __pycache__/
-benchmark/runs/*/state/
-benchmark/runs/*/run.json
-benchmark/runs/*/run.verify_requests.json
+# Regenerable intermediates: clean card renders (python3 benchmark/generate_dataset.py
+# recreates them) and per-run temp images
 benchmark/dataset/clean/
 benchmark/dataset_holdout/clean/
+benchmark/runs/*/tmp/

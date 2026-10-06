@@ -1,0 +1,22 @@
+from hb import *
+card('img_0018', language_hint=["zh-Hant","en"],
+ name={"given":F("Tina",0.97,"Tina Hsu"),"family":F("Hsu",0.97,"Tina Hsu"),"cjk_full":F("許雅婷",0.96)},
+ company=F("Hebang Commercial Bank",0.95),
+ company_cjk=F("合邦商業銀行",0.94),
+ job_title=F("Partner",0.96), job_title_cjk=F("合夥人",0.95),
+ phones=[P("+886 937 052 703","mobile",0.95,"M 手機 +886 937 052 703","TW")],
+ emails=[E("tina@hebangbank.com.tw",0.95,"電郵 Email: tina@hebangbank.com.tw"),
+         E("service@hebangbank.com.tw",0.94,"電郵 Email: service@hebangbank.com.tw")],
+ websites=[W("https://www.hebangbank.com.tw",0.94)],
+ addresses=[A("12F., No. 88, Sec. 2, Nanjing E. Rd., Zhongshan Dist. Taipei City 104","12F., No. 88, Sec. 2, Nanjing E. Rd., Zhongshan Dist.","Taipei City",None,"104","Taiwan",0.88)],
+ evidence={"ignored_text":["Est. 1985"],"concerns":[],"has_qr_code":True,"has_person_photo":True,"overall_confidence":0.93})
+card('img_0024', language_hint=["zh-Hant","en"],
+ name={"cjk_full":F("吳家樂",0.95)},
+ company_cjk=F("滙泰食品有限公司",0.9,alt=["匯泰食品有限公司"]),
+ job_title_cjk=F("董事長",0.93),
+ phones=[P("+852 2982 0655","work",0.92,"電話：+852 2982 0655","HK")],
+ emails=[E("calvin.ng@wuitaifoods.com.hk",0.93,"calvin.ng@wuitaifoods.com.hk")],
+ websites=[W("www.wuitaifoods.com.hk",0.93)],
+ social=[{"service":"wechat","handle":"calvinng86","confidence":0.9}],
+ addresses=[A("香港九龍觀塘鴻圖道12號永發工業大廈9樓B室","鴻圖道12號永發工業大廈9樓B室","觀塘","九龍",None,"香港",0.8)],
+ evidence={"ignored_text":["GOLDEN BOWL","滙泰"],"concerns":["blurry_text","small_font_address"],"overall_confidence":0.88})

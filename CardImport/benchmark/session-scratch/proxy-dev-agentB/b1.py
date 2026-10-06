@@ -1,0 +1,21 @@
+from hb import *
+card('img_0006', language_hint=["zh-Hant","en"],
+ name={"cjk_full":F("梁家輝",0.97)},
+ company_cjk=F("滙泰食品有限公司",0.93,alt=["匯泰食品有限公司"]),
+ job_title_cjk=F("品保經理",0.96),
+ phones=[P("(852) 5638 1262","mobile",0.94,"手提：(852) 5638 1262","HK"),
+         P("+852 2517 0785","work",0.94,"直線：+852 2517 0785","HK"),
+         P("+852 3812 1189","fax",0.94,"傳真：+852 3812 1189","HK")],
+ emails=[E("patrick.leung@wuitaifoods.com.hk",0.95,"E-mail：patrick.leung@wuitaifoods.com.hk")],
+ websites=[W("www.wuitaifoods.com.hk",0.95)],
+ addresses=[A("香港九龍觀塘鴻圖道12號永發工業大廈9樓B室","鴻圖道12號永發工業大廈9樓B室","觀塘","九龍",None,"香港",0.9)],
+ evidence={"ignored_text":["嚴選食材 用心把關","滙泰"],"concerns":["vertical_text"],"overall_confidence":0.92})
+card('img_0012',
+ name={"given":F("Min",0.97,"Min Zhao"),"family":F("Zhao",0.97,"Min Zhao")},
+ company=F("Beijing Yunfan Software Co., Ltd.",0.96),
+ job_title=F("Senior Software Engineer",0.95),
+ phones=[P("+86-159-1477-1523","mobile",0.93,"M +86-159-1477-1523","CN")],
+ emails=[E("min.zhao@yunfansoft.cn",0.93,"E min.zhao@yunfansoft.cn")],
+ websites=[W("yunfansoft.cn",0.94)],
+ addresses=[A("Suite 1203, No. 93 Jianguo Road, Chaoyang District Beijing 100022, China","Suite 1203, No. 93 Jianguo Road, Chaoyang District","Beijing",None,"100022","China",0.85)],
+ evidence={"ignored_text":["云帆"],"concerns":["glare","faint_text_unreadable","low_contrast"],"overall_confidence":0.85})

@@ -1,0 +1,22 @@
+from hb import *
+card('img_0054', language_hint=["zh-Hant","en"],
+ name={"given":F("Linda",0.97,"Linda Lin"),"family":F("Lin",0.97,"Linda Lin"),"cjk_full":F("林美玲",0.97)},
+ company=F("Fu Yuan Seafood Co., Ltd.",0.96), company_cjk=F("福源水產有限公司",0.96),
+ job_title=F("General Manager",0.96), job_title_cjk=F("總經理",0.96),
+ department=F("Quality Assurance",0.93,"品保部 Quality Assurance"),
+ phones=[P("0921-372-525","mobile",0.96,"M 手機 0921-372-525","TW")],
+ emails=[E("linda.lin@fuyuanseafood.com.tw",0.96,"電郵 Email: linda.lin@fuyuanseafood.com.tw")],
+ websites=[W("https://www.fuyuanseafood.com.tw",0.95)],
+ addresses=[A("台灣 407 台中市西屯區台灣大道三段99號8樓","台灣大道三段99號8樓","西屯區","台中市","407","台灣",0.92)],
+ evidence={"ignored_text":["海之味","BRCGS AA"],"concerns":[],"has_qr_code":True,"overall_confidence":0.94})
+card('img_0060', language_hint=["zh-Hant","en"],
+ name={"cjk_full":F("吳佩珊",0.96)},
+ company_cjk=F("合邦商業銀行",0.95),
+ job_title_cjk=F("理財專員",0.95),
+ phones=[P("0910 653 799","mobile",0.93,"手機：0910 653 799","TW"),
+         P("+886 2 2859 1651","work",0.93,"電話：+886 2 2859 1651","TW"),
+         P("02-2277-9904","fax",0.93,"FAX：02-2277-9904","TW")],
+ emails=[E("pwu@hebangbank.com.tw",0.94,"pwu@hebangbank.com.tw")],
+ websites=[W("www.hebangbank.com.tw",0.94)],
+ addresses=[A("104台北市中山區南京東路二段88號12樓","南京東路二段88號12樓","中山區","台北市","104","Taiwan",0.88)],
+ evidence={"ignored_text":["誠信 穩健 專業","合邦"],"concerns":["vertical_text"],"overall_confidence":0.92})

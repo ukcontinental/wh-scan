@@ -1,0 +1,17 @@
+rendering 14 card faces with Playwright Chromium ...
+rendered 14 cards
+  img_0001  p004  front portrait_classic   zh-Hant 1662x2216
+  img_0002  p009  back  back_logo          en      1649x1236
+  img_0003  p006  back  navy_gold          zh-Hant 1847x1385
+  img_0004  p009  front startup            en      1003x752
+  img_0005  p006  front minimal_white      en      2063x1547
+  img_0006  p001  front color_band         mixed   1397x1047
+  img_0007  p005  front logo_heavy         zh-Hans 2301x1725
+  img_0008  p008  front japanese_minimal   zh-Hant 1563x1172
+  img_0009  p007  front portrait_modern    mixed   726x969
+  img_0010  p002  front japanese_minimal   en      1453x1089
+  img_0011  p008  back  back_contact       zh-Hant 2254x1690
+  img_0012  p007  back  back_decor         mixed   759x1013
+  img_0013  p010  front logo_heavy         zh-Hant 1111x833
+  img_0014  p003  front bank_style         en      2041x1530
+done: 10 people, 14 photos -> /tmp/claude-0/-home-user-wh-scan/e6b8aca0-9c67-5e09-9aa9-0b9a8cc550dc/scratchpad/ds3
