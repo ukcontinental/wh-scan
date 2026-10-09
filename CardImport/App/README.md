@@ -7,14 +7,15 @@
 打開 Mac 的「終端機」，貼上：
 
 ```bash
-cd ~/Desktop
+mkdir -p ~/code
+cd ~/code
 git clone -b claude/zealous-thompson-5f6q83 https://github.com/ukcontinental/wh-scan.git
 ```
 
 ## 2. 產生 Xcode 專案
 
 ```bash
-cd ~/Desktop/wh-scan/CardImport/App
+cd ~/code/wh-scan/CardImport/App
 ./setup.sh
 ```
 

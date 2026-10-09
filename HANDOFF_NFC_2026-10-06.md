@@ -84,7 +84,7 @@
 | iPhone 實機未測 | Apple Vision OCR、通訊錄寫入、NFC、分享延伸都只在模擬器或程式層測過 |
 | 處理時間與 API 成本未實測 | 目前只有估計值 |
 | Logo 文字被當公司名 | 保留集唯一的錯存案例，尚未修正 |
-| 使用者安裝進度 | 已給第 1 步（下載程式碼並執行 `setup.sh`），等待使用者回報結果 |
+| 使用者安裝進度 | 第 1～2 步已完成（見文末「進度更新」）；停在 Xcode 簽署與裝到 iPhone |
 
 ## 4. 下一步
 
@@ -121,3 +121,26 @@
 - 編譯快取（`.build/`、`__pycache__/`）
 - 名片的乾淨渲染圖（`dataset*/clean/`）
 - 約 90MB 的除錯裁切截圖
+
+## 6. 進度更新（記錄於 2026-10-09）
+
+### 已完成
+- 專案放在 `~/code/wh-scan`（不是 `~/Desktop/wh-scan`），不需要重新 clone。目前本機分支是 `nfc-card-import`，不是文件開頭寫的 `claude/zealous-thompson-5f6q83`，內容已包含 `CardImport/`。
+- 安裝 Homebrew（7.0.8），並把 `brew shellenv` 寫進 `~/.bash_profile`。這台 Mac 的登入 shell 是 bash。
+- 在 `~/code/wh-scan/CardImport/App` 執行 `./setup.sh` 成功：
+  - 暱稱 `willie0403`，選免費 Apple ID 版（使用 `project-free.yml`）。
+  - 自動安裝 XcodeGen 並產生 `CardImport.xcodeproj`。
+  - App 識別碼：`com.willie0403.cardimport`。
+  - Xcode 已打開專案，狀態 Ready。
+
+### 尚未完成（接續做這些）
+1. Xcode → Settings → Accounts 登入 Apple ID。
+2. 在 CardImport target → Signing & Capabilities，Team 選 Personal Team。
+3. iPhone 接線、信任這部電腦、開啟「開發者模式」並重新開機。上次檢查時 iPhone 與 iPad 都顯示 Offline。
+4. Xcode 選 iPhone 後按 ▶︎；到 iPhone「設定 → 一般 → VPN 與裝置管理」信任開發者，再按一次 ▶︎。
+5. 第一次開 App：貼上 Anthropic API 金鑰、聯絡人選完整取用、設定 NFC 捷徑。
+
+### 備註
+- `App/README.md` 第 1、2 步仍寫 `~/Desktop`，尚未改成 `~/code/wh-scan`。
+- 免費 Apple ID 安裝的 App 每 7 天要重新接 Mac 按 ▶︎。
+- 第 4 節「下一步」的第 1 步，路徑請以 `~/code/wh-scan/CardImport/App` 為準。
