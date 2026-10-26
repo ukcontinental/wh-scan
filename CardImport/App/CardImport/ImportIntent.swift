@@ -2,7 +2,7 @@ import AppIntents
 import UniformTypeIdentifiers
 
 /// "匯入名片" — used by the NFC personal automation (Shortcuts → Automation → NFC → Run Immediately)
-/// and by Siri / Spotlight / the Action button. With no photos it opens the multi-select picker directly;
+/// and by Siri / Spotlight / the Action button. With no photos it asks: shoot now, or pick from the library;
 /// with photos (e.g. a Shortcut that received images from the share sheet) it imports them at once.
 struct ImportBusinessCardsIntent: AppIntent {
     static var title: LocalizedStringResource = "匯入名片"
@@ -19,7 +19,7 @@ struct ImportBusinessCardsIntent: AppIntent {
         if let photos, !photos.isEmpty {
             ImportRouter.shared.enqueue(photos.map(\.data), source: "shortcut")
         } else {
-            ImportRouter.shared.requestPicker(source: "nfc")
+            ImportRouter.shared.requestStart(source: "nfc")
         }
         return .result()
     }

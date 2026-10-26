@@ -40,6 +40,7 @@ targets:
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
         NSContactsUsageDescription: 用來檢查重複聯絡人，並把名片資料寫入你的通訊錄。
+        NSCameraUsageDescription: 拍攝名片。
         NSMicrophoneUsageDescription: 錄製選用的語音備註（例如在哪裡認識這個人）。
         NSSpeechRecognitionUsageDescription: 把語音備註轉成文字。
         CFBundleURLTypes:

@@ -5,9 +5,22 @@ import AppIntents
 @MainActor
 final class ImportRouter: ObservableObject {
     static let shared = ImportRouter()
+    @Published var showChooser = false
+    @Published var showScanner = false
     @Published var showPicker = false
     @Published var pendingImages: [Data]? = nil
     @Published var pendingSource = "app"
+
+    /// NFC / URL entry: ask whether to shoot the cards now or pick photos already taken.
+    func requestStart(source: String) {
+        pendingSource = source
+        showChooser = true
+    }
+
+    func requestScanner(source: String) {
+        pendingSource = source
+        showScanner = true
+    }
 
     func requestPicker(source: String) {
         pendingSource = source
@@ -37,7 +50,7 @@ struct CardImportApp: App {
                 .environmentObject(router)
                 .onOpenURL { url in
                     // cardimport://import — for NFC tags that carry a URL record instead of a Shortcuts automation.
-                    if url.host == "import" { router.requestPicker(source: "url") }
+                    if url.host == "import" { router.requestStart(source: "url") }
                 }
                 .task {
                     if let demo = DemoData.requestedScreen() { DemoData.apply(demo, to: engine); return }

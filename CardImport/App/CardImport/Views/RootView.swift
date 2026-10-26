@@ -40,6 +40,26 @@ struct RootView: View {
                 }
             }
         }
+        .confirmationDialog("匯入名片", isPresented: $router.showChooser, titleVisibility: .visible) {
+            Button("拍攝名片") {
+                if CardScannerView.isSupported { router.requestScanner(source: router.pendingSource) }
+                else { router.requestPicker(source: router.pendingSource) }
+            }
+            Button("從相簿選擇") { router.requestPicker(source: router.pendingSource) }
+            Button("取消", role: .cancel) {}
+        } message: {
+            Text("連續拍好再按「儲存」，或選已經拍好的照片。")
+        }
+        .fullScreenCover(isPresented: $router.showScanner) {
+            CardScannerView(
+                onFinish: { datas in
+                    router.showScanner = false
+                    guard !datas.isEmpty else { return }
+                    Task { await engine.importImages(datas, source: router.pendingSource) }
+                },
+                onCancel: { router.showScanner = false })
+            .ignoresSafeArea()
+        }
         .photosPicker(isPresented: $router.showPicker, selection: $selection, maxSelectionCount: nil,
                       selectionBehavior: .ordered, matching: .images, preferredItemEncoding: .current)
         .onChange(of: selection) { _, items in
@@ -90,15 +110,26 @@ struct HomeView: View {
                 .font(.system(size: 64)).foregroundStyle(.tint)
             Text("名片匯入").font(.largeTitle.bold())
             Text("選好名片照片，其餘交給系統").foregroundStyle(.secondary)
-            Button {
-                router.requestPicker(source: "app")
-            } label: {
-                Label("選擇名片照片", systemImage: "photo.on.rectangle.angled")
-                    .font(.title3.weight(.semibold)).frame(maxWidth: .infinity).padding(.vertical, 6)
+            VStack(spacing: 12) {
+                Button {
+                    if CardScannerView.isSupported { router.requestScanner(source: "app") }
+                    else { router.requestPicker(source: "app") }
+                } label: {
+                    Label("拍攝名片", systemImage: "camera.viewfinder")
+                        .font(.title3.weight(.semibold)).frame(maxWidth: .infinity).padding(.vertical, 6)
+                }
+                .buttonStyle(.borderedProminent)
+                Button {
+                    router.requestPicker(source: "app")
+                } label: {
+                    Label("選擇名片照片", systemImage: "photo.on.rectangle.angled")
+                        .font(.title3.weight(.semibold)).frame(maxWidth: .infinity).padding(.vertical, 6)
+                }
+                .buttonStyle(.bordered)
             }
-            .buttonStyle(.borderedProminent).controlSize(.large).padding(.horizontal, 32)
+            .controlSize(.large).padding(.horizontal, 32)
             Spacer()
-            Text("提示：在「捷徑」設定 NFC 自動化，碰一下就會直接打開照片選擇。")
+            Text("提示：在「捷徑」設定 NFC 自動化，碰一下就會問你要拍照還是選照片。")
                 .font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center).padding(.horizontal)
         }
         .padding(.bottom)
